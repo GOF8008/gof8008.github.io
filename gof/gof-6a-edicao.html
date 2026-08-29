@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Banco Central como Agente — Gestão de Opções Futuras, 6ª edição | Giuliano Tomazelli</title>
+<meta name="description" content="Sexta edição da Gestão de Opções Futuras: a teoria fechada como sistema dinâmico formalizado e refutável, com o Banco Central do Brasil como campo de ilustração empírica. HDE como variável de estado, equação de acúmulo e condições explícitas de refutação.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/gof/gof-6a-edicao.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="O Banco Central como Agente — GOF, 6ª edição">
+<meta property="og:description" content="A GOF apresentada como sistema dinâmico formalizado e refutável — HDE como variável de estado, com o Banco Central como campo de ilustração empírica.">
+<meta property="og:url" content="https://gof8008.github.io/gof/gof-6a-edicao.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O Banco Central como Agente — GOF, 6ª edição">
+<meta name="twitter:description" content="A GOF apresentada como sistema dinâmico formalizado e refutável — HDE como variável de estado, com o Banco Central como campo de ilustração empírica.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+  :root{
+    --navy:#12293f;
+    --navy-mid:#1A3A5C;
+    --navy-soft:#2c5580;
+    --orange:#D97706;
+    --cream:#FBF0E2;
+    --paper:#ffffff;
+    --ink:#2a3541;
+    --muted:#5b6b7a;
+    --rule:#e4e9ee;
+    --box:#f5f7f9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#e9edf1;font-family:'Source Sans 3',sans-serif;padding:22px 10px calc(160px + env(safe-area-inset-bottom));color:var(--ink)}
+  .card{max-width:560px;margin:0 auto;background:var(--paper);overflow:hidden;
+        box-shadow:0 10px 40px rgba(18,41,63,.2);border-radius:6px}
+
+  /* ============ CABEÇALHO ============ */
+  .head{background:linear-gradient(160deg,#173250 0%,#0e2135 100%);color:#fff;padding:26px 26px 30px}
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+  .logo{width:26px;height:26px;border:1.6px solid var(--orange);border-radius:50%;
+        display:flex;align-items:center;justify-content:center;flex:none}
+  .logo span{font-family:'Playfair Display',serif;font-size:14px;color:var(--orange);font-weight:700;line-height:1}
+  .brand .bt{font-size:13.5px;font-weight:700;letter-spacing:.02em}
+  .brand .bt b{color:var(--orange)}
+  .kick{color:#8fa6bb;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+        line-height:1.5;margin-bottom:12px}
+  .h1{font-family:'Playfair Display',serif;font-size:36px;line-height:1.06;font-weight:700;margin-bottom:12px}
+  .sub{font-size:15px;line-height:1.5;color:#c3d2df}
+
+  /* ============ EPÍGRAFE ============ */
+  .epi{background:var(--cream);border-left:5px solid var(--orange);padding:20px 24px}
+  .epi p{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;line-height:1.46;color:#4a3a24}
+
+  /* ============ VIRADA ============ */
+  .turn{background:var(--navy);color:#dfe8f0;padding:22px 26px}
+  .turn .lb{display:flex;align-items:baseline;gap:9px;margin-bottom:11px}
+  .turn .sg{font-family:'Playfair Display',serif;font-size:23px;color:var(--orange);line-height:1}
+  .turn .lt{color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+  .turn p{font-size:14.5px;line-height:1.62}
+  .turn b{color:#fff}
+
+  /* ============ SEÇÕES ============ */
+  .body{padding:26px 26px 8px}
+  .sec{display:grid;grid-template-columns:22px 1fr;gap:10px;margin-bottom:26px;margin-left:-14px}
+  .num{font-family:'Playfair Display',serif;font-size:17.5px;color:var(--orange);font-weight:700;line-height:1.55;text-align:right}
+  .eyebrow{color:var(--orange);font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+        line-height:1.45;margin-bottom:4px}
+  .st{font-family:'Playfair Display',serif;font-size:22px;line-height:1.14;color:var(--navy-mid);
+        font-weight:700;margin-bottom:9px}
+  .sc p{font-size:14.6px;line-height:1.62;margin-bottom:11px}
+  .sc p:last-child{margin-bottom:0}
+  b.k{color:var(--navy-mid);font-weight:700}
+  .new{display:inline-block;background:var(--orange);color:#fff;font-size:9px;font-weight:700;
+       letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:3px;
+       vertical-align:middle;margin-left:7px}
+
+  /* ============ CAIXAS ============ */
+  .bx{background:var(--box);border-radius:7px;padding:13px 15px;margin:11px 0;
+      display:grid;grid-template-columns:52px 1fr;gap:11px;align-items:start}
+  .bx .tg{font-family:'Playfair Display',serif;font-size:16.5px;color:var(--orange);font-weight:700;line-height:1.2}
+  .bx .tx{font-size:13.8px;line-height:1.56}
+  .bx .tx b{color:var(--navy-mid)}
+
+  .eq{background:var(--box);border-radius:7px;padding:18px 16px;margin:12px 0;text-align:center}
+  .eq .f{font-family:'Playfair Display',serif;font-size:25px;color:var(--navy-mid);font-weight:700}
+  .eq .f i{color:var(--orange);font-style:normal}
+  .eq .g{font-size:12.6px;color:var(--muted);line-height:1.5;margin-top:9px}
+  .eq .g b{color:var(--navy-mid)}
+
+  .reg{border-radius:7px;padding:13px 15px;margin:9px 0;color:#eaf1f7}
+  .reg .rl{font-size:9.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;opacity:.72;margin-bottom:3px}
+  .reg .rn{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;margin-bottom:5px}
+  .reg .rt{font-size:13.2px;line-height:1.52}
+  .r1{background:#3d6288}.r2{background:#254b70}.r3{background:#12293f}
+
+  .figs{background:var(--navy);border-radius:7px;padding:20px 20px;margin:12px 0}
+  .figs .fg{margin-bottom:14px}
+  .figs .fg:last-child{margin-bottom:0}
+  .figs .fv{font-family:'Playfair Display',serif;font-size:27px;color:var(--orange);font-weight:700;line-height:1.1}
+  .figs .fl{font-size:12.4px;color:#b7c8d7;line-height:1.45;margin-top:3px}
+  .figs .fl b{color:#fff}
+
+  .flow{background:#fdf7ee;border-radius:7px;padding:11px 14px;margin:9px 0;
+        font-size:12.8px;line-height:1.52;color:#7a5b2a}
+  .flow b{color:var(--orange)}
+
+  .warn{border-left:3px solid var(--orange);padding:2px 0 2px 13px;margin:11px 0;
+        font-size:13.4px;line-height:1.56;color:#4a5560;font-style:italic}
+
+  /* ============ RODAPÉ ============ */
+  .foot{background:var(--navy);color:#dfe8f0;padding:28px 26px 26px;margin-top:6px}
+  .foot .q{border-left:4px solid var(--orange);padding-left:16px;margin-bottom:22px}
+  .foot .q p{font-family:'Playfair Display',serif;font-style:italic;font-size:17.5px;line-height:1.44;color:#f0f5fa}
+  .foot .div{height:1px;background:rgba(255,255,255,.15);margin-bottom:18px}
+  .foot .an{font-size:15px;font-weight:700;color:#fff;margin-bottom:5px}
+  .foot .ab{font-size:12.8px;line-height:1.55;color:#93a8bb;margin-bottom:18px}
+  .foot .sr{color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.13em;
+        text-transform:uppercase;line-height:1.85}
+  .foot .nt{margin-top:16px;font-size:11.5px;line-height:1.55;color:#7f93a6}
+
+  @media(max-width:430px){
+    body{padding:14px 6px calc(160px + env(safe-area-inset-bottom))}
+    .head,.turn,.foot{padding-left:18px;padding-right:18px}
+    .body{padding-left:18px;padding-right:18px}
+    .epi{padding-left:16px;padding-right:16px}
+    .h1{font-size:30px}
+    .sec{grid-template-columns:18px 1fr;gap:8px;margin-left:-11px}
+    .num{font-size:14.7px}
+    .st{font-size:19.5px}
+    .bx{grid-template-columns:1fr;gap:4px;padding:12px 14px}
+    .bx .tg{font-size:15px}
+    .eq .f{font-size:21px}
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <!-- ================= CABEÇALHO ================= -->
+  <div class="head">
+    <div class="brand">
+      <div class="logo"><span>G</span></div>
+      <div class="bt">Gestão de Opções Futuras · <b>6ª edição</b></div>
+    </div>
+    <div class="kick">Sistema dinâmico · Aceleração algorítmica · 2026</div>
+    <h1 class="h1">O Banco Central<br>como Agente</h1>
+    <div class="sub">Aceleração algorítmica e a nova dissociação regulatória — a GOF apresentada como sistema dinâmico, formalizado e refutável.</div>
+  </div>
+
+  <!-- ================= EPÍGRAFE ================= -->
+  <div class="epi">
+    <p>"O PIB não é bem-estar. O VIX não é medo. O HDE_score não é o horizonte. São instrumentos — e só têm valor quando suas limitações são conhecidas por quem os usa."</p>
+  </div>
+
+  <!-- ================= A VIRADA ================= -->
+  <div class="turn">
+    <div class="lb"><span class="sg">§</span><span class="lt">A virada desta edição</span></div>
+    <p>Esta edição <b>não amplia a teoria — ela a restringe</b>. Fecha a microestrutura da GOF e a apresenta como um <b>sistema dinâmico único</b>: formalizável, mensurável e, sobretudo, refutável de forma independente do autor. A ordem se inverte em relação à 5ª edição — não é mais a teoria que emerge do caso; é o <b>caso que testa a teoria</b>. O Banco Central entra como primeiro campo de ilustração empírica estruturada, não como fundamento.</p>
+  </div>
+
+  <div class="body">
+
+    <!-- ===== 1 ===== -->
+    <div class="sec">
+      <div class="num">1</div>
+      <div class="sc">
+        <div class="st">O problema</div>
+        <p>Agentes não colapsam quando erram — colapsam quando <b class="k">perdem a capacidade de continuar decidindo</b>. A GOF trata desse fenômeno sob duas condições que a distinguem das teorias de decisão usuais: <b class="k">consumo irreversível de opcionalidade</b> e <b class="k">aceleração do ambiente decisório</b>. O objeto desta edição é um tipo específico de agente: o regulador — instituição com função normativa que opera sob essas duas pressões.</p>
+      </div>
+    </div>
+
+    <!-- ===== 2 ===== -->
+    <div class="sec">
+      <div class="num">2</div>
+      <div class="sc">
+        <div class="eyebrow">Parte I · Fundamentos revisitados</div>
+        <div class="st">O HDE como variável de estado</div>
+        <p>O Horizonte Decisório Efetivo (HDE) deixa de ser conceito descritivo e passa a ser tratado como <b class="k">variável de estado</b>, governada por uma equação de acúmulo — a mesma estrutura que rege estoques de capital ou reservas:</p>
+        <div class="eq">
+          <div class="f">dHDE/dt = <i>ρ</i>(t) − <i>σ</i>(t)</div>
+          <div class="g"><b>ρ</b> = taxa de reposição de opcionalidade · <b>σ</b> = taxa de consumo. Sob pressão, a teoria postula que σ tende a superar ρ.</div>
+        </div>
+        <p>Há um <b class="k">limiar crítico HDE*</b> que marca a transição de regime. E o <b class="k">HDE_score</b> é a janela operacional para observar a deterioração desse estoque latente — não o estoque em si, assim como um teste de produtividade não é o capital humano.</p>
+        <div class="warn">O sistema quantitativo tem domínio declarado: quando a resposta do agente é nula, σ não recebe valor e a equação, embora válida como enunciado estrutural, deixa de ser computável. O diagnóstico, nesse caso, é qualitativo por necessidade — não por escolha.</div>
+      </div>
+    </div>
+
+    <!-- ===== 3 · NOVA ===== -->
+    <div class="sec">
+      <div class="num">3</div>
+      <div class="sc">
+        <div class="eyebrow">Parte I · Fundamentos revisitados</div>
+        <div class="st">A soberania temporal<span class="new">Novo</span></div>
+        <p>Alguns agentes carregam um mandato que os demais não têm: preservar não o próprio horizonte, mas <b class="k">o horizonte dentro do qual os outros decidem</b>. A Função de Soberania Temporal mede esse mandato — e deriva do HDE sem se dissolver nele.</p>
+        <div class="eq">
+          <div class="f">FST = HDE × <i>Φ</i><sub style="font-size:14px">normativo</sub></div>
+          <div class="g"><b>Φ</b> ∈ [0,1] indica o grau em que o mandato sistêmico está ativo e é <b>exercido</b>. Admite três estatutos: plena, delegada e inexistente.</div>
+        </div>
+        <p>A consequência é a assimetria que a aplicação empírica tornou visível: um agente pode <b class="k">preservar integralmente o próprio horizonte e, ao mesmo tempo, deixar a soberania temporal degradar-se</b>. Não é estado intermediário do mesmo indicador — é falha numa função que o indicador do horizonte próprio não capta.</p>
+      </div>
+    </div>
+
+    <!-- ===== 4 ===== -->
+    <div class="sec">
+      <div class="num">4</div>
+      <div class="sc">
+        <div class="eyebrow">Parte I · Fundamentos revisitados</div>
+        <div class="st">A estrutura LPRC como função dinâmica</div>
+        <p>A LPRC deixa de ser apenas instrumento diagnóstico e passa a <b class="k">governar a dinâmica do horizonte</b>. Seus quatro componentes recebem definição formal e interagem em cascata (σ_inter): liquidez baixa encarece o passivo, passivo alto reduz a reversibilidade, pouca reversibilidade corrói a contratualidade.</p>
+        <p>A propriedade de <b class="k">invariância de escala</b> se mantém — o mesmo aparato opera de um banco a um regulador. Já a assimetria entre consumo e reposição é declarada com o estatuto que lhe cabe: <b class="k">hipótese estrutural de domínios de pressão, escassez e irreversibilidade</b>, não lei universal. Em domínios de expansão — restauração automática, altíssima liquidez, inovação tecnológica — a reposição pode ser tão rápida quanto o consumo, e a teoria exigiria ajuste. Declarar esse domínio de validade não enfraquece a hipótese: delimita onde ela vale e a torna testável.</p>
+      </div>
+    </div>
+
+    <!-- ===== 5 ===== -->
+    <div class="sec">
+      <div class="num">5</div>
+      <div class="sc">
+        <div class="eyebrow">Parte II · λ_IA e a nova dissociação</div>
+        <div class="st">λ_IA — o acelerador algorítmico</div>
+        <p>O acelerador é redefinido. Não é mais aceleração genérica do ambiente, mas uma forma específica: a <b class="k">mediação algorítmica da percepção</b>. O λ_IA formaliza a assimetria estrutural entre a velocidade com que sistemas assistidos por IA ampliam a <b class="k">percepção (λ_p)</b> e a velocidade com que as instituições conseguem <b class="k">responder (λ_r)</b>.</p>
+        <p>A IA não elimina a incerteza — altera o <i>regime de percepção</i> dela. O efeito relevante não é prever mais rápido, mas o <b class="k">descompasso entre detectar e agir</b>. Por isso a tese: λ_IA "não é sobre tecnologia — é sobre tempo institucional".</p>
+      </div>
+    </div>
+
+    <!-- ===== 6 ===== -->
+    <div class="sec">
+      <div class="num">6</div>
+      <div class="sc">
+        <div class="eyebrow">Parte II · λ_IA e a nova dissociação</div>
+        <div class="st">Três regimes de percepção</div>
+        <div class="reg r1">
+          <div class="rl">Regime 1</div>
+          <div class="rn">Direta</div>
+          <div class="rt">Auditoria humana, visita, julgamento. λ_p baixo — e a resposta foi desenhada para ele.</div>
+        </div>
+        <div class="reg r2">
+          <div class="rl">Regime 2</div>
+          <div class="rn">Mediada</div>
+          <div class="rt">Dashboards e scoring filtram o dado. λ_p sobe, λ_r não muda — alertas se acumulam.</div>
+        </div>
+        <div class="reg r3">
+          <div class="rl">Regime 3</div>
+          <div class="rn">Delegada</div>
+          <div class="rt">Sistemas autônomos detectam e reportam em alta frequência. λ_p máximo; a pressão sobre a resposta é estrutural.</div>
+        </div>
+        <div class="flow">→ Da percepção humana à delegada, <b>λ_p cresce</b> — e a defasagem com a resposta também.</div>
+      </div>
+    </div>
+
+    <!-- ===== 7 ===== -->
+    <div class="sec">
+      <div class="num">7</div>
+      <div class="sc">
+        <div class="eyebrow">Parte II · λ_IA e a nova dissociação</div>
+        <div class="st">A dissociação estrutural</div>
+        <p>Quando o descompasso persiste, a dissociação deixa de ser evento e vira <b class="k">regime</b>: a deterioração passa a se alimentar de si mesma, independentemente de novos choques. O regime tem <b class="k">duas formas</b>, correspondentes aos dois estados possíveis da resposta.</p>
+        <div class="bx">
+          <div class="tg">Estado D</div>
+          <div class="tx"><b>Responde devagar.</b> λ_r &gt; 0, e o descompasso D = λ_p/λ_r é calculável. O regime se caracteriza quando D excede D_crit por τ_min trimestres consecutivos.</div>
+        </div>
+        <div class="bx">
+          <div class="tg">Estado S</div>
+          <div class="tx"><b>Percebe e não responde.</b> λ_r = 0, e D é <i>indefinido</i> — não infinito. O regime se caracteriza pela persistência do próprio silêncio. Não é valor extremo do Estado D: é a condição em que a razão perde sentido, porque não há resposta a comparar com a percepção.</div>
+        </div>
+        <p>A <b class="k">Dissociação Dual (DD)</b> compara domínios do mesmo agente, e há um <b class="k">ponto de inflexão</b> a partir do qual a dissociação se torna irreversível — diagnosticável antes do evento terminal.</p>
+        <div class="warn">O silêncio não se mede; observa-se. Onde não há resposta, não há razão a calcular — há um estado a registrar.</div>
+      </div>
+    </div>
+
+    <!-- ===== 8 ===== -->
+    <div class="sec">
+      <div class="num">8</div>
+      <div class="sc">
+        <div class="eyebrow">Parte III · Aplicação empírica</div>
+        <div class="st">Por que reguladores subrespondem</div>
+        <p>A <b class="k">Proposição 9.1</b> sustenta que o padrão — postergação sistemática seguida de intervenção terminal — é <b class="k">endógeno à estrutura</b>, não contingente à identidade, competência ou intenção de quem opera. Três forças agem simultaneamente:</p>
+        <div class="bx">
+          <div class="tg">Força 1</div>
+          <div class="tx"><b>Inércia de design</b> — arquiteturas regulatórias robustas foram feitas para durar; as mesmas qualidades as tornam lentas para atualizar. Operam calibradas para um regime de percepção que já não existe.</div>
+        </div>
+        <div class="bx">
+          <div class="tg">Força 2</div>
+          <div class="tx"><b>Assimetria de custo político</b> — intervir cedo tem custo visível e imediato; não intervir tem custo invisível e acumulado. A estrutura de incentivos premia a postergação, independentemente de quem ocupa o cargo.</div>
+        </div>
+        <div class="bx">
+          <div class="tg">Força 3</div>
+          <div class="tx"><b>λ_IA — aceleração sem redesenho</b> — quando a percepção migra ao Regime 3 sem que a resposta seja redesenhada, o gap λ_p–λ_r cresce mais rápido, e o dano acumulado durante o gap cresce na mesma velocidade.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 9 ===== -->
+    <div class="sec">
+      <div class="num">9</div>
+      <div class="sc">
+        <div class="eyebrow">Parte III · Aplicação empírica</div>
+        <div class="st">Os casos</div>
+        <p>O <b class="k">Banco Master (2022–2025)</b> é o caso paradigmático — alertas precoces, resposta nula, intervenção terminal. Seu domínio supervisório permanece em <b class="k">Estado S</b> por mais de catorze trimestres: percepção ativa, resposta ausente. Em torno dele, uma série de episódios calibra e tensiona a teoria: <b class="k">Will Financeira</b> (jan/2026), <b class="k">Banco Morada</b> (2011, controle pré-IA, em Regime 2), <b class="k">SVB</b> (EUA, 2023, controle internacional e único caso em Estado D entre os examinados) e <b class="k">Americanas</b> (2023, caso de fronteira que marca o limite do domínio). Juntos, mostram um mecanismo recorrente, não um acidente.</p>
+      </div>
+    </div>
+
+    <!-- ===== 10 ===== -->
+    <div class="sec">
+      <div class="num">10</div>
+      <div class="sc">
+        <div class="eyebrow">Parte III · Aplicação empírica</div>
+        <div class="st">A escala não é coincidência</div>
+        <div class="figs">
+          <div class="fg">
+            <div class="fv">R$ 6,2 bi</div>
+            <div class="fl">total de intervenções do FGC em ~30 anos (1996–2025)</div>
+          </div>
+          <div class="fg">
+            <div class="fv">R$ 41–51,8 bi</div>
+            <div class="fl">Banco Master, em um <b>único evento</b></div>
+          </div>
+          <div class="fg">
+            <div class="fv">US$ 42 bi</div>
+            <div class="fl">SVB, movidos em <b>48 horas</b></div>
+          </div>
+        </div>
+        <p>A magnitude dos colapsos modernos não se explica por fraudes maiores ou reguladores mais incompetentes. É consistente com <b class="k">percepção de Regime 3 operando sobre arquitetura de resposta de Regime 1</b> — risco que se acumula na velocidade algorítmica enquanto a resposta segue na velocidade humana.</p>
+      </div>
+    </div>
+
+    <!-- ===== 11 ===== -->
+    <div class="sec">
+      <div class="num">11</div>
+      <div class="sc">
+        <div class="eyebrow">Parte IV · Calibração e falsificabilidade</div>
+        <div class="st">Falsificabilidade</div>
+        <p>"Uma teoria que não pode ser refutada é apenas uma narrativa bem construída." A edição assume o risco oposto, com <b class="k">três proposições falsificáveis</b>, cada uma com condição de refutação:</p>
+        <div class="bx">
+          <div class="tg">P1</div>
+          <div class="tx"><b>Assimetria consumo/reposição</b> — em componentes LPRC sob pressão ambiental sustentada, o consumo supera sistematicamente a reposição.</div>
+        </div>
+        <div class="bx">
+          <div class="tg">P2·A</div>
+          <div class="tx"><b>Diagnóstico precoce em Estado D</b> — HDE_score &lt; 50 por dois trimestres, somado a Δ²HDE_score &lt; 0, sinaliza regime de pressão dinâmica antes do evento terminal.</div>
+        </div>
+        <div class="bx">
+          <div class="tg">P2·B</div>
+          <div class="tx"><b>Diagnóstico precoce em Estado S</b> — percepção ativa com resposta nula sustentada por τ_min trimestres. Mais simples e mais robusto: não depende de calibração de parâmetros nem da forma funcional do escore. Exige apenas dois fatos observáveis — houve alerta, não houve resposta.</div>
+        </div>
+        <div class="bx">
+          <div class="tg">P3</div>
+          <div class="tx"><b>Padrão emergente</b> (Proposição 9.1) — reguladores em Regime 3 com dissociação sustentada tendem à intervenção irreversível.</div>
+        </div>
+        <div class="warn">Uma quarta hipótese é declarada sem ser operacionalizada: a de que a transição em HDE* é abrupta, e não gradual. Refutável em princípio — a observação de agentes que apenas declinam suavemente a contrariaria —, mas esta edição não construiu o instrumento capaz de testá-la. Declará-la, e não omiti-la, é o que separa uma delimitação honesta de uma imunização.</div>
+      </div>
+    </div>
+
+    <!-- ===== 12 ===== -->
+    <div class="sec">
+      <div class="num">12</div>
+      <div class="sc">
+        <div class="eyebrow">Parte IV · Reformas de design</div>
+        <div class="st">Os circuit breakers</div>
+        <p>Se o problema é estrutural, a prescrição também precisa ser. Três circuit breakers complementares — não substitutos — atacam cada força:</p>
+        <div class="bx">
+          <div class="tg">CB1</div>
+          <div class="tx"><b>Sincronização de regime</b> — redesenha a arquitetura de resposta para elevar o λ_r estrutural; ataca a causa de fundo (inércia de design).</div>
+        </div>
+        <div class="bx">
+          <div class="tg">CB2</div>
+          <div class="tx"><b>Inversão da assimetria de custo político</b> — torna visível o custo de <i>não</i> intervir; ataca a força mais difícil politicamente.</div>
+        </div>
+        <div class="bx">
+          <div class="tg">CB3</div>
+          <div class="tx"><b>Escalonamento automático de urgência</b> — reduz a latência decisória; é o primeiro passo viável de implementação.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 13 · NOVA ===== -->
+    <div class="sec">
+      <div class="num">13</div>
+      <div class="sc">
+        <div class="eyebrow">Síntese · O achado central</div>
+        <div class="st">O Formulador<span class="new">Novo</span></div>
+        <p>Nenhum dos três mecanismos está ao alcance de quem apenas opera as regras. São instrumentos de <b class="k">formulação</b> — e é aí que a edição fecha seu argumento.</p>
+        <p>Toda instituição opera sobre uma estrutura normativa que persiste além de quem ocupa os cargos: o <b class="k">Regulador</b>, entendido como desenho e não como pessoa. É ele que define o que pode ser decidido, por quem, em quanto tempo e sob que gatilho.</p>
+        <div class="bx">
+          <div class="tg">Gestor</div>
+          <div class="tx">Lidera dentro do desenho. Decide, responde por resultados, comanda equipes — <b>sem poder alterar o desenho</b>. Diante do horizonte encurtando, usa melhor o que resta.</div>
+        </div>
+        <div class="bx">
+          <div class="tg">Formu&shy;lador</div>
+          <div class="tx">Lidera no mesmo nível e tem uma atribuição a mais: <b>pode reescrever a estrutura</b>. E ao reescrevê-la, altera a capacidade decisória de todos que operam dentro dela. Diante do horizonte encurtando, amplia o horizonte disponível.</div>
+        </div>
+        <p>A diferença não é de hierarquia, mérito ou intenção — é de <b class="k">grau de liberdade sobre a estrutura</b>. E não classifica pessoas: classifica funções em cada domínio. O mesmo ocupante pode ser Formulador numa dimensão e Gestor em outra, e o caso desta edição é exatamente isso — folga de formulação no domínio monetário, condição de Gestor no supervisório.</p>
+        <p>A distinção opera sobre <b class="k">Φ</b>: sob o Gestor, a soberania temporal permanece <b class="k">latente</b> — existe como mandato, não como exercício. Sob o Formulador, constitui-se plenamente. Vale para qualquer agente, privado ou estatal: o que decide não é a natureza do agente, mas se ele dispõe, naquele domínio, do poder de reescrever a estrutura.</p>
+        <div class="warn">O limite é declarado. Onde a falha é de <i>design</i>, a teoria prescreve com precisão. Onde a falha é de <i>poder</i> — omissão deliberada, não inércia —, o diagnóstico permanece válido, mas a engenharia institucional cede lugar à política.</div>
+      </div>
+    </div>
+
+    <!-- ===== 14 ===== -->
+    <div class="sec">
+      <div class="num">14</div>
+      <div class="sc">
+        <div class="eyebrow">Parte IV · Contribuição</div>
+        <div class="st">A contribuição e a síntese</div>
+        <p>A reivindicação não é o ineditismo dos componentes, mas sua <b class="k">formalização integrada com propriedade emergente testável</b>: λ_IA, λ_r baixo e HDE reunidos num único sistema com equação de acúmulo, instrumento diagnóstico (HDE_score) e condições explícitas de refutação.</p>
+        <p>A propriedade que emerge — e que não aparece isolada nas tradições anteriores — é a existência de um <b class="k">ponto de irreversibilidade diagnosticável antes do evento terminal</b>, a partir de dados públicos. A literatura de supervisão explica <i>por que</i> a janela de prevenção se fecha; a GOF estrutura <b class="k">quando e como</b> ela se fecha.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= RODAPÉ ================= -->
+  <div class="foot">
+    <div class="q">
+      <p>Se a teoria estiver correta, ela permite explicar por que agentes perdem a capacidade de decidir antes que essa perda se torne visível — e diagnosticá-la enquanto ainda é reversível.</p>
+    </div>
+    <div class="div"></div>
+    <div class="an">Giuliano Tomazelli</div>
+    <div class="ab">Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</div>
+    <div class="sr">
+      Gestão de Opções Futuras<br>
+      6ª edição · 2026<br>
+      Caso: Banco Central do Brasil
+    </div>
+    <div class="nt">As referências a casos concretos têm função ilustrativa da dinâmica descrita, com base em documentação pública, e não constituem imputação de conduta a pessoas ou instituições. Alegação não é fato comprovado. A edição declara seu domínio de validade e as lacunas que permanecem abertas, incluindo a ausência de teste prospectivo. Proposição para debate, não veredito técnico.</div>
+  </div>
+
+</div>
+</body>
+</html>
