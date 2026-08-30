@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Conta Dupla do Varejo — assimetria de proteção institucional na B3 | Giuliano Tomazelli</title>
+<meta name="description" content="Artigo de economia institucional sobre a assimetria de proteção na B3: por que empresas submetidas ao mesmo juro têm desempenhos opostos. O varejo de consumo cíclico como o caso extremo de ausência de instrumentos que atenuam o repasse da taxa.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/artigos/conta-dupla-do-varejo.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="A Conta Dupla do Varejo">
+<meta property="og:description" content="Por que empresas submetidas ao mesmo juro têm desempenhos opostos — e o que decide de que lado da rede cada uma está.">
+<meta property="og:url" content="https://gof8008.github.io/artigos/conta-dupla-do-varejo.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Conta Dupla do Varejo">
+<meta name="twitter:description" content="Por que empresas submetidas ao mesmo juro têm desempenhos opostos — e o que decide de que lado da rede cada uma está.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1A3A5C;
+    --navy-dark:#12293F;
+    --ocre:#B5651D;
+    --cream:#FBF3E8;
+    --ink:#23282D;
+    --muted:#5A6672;
+    --line:#E3E7EB;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:#EDF0F3;
+    font-family:'Source Sans 3',system-ui,sans-serif;
+    color:var(--ink);
+    line-height:1.62;
+    padding:16px 12px calc(220px + env(safe-area-inset-bottom));
+  }
+  .card{
+    max-width:600px;margin:0 auto;background:#fff;
+    border-radius:14px;overflow:hidden;
+    box-shadow:0 2px 20px rgba(26,58,92,.13);
+  }
+
+  /* ---------- CABEÇALHO ---------- */
+  .head{background:var(--navy);color:#fff;padding:32px 28px 30px}
+  .badge{display:flex;align-items:center;gap:11px;margin-bottom:22px}
+  .badge .ring{
+    width:30px;height:30px;border:1.5px solid var(--ocre);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Playfair Display',serif;color:var(--ocre);font-size:15px;
+  }
+  .badge .txt{font-size:14.5px;font-weight:600;letter-spacing:.2px}
+  .badge .txt em{color:var(--ocre);font-style:normal;font-weight:700}
+  .kicker{
+    font-size:11px;letter-spacing:1.7px;text-transform:uppercase;
+    color:#A8BDD1;font-weight:600;margin-bottom:14px;line-height:1.7;
+  }
+  h1{
+    font-family:'Playfair Display',serif;font-size:38px;line-height:1.14;
+    font-weight:700;margin-bottom:14px;letter-spacing:-.4px;
+  }
+  .sub{font-size:16.5px;color:#CBD9E5;line-height:1.5}
+
+  /* ---------- CITAÇÃO DE ABERTURA ---------- */
+  .pull{
+    background:var(--cream);border-left:5px solid var(--ocre);
+    padding:24px 26px;
+  }
+  .pull p{
+    font-family:'Playfair Display',serif;font-style:italic;
+    font-size:19px;line-height:1.5;color:#4A3520;
+  }
+
+  /* ---------- BLOCO DE TESE ---------- */
+  .thesis{background:var(--navy-dark);color:#fff;padding:28px}
+  .thesis .tag{
+    font-size:11px;letter-spacing:1.8px;text-transform:uppercase;
+    color:var(--ocre);font-weight:700;margin-bottom:14px;
+    display:flex;align-items:center;gap:9px;
+  }
+  .thesis .tag span{font-family:'Playfair Display',serif;font-size:22px;line-height:0}
+  .thesis p{font-size:16px;color:#DCE6EF;margin-bottom:13px}
+  .thesis p:last-child{margin-bottom:0}
+  .thesis b{color:#fff}
+
+  /* ---------- SEÇÕES ---------- */
+  .body{padding:8px 28px 30px}
+  section{padding:26px 0;border-bottom:1px solid var(--line)}
+  section:last-child{border-bottom:none}
+  .snum{
+    display:flex;align-items:baseline;gap:11px;margin-bottom:5px;
+  }
+  .snum i{
+    font-family:'Playfair Display',serif;font-style:normal;
+    color:var(--ocre);font-size:15px;min-width:16px;
+  }
+  .slabel{
+    font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--ocre);font-weight:700;
+  }
+  h2{
+    font-family:'Playfair Display',serif;font-size:25px;line-height:1.2;
+    color:var(--navy);font-weight:700;margin:0 0 13px 27px;
+  }
+  section p{font-size:16.5px;margin-bottom:13px;margin-left:27px}
+  /* justificado APENAS em parágrafos que não estejam dentro de quadro */
+  section > p{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  section p:last-child{margin-bottom:0}
+  b{font-weight:700;color:var(--navy)}
+  .new{
+    background:var(--ocre);color:#fff;font-size:9.5px;font-weight:700;
+    letter-spacing:1.2px;padding:3px 8px;border-radius:3px;
+    vertical-align:middle;margin-left:8px;font-family:'Source Sans 3',sans-serif;
+  }
+
+  /* ---------- CAIXAS ---------- */
+  .box{
+    background:#F5F7F9;border-radius:7px;padding:17px 19px;
+    margin:0 0 12px 27px;
+  }
+  .box h4{
+    font-family:'Playfair Display',serif;color:var(--ocre);
+    font-size:16px;margin-bottom:6px;font-weight:700;
+  }
+  .box p{margin:0;font-size:15.5px;line-height:1.55}
+  .box.dark{background:var(--navy);color:#DCE6EF}
+  .box.dark h4{color:var(--ocre)}
+  .box.dark b{color:#fff}
+
+  .note{
+    border-left:3px solid var(--ocre);padding:4px 0 4px 16px;
+    margin:14px 0 0 27px;
+  }
+  .note p{
+    margin:0;font-size:15px;font-style:italic;color:var(--muted);line-height:1.55;
+  }
+
+  /* ---------- ESTATÍSTICAS ---------- */
+  .stats{background:var(--navy);border-radius:8px;padding:22px 22px 18px;margin:0 0 14px 27px}
+  .stat{margin-bottom:17px}
+  .stat:last-child{margin-bottom:0}
+  .stat .big{
+    font-family:'Playfair Display',serif;color:var(--ocre);
+    font-size:29px;font-weight:700;line-height:1.1;
+  }
+  .stat .cap{font-size:13.5px;color:#B9CBDC;line-height:1.45;margin-top:3px}
+  .stat .cap b{color:#fff}
+
+  /* ---------- GRÁFICO ---------- */
+  .chart{margin:0 0 12px 27px}
+  .chartwrap{background:#F5F7F9;border-radius:8px;padding:20px 18px 14px}
+  .charttitle{
+    font-size:11px;letter-spacing:1.3px;text-transform:uppercase;
+    color:var(--navy);font-weight:700;margin-bottom:16px;
+  }
+  .src{font-size:12.5px;color:var(--muted);line-height:1.5;margin-top:12px;font-style:italic}
+
+  /* ---------- RODAPÉ ---------- */
+  .closing{background:var(--navy);color:#fff;padding:32px 28px}
+  .closing .quote{
+    border-left:4px solid var(--ocre);padding-left:20px;margin-bottom:28px;
+  }
+  .closing .quote p{
+    font-family:'Playfair Display',serif;font-style:italic;
+    font-size:21px;line-height:1.42;color:#fff;
+  }
+  .rule{height:1px;background:rgba(255,255,255,.17);margin:24px 0}
+  .author{font-size:17px;font-weight:700;margin-bottom:6px}
+  .cred{font-size:14px;color:#A8BDD1;line-height:1.5;margin-bottom:20px}
+  .meta{
+    font-size:11px;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--ocre);font-weight:700;line-height:1.9;margin-bottom:18px;
+  }
+  .disc{font-size:12.5px;color:#7E93A8;line-height:1.6}
+
+  @media(max-width:430px){
+    h1{font-size:31px}
+    h2{font-size:22px;margin-left:0}
+    section p,.box,.stats,.chart,.note{margin-left:0}
+    .head,.body,.closing,.thesis{padding-left:20px;padding-right:20px}
+    .pull{padding:20px}
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <!-- CABEÇALHO -->
+  <div class="head">
+    <div class="badge">
+      <div class="ring">§</div>
+      <div class="txt">Economia Institucional · <em>Mercado de Capitais</em></div>
+    </div>
+    <div class="kicker">Artigo · Assimetria de Proteção · 2026</div>
+    <h1>A Conta Dupla do Varejo</h1>
+    <p class="sub">Por que empresas submetidas ao mesmo juro têm desempenhos opostos — e o que decide de que lado da rede cada uma está.</p>
+  </div>
+
+  <!-- ABERTURA -->
+  <div class="pull">
+    <p>"A explicação convencional para a queda do varejo não está errada. Ela é completa demais para ser interessante — descreve um ciclo, e ciclos se invertem."</p>
+  </div>
+
+  <!-- TESE -->
+  <div class="thesis">
+    <div class="tag"><span>§</span> O que este artigo sustenta</div>
+    <p>Juros altos, endividamento das famílias e concorrência digital explicam <b>o nível</b> da queda do varejo. Não explicam <b>a dispersão</b>: por que empresas expostas exatamente à mesma taxa se movem em sentidos opostos.</p>
+    <p>A tese é que parte relevante dessa dispersão tem origem institucional. O Estado brasileiro dispõe de instrumentos que atenuam o repasse do juro — e o acesso a eles é distribuído de forma desigual entre setores, por normas criadas em décadas distintas e sem coordenação entre si.</p>
+    <p><b>O varejo listado de consumo cíclico é o caso extremo de ausência.</b> E, como contribuinte, participa do custeio da estrutura que amortece o mesmo choque para outros.</p>
+  </div>
+
+  <div class="body">
+
+    <!-- 1 -->
+    <section>
+      <div class="snum"><i>1</i><span class="slabel">O ponto de partida</span></div>
+      <h2>O que se vê</h2>
+      <p>Em 2025, as ações de Magazine Luiza recuaram 44,0%, as de Casas Bahia 43,2% e as de Americanas 89,7%. No primeiro semestre de 2026, considerado o retorno total ajustado por proventos entre 31 de dezembro de 2025 e 30 de junho de 2026, o Magazine Luiza caiu 47,16%.</p>
+      <p>No mesmo intervalo, papéis de energia, óleo e gás, saneamento e setor financeiro estiveram entre os destaques positivos. E o sistema bancário fechou 2025 com lucro líquido recorde de R$ 255 bilhões, com a taxa básica em 15% ao ano.</p>
+      <p>Esses fatos são conhecidos. O que se faz com eles é o objeto do artigo.</p>
+    </section>
+
+    <!-- 2 -->
+    <section>
+      <div class="snum"><i>2</i><span class="slabel">Delimitação</span></div>
+      <h2>De que varejo se está falando</h2>
+      <p>"Varejo" é amplo demais para uso analítico, e o artigo restringe o termo antes de argumentar.</p>
+      <div class="box">
+        <h4>Consumo cíclico — o objeto</h4>
+        <p>Bens duráveis, eletrônicos, móveis, vestuário. Magazine Luiza, Casas Bahia, Americanas, Lojas Renner, C&amp;A, Vivara. A demanda depende de crédito ao consumidor e de renda disponível: o repasse do juro é direto.</p>
+      </div>
+      <div class="box">
+        <h4>Consumo não cíclico — outra lógica</h4>
+        <p>Alimentar e farmacêutico. Assaí, Grupo Pão de Açúcar, RD Saúde. Demanda menos elástica, e o segmento farmacêutico teve desempenho operacional favorável mesmo sob juros altos.</p>
+      </div>
+      <p>A segunda categoria não é objeto da tese — e o artigo declara por quê. A resiliência das farmacêuticas se explica por <b>inelasticidade de demanda</b>, não por proteção estatal. O argumento não pretende absorver toda variação observada.</p>
+      <div class="note">
+        <p>Ainda assim, demanda essencial não bastou: em 30 de maio de 2025, o Carrefour Brasil, maior rede de varejo alimentar do país, concluiu seu fechamento de capital e deixou a B3, com valor de mercado 44% inferior ao da sua abertura.</p>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section>
+      <div class="snum"><i>3</i><span class="slabel">O deslocamento</span></div>
+      <h2>A pergunta errada</h2>
+      <p>Uma explicação que atribui a queda ao juro deveria prever que empresas igualmente expostas ao juro caíssem de modo semelhante. Não é o que se observa.</p>
+      <p>Construtoras brasileiras — setor cuja sensibilidade a juros é, se algo, superior à do varejo — apresentaram entre si desempenhos que divergem com amplitude maior do que a distância entre setores. Não por gestão apenas. Não por porte apenas.</p>
+      <p>A linha de corte mais nítida separa quem vende dentro do Minha Casa, Minha Vida, financiado pelo FGTS, de quem vende para média e alta renda, financiado por poupança e crédito bancário livre.</p>
+      <p><b>Mesma taxa. Mesmo país. Mesmo ano. Resultados opostos.</b></p>
+      <p>Isso desloca a pergunta. Ela deixa de ser "por que o varejo caiu" e passa a ser: <b>o que existe entre a taxa de juros e a empresa?</b></p>
+    </section>
+
+    <!-- 4 -->
+    <section>
+      <div class="snum"><i>4</i><span class="slabel">Mecanismo</span></div>
+      <h2>Onde o juro é interrompido</h2>
+      <p>A transmissão da política monetária a uma empresa não é um fio único. É uma cadeia com pontos distintos, e o Estado dispõe de instrumentos que a interrompem em cada um deles.</p>
+      <div class="box">
+        <h4>Camada 1 — rompe a origem</h4>
+        <p><b>Funding direcionado.</b> Recurso que não é captado no mercado e não tem custo indexado à taxa básica: FGTS, FAT, fundos constitucionais. Quando a Selic sobe, esse custo não sobe junto.</p>
+      </div>
+      <div class="box">
+        <h4>Camada 2 — rompe o preço</h4>
+        <p><b>Equalização de juros.</b> O Tesouro paga a diferença entre a taxa que o banco precisaria cobrar e a que o tomador paga. A interrupção é literal: o juro sobe para o sistema e não sobe para o tomador.</p>
+      </div>
+      <div class="box">
+        <h4>Camada 3 — rompe o risco</h4>
+        <p><b>Fundos garantidores.</b> Absorvem parte da inadimplência, reduzem a provisão exigida do banco e, por consequência, o preço do crédito. FGO, FGI, FGHab, FG-FIES.</p>
+      </div>
+      <div class="box">
+        <h4>Camada 4 — rompe o intermediário</h4>
+        <p><b>Aportes e instrumentos híbridos.</b> Reforçam o capital de bancos públicos, ampliando sua capacidade de emprestar sem que o custo apareça como despesa.</p>
+      </div>
+      <div class="note">
+        <p>Nenhum desses instrumentos é irregular. Todos têm base legal e finalidade declarada. O objeto do artigo não é a legitimidade de cada camada — é o que resulta da soma delas: um mapa de exposição ao juro que ninguém desenhou como mapa.</p>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section>
+      <div class="snum"><i>5</i><span class="slabel">Distribuição</span></div>
+      <h2>Quem está de cada lado</h2>
+      <p>As camadas não são abstratas. Cada uma corresponde a setores identificáveis e, dentro deles, a companhias listadas.</p>
+      <p><b>FGTS</b> — habitação popular (Cury, Direcional, Plano &amp; Plano, Tenda, a operação de baixa renda da MRV) e saneamento (Sabesp, Copasa, Sanepar).</p>
+      <p><b>FAT, via BNDES</b> — infraestrutura, energia, indústria de base e bens de capital.</p>
+      <p><b>Equalização</b> — crédito rural. Aqui cabe uma precisão que evita exagero: os limites por beneficiário fazem com que os favorecidos diretos sejam o produtor individual e o banco operador. A produtora agrícola listada está em outra faixa de acesso, e afirmar o contrário seria imprecisão.</p>
+      <p><b>Do lado de fora</b>, sem instrumento setorial permanente de compartilhamento de risco: varejo cíclico, varejo alimentar, varejo farmacêutico, papel e celulose, mineração, tecnologia e vestuário.</p>
+      <div class="note">
+        <p>Estar do lado de dentro não garante desempenho. Em 2026, até junho, as ações da Copasa acumulavam alta próxima de 33% no ano, as da Sabesp cerca de 2%, e as da Sanepar registravam queda. A proteção altera o custo e a estabilidade do funding — não substitui execução nem revisão tarifária.</p>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section>
+      <div class="snum"><i>6</i><span class="slabel">Precisão do mecanismo</span></div>
+      <h2>Dois canais que não se confundem<span class="new">CENTRAL</span></h2>
+      <p>Este é o ponto em que o artigo se corrige e em que se torna mais exigente consigo mesmo.</p>
+      <div class="box dark">
+        <h4>Canal do custo</h4>
+        <p>Opera sobre o financiamento <b>da própria empresa</b>. Altera a origem e o preço do seu funding e, por essa via, reduz o repasse da taxa básica ao seu custo de capital.</p>
+      </div>
+      <div class="box dark">
+        <h4>Canal da demanda</h4>
+        <p>Opera sobre o <b>comprador final</b>. Subsidia a taxa que ele paga, amplia sua elegibilidade ou reduz seu endividamento — e sustenta a receita da empresa sem tocar em seu balanço.</p>
+      </div>
+      <p>Os dois produzem o mesmo indicador observável: desempenho relativo superior sob juro alto. E exigem evidências inteiramente distintas.</p>
+      <p><b>O artigo declara qual dos dois sustenta.</b> A evidência reunida sustenta o canal da demanda, observável em resultados públicos e em normas de programa. O canal do custo permanece hipótese no nível da empresa — demonstrá-lo exigiria a composição do endividamento por indexador de cada companhia, informação que o artigo não levantou.</p>
+      <div class="note">
+        <p>Afirmar o canal do custo com a evidência disponível seria especulação. Declarar a diferença, em vez de dissolvê-la numa formulação vaga, é o que separa uma delimitação honesta de uma imunização.</p>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section>
+      <div class="snum"><i>7</i><span class="slabel">Evidência nuclear</span></div>
+      <h2>O contrafactual está dentro do mesmo setor</h2>
+      <p>Comparar varejo com construção é confrontar coisas diferentes, e a objeção é válida. Por isso o teste mais forte não está entre setores, mas dentro de um.</p>
+      <p>A construção civil listada opera <b>dois regimes de financiamento ao mesmo tempo</b>. Média e alta renda dependem do SBPE e do crédito bancário livre, indexados à taxa básica. Habitação popular opera dentro do Minha Casa, Minha Vida, com recursos do FGTS e subsídio direto ao comprador.</p>
+      <p>Os resultados divergiram na direção prevista. As empresas de média e alta renda passaram a enfrentar margens comprimidas pelo custo do financiamento ao comprador e pela escassez de recursos da poupança. As de habitação popular aceleraram suas métricas operacionais — a Cury registrou lucro recorde de R$ 270 milhões no quarto trimestre de 2025, e a Plano &amp; Plano R$ 143,8 milhões no mesmo trimestre, alta de 39%.</p>
+      <p>Mesmo setor. Mesma taxa. Mesma legislação trabalhista, tributária e urbanística. <b>A variável que separa os dois grupos é a fonte do funding — definida por norma, não por mercado.</b></p>
+    </section>
+
+    <!-- 8 -->
+    <section>
+      <div class="snum"><i>8</i><span class="slabel">A exclusão</span></div>
+      <h2>Para o varejo, a porta é fechada por lei</h2>
+      <p>Existe instrumento de compartilhamento de risco acessível ao comércio: o Pronampe, criado pela Lei nº 13.999, de 2020, tornado permanente pela Lei nº 14.161, de 2021, e garantido pelo Fundo Garantidor de Operações.</p>
+      <p>Ele é horizontal, não setorial — atende qualquer atividade, desde que a empresa caiba nos critérios de porte da Lei Complementar nº 123, de 2006.</p>
+      <div class="stats">
+        <div class="stat">
+          <div class="big">R$ 4,8 milhões</div>
+          <div class="cap">Teto de faturamento anual da empresa de pequeno porte. Ultrapassado no ano-calendário anterior, <b>a elegibilidade se perde automaticamente</b>.</div>
+        </div>
+      </div>
+      <p>Nenhuma varejista listada na B3 se aproxima desse teto. <b>A exclusão não é falha de execução nem efeito colateral: é condição normativa.</b> O varejo tem instrumento horizontal ao qual a companhia aberta não pode recorrer, e não tem instrumento setorial algum.</p>
+      <div class="note">
+        <p>Uma qualificação, sob pena de exagero: isso não significa que nenhuma política tenha tocado a demanda do varejo. O Novo Desenrola Brasil, lançado em 4 de maio de 2026, reduz o endividamento do consumidor e recorre justamente ao FGO — o mesmo fundo que, do lado da oferta, a varejista listada não pode acessar. E o fim da isenção de imposto de importação para compras de até cinquenta dólares, com alíquota de 20% aprovada em 2024, alterou a assimetria com as plataformas estrangeiras. Nenhuma das duas é arquitetura de proteção — não compartilha o risco de crédito da empresa, não altera seu funding e não é permanente.</p>
+      </div>
+    </section>
+
+    <!-- 9 — GRÁFICO -->
+    <section>
+      <div class="snum"><i>9</i><span class="slabel">Consequência</span></div>
+      <h2>A bolsa que encolhe</h2>
+      <p>O universo listado não parou de diminuir, e o movimento não é do varejo apenas — mas é dele que saem alguns dos casos mais visíveis.</p>
+      <div class="chart">
+        <div class="chartwrap">
+          <div class="charttitle">Companhias listadas na B3</div>
+          <svg viewBox="0 0 480 250" width="100%" role="img" aria-label="Gráfico de barras do número de companhias listadas na B3">
+            <line x1="52" y1="200" x2="470" y2="200" stroke="#C9D2DA" stroke-width="1"/>
+            <line x1="52" y1="150" x2="470" y2="150" stroke="#E3E7EB" stroke-width="1"/>
+            <line x1="52" y1="100" x2="470" y2="100" stroke="#E3E7EB" stroke-width="1"/>
+            <line x1="52" y1="50"  x2="470" y2="50"  stroke="#E3E7EB" stroke-width="1"/>
+            <text x="44" y="204" text-anchor="end" font-family="Source Sans 3" font-size="12" fill="#5A6672">400</text>
+            <text x="44" y="154" text-anchor="end" font-family="Source Sans 3" font-size="12" fill="#5A6672">420</text>
+            <text x="44" y="104" text-anchor="end" font-family="Source Sans 3" font-size="12" fill="#5A6672">440</text>
+            <text x="44" y="54"  text-anchor="end" font-family="Source Sans 3" font-size="12" fill="#5A6672">460</text>
+
+            <!-- 463 -> altura (463-400)*2.5 = 157.5 -->
+            <rect x="72"  y="42.5"  width="72" height="157.5" fill="#1A3A5C" rx="2"/>
+            <text x="108" y="33" text-anchor="middle" font-family="Playfair Display" font-size="19" font-weight="700" fill="#1A3A5C">463</text>
+            <text x="108" y="220" text-anchor="middle" font-family="Source Sans 3" font-size="12.5" fill="#5A6672">dez/2021</text>
+            <text x="108" y="236" text-anchor="middle" font-family="Source Sans 3" font-size="11" fill="#9AA6B2">pico</text>
+
+            <!-- 446 -> 115 -->
+            <rect x="176" y="85"   width="72" height="115" fill="#2E5B85" rx="2"/>
+            <text x="212" y="75" text-anchor="middle" font-family="Playfair Display" font-size="19" font-weight="700" fill="#1A3A5C">446</text>
+            <text x="212" y="220" text-anchor="middle" font-family="Source Sans 3" font-size="12.5" fill="#5A6672">dez/2023</text>
+
+            <!-- 427 -> 67.5 -->
+            <rect x="280" y="132.5" width="72" height="67.5" fill="#B5651D" rx="2"/>
+            <text x="316" y="123" text-anchor="middle" font-family="Playfair Display" font-size="19" font-weight="700" fill="#B5651D">427</text>
+            <text x="316" y="220" text-anchor="middle" font-family="Source Sans 3" font-size="12.5" fill="#5A6672">dez/2024</text>
+            <text x="316" y="236" text-anchor="middle" font-family="Source Sans 3" font-size="11" fill="#B5651D">−19 em um ano</text>
+
+            <!-- 422 -> 55 -->
+            <rect x="384" y="145"   width="72" height="55" fill="#D08843" rx="2"/>
+            <text x="420" y="135" text-anchor="middle" font-family="Playfair Display" font-size="19" font-weight="700" fill="#B5651D">422</text>
+            <text x="420" y="220" text-anchor="middle" font-family="Source Sans 3" font-size="12.5" fill="#5A6672">fev/2025</text>
+          </svg>
+          <p class="src">Série única, apurada a partir de dados da B3. Outras apurações circulam com bases distintas — uma delas registra 416 companhias em outubro de 2023 e 368 em outubro de 2025, e o Banco Mundial contabiliza 331 em 2024. Por não serem a mesma base, nenhuma subtração é feita entre pontos de séries diferentes.</p>
+        </div>
+      </div>
+      <p>Em 2025, nenhuma empresa abriu capital na B3. Entre as que saíram estão Santos Brasil, Wilson Sons, ClearSale, Eletromídia, BRF — e o Carrefour Brasil.</p>
+      <p>Juros altos deprimem múltiplos e tornam companhias médias alvos baratos de aquisição ou recompra. Isso explica a saída. <b>Não explica por que a saída se concentra de um lado da rede.</b></p>
+    </section>
+
+    <!-- 10 -->
+    <section>
+      <div class="snum"><i>10</i><span class="slabel">A dinâmica fiscal</span></div>
+      <h2>A conta cresce com o juro que a torna necessária</h2>
+      <p>O crédito rural oferece o teste mais limpo, porque os números são publicados e desagregados. Para o ciclo 2026/2027, o Ministério da Fazenda distribuiu R$ 141,9 bilhões em limites equalizáveis — 10% menos que o ciclo anterior. O custo para a União, porém, subiu.</p>
+      <div class="stats">
+        <div class="stat">
+          <div class="big">R$ 13,5 bi → R$ 18,2 bi</div>
+          <div class="cap">Custo da equalização para a União entre os ciclos 2025/2026 e 2026/2027. Alta de aproximadamente <b>34%</b>, com volume equalizado <b>menor</b>.</div>
+        </div>
+        <div class="stat">
+          <div class="big">R$ 1,7 bi</div>
+          <div class="cap">Impacto orçamentário no segundo semestre de 2026. Os valores acima são <b>plurianuais</b> — desembolsados ao longo de anos, à medida que as operações amortizam.</div>
+        </div>
+      </div>
+      <p>Menos crédito equalizado, mais despesa. A aparente contradição é o mecanismo funcionando como projetado: reduziu-se a taxa cobrada do produtor, e o Tesouro absorveu a diferença. <b>Quanto maior o desnível entre a taxa de mercado e a taxa subsidiada, maior a conta — e o desnível é função da Selic.</b></p>
+      <div class="note">
+        <p>Três grandezas são frequentemente confundidas no debate público e aqui permanecem separadas: o volume total anunciado do programa, o montante sujeito a equalização e o custo fiscal efetivo. São ordens de grandeza distintas, e tratá-las como equivalentes produz números inflados que desqualificam o argumento em vez de sustentá-lo.</p>
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section>
+      <div class="snum"><i>11</i><span class="slabel">Onde está a segunda conta</span></div>
+      <h2>O visível e o invisível</h2>
+      <p>As duas contas do título não têm a mesma visibilidade, e a diferença não é acessória.</p>
+      <p><b>A primeira é apurada diariamente</b>, em público, com precisão de centavo. Uma varejista listada tem seu valor recalculado a cada pregão. A perda é concentrada, identificável e atribuível — e por isso cobrada de quem a sofre.</p>
+      <p><b>A segunda não tem pregão.</b> O subsídio implícito recebe esse nome porque não figura explicitamente no Orçamento. A equalização aparece diluída ao longo de exercícios futuros. O custo de oportunidade do funding direcionado não é apurado em lugar nenhum. A garantia da União só vira despesa se for executada.</p>
+      <p>Não se trata de opacidade deliberada — os dados existem e são publicados. Trata-se de <b>assimetria de forma</b>: uma conta é um preço, a outra é um agregado fiscal. Preços são lidos em tempo real por qualquer investidor; agregados exigem que alguém vá buscá-los, somá-los e traduzi-los.</p>
+      <p>É nesse sentido estrito que a conta é dupla. O varejo paga o juro pelo lado da demanda, quando o consumidor deixa de comprar a crédito. E participa, como contribuinte, do financiamento da estrutura que atenua esse mesmo juro para outros setores. <b>Não há transferência direta de um para outro, e afirmá-la seria erro.</b> Há um agente que absorve o choque integralmente e ajuda a custear a absorção alheia.</p>
+    </section>
+
+    <!-- 12 -->
+    <section>
+      <div class="snum"><i>12</i><span class="slabel">Contraditório</span></div>
+      <h2>As objeções mais fortes</h2>
+      <p>Um argumento sobre desenho institucional é vulnerável à leitura conspiratória. A defesa contra ela é apresentar as objeções em sua versão mais forte.</p>
+      <div class="box">
+        <h4>O varejo caiu por razões próprias</h4>
+        <p>Americanas colapsou por fraude contábil. Magalu e Casas Bahia tiveram queima de caixa e problemas operacionais. <b>Procede em parte, e o artigo não contesta</b> — a evidência da tese não é a queda do varejo, e sim a divergência dentro da construção civil.</p>
+      </div>
+      <div class="box">
+        <h4>A proteção não protege</h4>
+        <p>O Banco do Brasil teve queda de 45,4% no lucro em 2025, pressionado pela inadimplência no agronegócio — o setor mais amparado do país. <b>A objeção obriga a uma precisão que o artigo aceita:</b> proteção redistribui risco, não o elimina. Sofrer menos não é não sofrer.</p>
+      </div>
+      <div class="box">
+        <h4>O canal da demanda explica tudo</h4>
+        <p>Se a divergência decorre da ampliação de elegibilidade do MCMV, o que se vê é expansão de mercado, não atenuação do juro. <b>Procede — e é a razão pela qual o artigo desdobrou a proposição em dois canais.</b> O que a objeção não alcança é a distribuição: o instrumento existe para um setor e não para outro.</p>
+      </div>
+      <div class="box">
+        <h4>Reversão à média</h4>
+        <p>As construtoras de baixa renda vinham de base deprimida; a MRV saía de prejuízo. <b>Procede quanto à magnitude, não quanto à direção</b> — por isso o artigo não quantifica a divergência em ponto percentual.</p>
+      </div>
+      <div class="box">
+        <h4>A causalidade pode ser inversa</h4>
+        <p>Setores não recebem proteção porque foram escolhidos, mas porque são organizados e capazes de sustentar representação permanente. O varejo é fragmentado. <b>Esta objeção não é respondida no artigo, e a honestidade exige registrá-lo</b> — testá-la exigiria cruzar a cronologia de criação de cada instrumento com indicadores de organização setorial prévia.</p>
+      </div>
+    </section>
+
+    <!-- 13 -->
+    <section>
+      <div class="snum"><i>13</i><span class="slabel">Contribuição</span></div>
+      <h2>Restrição dura, restrição branda</h2>
+      <p>A distinção central tem nome na literatura, ainda que formulada para outro contexto. János Kornai desenvolveu, a partir do fim da década de 1970, o conceito de <b>restrição orçamentária branda</b>: a situação em que a sobrevivência de uma organização não depende integralmente de seu próprio resultado, porque uma instância externa absorve parte do déficit.</p>
+      <p>O uso aqui é extensão declarada, e cabe dizê-lo. Kornai tratava de firmas estatais em economias de planejamento central. Nenhuma empresa privada brasileira opera sob restrição branda em sentido pleno; nenhuma tem prejuízo automaticamente coberto. O que se propõe é que a distinção <b>admite gradação</b>.</p>
+      <p>Nessa leitura, o eixo relevante não é público contra privado. É o grau em que a norma amortece o resultado. Uma construtora privada que vende dentro do MCMV opera sob restrição mais branda que uma construtora privada que vende para a alta renda — ambas privadas, ambas listadas, disputando capital no mesmo mercado.</p>
+      <div class="note">
+        <p>A implicação incômoda: se a sensibilidade ao juro é parcialmente institucional, a política monetária não opera sobre economia homogênea. Opera sobre terreno previamente segmentado por decisões fiscais e legislativas — e o efeito contracionista se concentra na parcela que não foi blindada. O instrumento é único; a superfície sobre a qual incide, não.</p>
+      </div>
+    </section>
+
+    <!-- 14 -->
+    <section>
+      <div class="snum"><i>14</i><span class="slabel">Falseabilidade</span></div>
+      <h2>Como refutar este artigo</h2>
+      <p>Toda proposição empírica do trabalho tem condição de refutação enunciada. O teste central é executável com dados públicos.</p>
+      <div class="box dark">
+        <h4>O desenho</h4>
+        <p>Painel de companhias listadas na B3, estimando a sensibilidade do retorno a choques não antecipados na taxa básica por estudo de evento em torno das decisões do Copom. Variável de exposição <b>dupla</b>: proporção do endividamento indexada a fontes direcionadas (notas explicativas) e proporção da receita elegível a programa público (relatórios trimestrais).</p>
+      </div>
+      <div class="box dark">
+        <h4>A condição de falseamento</h4>
+        <p>A proposição cai se <b>nenhum</b> dos dois coeficientes for significativo, ou se ambos tiverem sinal contrário ao previsto. Se apenas o canal do custo falhar, a proposição não cai — reduz-se ao canal da demanda, e o ganho está em saber qual dos dois opera.</p>
+      </div>
+      <p>Nenhum insumo exige acesso privilegiado. O que não existe é a base consolidada que reúna esses dados para o conjunto das listadas — construí-la é trabalho de coleta.</p>
+      <div class="note">
+        <p>Duas leituras não constituem refutação: mostrar que um setor protegido teve prejuízo, e mostrar que os instrumentos analisados são legítimos ou socialmente desejáveis. O artigo não trata do mérito das políticas — um instrumento pode ser bem justificado e, ainda assim, gerar assimetria.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FECHAMENTO -->
+  <div class="closing">
+    <div class="quote">
+      <p>"Quando a taxa ceder, o varejo provavelmente se recuperará, e a explicação convencional parecerá confirmada. A pergunta que resta não depende do ciclo: o que sustenta um setor que não tem rede?"</p>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="author">Giuliano Tomazelli</div>
+    <div class="cred">Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado. Chapecó, Santa Catarina, Brasil.</div>
+
+    <div class="meta">
+      A Conta Dupla do Varejo<br>
+      Artigo · 2026<br>
+      Assimetria de proteção institucional na B3
+    </div>
+
+    <div class="disc">A base normativa e os agregados fiscais citados provêm de fonte primária — legislação federal, Portaria MF nº 2.170, de 23 de julho de 2026, Balanço Geral da União, Secretaria do Tesouro Nacional, Banco Central e BNDES. Os dados de desempenho de mercado e de resultado trimestral das companhias foram obtidos por intermédio de veículos que identificam sua origem, sem conferência direta nas demonstrações financeiras; essa evidência é corroborativa e nenhuma proposição repousa exclusivamente sobre ela. As referências a empresas têm função ilustrativa da dinâmica descrita, com base em informação pública, e não constituem imputação de conduta nem recomendação de investimento. O artigo declara seu domínio de validade — companhias listadas na B3, entre 2021 e 2026 — e as lacunas que permanecem abertas, incluindo a ausência do teste econométrico proposto. Proposição para debate, não veredito técnico.</div>
+  </div>
+
+</div>
+</body>
+</html>
