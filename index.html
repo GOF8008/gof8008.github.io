@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestão de Opções Futuras — pesquisa em economia | Giuliano Tomazelli</title>
+<meta name="description" content="Pesquisa de Giuliano Tomazelli em três frentes: a teoria econômica autoral Gestão de Opções Futuras (GOF), a leitura semanal do mercado financeiro e industrial, e artigos sobre política monetária, juros, competitividade, infraestrutura e desenvolvimento econômico.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="Gestão de Opções Futuras — pesquisa em economia">
+<meta property="og:description" content="Teoria econômica original, leitura analítica de mercados e artigos de economia institucional. Por Giuliano Tomazelli.">
+<meta property="og:url" content="https://gof8008.github.io/">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gestão de Opções Futuras — pesquisa em economia">
+<meta name="twitter:description" content="Teoria econômica original, leitura analítica de mercados e artigos de economia institucional. Por Giuliano Tomazelli.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Giuliano Tomazelli",
+  "url": "https://gof8008.github.io/",
+  "jobTitle": "Pesquisador independente e analista de mercado",
+  "alumniOf": "Unochapecó",
+  "address": {"@type": "PostalAddress", "addressLocality": "Chapecó", "addressRegion": "SC", "addressCountry": "BR"},
+  "knowsAbout": ["Política monetária", "Juros", "Competitividade", "Infraestrutura", "Desenvolvimento econômico", "Economia institucional", "Teoria da decisão", "Mercado de capitais"]
+}
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+  :root{
+    --navy:#0e2135;
+    --navy-mid:#1A3A5C;
+    --gold:#C8912F;
+    --orange:#D97706;
+    --ink:#2a3541;
+    --muted:#5b6b7a;
+    --rule:#e4e9ee;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:#EDF0F3;
+    font-family:'Source Sans 3',system-ui,sans-serif;
+    color:var(--ink);
+    line-height:1.62;
+    padding:16px 12px calc(220px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:620px;margin:0 auto;background:#fff;border-radius:14px;overflow:hidden;
+        box-shadow:0 10px 40px rgba(18,41,63,.16)}
+
+  header{background:linear-gradient(160deg,#173250 0%,#0e2135 100%);color:#fff;padding:36px 28px 34px;text-align:center}
+  .kicker{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px}
+  .mark{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+  .mark .ring{width:28px;height:28px;border:1.6px solid var(--gold);border-radius:50%;
+        display:flex;align-items:center;justify-content:center;flex:none}
+  .mark .ring span{font-family:'Playfair Display',serif;font-size:15px;color:var(--gold);font-weight:700;line-height:1}
+  .mark .nm{font-size:13.5px;font-weight:700;letter-spacing:.02em}
+  .mark .nm b{color:var(--gold)}
+  header h1{font-family:'Playfair Display',serif;font-size:31px;line-height:1.12;font-weight:700}
+  header p{font-size:15px;line-height:1.55;color:#c3d2df}
+
+  .who{background:#FBF0E2;border-left:5px solid var(--orange);padding:20px 24px}
+  .who .n{font-size:15.5px;font-weight:700;color:#3d2f18;margin-bottom:4px}
+  .who p{font-size:13.6px;line-height:1.55;color:#5c4a2c}
+  .who .loc{margin-top:7px;font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#8a6b32}
+  .intro{padding:20px 28px 0}
+  .intro p{font-size:14.6px;line-height:1.6;color:var(--muted)}
+
+  main{padding:8px 28px 26px}
+  section{margin-top:26px}
+  .lb{color:var(--orange);font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+  section h2{font-family:'Playfair Display',serif;font-size:23px;line-height:1.15;color:var(--navy-mid);font-weight:700;margin-bottom:6px}
+  section .d{font-size:14.2px;color:var(--muted);margin-bottom:14px}
+
+  a.item{display:block;text-decoration:none;color:inherit;border:1px solid var(--rule);
+         border-radius:9px;padding:14px 16px;margin-bottom:10px;transition:border-color .15s}
+  a.item:hover{border-color:var(--gold)}
+  a.item .t{font-family:'Playfair Display',serif;font-size:17.5px;line-height:1.24;color:var(--navy-mid);font-weight:700;margin-bottom:4px}
+  a.item .s{font-size:13.6px;line-height:1.5;color:var(--muted)}
+  a.item .m{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:7px}
+
+  a.cta{display:block;text-decoration:none;color:#fff;margin-top:30px;
+        background:linear-gradient(160deg,#173250 0%,#0e2135 100%);
+        border-radius:11px;padding:20px 22px;border-left:5px solid var(--gold)}
+  a.cta .ct{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;margin-bottom:5px}
+  a.cta .cs{font-size:13.8px;line-height:1.5;color:#c3d2df}
+  a.cta .cs b{color:var(--gold)}
+  a.cta .cg{margin-top:12px;font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--gold)}
+
+  footer{background:var(--navy);color:#93a8bb;padding:26px 28px 30px;margin-top:26px}
+  footer .q{border-left:4px solid var(--orange);padding-left:16px;margin-bottom:20px}
+  footer .q p{font-family:'Playfair Display',serif;font-style:italic;font-size:16.5px;line-height:1.45;color:#f0f5fa}
+  footer .an{font-size:14.5px;font-weight:700;color:#fff;margin-bottom:5px}
+  footer .ab{font-size:12.6px;line-height:1.55;margin-bottom:16px}
+  footer .nt{font-size:11.5px;line-height:1.55;color:#7f93a6}
+  footer a{color:var(--gold);text-decoration:none}
+
+  @media (max-width:430px){
+    header,footer{padding-left:20px;padding-right:20px}
+    main,.intro{padding-left:20px;padding-right:20px}
+    header h1{font-size:27px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">Gestão de Opções Futuras</div>
+    <h1>Lucidez no presente,<br>soberania no futuro</h1>
+  </header>
+
+  <div class="who">
+    <div class="n">Giuliano Tomazelli</div>
+    <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</p>
+    <p class="loc">Chapecó · Santa Catarina · Brasil</p>
+  </div>
+
+  <div class="intro">
+    <p>A pesquisa se organiza em três frentes. A primeira desenvolve teoria própria; a segunda acompanha o mercado em cadência semanal; a terceira trata da arquitetura institucional que condiciona as duas anteriores.</p>
+  </div>
+
+  <main>
+
+    <section>
+      <div class="lb">Frente 1 · Teoria</div>
+      <h2>Gestão de Opções Futuras</h2>
+      <p class="d">Teoria econômica autoral sobre decisão sob incerteza genuína — aquela em que não apenas o resultado é desconhecido, mas a própria lista do que pode acontecer. Quando não há o que calcular, o que resta ao agente não é acertar a previsão: é preservar a capacidade de decidir de novo. Seu conceito central é o <b>Horizonte Decisório Efetivo (HDE)</b> — o tempo durante o qual um agente ainda decide por avaliação e escolha, antes que a pressão passe a decidir em seu lugar. A teoria sustenta que essa passagem não é suave: existe uma fronteira entre o regime de decisão e o regime de coerção, e atravessá-la muda a natureza do agente de uma vez. Quatro forças governam essa travessia — liquidez, passivo, reversibilidade e contratualidade —, e a hipótese mais arriscada da GOF é que elas não caem isoladas, mas em cascata. O mesmo núcleo opera do investidor individual ao Estado; o que muda entre as escalas é a calibração, não a teoria.</p>
+    </section>
+
+    <section>
+      <div class="lb">Frente 2 · Análise</div>
+      <h2>Leitura semanal do mercado financeiro e industrial</h2>
+      <p class="d">Publicação em cadência semanal. Cada edição identifica o indicador que melhor explicou o período, organiza os acontecimentos econômicos e distingue o que altera a rota do que apenas agita o curto prazo.</p>
+    </section>
+
+    <section>
+      <div class="lb">Frente 3 · Pesquisa</div>
+      <h2>Artigos acadêmicos, científicos e analíticos</h2>
+      <p class="d">Política monetária, juros, competitividade, infraestrutura e desenvolvimento econômico. Artigos com domínio de validade declarado, lacunas explícitas e condições de refutação — proposições para debate, não vereditos técnicos.</p>
+    </section>
+
+    <a class="cta" href="https://x.com/Gof_adm" target="_blank" rel="noopener">
+      <div class="ct">Acompanhe as publicações</div>
+      <div class="cs">Todos os trabalhos das três frentes são divulgados em <b>@Gof_adm</b> no X.</div>
+      <div class="cg">Abrir o perfil →</div>
+    </a>
+
+  </main>
+
+  <footer>
+    <div class="q"><p>“O que decide não é a natureza do agente, mas se ele dispõe, naquele domínio, do poder de reescrever a estrutura.”</p></div>
+    <div class="an">Giuliano Tomazelli</div>
+    <div class="ab">Pesquisador independente e analista de mercado. Acompanhe em <a href="https://x.com/Gof_adm" target="_blank" rel="noopener">@Gof_adm</a>.</div>
+    <div class="nt">As publicações têm caráter educacional e analítico. As referências a empresas e instituições têm função ilustrativa da dinâmica descrita, com base em informação pública, e não constituem imputação de conduta nem recomendação de investimento.</div>
+  </footer>
+
+</div>
+</body>
+</html>

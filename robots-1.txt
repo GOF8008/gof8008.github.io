@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gof8008.github.io/sitemap.xml
