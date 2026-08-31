@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decidir sem base — o marco legal da inteligência artificial no Brasil | Giuliano Tomazelli</title>
+<meta name="description" content="Primeira parte da série sobre a regulação de inteligência artificial no Brasil: o que já se decidiu, o que ficou em aberto e o que não se estudou nos dezessete meses de espera do marco legal na Câmara. A ausência de estimativa de custo de conformidade e a assimetria entre fomento à adoção e apoio ao processo regulatório.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/artigos/decidir-sem-base-ia.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="Decidir sem base — regulação de IA no Brasil">
+<meta property="og:description" content="O marco legal da IA está há dezessete meses na Câmara. A demora não produziu o que faltava: a medida do custo de conformidade.">
+<meta property="og:url" content="https://gof8008.github.io/artigos/decidir-sem-base-ia.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Decidir sem base — regulação de IA no Brasil">
+<meta name="twitter:description" content="O marco legal da IA está há dezessete meses na Câmara. A demora não produziu o que faltava: a medida do custo de conformidade.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1F3864;
+    --navy-deep:#16294a;
+    --ocre:#C55A11;
+    --ocre-soft:#E08A45;
+    --ink:#222222;
+    --grey:#555555;
+    --paper:#ffffff;
+    --shell:#e9ecef;
+    --box-grey:#f2f4f7;
+    --box-peach:#fdf3eb;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    padding-bottom:calc(220px + env(safe-area-inset-bottom));
+    background:var(--shell);
+    font-family:'Source Sans 3',system-ui,sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;background:var(--paper);}
+  .pad{padding:26px 28px;}
+
+  /* ---------- HERO ---------- */
+  .hero{background:var(--navy);color:#fff;border-top:7px solid var(--ocre);padding:34px 28px 30px;}
+  .eyebrow{
+    font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ocre-soft);margin:0 0 18px;line-height:1.5;
+  }
+  .hero h1{
+    font-family:'Playfair Display',Georgia,serif;font-weight:700;
+    font-size:2.7rem;line-height:1.06;margin:0 0 14px;letter-spacing:-.01em;
+  }
+  .hero .deck{
+    font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:500;
+    font-size:1.32rem;line-height:1.36;margin:0 0 22px;color:#e8edf5;
+  }
+  .serie{font-size:.95rem;color:#c3cddd;margin:0 0 20px;}
+  .serie b{color:var(--ocre-soft);font-weight:600;}
+  .rule{height:1px;background:rgba(255,255,255,.28);margin:0 0 20px;}
+  .ask{font-size:1.06rem;line-height:1.5;margin:0 0 22px;color:#eef2f8;}
+  .ask b{color:var(--ocre-soft);font-weight:700;}
+  .byline{font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ocre-soft);margin:0;}
+
+  /* ---------- BODY ---------- */
+  .body p{margin:0 0 16px;font-size:1.06rem;}
+  .body p.lede::first-letter{
+    font-family:'Playfair Display',Georgia,serif;font-weight:700;color:var(--ocre);
+    float:left;font-size:4.1rem;line-height:.82;padding:6px 10px 0 0;
+  }
+  .body strong{font-weight:700;color:var(--navy);}
+
+  /* ---------- NÚMEROS ---------- */
+  .figs{border-top:2px solid var(--navy);border-bottom:2px solid var(--navy);margin:26px 0 4px;}
+  .fig{display:flex;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid #dde2ea;}
+  .fig:last-child{border-bottom:none;}
+  .fig .n{
+    font-family:'Playfair Display',Georgia,serif;font-weight:700;color:var(--navy);
+    font-size:1.6rem;line-height:1;flex:0 0 128px;text-align:right;
+  }
+  .fig .t{font-size:.98rem;line-height:1.45;color:var(--ink);}
+
+  /* ---------- CAIXAS ---------- */
+  .box{border-radius:10px;padding:22px 24px;margin:24px 0;}
+  .box-grey{background:var(--box-grey);}
+  .box-peach{background:var(--box-peach);}
+  .box-note{background:var(--box-grey);border-left:4px solid var(--ocre);border-radius:0 10px 10px 0;}
+  .box-concl{background:#fff;border-top:3px solid var(--navy);border-bottom:1px solid #dde2ea;border-radius:0;padding:24px 0 22px;}
+  .box-concl h2{color:var(--navy);}
+  .box-concl p{margin:0 0 15px;font-size:1.08rem;line-height:1.58;}
+  .box-concl p:last-child{margin-bottom:0;}
+  .box-concl .kicker{
+    font-family:'Playfair Display',Georgia,serif;font-size:1.28rem;line-height:1.4;
+    color:var(--navy);font-weight:600;
+  }
+  .box h2{
+    font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ocre);margin:0 0 16px;
+  }
+  .box ul{margin:0;padding:0;list-style:none;}
+  .box li{position:relative;padding-left:22px;margin-bottom:13px;font-size:1.02rem;line-height:1.5;}
+  .box li:last-child{margin-bottom:0;}
+  .box li::before{content:"";position:absolute;left:0;top:.58em;width:7px;height:7px;border-radius:50%;background:var(--ocre);}
+  .box li b{color:var(--navy);font-weight:700;}
+  .box-note p{margin:0 0 12px;font-size:.99rem;line-height:1.55;}
+  .box-note p:last-child{margin-bottom:0;}
+
+  /* ---------- SOBRE ---------- */
+  .about{background:var(--navy);color:#fff;border-top:7px solid var(--ocre);padding:30px 28px 34px;}
+  .about h2{
+    font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ocre-soft);margin:0 0 16px;
+  }
+  .about p{font-size:1.02rem;line-height:1.55;margin:0 0 16px;color:#e8edf5;}
+  .about em{font-style:italic;}
+  .cta{color:var(--ocre-soft);font-weight:700;font-size:1.06rem;line-height:1.5;margin:22px 0 26px !important;}
+  .sep{height:1px;background:rgba(255,255,255,.22);margin:0 0 22px;}
+  .bio{font-size:.97rem;color:#dbe2ec;}
+  .bio b{color:#fff;}
+  .meta{font-size:.87rem;color:#a9b6c9;line-height:1.55;margin:14px 0 0;}
+  .meta b{color:#cfd8e4;}
+
+  @media (max-width:600px){
+    .pad{padding:22px 20px;}
+    .hero{padding:28px 20px 26px;}
+    .about{padding:26px 20px 30px;}
+    .hero h1{font-size:2.15rem;}
+    .hero .deck{font-size:1.14rem;}
+    .box{padding:19px 18px;}
+    .fig{flex-direction:column;gap:2px;}
+    .fig .n{flex:none;text-align:left;font-size:1.5rem;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <p class="eyebrow">Artigo · Regulação de Inteligência Artificial no Brasil · 1 de 2</p>
+    <h1>Decidir sem base</h1>
+    <p class="deck">O marco legal da inteligência artificial: o que já se decidiu, o que se deixou em aberto, e o que não se estudou nos dezessete meses de espera.</p>
+    <p class="serie">Série <b>Regulação de IA no Brasil</b> — <b>1ª parte</b> · situação verificada em 21 de agosto de 2026</p>
+    <div class="rule"></div>
+    <p class="ask"><b>A pergunta:</b> o Estado brasileiro está construindo a regra da inteligência artificial com a base necessária para saber o que está decidindo?</p>
+    <p class="byline">Por Giuliano Tomazelli</p>
+  </header>
+
+  <!-- CORPO -->
+  <section class="pad body">
+    <p class="lede">O projeto que criará o marco legal da inteligência artificial foi aprovado pelo Senado em dezembro de 2024 e está na Câmara desde março de 2025. O relator foi designado em maio de 2025 e, até agosto de 2026, não apresentou parecer. Quatro datas de votação foram anunciadas publicamente. Nenhuma se cumpriu.</p>
+
+    <p>O argumento deste artigo não é que houve demora. É que <strong>a demora não produziu o que faltava</strong>.</p>
+
+    <p>Houve comissão de juristas com relatório próprio, dezenas de audiências públicas e manifestações técnicas de todos os lados. O material é volumoso. Mas audiência pública é oitiva de interessados: produz evidência qualitativa, e não estimativa. O que não se produziu, em dezessete meses, foi a medida — quanto custará a conformidade, a quem, e com que efeito sobre a decisão de adotar.</p>
+
+    <p>Enquanto isso, o Estado seguiu por outra frente. Em julho de 2024, dezesseis meses antes de o Senado aprovar o texto, o governo lançou um plano de fomento de <strong>R$ 23,03 bilhões</strong> — que destina a induzir a adoção pelas empresas <strong>cento e trinta e quatro vezes</strong> o que destina ao apoio do próprio processo regulatório.</p>
+
+    <p>E há um poder que já regulou: o Judiciário. Não a inteligência artificial em geral — o uso dela dentro dos tribunais, por resolução em vigor desde 2025 e alterada em 2026. É o poder que menos aparece no debate, é o único com norma vigente, e pediu assento no sistema nacional que o Legislativo ainda não criou.</p>
+
+    <div class="figs">
+      <div class="fig"><div class="n">17 meses</div><div class="t">na Câmara dos Deputados, com <b>zero pareceres</b> registrados na ficha oficial de tramitação</div></div>
+      <div class="fig"><div class="n">35</div><div class="t">proposições apensadas ao projeto, cujo conteúdo o relator precisará consolidar</div></div>
+      <div class="fig"><div class="n">134×</div><div class="t">a razão entre o que o plano de fomento destina à inovação empresarial (R$ 13,79 bi) e ao apoio ao processo regulatório (R$ 103,25 mi)</div></div>
+      <div class="fig"><div class="n">730 dias</div><div class="t">de prazo para entrada em vigor após a publicação — e mais dois anos para que o Executivo aparelhe a autoridade coordenadora</div></div>
+      <div class="fig"><div class="n">2 votações</div><div class="t">ainda faltam: aprovado na Câmara com alterações, o texto <b>retorna ao Senado</b> como casa revisora</div></div>
+    </div>
+  </section>
+
+  <!-- O QUE AFIRMA -->
+  <section class="pad" style="padding-top:6px;">
+    <div class="box box-grey">
+      <h2>O que afirma</h2>
+      <ul>
+        <li>Os dezessete meses de espera <b>não produziram análise de impacto legislativo declarada</b> — e o próprio Senado publicou, em outubro de 2025, a metodologia de como fazê-la.</li>
+        <li>O texto aprovado <b>exige análise de impacto regulatório das autoridades futuras</b> em dois dispositivos, e não se acompanha de exame equivalente sobre si mesmo.</li>
+        <li>A classificação de risco foi <b>transferida ao próprio agente</b>: a avaliação preliminar é facultativa, e os termos que a operam — fator determinante, risco relevante, tarefa processual restrita — não têm definição no texto.</li>
+        <li>O tratamento diferenciado por porte alcança <b>quem oferta sistemas de IA, não quem os utiliza</b> — e a empresa que apenas adota é a maioria.</li>
+        <li>Os dados disponíveis sobre adoção <b>medem uso de tecnologia, não exposição a obrigação legal</b>: quem usa IA para redigir comunicado e quem a usa para negar crédito entram no mesmo percentual.</li>
+        <li>Aprovar nessas condições <b>não encerra a incerteza</b>: seis das sete implicações mapeadas descrevem indeterminação que permanece para depois da lei.</li>
+      </ul>
+    </div>
+
+    <div class="box box-peach">
+      <h2>O que não afirma</h2>
+      <ul>
+        <li>Que o projeto tenha tramitado <b>sem estudo</b> — houve comissão de juristas e dezenas de audiências. Afirma-se a ausência de um instrumento específico, não de conhecimento.</li>
+        <li>Que a regulação seja indesejável, ou que deva ser <b>mais branda ou mais severa</b>. O mérito da regulação não é objeto do texto.</li>
+        <li>Que a conformidade constitua <b>barreira à entrada</b> — não existe estimativa brasileira de custo de conformidade em IA por porte de empresa, e nenhuma é produzida aqui.</li>
+        <li>Que os R$ 23,03 bilhões tenham sido <b>desembolsados</b>: são valores previstos, mais da metade em crédito reembolsável, e a execução não foi apurada.</li>
+        <li>Que se possa <b>prever o conteúdo do substitutivo</b>. As implicações decorrem do estado do processo, não de hipótese sobre o texto que virá.</li>
+      </ul>
+    </div>
+
+    <div class="box box-concl">
+      <h2>A conclusão</h2>
+      <p>O Brasil anunciou um plano de R$ 23,03 bilhões para difundir uma tecnologia cujo regime jurídico ainda não definiu, destinou a induzir a adoção pelas empresas cerca de cento e trinta e quatro vezes o que destinou a apoiar a construção desse regime, e prepara-se para defini-lo sem ter medido o que a definição custará a quem deverá cumpri-la.</p>
+      <p>Os dezessete meses de espera produziram conhecimento, e seria falso dizer o contrário. Produziram posições, argumentos e um mapa razoavelmente completo de quem quer o quê. O que não produziram foi a medida.</p>
+      <p class="kicker">Nada disso é argumento contra aprovar a lei. É argumento contra supor que aprová-la encerra a incerteza que ela se propôs a resolver.</p>
+    </div>
+
+    <div class="box box-note">
+      <h2>Nota de método</h2>
+      <p>Situação da tramitação lida na ficha oficial da Câmara. Dispositivos citados conferidos na redação final aprovada pelo Senado em 10 de dezembro de 2024 — não em análises de terceiros, nem no texto original de 2023, cuja numeração difere. Valores do plano de fomento extraídos de apresentação do próprio ministério à Câmara.</p>
+      <p>Fontes hierarquizadas em três níveis, com sinalização quando o texto desce de nível. Quatro filtros aplicados a cada dado: acesso real à fonte, número situado dentro de sua série, distinção entre eco e corroboração independente, e declaração do interesse de quem produziu o dado.</p>
+      <p>O texto passou por avaliação crítica adversarial assistida por IA, sob protocolo próprio. Nenhum achado externo foi incorporado antes de conferência literal contra a fonte original — regra que, nesta pesquisa, evitou dois erros graves.</p>
+      <p>Onde o autor infere, o texto diz que infere. Onde não localizou documento, diz que não localizou — e não que o documento inexiste.</p>
+    </div>
+  </section>
+
+  <!-- SOBRE O ARTIGO -->
+  <footer class="about">
+    <h2>Sobre o artigo</h2>
+    <p>Artigo analítico sobre a base informacional do processo regulatório brasileiro de inteligência artificial. Mapeia o que cada um dos três poderes já decidiu, o que o texto aprovado estabelece, o que deixa para regulamentação futura, e as sete implicações previsíveis de aprová-lo sem análise de impacto. Não propõe redação alternativa nem defende posição sobre o mérito da regulação.</p>
+    <p><em>Primeiro de dois trabalhos. O segundo examina as escolhas regulatórias de China e Estados Unidos e o que o contraste revela sobre o modelo brasileiro.</em></p>
+
+    <p class="cta">O artigo completo está disponível sob solicitação direta.</p>
+
+    <div class="sep"></div>
+
+    <p class="bio"><b>Giuliano Tomazelli</b> — Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</p>
+
+    <p class="meta"><b>Fontes principais:</b> ficha de tramitação do PL 2.338/2023 (Câmara dos Deputados); Parecer nº 208/2024-PLEN (Senado Federal); Resolução CNJ nº 615/2025, alterada pela nº 674/2026; Plano Brasileiro de Inteligência Artificial 2024–2028 (MCTI); Meneguin (2025), <em>Análise ex ante na perspectiva do Legislativo</em>, Texto para Discussão nº 354 (Senado Federal); TIC Empresas 2025 (Cetic.br/NIC.br).</p>
+  </footer>
+
+</div>
+</body>
+</html>
