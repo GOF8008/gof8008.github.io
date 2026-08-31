@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perseguir ou Conduzir — sincronia entre juro e inflação | Giuliano Tomazelli</title>
+<meta name="description" content="Ensaio empírico sobre a sincronia entre juro e inflação em Brasil, Chile e Colômbia (2000-2026), com dado oficial de BCB, BCCh e BanRep. Se o efeito do juro sobre os preços leva cerca de 29 meses, o co-movimento quase imediato entre as séries não é comando: é resposta. Companheiro do ensaio A Ferramenta Cega.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/artigos/perseguir-ou-conduzir.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="Perseguir ou Conduzir — sincronia entre juro e inflação">
+<meta property="og:description" content="Juro e inflação parecem andar juntos. Mas se o efeito leva dois anos, o que o gráfico mostra é a inflação vindo primeiro — e o juro seguindo.">
+<meta property="og:url" content="https://gof8008.github.io/artigos/perseguir-ou-conduzir.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Perseguir ou Conduzir — sincronia entre juro e inflação">
+<meta name="twitter:description" content="Juro e inflação parecem andar juntos. Mas se o efeito leva dois anos, o que o gráfico mostra é a inflação vindo primeiro — e o juro seguindo.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1A3A5C; --navy-d:#15243f; --orange:#e07a28; --orange-d:#c8631a;
+    --ink:#28323c; --paper:#fff; --chartbg:#f1f3f5; --cream:#fdf4ea; --line:#e6e9ee;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#cfd5dc;font-family:'Source Sans 3',sans-serif;color:var(--ink);
+    -webkit-font-smoothing:antialiased;padding:0 0 calc(220px + env(safe-area-inset-bottom))}
+  .card{max-width:720px;margin:0 auto;background:var(--paper)}
+
+  .band{background:var(--orange);color:#fff;font-weight:700;text-transform:uppercase;
+    letter-spacing:.15em;font-size:10.3px;padding:14px 22px}
+
+  .hero{background:var(--navy-d);color:#fff;padding:38px 22px 34px}
+  .hero .eyebrow{color:#f0a868;font-weight:700;text-transform:uppercase;letter-spacing:.13em;
+    font-size:10.3px;margin-bottom:16px;line-height:1.35}
+  .hero h1{font-family:'Playfair Display',serif;font-weight:800;font-size:34.4px;line-height:1.04;
+    letter-spacing:-.01em}
+  .hero .sub{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;
+    font-size:17.3px;line-height:1.34;color:#c7d6e6;margin-top:18px}
+  .hero .series{font-size:12.4px;line-height:1.4;color:#9fb6cd;margin-top:16px;letter-spacing:.01em}
+  .hero .series b{color:#f0a868;font-weight:700}
+  .hero hr{border:0;border-top:1px solid #34506e;margin:26px 0 22px}
+  .hero .q{font-size:14.5px;line-height:1.5;color:#e7eef5}
+  .hero .q b{color:var(--orange);font-weight:700}
+  .hero .by{color:#f0a868;font-weight:700;text-transform:uppercase;letter-spacing:.13em;
+    font-size:10.0px;margin-top:26px}
+
+  .body{padding:34px 22px 10px;font-size:13.8px;line-height:1.62}
+  .body p{margin-bottom:22px;text-align:justify}
+  .body p b, .body li b{color:var(--navy);font-weight:700}
+  .num{color:var(--orange-d);font-weight:700}
+  .lead::first-letter{font-family:'Playfair Display',serif;font-weight:800;color:var(--orange);
+    font-size:53.8px;line-height:.72;float:left;margin:8px 14px 0 0}
+
+  .kicker{color:var(--orange-d);font-weight:700;text-transform:uppercase;letter-spacing:.14em;
+    font-size:10.3px;margin:38px 0 8px}
+  h2.sec{font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);
+    font-size:22.8px;line-height:1.12;margin-bottom:6px}
+  .rule{width:62px;height:4px;background:var(--orange);border-radius:2px;margin:14px 0 22px}
+
+  .chartcard{background:var(--chartbg);border-radius:12px;padding:30px 24px 26px;margin:34px 0 10px}
+  .chartcard .ck{color:var(--orange-d);font-weight:700;text-transform:uppercase;letter-spacing:.12em;
+    font-size:9.6px;margin-bottom:6px}
+  .chartcard h3{font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);
+    font-size:17.3px;line-height:1.15;margin-bottom:18px}
+  .chartcard .src{font-size:10.3px;color:#6b7785;line-height:1.4;margin-top:14px}
+  .chartcard .src b{color:#54616e}
+
+  .pull{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;color:var(--navy);
+    font-size:20.6px;line-height:1.32;border-left:6px solid var(--orange);padding:6px 0 6px 26px;
+    margin:36px 0}
+
+  .twin{margin:30px 0 8px}
+  .tbox{border:1px solid var(--line);border-radius:10px;padding:22px 22px;margin-bottom:18px}
+  .tbox .tk{color:var(--orange-d);font-weight:700;text-transform:uppercase;letter-spacing:.12em;
+    font-size:10.0px;margin-bottom:12px}
+  .tbox p{text-align:justify;font-size:13.1px;line-height:1.5;margin:0}
+  .tbox.no .tk{color:#7a8794}
+
+  .note{background:var(--cream);border-left:6px solid var(--orange);border-radius:8px;
+    padding:22px 22px;margin:32px 0}
+  .note .nk{color:var(--orange-d);font-weight:700;text-transform:uppercase;letter-spacing:.12em;
+    font-size:10.0px;margin-bottom:12px}
+  .note p{text-align:justify;font-size:13.1px;line-height:1.55;margin:0}
+  .note p b{color:var(--navy)}
+
+  .sq{display:inline-block;width:15px;height:15px;background:var(--orange);
+    vertical-align:-1px;margin-left:6px}
+
+  .final{background:var(--navy-d);border-left:5px solid var(--orange)}
+  .about{background:transparent;color:#e7eef5;padding:32px 22px 22px}
+  .about .ak{color:#f0a868;font-weight:700;text-transform:uppercase;letter-spacing:.14em;
+    font-size:10.3px;margin-bottom:18px}
+  .about p{text-align:justify;font-size:13.1px;line-height:1.55;margin-bottom:16px}
+  .about p b{color:#fff;font-weight:700}
+
+  .bio{padding:8px 22px 38px;font-size:12.4px;line-height:1.5;color:#c2d0dd}
+  .bio b{color:#fff}
+  .refs{font-size:10.7px;color:#8ba0b3;line-height:1.5;margin-top:18px}
+  .refs b{color:#aebecd}
+  .refs i{font-style:italic}
+</style>
+</head><body><div class="card">
+
+<div class="band">Ensaio empírico · complementar a “A Ferramenta Cega”</div>
+
+<div class="hero">
+  <div class="eyebrow">Sincronia entre juro e inflação · Brasil, Chile e Colômbia · 2000–2026</div>
+  <h1>Perseguir ou Conduzir</h1>
+  <div class="sub">Por que a taxa básica e a inflação parecem andar juntas — e o que esse co-movimento, sozinho, não consegue provar.</div>
+  <div class="series">Estudo empírico com dado oficial de três bancos centrais (BCB, BCCh, BanRep). Companheiro do ensaio <b>“A Ferramenta Cega”</b>.</div>
+  <hr>
+  <div class="q"><b>A pergunta:</b> se o efeito do juro sobre a inflação leva cerca de dois anos para se completar, por que as duas séries parecem se mover quase juntas?</div>
+  <div class="by">Por Giuliano Tomazelli</div>
+</div>
+
+<div class="body">
+  <p class="lead">Todo manual de política monetária diz a mesma coisa. O juro não afeta a inflação de imediato. A meta-análise de referência, que reúne 67 estudos, aponta um atraso médio de <b>29 meses</b> até o efeito máximo sobre os preços. E, no entanto, quando se olha o gráfico, juro e inflação sobem e descem quase juntos. Onde foi parar a defasagem de dois anos?</p>
+
+  <div class="kicker">O paradoxo</div>
+  <h2 class="sec">O que parece sincronia é resposta, não comando</h2>
+  <div class="rule"></div>
+  <p>A resposta desfaz a ilusão. Se o efeito do juro leva anos, então o co-movimento quase imediato que se vê no gráfico <b>não pode ser</b> esse efeito. Ele é outra coisa. É o banco central <b>respondendo</b> à inflação — às pressões observadas ou às expectativas sobre elas — elevando a taxa. A inflação se move, e a taxa acompanha alguns meses depois. O que o gráfico mostra, portanto, é que a <b>inflação se move antes do juro</b> — não que o juro esteja conduzindo a inflação.</p>
+
+  <div class="chartcard">
+    <div class="ck">Gráfico · Brasil, janela ampliada (2020–2024)</div>
+    <h3>A inflação vem primeiro. O juro segue depois.</h3>
+    <svg viewBox="0 0 760 318" width="100%" xmlns="http://www.w3.org/2000/svg">
+<line x1="78" y1="270.0" x2="742" y2="270.0" stroke="#dfe3e8" stroke-width="1"/><text x="68" y="275.0" font-size="18" fill="#8a95a0" text-anchor="end">0</text><line x1="78" y1="211.0" x2="742" y2="211.0" stroke="#dfe3e8" stroke-width="1"/><text x="68" y="216.0" font-size="18" fill="#8a95a0" text-anchor="end">4</text><line x1="78" y1="152.0" x2="742" y2="152.0" stroke="#dfe3e8" stroke-width="1"/><text x="68" y="157.0" font-size="18" fill="#8a95a0" text-anchor="end">8</text><line x1="78" y1="93.0" x2="742" y2="93.0" stroke="#dfe3e8" stroke-width="1"/><text x="68" y="98.0" font-size="18" fill="#8a95a0" text-anchor="end">12</text><line x1="78" y1="34.0" x2="742" y2="34.0" stroke="#dfe3e8" stroke-width="1"/><text x="68" y="39.0" font-size="18" fill="#8a95a0" text-anchor="end">16</text><text x="78.0" y="304" font-size="18" fill="#8a95a0" text-anchor="middle">2020</text><text x="213.1" y="304" font-size="18" fill="#8a95a0" text-anchor="middle">2021</text><text x="348.1" y="304" font-size="18" fill="#8a95a0" text-anchor="middle">2022</text><text x="483.2" y="304" font-size="18" fill="#8a95a0" text-anchor="middle">2023</text><text x="618.2" y="304" font-size="18" fill="#8a95a0" text-anchor="middle">2024</text>
+<polyline points="78.0,201.3 89.3,217.8 100.5,208.6 111.8,219.7 123.0,226.9 134.3,232.4 145.5,236.1 156.8,241.4 168.0,241.4 179.3,241.4 190.5,243.3 201.8,241.4 213.1,243.3 224.3,246.8 235.6,234.2 246.8,232.4 258.1,221.5 269.3,214.2 280.6,205.0 291.8,192.1 303.1,190.2 314.3,180.9 325.6,162.2 336.8,127.8 348.1,135.5 359.4,129.7 370.6,96.7 381.9,116.2 393.1,77.1 404.4,79.0 415.6,77.1 426.9,49.0 438.1,69.1 449.4,79.0 460.6,79.0 471.9,59.1 483.2,59.1 494.4,98.6 505.7,49.0 516.9,98.6 528.2,59.1 539.4,69.1 550.7,69.1 561.9,55.1 573.2,88.9 584.4,83.0 595.7,98.6 606.9,104.5 618.2,88.9 629.5,122.1 640.7,116.2 652.0,104.5 663.2,116.2 674.5,124.0 685.7,100.7 697.0,108.5 708.2,114.2 719.5,96.7 730.7,124.0 742.0,96.7" fill="none" stroke="#1A3A5C" stroke-width="3.4"/>
+<polyline points="78.0,208.2 89.3,210.9 100.5,221.3 111.8,234.6 123.0,242.3 134.3,238.6 145.5,235.9 156.8,234.0 168.0,223.7 179.3,212.2 190.5,206.4 201.8,203.3 213.1,202.7 224.3,193.3 235.6,180.0 246.8,170.3 258.1,151.1 269.3,146.8 280.6,137.4 291.8,127.2 303.1,118.8 314.3,112.6 325.6,111.6 336.8,121.6 348.1,116.9 359.4,114.5 370.6,103.3 381.9,91.1 393.1,97.0 404.4,94.6 415.6,121.5 426.9,141.2 438.1,164.2 449.4,174.6 460.6,183.0 471.9,184.6 483.2,184.9 494.4,187.4 505.7,201.4 516.9,208.3 528.2,211.9 539.4,223.4 550.7,211.1 561.9,202.0 573.2,193.4 584.4,198.9 595.7,201.0 606.9,201.9 618.2,203.5 629.5,203.6 640.7,212.0 652.0,215.6 663.2,212.0 674.5,207.6 685.7,203.6 697.0,207.5 708.2,204.8 719.5,199.8 730.7,198.2 742.0,198.8" fill="none" stroke="#e07a28" stroke-width="3.4"/>
+<rect x="78" y="10" width="18" height="5" fill="#e07a28"/><text x="104" y="19" font-size="19" fill="#28323c">inflação (IPCA 12m)</text>
+<rect x="308" y="10" width="18" height="5" fill="#1A3A5C"/><text x="334" y="19" font-size="19" fill="#28323c">Selic (% a.a.)</text>
+</svg>
+    <div class="src"><b>Fonte:</b> Banco Central do Brasil (IPCA 12 meses; Selic efetiva anualizada). A série longa, comprimida, dá a impressão de movimento idêntico. Ao ampliar o intervalo de tempo, a distância entre as duas linhas aparece: a laranja sobe primeiro, a azul segue.</div>
+  </div>
+
+  <div class="kicker">Os três países</div>
+  <h2 class="sec">O mesmo padrão em Brasil, Chile e Colômbia</h2>
+  <div class="rule"></div>
+  <p>O achado não é de um país só. Nos três, a inflação precede a taxa de política. Medida sobre o indicador de doze meses, essa dianteira é de <b>três meses no Brasil</b>, seis no Chile e cinco na Colômbia. Mas há um cuidado honesto: quando se remove a persistência mecânica do indicador anual, a dianteira encolhe para <b>cerca de um mês</b> nos três. A direção resiste ao teste; a magnitude, não. O que se afirma com segurança é estreito: a inflação vem antes, por uma margem curta.</p>
+
+  <div class="kicker">O enigma dos preços</div>
+  <h2 class="sec">Quando o modelo tenta medir, ele se confunde</h2>
+  <div class="rule"></div>
+  <p>Há um detalhe revelador. Quando se tenta medir, de forma simples, o efeito de uma alta de juro sobre a inflação, o resultado aparece <b>invertido</b>: a inflação parece subir depois do aperto, não cair. A literatura chama isso de <b>enigma dos preços</b>. Não é o juro causando inflação. É o sinal de que a reação domina de tal modo que a correlação bruta não consegue separar a causa do efeito. O enigma é o retrato estatístico de um instrumento que persegue de perto demais para se deixar medir.</p>
+
+  <div class="kicker">O cuidado que muda tudo</div>
+  <h2 class="sec">Precedência não é o mesmo que perseguição</h2>
+  <div class="rule"></div>
+  <p>Aqui é preciso parar, porque é fácil concluir demais. Que a inflação venha antes do juro é compatível com <b>duas histórias opostas</b>. Na primeira, o banco central persegue a inflação: corre atrás dela. Na segunda, ele a antecipa: aperta antes, prevendo a alta que já enxerga chegar. As duas produzem exatamente o mesmo desenho no gráfico. E os dados, sozinhos, não distinguem uma da outra. Chamar o padrão de “perseguição” já é uma leitura — não é o dado.</p>
+
+  <div class="pull">O co-movimento entre juro e inflação não prova que o juro conduz a inflação. Prova apenas que os dois se movem na mesma direção — e não diz quem comanda quem.</div>
+
+  <div class="twin">
+    <div class="tbox">
+      <div class="tk">O que o estudo afirma</div>
+      <p>Nos três países, a inflação observada <b>precede</b> a taxa de política, por uma margem curta. O co-movimento bruto, sozinho, <b>não sustenta</b> a afirmação de que o juro conduz a inflação de forma limpa.</p>
+    </div>
+    <div class="tbox no">
+      <div class="tk">O que o estudo não afirma</div>
+      <p>Não se afirma que a taxa seja ineficaz, nem que <b>“os três bancos centrais perseguem”</b>. A precedência é compatível com perseguição e com antecipação eficaz, e o método não distingue as duas. Medir o <b>tamanho</b> do efeito exige identificação que fica como agenda.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <div class="nk">Nota de método</div>
+    <p>Todos os números vêm de <b>fonte primária</b>: Banco Central do Brasil, Banco Central de Chile e Banco de la República. Cada série foi conferida em datas conhecidas contra a fonte oficial antes de entrar na análise. Os cálculos são próprios. <b>Nenhum dado foi estimado ou preenchido.</b></p>
+  </div>
+
+  <p>A pergunta certa não é se a taxa está alta ou baixa. É o que se pode, honestamente, pedir a ela. O gráfico mostra dois movimentos na mesma direção. Não mostra quem comanda quem — e reconhecer esse limite é mais forte do que fingir que o dado prova o que não prova. <span class="sq"></span></p>
+
+  <div class="pull">A próxima pergunta não é “perseguir ou conduzir”, mas: se o juro conduz alguma coisa, de quanto é o efeito a cada 100 pontos de taxa?</div>
+
+  <div class="kicker" style="margin-top:6px">Glossário</div>
+  <div class="rule"></div>
+  <p style="text-align:justify"><b>Taxa básica de juros</b> — o juro de política que o banco central define para influenciar as condições financeiras da economia. No Brasil, a Selic; no Chile, a TPM; na Colômbia, a tasa de intervención.<br><br>
+  <b>Inflação em 12 meses</b> — a variação de preços ao consumidor acumulada no último ano.<br><br>
+  <b>Função de reação</b> — a regra pela qual o banco central sobe o juro quando a inflação sobe.<br><br>
+  <b>Transmissão</b> — o efeito do juro sobre a inflação, que leva de meses a anos para aparecer.<br><br>
+  <b>Precedência</b> — qual série se move primeiro. Aqui, a inflação vem antes do juro.<br><br>
+  <b>Perseguir × conduzir</b> — perseguir é o juro correndo atrás da inflação; conduzir é o juro guiando a inflação. O gráfico, sozinho, não distingue os dois.<br><br>
+  <b>Enigma dos preços</b> — o resultado, comum em modelos simples, em que o juro parece elevar a inflação. É um artefato: o juro subiu reagindo a uma pressão que o modelo não enxergou.</p>
+</div>
+
+<div style="background:#15243f;border-top:5px solid #e07a28">
+<div class="about">
+  <div class="ak">Sobre o artigo</div>
+  <p>Ensaio empírico complementar a <i>“A Ferramenta Cega”</i>. Examina a relação temporal entre a taxa básica e a inflação em três economias de metas — Brasil, Chile e Colômbia — entre 2000 e 2026, com dado mensal oficial. Mostra que a inflação precede o juro, mas que essa precedência não distingue, por si só, um banco central que persegue a inflação de um que a antecipa com eficácia. Método, testes de robustez, steelman da posição contrária e limites declarados estão no artigo completo.</p>
+  <p style="color:#f0a868;font-weight:700">O artigo completo está disponível sob solicitação direta.</p>
+</div>
+
+<div class="bio">
+  <b>Giuliano Tomazelli</b> — Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.
+  <div class="refs"><b>Referências principais:</b> Havránek &amp; Rusnák (2013), <i>Transmission Lags of Monetary Policy: A Meta-Analysis</i>; Sims (1992); Christiano, Eichenbaum &amp; Evans (1999); Taylor (1993). <b>Dados:</b> Banco Central do Brasil, Banco Central de Chile, Banco de la República.</div>
+</div>
+
+</div>
+</div></body></html>
