@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Ferramenta Cega — a Selic e os limites de um instrumento agregado | Giuliano Tomazelli</title>
+<meta name="description" content="Ensaio de economia monetária: a pergunta não é se o juro está alto ou baixo, mas se a taxa básica é o instrumento adequado para conduzir uma transformação tecnológica que se faz na escala da firma, do setor e do horizonte longo. Instrumento agregado, homogêneo e cego a setor.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/artigos/a-ferramenta-cega.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="A Ferramenta Cega — os limites de um instrumento agregado">
+<meta property="og:description" content="A pergunta não é se o juro está certo, e sim se a ferramenta é a certa.">
+<meta property="og:url" content="https://gof8008.github.io/artigos/a-ferramenta-cega.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Ferramenta Cega — os limites de um instrumento agregado">
+<meta name="twitter:description" content="A pergunta não é se o juro está certo, e sim se a ferramenta é a certa.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{
+    --navy:#15243f; --navy-deep:#0f1a2e; --ink:#1a1a1a;
+    --orange:#e07a28; --orange-soft:#f6e8da;
+    --gray:#E8E9EB; --gray-mid:#aab0bb; --gray-line:#dcdee3;
+    --paper:#ffffff; --measure:42rem;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0;padding-bottom:calc(220px + env(safe-area-inset-bottom));background:var(--paper);color:var(--ink);
+    font-family:"Source Sans 3",system-ui,-apple-system,sans-serif;
+    font-size:0.98rem;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--measure);margin:0 auto;padding:0 1.4rem;}
+
+  .ribbon{background:var(--orange);color:#fff;text-align:center;
+    font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding:.5rem 1rem;}
+
+  .hero{background:var(--navy-deep);color:#fff;padding:3.2rem 0 2.6rem;border-bottom:3px solid var(--orange);}
+  .eyebrow{font-weight:600;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin:0 0 1rem;}
+  h1{font-family:"Playfair Display",Georgia,serif;font-weight:800;
+    font-size:clamp(2.2rem,7vw,3.7rem);line-height:1.02;letter-spacing:-.01em;margin:0 0 .7rem;}
+  .hero .deck{font-family:"Playfair Display",serif;font-style:italic;font-weight:500;
+    font-size:clamp(1rem,3vw,1.3rem);color:#c5cede;margin:0 0 1.4rem;max-width:34rem;line-height:1.42;}
+  .hero .obj{font-size:.86rem;color:#9fb0cb;margin:0 0 1.7rem;max-width:33rem;}
+  .hero .obj b{color:#e7ebf2;font-weight:600;}
+  .byline{font-size:.76rem;letter-spacing:.04em;color:#8a96ad;border-top:1px solid rgba(255,255,255,.14);
+    padding-top:1rem;text-transform:uppercase;font-weight:600;}
+  .byline span{color:var(--orange);}
+
+  article{padding:2.6rem 0 1rem;}
+  .lede{font-size:1.07rem;line-height:1.5;color:var(--navy);}
+  .lede::first-letter{font-family:"Playfair Display",serif;font-weight:800;font-size:3.3rem;
+    float:left;line-height:.78;padding:.32rem .5rem 0 0;color:var(--orange);}
+  p{margin:0 0 1.2rem;}
+  article p strong{color:var(--navy);font-weight:700;}
+  .term{color:var(--navy);font-weight:700;}
+
+  .movement{margin:2.7rem 0 1.3rem;}
+  .movement .idx{font-weight:700;font-size:.72rem;letter-spacing:.2em;color:var(--orange);display:block;margin-bottom:.5rem;text-transform:uppercase;}
+  .movement h2{font-family:"Playfair Display",Georgia,serif;font-weight:700;
+    font-size:clamp(1.45rem,4.4vw,2rem);line-height:1.1;color:var(--navy);margin:0;letter-spacing:-.01em;}
+  .movement .rule{width:44px;height:3px;background:var(--orange);margin:.85rem 0 0;}
+
+  blockquote{margin:2rem 0;padding:.2rem 0 .2rem 1.4rem;border-left:4px solid var(--orange);
+    font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;
+    font-size:clamp(1.15rem,3.6vw,1.45rem);line-height:1.34;color:var(--navy);}
+
+  /* charts */
+  figure{margin:2rem 0 2.2rem;background:#fbfbfc;border:1px solid var(--gray-line);border-radius:14px;padding:1.4rem 1.3rem 1.2rem;}
+  figure .cap-top{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--orange);margin:0 0 .15rem;}
+  figure .cap-title{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:1.22rem;color:var(--navy);line-height:1.15;margin:0 0 1rem;}
+  .chart-box{position:relative;width:100%;height:280px;}
+  figure figcaption{margin-top:.9rem;font-size:.85rem;line-height:1.5;color:#555;border-top:1px solid var(--gray-line);padding-top:.8rem;}
+  figure figcaption b{color:var(--navy);font-weight:700;}
+
+  /* synth two-col */
+  .synth{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--gray-line);
+    border:1px solid var(--gray-line);border-radius:12px;overflow:hidden;margin:1.8rem 0;}
+  .synth div{background:#fff;padding:1.1rem 1rem;}
+  .synth h4{margin:0 0 .55rem;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;}
+  .synth .keep h4{color:var(--navy);}
+  .synth .cut h4{color:#b5611c;}
+  .synth ul{margin:0;padding-left:1.05rem;}
+  .synth li{font-size:.88rem;line-height:1.42;color:#444;margin-bottom:.4rem;}
+  .synth li b{color:var(--navy);}
+
+  /* toolbox rows */
+  .prio{border-top:1px solid var(--gray-line);margin:1.8rem 0 0;}
+  .prio .row{display:grid;grid-template-columns:auto 1fr;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--gray-line);}
+  .prio .k{font-family:"Playfair Display",serif;font-weight:800;color:var(--orange);font-size:1rem;min-width:1.5rem;}
+  .prio .row b{color:var(--navy);}
+  .prio .row p{margin:.18rem 0 0;font-size:.9rem;line-height:1.42;color:#555;}
+
+  .endmark{width:9px;height:9px;background:var(--orange);display:inline-block;margin-left:.3rem;transform:translateY(-1px);}
+
+  .status{background:var(--navy);color:#fff;border-radius:14px;padding:1.3rem 1.2rem;margin:2.2rem 0 1rem;}
+  .status h4{margin:0 0 .5rem;color:var(--orange);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;}
+  .status p{margin:0;font-size:.9rem;line-height:1.5;color:#d4dae6;}
+  .status p + p{margin-top:.6rem;}
+
+  footer{margin-top:2.2rem;border-top:3px solid var(--navy);padding:1.7rem 0 4rem;}
+  .bio{font-size:.9rem;line-height:1.55;color:#444;}
+  .bio b{color:var(--navy);}
+  .legal{font-size:.74rem;color:#999;line-height:1.5;margin-top:1rem;}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:560px){
+    body{font-size:.94rem;}
+    .synth{grid-template-columns:1fr;}
+    .chart-box{height:250px;}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Ensaio · Economia monetária · versão 2</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Ensaio · Política monetária e transformação tecnológica</p>
+    <h1>A Ferramenta Cega</h1>
+    <p class="deck">A taxa básica de juros e os limites de um instrumento agregado diante de uma transformação tecnológica.</p>
+    <p class="obj"><b>A pergunta:</b> não é se o juro está alto ou baixo, mas se a taxa básica é o instrumento mais eficiente para conduzir uma transformação que se faz na escala da firma, do setor e do horizonte longo.</p>
+    <p class="byline">Por <span>Giuliano Tomazelli</span></p>
+  </div>
+</header>
+
+<article>
+<div class="wrap">
+
+  <p class="lede reveal">O debate brasileiro sobre juros é quase sempre uma questão de nível: a Selic está alta demais? O juro real é compatível com o crescimento? Este ensaio desloca a pergunta. Não importa se o juro está certo, e sim se a ferramenta é a certa — porque a ferramenta adequada para um problema pode ser a errada para outro. Nada aqui é defesa de juro baixo: a crítica não recai sobre o patamar, recai sobre a adequação do instrumento à tarefa.</p>
+
+  <p class="reveal">A tese tem três passos. A taxa básica é um instrumento <strong>agregado, homogêneo e cego a setor</strong>. Por isso é poderosa para esfriar ou aquecer a economia inteira, mas inadequada para guiar uma transformação tecnológica. E, nesses períodos, o arranjo eficiente não é uma taxa melhor calibrada — é a <strong>coordenação entre instrumentos</strong>. O Banco Central, aqui, não é reator passivo: é um agente que escolhe uma ferramenta entre as que tem à mão.</p>
+
+  <section class="movement reveal">
+    <span class="idx">O conflito</span>
+    <h2>Um instrumento, dois tempos</h2>
+    <div class="rule"></div>
+  </section>
+
+  <p class="reveal">A mesma alavanca é chamada a moderar a demanda presente e a não estrangular o investimento que constrói a oferta futura — e move as duas na mesma direção. Pior: o investimento em adoção tecnológica não é consumo diferido; é o que define o hiato do produto futuro. Quando a inflação vem de gargalos de oferta (energia, semicondutores, logística), aplica-se um instrumento de demanda a um problema de oferta — e, como notou Stiglitz, encarece-se a própria solução do gargalo. Ao estabilizar o presente atrofiando a oferta futura, a política fabrica parte da fragilidade que mais tarde terá de combater.</p>
+
+  <section class="movement reveal">
+    <span class="idx">A transmissão</span>
+    <h2>Como a taxa comprime o horizonte</h2>
+    <div class="rule"></div>
+  </section>
+
+  <p class="reveal">Dois mecanismos bastam. O <strong>desconto mecânico</strong>: uma taxa real alta corrói o valor presente dos fluxos distantes muito mais que o dos próximos — o projeto que amadurece em cinco ou dez anos colapsa contra a taxa de barreira. E o <strong>valor da opção de esperar</strong>: sob incerteza tecnológica, custo de capital alto eleva o prêmio de adiar o compromisso irreversível, e a firma racional retém caixa e aguarda (Bloom, 2009). A adoção fica assimétrica — só as grandes firmas investem —, e o investimento complementar de maturação longa, o da curva J de Brynjolfsson, é justamente o mais sensível à taxa de desconto. O dano não é tanto o preço do crédito; é a compressão do horizonte de tempo em que a economia se dispõe a construir.</p>
+
+  <section class="movement reveal">
+    <span class="idx">A evidência</span>
+    <h2>A moeda não é neutra no longo prazo</h2>
+    <div class="rule"></div>
+  </section>
+
+  <p class="reveal">A convenção herdada (Friedman, Lucas) diz que a moeda é neutra no longo prazo — apertar não causaria dano permanente. A pesquisa recente desmonta essa premissa com dados, em quatro cortes do micro ao macro.</p>
+
+  <figure class="reveal">
+    <p class="cap-top">Gráfico 1 · Variação após aperto de 1 p.p.</p>
+    <p class="cap-title">O preço de um aperto sobre a inovação</p>
+    <div class="chart-box"><canvas id="c1"></canvas></div>
+    <figcaption>Após um aperto monetário de um ponto, a inovação recua em todas as pontas — e o capital de risco é o mais atingido. <b>Fonte:</b> Ma &amp; Zimmermann (2023), NBER WP 31698.</figcaption>
+  </figure>
+
+  <p class="reveal">O dado decisivo não é a magnitude, é a <strong>assimetria</strong>. Jordà, Singh e Taylor (2023), com painel histórico desde 1900, encontram que a histerese aparece depois dos apertos, mas não dos afrouxamentos: a política restritiva derruba o produto potencial, e a expansão seguinte não o restaura. Parte do que o juro alto destrói não volta quando o juro cai — a questão deixa de ser de grau e passa a ser de direção.</p>
+
+  <figure class="reveal">
+    <p class="cap-top">Gráfico 2 · Horizonte do efeito real (anos)</p>
+    <p class="cap-title">Quanto tempo o dano persiste</p>
+    <div class="chart-box"><canvas id="c2"></canvas></div>
+    <figcaption>O efeito real de um choque monetário dura anos, não trimestres — até mais de uma década no painel histórico. <b>Fontes:</b> Ma &amp; Zimmermann (2023); Franco &amp; Unsal (2025, OCDE); Jordà, Singh &amp; Taylor (2023). O estudo do BCE (Elfsbacka-Schmöller et al., 2025) também aponta efeito persistente de médio prazo.</figcaption>
+  </figure>
+
+  <p class="reveal">A honestidade exige a contrapartida: o mesmo estudo da OCDE mostra que afrouxar sem critério preserva empresas zumbis e trava a realocação. O instrumento é cego nas duas direções — apertar atrofia a oferta futura, afrouxar mantém a ineficiência presente. A evidência estabelece a existência e a persistência do custo de oferta; não prova que ele sempre domine o benefício de conter uma espiral. O que ela nega é a suposição de que esse custo seja de segunda ordem por definição.</p>
+
+  <section class="movement reveal">
+    <span class="idx">O ponto cego</span>
+    <h2>Custos visíveis, custos invisíveis</h2>
+    <div class="rule"></div>
+  </section>
+
+  <p class="reveal">Por que esses efeitos não entram na decisão? Porque a função de reação se calibra pelo que se mede em alta frequência — inflação corrente, hiato do produto. Não há, na regra de Taylor, um termo para o hiato de produtividade futura. E o custo que aqui interessa é um <strong>não-evento</strong>: o investimento adiado não gera registro, a inovação não tentada não deixa rastro. Aparece anos depois como PTF mais baixa, atribuída a "fatores estruturais" — não à postura monetária que a produziu. Daí um viés a apertar mais do que se apertaria: a coluna invisível do balanço não gera dado capaz de discipliná-la. O viés não é moral; é informacional — e por isso resiste ao mero aprimoramento da calibragem.</p>
+
+  <section class="movement reveal">
+    <span class="idx">O arranjo</span>
+    <h2>A caixa de ferramentas que a história usou</h2>
+    <div class="rule"></div>
+  </section>
+
+  <p class="reveal">Operar só com a taxa básica curta é construção teórica recente, dos anos 1990 — não a norma histórica. A maioria das autoridades que conduziram transformações produtivas recorreu a crédito direcionado e taxas diferenciadas (Epstein, 2006). O traço comum é a <strong>separação de funções</strong>: a taxa básica cuida da estabilização nominal; um segundo canal, isolado dos ciclos do primeiro, blinda o financiamento da transformação.</p>
+
+  <div class="prio reveal">
+    <div class="row"><div class="k">›</div><div><b>Fed</b> — Operação Twist; e transições conduzidas por financiamento público (RFC, eletrificação rural, DARPA).</div></div>
+    <div class="row"><div class="k">›</div><div><b>BCE</b> — TLTROs, liquidez de longo prazo condicionada ao crédito produtivo (Draghi, 2014).</div></div>
+    <div class="row"><div class="k">›</div><div><b>Banco do Japão</b> — Window Guidance, direcionamento quantitativo do crédito (Werner, 2005).</div></div>
+    <div class="row"><div class="k">›</div><div><b>China / Brasil</b> — reempréstimos estruturados do PBoC; coordenação BC–BNDES (TJLP, depois TLP).</div></div>
+  </div>
+
+  <blockquote class="reveal">A pergunta certa não é "qual o nível da Selic?", e sim: qual instrumento deve carregar qual parte da tarefa?</blockquote>
+
+  <section class="movement reveal">
+    <span class="idx">A refutação</span>
+    <h2>O que o argumento absorve</h2>
+    <div class="rule"></div>
+  </section>
+
+  <p class="reveal">A ortodoxia tem argumentos fortes — empresas zumbis, bolhas de ativos, o fracasso do crédito direcionado mal desenhado (a Nova Matriz Econômica dos anos 2010, com captura e deterioração fiscal) e o risco de credibilidade e dominância fiscal. A tese sobrevive não por descartá-los, mas por absorvê-los: cada um é o custo da <strong>alternativa errada</strong> — o afrouxamento cego ou o subsídio sem contrapartida —, não uma defesa da taxa única. O desenho proposto é o oposto desses fracassos: âncora monetária cautelosa + crédito direcionado contracíclico, condicionado a desempenho e fiscalmente custeado, + requalificação em escala.</p>
+
+  <div class="synth reveal">
+    <div class="keep">
+      <h4>O que o ensaio afirma</h4>
+      <ul>
+        <li>A taxa básica carrega custos de oferta <b>persistentes e assimétricos</b>.</li>
+        <li>A função de reação convencional <b>não os enxerga nem pondera</b>.</li>
+        <li>Isso é <b>conclusão</b>, apoiada em evidência.</li>
+      </ul>
+    </div>
+    <div class="cut">
+      <h4>O que apenas propõe</h4>
+      <ul>
+        <li>A alternativa eficiente é a <b>coordenação de instrumentos</b>.</li>
+        <li>Superioridade prática ainda à espera de demonstração controlada.</li>
+        <li>Isso é <b>agenda</b>, sustentada pela história.</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="reveal">A tese é falseável: se a difusão da IA e o ganho de produtividade se mostrarem indiferentes ao regime de financiamento — comparando o Brasil, sob juros reais altos, à Coreia, aos EUA e à China —, então a taxa básica poderá ser reabilitada como instrumento suficiente. É a possibilidade de falhar que separa um argumento de uma convicção.<span class="endmark" aria-hidden="true"></span></p>
+
+  <div class="status reveal">
+    <h4>Sobre o artigo</h4>
+    <p>Este é um resumo do ensaio <i>A Ferramenta Cega</i> (v2), escrito em vocabulário econômico padrão e ancorado em evidência verificada: Ma &amp; Zimmermann (2023), Jordà-Singh-Taylor (2023), Franco &amp; Unsal (2025, OCDE) e Elfsbacka-Schmöller et al. (2025, BCE).</p>
+    <p>O artigo está disponível na íntegra mediante solicitação formal ao autor.</p>
+  </div>
+
+</div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <p class="bio"><b>Giuliano Tomazelli</b> — Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</p>
+    <p class="legal">Referências principais: Ma &amp; Zimmermann (NBER, 2023); Jordà, Singh &amp; Taylor (FRBSF, 2023); Franco &amp; Unsal (OCDE, 2025); Elfsbacka-Schmöller, Goldfayn-Frank &amp; Schmidt (BCE/Bundesbank, 2025); Stiglitz (2023); Bloom (2009); Brynjolfsson, Rock &amp; Syverson (2021); Epstein (2006); Werner (2005); Draghi (2014).</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var navy='#15243f', orange='#e07a28', gray='#aab0bb', line='#e3e5e9';
+  if (window.Chart){
+    Chart.defaults.font.family="'Source Sans 3', sans-serif";
+    Chart.defaults.font.size=12; Chart.defaults.color='#3c4656';
+    var anim = rm ? false : {duration:850, easing:'easeOutQuart'};
+
+    new Chart(document.getElementById('c1'),{
+      type:'bar',
+      data:{labels:['P&D','Capital de risco','Patentes','Produto (5 anos)'],
+        datasets:[{data:[-2,-25,-9,-1],
+          backgroundColor:[navy,orange,navy,navy],borderRadius:6,barPercentage:0.62,categoryPercentage:0.72}]},
+      options:{responsive:true,maintainAspectRatio:false,animation:anim,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.y+'%';}}}},
+        scales:{y:{grid:{color:line,drawBorder:false},ticks:{callback:function(v){return v+'%';}},title:{display:true,text:'variação',color:'#888',font:{size:10}}},
+          x:{grid:{display:false},ticks:{font:{size:11,weight:'600'},color:navy}}}}
+    });
+
+    new Chart(document.getElementById('c2'),{
+      type:'bar',
+      data:{labels:['Ma & Zimmermann','Franco & Unsal','Jordà-Singh-Taylor'],
+        datasets:[{data:[4,5,12],
+          backgroundColor:[navy,navy,orange],borderRadius:6,barPercentage:0.6,categoryPercentage:0.72}]},
+      options:{responsive:true,maintainAspectRatio:false,animation:anim,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.y+' anos';}}}},
+        scales:{y:{beginAtZero:true,grid:{color:line,drawBorder:false},ticks:{callback:function(v){return v+'a';}},title:{display:true,text:'anos de persistência',color:'#888',font:{size:10}}},
+          x:{grid:{display:false},ticks:{font:{size:11,weight:'600'},color:navy}}}}
+    });
+  }
+  var els=document.querySelectorAll('.reveal');
+  if (rm || !('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:0.12});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>
