@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar da Indústria Brasileira — Edição 03</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+  :root{
+    --ink:#1A1D24; --ochre:#B8862F; --ochre-dk:#8A6420; --ochre-soft:#c99a4a;
+    --text:#2a2d33; --text-soft:#6b6f78; --paper:#ffffff;
+    --frame:#eae5db; --cream:#F3EFE6; --cream-2:#FAF6EC;
+    --pos:#3c7a4f; --neg:#a5342a; --blue:#3a5f8a;
+    --serif:'Playfair Display', Georgia, 'Times New Roman', serif;
+    --sans:'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--frame);font-family:var(--sans);color:var(--text);line-height:1.55;
+       -webkit-font-smoothing:antialiased;padding:24px 12px;}
+  .card{max-width:716px;margin:0 auto;background:var(--paper);
+        box-shadow:0 18px 48px rgba(20,30,50,.18);overflow:hidden;border-radius:4px;}
+
+  .head{padding:26px 5% 20px;}
+  .mast{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:6px;}
+  .eyebrow{color:var(--ink);font-weight:700;letter-spacing:.12em;font-size:10.5px;
+           text-transform:uppercase;line-height:1.4;}
+  .date{color:var(--ochre-dk);font-weight:700;letter-spacing:.1em;font-size:10.5px;text-transform:uppercase;text-align:right;}
+  .titlerow{display:flex;justify-content:space-between;align-items:flex-end;margin-top:12px;gap:12px;flex-wrap:wrap;}
+  .wordmark{font-family:var(--serif);font-weight:800;font-size:29px;color:var(--ink);line-height:1.08;}
+  .badge{border:1.5px solid var(--ochre);border-radius:4px;padding:6px 14px;text-align:center;flex-shrink:0;}
+  .badge .k{font-size:9.5px;font-weight:700;letter-spacing:.1em;color:var(--ochre-dk);text-transform:uppercase;}
+  .badge .n{font-family:var(--serif);font-weight:800;font-size:22px;color:var(--ink);}
+  .rule2{height:4px;background:var(--ink);margin:16px 0 18px;position:relative;}
+  .rule2::after{content:"";position:absolute;left:0;top:0;height:100%;width:64px;background:var(--ochre);}
+
+  h1{font-family:var(--serif);font-weight:800;font-size:28px;line-height:1.12;color:var(--ink);margin-bottom:10px;}
+  .dek{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--ochre-dk);font-size:14.5px;line-height:1.5;}
+
+  .box{margin:18px 5% 0;background:var(--cream);border-radius:6px;padding:16px 18px 18px;}
+  .box .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--ochre-dk);text-transform:uppercase;
+     display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+  .box .lbl::after{content:"";flex:1;height:1px;background:#d8cdb4;}
+  .box .sub{font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--text-soft);text-transform:uppercase;margin-bottom:6px;}
+  .box p{font-size:13.5px;color:var(--text);line-height:1.55;margin-bottom:8px;}
+  .box p:last-child{margin-bottom:0;}
+  .pill{display:inline-block;background:var(--ink);color:#fff;font-size:11px;font-weight:700;
+     padding:4px 10px;border-radius:3px;margin:4px 0 8px;}
+
+  .indicador{margin:18px 5% 0;background:var(--ink);border-radius:6px;padding:18px 18px 20px;}
+  .indicador .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--ochre-soft);text-transform:uppercase;
+     display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+  .indicador .lbl::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.18);}
+  .indicador h3{font-family:var(--serif);font-weight:700;font-size:19px;color:#fff;margin-bottom:8px;}
+  .indicador p{font-size:13.5px;color:#dcdfe6;line-height:1.55;}
+
+  .body{padding:22px 5% 4px;}
+  .sec{padding-top:20px;border-top:1px solid #eee9dd;}
+  .sec:first-child{border-top:none;padding-top:6px;}
+  .sec-h{display:flex;align-items:baseline;gap:9px;margin-bottom:8px;flex-wrap:wrap;}
+  .sec-num{font-family:var(--serif);font-weight:800;font-size:15px;color:var(--ochre-dk);}
+  .sec h2{font-family:var(--serif);font-weight:700;font-size:18px;color:var(--ink);}
+  .tag{font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:9px;margin-left:2px;}
+  .tag-pos{background:#e7f2ea;color:var(--pos);}
+  .subhead{font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ochre-dk);
+     margin:12px 0 4px;}
+  .body p{font-size:13.5px;margin-bottom:11px;color:var(--text);}
+  .body strong{color:var(--ink);font-weight:700;}
+  .stat{font-family:var(--serif);font-weight:800;color:var(--ink);font-size:24px;margin-right:6px;}
+  .statcap{font-size:11.5px;color:var(--text-soft);}
+  .statline{margin:6px 0 8px;}
+  .note{background:var(--cream-2);border-left:3px solid var(--ochre);border-radius:0 5px 5px 0;
+     padding:9px 12px;font-size:12px;color:var(--text-soft);margin:6px 0 10px;}
+  .note b{color:var(--ochre-dk);}
+
+  .importa{margin:20px 5% 0;padding-top:20px;border-top:1px solid #eee9dd;}
+  .importa .sec-h{margin-bottom:10px;}
+  .importa ol{padding-left:20px;}
+  .importa ol li{font-size:13.5px;color:var(--text);margin-bottom:9px;line-height:1.5;}
+  .importa ol li b{color:var(--ink);}
+
+  .leitura{margin:20px 5% 0;padding-top:20px;border-top:1px solid #eee9dd;}
+
+  .radar{margin:20px 5% 0;padding-top:20px;border-top:1px solid #eee9dd;}
+  .rlevel{margin-bottom:12px;padding-left:16px;border-left:3px solid;}
+  .rlevel .t{font-size:13px;font-weight:700;margin-bottom:3px;display:flex;align-items:center;gap:6px;}
+  .rlevel .t::before{content:"●";font-size:10px;}
+  .rlevel p{font-size:12.5px;color:var(--text-soft);margin:0;}
+  .r-blue{border-color:var(--blue);} .r-blue .t{color:var(--blue);}
+  .r-orange{border-color:var(--ochre);} .r-orange .t{color:var(--ochre-dk);}
+  .r-green{border-color:var(--pos);} .r-green .t{color:var(--pos);}
+  .r-red{border-color:var(--neg);} .r-red .t{color:var(--neg);}
+
+  .rulebottom{height:3px;background:var(--ink);margin:24px 5% 0;}
+  .about{margin:20px 5% 0;background:var(--cream);border-left:4px solid var(--ochre);border-radius:0 6px 6px 0;
+     padding:16px 18px;}
+  .about .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--ochre-dk);text-transform:uppercase;margin-bottom:8px;}
+  .about p{font-size:12.5px;color:var(--text);line-height:1.6;}
+
+  .foot{padding:20px 5% 30px;}
+  .indbadge{display:inline-block;border:1.5px solid var(--ochre);border-radius:20px;padding:5px 14px;
+     font-size:10.5px;font-weight:700;letter-spacing:.06em;color:var(--ochre-dk);text-transform:uppercase;margin-bottom:12px;}
+  .foot .titlerecap{font-family:var(--serif);font-size:16px;color:var(--ink);margin-bottom:2px;}
+  .foot .titlerecap .ac{color:var(--ochre-dk);}
+  .foot .subrecap{font-family:var(--serif);font-style:italic;color:var(--text-soft);font-size:13px;margin-bottom:14px;}
+  .author .name{font-family:var(--sans);font-weight:700;font-size:15px;color:var(--ink);margin-bottom:2px;}
+  .author .cred{font-size:12px;color:var(--text-soft);line-height:1.5;margin-bottom:12px;}
+  .disclaimer{border-left:3px solid var(--ochre);padding-left:12px;}
+  .disclaimer p{font-family:var(--serif);font-style:italic;font-size:12.5px;color:var(--text-soft);line-height:1.5;}
+  .refs{border-top:1px solid #e3ddcd;margin-top:16px;padding-top:12px;}
+  .refs p{font-size:10.5px;color:var(--text-soft);line-height:1.55;}
+  .refs .rlbl{font-weight:700;color:var(--ink);font-size:11px;}
+</style>
+</head>
+<body>
+<div class="card">
+
+  <header class="head">
+    <div class="mast">
+      <div class="eyebrow">Radar Economia Industrial</div>
+      <div class="date">27 DE AGOSTO A 2<br>DE SETEMBRO DE 2026</div>
+    </div>
+    <div class="titlerow">
+      <div class="wordmark">Radar da Indústria<br>Brasileira</div>
+      <div class="badge"><div class="k">Edição</div><div class="n">Nº 03</div></div>
+    </div>
+    <div class="rule2"></div>
+    <h1>A transformação industrial perde ritmo, enquanto agropecuária e extração sustentam o PIB</h1>
+    <div class="dek">A indústria geral avançou só 0,1% no trimestre — puxada pela extrativa. A transformação e a construção recuaram. E política industrial passa a operar defendendo cadeias específicas, não a indústria como bloco.</div>
+  </header>
+
+  <div class="box">
+    <div class="lbl">Fato da Semana</div>
+    <div class="sub">PIB do 2º trimestre confirma a divergência setorial</div>
+    <p>O PIB cresceu 0,5% no 2º trimestre ante o 1º, após alta de 1,1% no trimestre anterior. Por dentro, a Indústria avançou apenas 0,1% — resultado quase todo puxado pela indústria extrativa (+3,4%), enquanto transformação (-0,4%) e construção (-0,4%) recuaram. A Formação Bruta de Capital Fixo cresceu 1,2%, mas a taxa de investimento caiu para 16,1% do PIB, ante 16,6% um ano antes.</p>
+    <div class="pill">Relevância para a cadeia: Alta</div>
+    <p>A leitura direta: o país segue crescendo, mas a expansão está menos apoiada na indústria de transformação e mais concentrada em agropecuária, extrativa e investimentos pontuais.</p>
+  </div>
+
+  <div class="indicador">
+    <div class="lbl">Indicador da Semana</div>
+    <h3>Indústria de Transformação: -0,4% no trimestre</h3>
+    <p>Juros elevados (Selic em 14,25% no período), endividamento e menor consumo das famílias (-0,4% no trimestre) formam um ambiente adverso à utilização e à expansão da capacidade produtiva na transformação — o núcleo manufatureiro da indústria brasileira. O contraste com a extrativa (+3,4%) é o dado que resume a semana: os setores ligados a petróleo e commodities seguem mais protegidos da transmissão doméstica do crédito e da demanda do que os que produzem bens manufaturados.</p>
+  </div>
+
+  <section class="body">
+
+    <div class="sec">
+      <div class="sec-h"><span class="sec-num">1</span><h2>Capacidade Produtiva</h2></div>
+      <p>A principal alteração da semana foi a confirmação, pelos dados oficiais do PIB, de uma perda de dinamismo da indústria de transformação — não mais um sinal isolado, mas um número trimestral fechado. O recuo indica que juros altos, endividamento e menor consumo estão restringindo a capacidade instalada exatamente no segmento que mais emprega e mais agrega tecnologia.</p>
+      <p><strong>Leitura:</strong> o Brasil não está paralisado — há investimento, expansão extrativa e novos projetos tecnológicos —, mas a base manufatureira enfrenta uma combinação adversa que a extração de commodities não enfrenta.</p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-h"><span class="sec-num">2</span><h2>Investimentos</h2></div>
+      <p>O investimento agregado cresceu 1,2% no trimestre, mas a taxa de investimento recuou na comparação anual — sinal de recuperação ainda insuficiente para alterar de forma ampla a estrutura produtiva. Em paralelo, o BNDES divulgou sua perspectiva para 2025-2029: entre <strong>R$ 757,8 bilhões</strong> (cenário base) e <strong>R$ 838,5 bilhões</strong> (cenário otimista) em 21 setores — 5,4% a 5,7% do PIB —, com cerca de <strong>dois terços</strong> concentrados em comércio e serviços, petróleo e gás e extração mineral.</p>
+      <p><strong>Ponto de atenção:</strong> o problema não é apenas o volume investido, mas em quais cadeias o investimento está se concentrando — a própria composição do estudo do BNDES reforça o padrão do trimestre: extração e infraestrutura pesam mais do que transformação.</p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-h"><span class="sec-num">3</span><h2>Política Industrial</h2></div>
+      <p>O Brasil Soberano Competitividade segue como principal instrumento de resposta à instabilidade internacional, apoiando exportadores de bens industriais e fornecedores afetados por tensões geopolíticas e tarifas majoradas. A política industrial passa a cumprir duas funções simultâneas: preservar capacidade produtiva ameaçada e financiar adaptação, diversificação e competitividade.</p>
+      <div class="note"><b>Nota de atualização:</b> em 1º/9 — já fora desta semana de referência, mas diretamente conectado — o BNDES ampliou sua participação no programa de R$ 5 bi para R$ 9,1 bi, elevando o total para R$ 22,6 bi. Fica registrado aqui como o desdobramento imediato deste tema; entra em detalhe na próxima edição.</div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-h"><span class="sec-num">4</span><h2>Cadeias Estratégicas</h2></div>
+      <p>A semana reforçou a centralidade de quatro cadeias: petroquímica e resinas, petróleo e gás, data centers e infraestrutura digital, e equipamentos de energia e transmissão. O Gecex-Camex renovou por 12 meses a elevação tarifária para 28 produtos do setor químico e aprovou antidumping definitivo sobre resinas PET da Malásia e do Vietnã e sobre tubos de aço carbono da Ucrânia, além de antidumping provisório contra fibra de vidro da China e do Egito.</p>
+      <p>A decisão protege a indústria petroquímica doméstica, mas também provoca reação de setores consumidores dessas resinas, que alertam para aumento de custos.</p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-h"><span class="sec-num">5</span><h2>Competitividade</h2></div>
+      <p>A queda da indústria de transformação ocorre em ambiente de juros altos e demanda doméstica enfraquecida — consumo das famílias recuou 0,4% no trimestre, com a Selic em patamar restritivo. A competitividade industrial brasileira está sendo pressionada por três lados: custo financeiro elevado, concorrência externa e menor escala doméstica. A resposta empresarial tende a combinar redução de custos, proteção comercial, exportação seletiva e concentração em segmentos de maior valor agregado.</p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-h"><span class="sec-num">6</span><h2>Energia</h2></div>
+      <p>O Gecex-Camex prorrogou por mais 60 dias (a partir de 8/9) o imposto de 12% sobre exportação de petróleo bruto, em meio à tentativa de proteger arrecadação e abastecimento interno.</p>
+      <div class="note"><b>Contexto que a minuta original não capturava:</b> a prorrogação ocorreu no <em>mesmo dia</em> em que a Justiça Federal concedeu liminar suspendendo a cobrança dessa mesma tarifa — o Executivo manteve a medida por via administrativa apesar da decisão judicial em sentido contrário. É o tipo de atrito institucional que faz da "previsibilidade regulatória" mais do que uma frase de efeito: aqui, dois poderes divergiram sobre a mesma cobrança no mesmo dia.</div>
+      <p>Empresas do setor contestam a medida e apontam perda de previsibilidade regulatória — a tensão é estrutural: a energia é fonte de competitividade industrial, e a instabilidade regulatória tende a reduzir o horizonte de investimento, embora o efeito concreto sobre decisões empresariais ainda não esteja demonstrado por dado específico.</p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-h"><span class="sec-num">7</span><h2>Logística</h2></div>
+      <p>A desaceleração das exportações (-0,8% no trimestre) e o aumento das importações (+1,8%) reforçam a necessidade de reduzir custos e melhorar a integração entre produção, portos, armazenagem e distribuição. Há indícios, ainda não plenamente sustentados pelas fontes desta edição, de que o comércio eletrônico internacional vem elevando a contratação no setor logístico — se confirmado, é um sinal indireto de que a pressão sobre a indústria doméstica está se transferindo, em parte, para a cadeia de distribuição em vez da produção. Fica como item a aprofundar: que alteração concreta na capacidade produtiva industrial esse movimento logístico está de fato produzindo?</p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-h"><span class="sec-num">8</span><h2>Tecnologia</h2></div>
+      <p>O Senado aprovou, em 1º/9, o Redata — regime especial de tributação para data centers —, com isenção federal (PIS/Cofins, IPI, Imposto de Importação) por cinco anos, custo estimado em R$ 5,2 bi em 2026 caindo a cerca de R$ 1 bi/ano a partir de 2027. A versão aprovada passou a admitir gás natural entre as fontes de energia elegíveis, no lugar da exigência original de fontes limpas ou renováveis.</p>
+      <div class="note"><b>Contexto que a minuta original não capturava:</b> a inclusão do gás natural entrou por uma emenda de redação — manobra para evitar que o projeto retornasse à Câmara para nova votação —, questionada pelo próprio presidente da Câmara, Hugo Motta. Não foi consenso técnico; foi acordo político para não perder a janela do esforço concentrado do Congresso.</div>
+      <p>Sobre o caso Voltalia — a aprovação, pelo Conselho Nacional das ZPEs, de um data center de R$ 181,7 bilhões em investimento <em>previsto</em> no Complexo do Pecém (CE): esse fato ocorreu em 25/8, dentro da <strong>semana anterior</strong> à de referência desta edição. Fica registrado como pano de fundo — o Ceará soma agora cerca de R$ 380 bi em projetos de data center anunciados (Voltalia + ByteDance) —, mas não como notícia desta semana. Vale a ressalva: R$ 181,7 bi é investimento projetado para os próximos anos, não capital desembolsado, e a própria Voltalia ainda negocia quem ocupará a capacidade.</p>
+    </div>
+
+  </section>
+
+  <div class="importa">
+    <div class="sec-h"><span class="sec-num">9</span><h2>O que realmente importa nesta semana</h2></div>
+    <ol>
+      <li><b>A transformação industrial perdeu dinamismo</b>, apesar do crescimento do PIB — o dado trimestral fechado confirma o que vinha sendo sinal.</li>
+      <li><b>A política industrial está sendo usada para preservar cadeias específicas</b> — petroquímica via Camex, exportadores via Brasil Soberano —, não a indústria como bloco único.</li>
+      <li><b>Data centers entraram na agenda industrial pela energia e infraestrutura</b>, não apenas pelo software — Redata e o corredor de projetos no Ceará confirmam isso.</li>
+    </ol>
+  </div>
+
+  <div class="leitura">
+    <div class="sec-h"><span class="sec-num">10</span><h2>Leitura</h2></div>
+    <p>A semana mostra um quadro de crescimento com mudança de composição. Há investimento, expansão extrativa e projetos tecnológicos de escala — mas a indústria de transformação enfrenta juros altos, demanda fraca, custos elevados e concorrência externa ao mesmo tempo.</p>
+    <p>O risco é que os investimentos avancem sem produzir uma mudança equivalente na densidade tecnológica e na capacidade industrial doméstica. A variável central para as próximas edições continua sendo o redirecionamento produtivo: quando um setor perde margem ou mercado, ele consegue redirecionar vendas, preservar utilização da capacidade e investir — ou apenas reduz produção?</p>
+  </div>
+
+  <div class="radar">
+    <div class="sec-h"><span class="sec-num">11</span><h2>Síntese estratégica</h2></div>
+    <p style="font-size:13.5px;color:var(--text);margin-bottom:14px;">O desafio da semana não é apenas aumentar o investimento. É impedir que o crescimento se concentre em atividades menos dependentes da transformação industrial, enquanto cadeias tecnológicas e manufatureiras perdem dinamismo. A política industrial será eficaz se conseguir transformar proteção temporária, crédito e infraestrutura em capacidade produtiva, produtividade e diversificação de mercados.</p>
+    <div class="rlevel r-blue"><div class="t">Atenção elevada</div><p>Expansão do Brasil Soberano para R$ 22,6 bi (anunciada 1/9) — acompanhar a conversão do orçamento anunciado em crédito efetivamente contratado e desembolsado. Precedente do Brasil Soberano 1 (2025): dos R$ 40 bi disponibilizados, o BNDES aprovou R$ 19,6 bi em operações, mas só R$ 10,8 bi haviam sido efetivamente desembolsados até o fim do ano — a lacuna relevante está entre aprovado e desembolsado, não apenas entre anunciado e aprovado.</p></div>
+    <div class="rlevel r-orange"><div class="t">Atenção moderada</div><p>Sanção presidencial do Redata · desdobramento da liminar sobre o imposto de exportação de petróleo · reação de setores consumidores de resina à decisão da Camex.</p></div>
+    <div class="rlevel r-green"><div class="t">Oportunidades de observação</div><p>Perspectiva de investimento do BNDES 2025-2029 · corredor de data centers no Ceará (Pecém) · setores que conseguirem redirecionar exportações para fora dos mercados sob tarifa.</p></div>
+    <div class="rlevel r-red"><div class="t">Riscos no radar</div><p>Aprofundamento da queda na indústria de transformação · taxa de investimento em trajetória de queda ante 2025 · instabilidade regulatória (petróleo, energia) reduzindo horizonte de investimento.</p></div>
+  </div>
+
+  <div class="rulebottom"></div>
+
+  <div class="about">
+    <div class="lbl">Sobre esta publicação</div>
+    <p>Radar da Indústria Brasileira é uma publicação dedicada à economia industrial aplicada. Cada edição identifica o fato institucional que melhor explicou o período coberto, organiza os principais acontecimentos por frente de competitividade e propõe uma leitura estruturada dos fatores capazes de alterar a trajetória da capacidade produtiva — distinguindo o que é consolidação do que é sinalização. As publicações têm caráter educacional e analítico.</p>
+  </div>
+
+  <footer class="foot">
+    <div class="indbadge">Indicador da Semana #03 · Indústria de Transformação</div>
+    <div class="titlerecap">Radar da Indústria Brasileira <span class="ac">· Edição Nº 03</span></div>
+    <div class="subrecap">Leitura estruturada da competitividade industrial brasileira.</div>
+    <div class="author">
+      <div class="name">Giuliano Tomazelli</div>
+      <div class="cred">Economista, especialista em Políticas Públicas, pesquisador independente e analista de mercado.</div>
+    </div>
+    <div class="disclaimer"><p>Análise de cenário com base em fontes institucionais e dados oficiais. Não constitui recomendação de investimento.</p></div>
+    <div class="refs">
+      <p><span class="rlbl">Fontes:</span> IBGE (PIB 2º tri/2026 e composição setorial); BNDES — Estudos Especiais nº 64/2026, "Perspectivas do investimento 2025-2029", e Blog do Desenvolvimento; Ministério do Desenvolvimento, Indústria, Comércio e Serviços / Gecex-Camex (antidumping, tarifas químicas, imposto sobre exportação de petróleo); Agência Senado e cobertura independente (Redata, PL 278/2026); Conselho Nacional das ZPEs, Focus Poder e Eixos (data center Voltalia, Complexo do Pecém); Poder360 (aprovação e desembolso do Brasil Soberano 1); Folha de S.Paulo e UOL Economia (cobertura geral da semana).</p>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
