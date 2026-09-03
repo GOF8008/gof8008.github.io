@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O instrumento que sobrou — sobrecarga institucional no Brasil, 2020-2022 | Giuliano Tomazelli</title>
+<meta name="description" content="Quarta edição da série Selic x Inflação: entre 2021 e 2022 o Banco Central elevou a taxa básica de 2% para 13,75% ao ano. O artigo desloca a pergunta da dose para a arquitetura — por que um único instrumento carregou todo o ajuste de uma inflação que, em sua maior parte, não era de demanda.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/artigos/o-instrumento-que-sobrou.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="O instrumento que sobrou — sobrecarga institucional, 2020-2022">
+<meta property="og:description" content="Não é se a Selic foi alta demais. É por que um único instrumento carregou todo o ajuste de uma inflação que não era de demanda.">
+<meta property="og:url" content="https://gof8008.github.io/artigos/o-instrumento-que-sobrou.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O instrumento que sobrou — sobrecarga institucional, 2020-2022">
+<meta name="twitter:description" content="Não é se a Selic foi alta demais. É por que um único instrumento carregou todo o ajuste de uma inflação que não era de demanda.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1A3A5C; --navy-d:#15243f; --orange:#e07a28; --orange-d:#c8631a;
+    --ink:#28323c; --paper:#fff; --chartbg:#f1f3f5; --cream:#fdf4ea; --line:#e6e9ee;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#cfd5dc;font-family:'Source Sans 3',sans-serif;color:var(--ink);
+    -webkit-font-smoothing:antialiased;padding:0 0 calc(220px + env(safe-area-inset-bottom))}
+  .card{max-width:680px;margin:0 auto;background:var(--paper)}
+
+  .band{background:var(--orange);color:#fff;font-weight:700;text-transform:uppercase;
+    letter-spacing:.15em;font-size:8.6px;padding:14px 34px}
+
+  .hero{background:var(--navy-d);color:#fff;padding:40px 34px 38px}
+  .hero .eyebrow{color:#f0a868;font-weight:700;text-transform:uppercase;letter-spacing:.13em;
+    font-size:8.6px;margin-bottom:16px;line-height:1.35}
+  .hero h1{font-family:'Playfair Display',serif;font-weight:800;font-size:28.7px;line-height:1.04;
+    letter-spacing:-.01em}
+  .hero .sub{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;
+    font-size:14.4px;line-height:1.34;color:#c7d6e6;margin-top:18px}
+  .hero .series{font-size:10.3px;line-height:1.4;color:#9fb6cd;margin-top:16px;letter-spacing:.01em}
+  .hero .series b{color:#f0a868;font-weight:700}
+  .hero hr{border:0;border-top:1px solid #34506e;margin:26px 0 22px}
+  .hero .q{font-size:12.1px;line-height:1.5;color:#e7eef5}
+  .hero .q b{color:var(--orange);font-weight:700}
+  .hero .by{color:#f0a868;font-weight:700;text-transform:uppercase;letter-spacing:.13em;
+    font-size:8.3px;margin-top:26px}
+
+  .body{padding:38px 34px 10px;font-size:11.5px;line-height:1.62}
+  .body p{margin-bottom:22px}
+  .body p b, .body li b{color:var(--navy);font-weight:700}
+  .num{color:var(--orange-d);font-weight:700}
+  .lead::first-letter{font-family:'Playfair Display',serif;font-weight:800;color:var(--orange);
+    font-size:44.8px;line-height:.72;float:left;margin:8px 14px 0 0}
+
+  .kicker{color:var(--orange-d);font-weight:700;text-transform:uppercase;letter-spacing:.14em;
+    font-size:8.6px;margin:38px 0 8px}
+  h2.sec{font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);
+    font-size:19px;line-height:1.12;margin-bottom:6px}
+  .rule{width:62px;height:4px;background:var(--orange);border-radius:2px;margin:14px 0 22px}
+
+  .chartcard{background:var(--chartbg);border-radius:10px;padding:26px 24px 22px;margin:30px 0 8px}
+  .chartcard .ck{color:var(--orange-d);font-weight:700;text-transform:uppercase;letter-spacing:.12em;
+    font-size:8px;margin-bottom:6px}
+  .chartcard h3{font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);
+    font-size:14.4px;line-height:1.15;margin-bottom:18px}
+  .chartcard .src{font-size:8.6px;color:#6b7785;line-height:1.4;margin-top:14px}
+  .chartcard .src b{color:#54616e}
+
+  .pull{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;color:var(--navy);
+    font-size:17.2px;line-height:1.32;border-left:6px solid var(--orange);padding:6px 0 6px 26px;
+    margin:36px 0}
+
+  .twin{margin:30px 0 8px}
+  .tbox{border:1px solid var(--line);border-radius:10px;padding:24px 26px;margin-bottom:18px}
+  .tbox .tk{color:var(--orange-d);font-weight:700;text-transform:uppercase;letter-spacing:.12em;
+    font-size:8.3px;margin-bottom:12px}
+  .tbox p{font-size:10.9px;line-height:1.5;margin:0}
+  .tbox.no .tk{color:#7a8794}
+
+  .note{background:var(--cream);border-left:6px solid var(--orange);border-radius:8px;
+    padding:24px 28px;margin:32px 0}
+  .note .nk{color:var(--orange-d);font-weight:700;text-transform:uppercase;letter-spacing:.12em;
+    font-size:8.3px;margin-bottom:12px}
+  .note p{font-size:10.9px;line-height:1.55;margin:0}
+  .note p b{color:var(--navy)}
+
+  .sq{display:inline-block;width:15px;height:15px;background:var(--orange);
+    vertical-align:-1px;margin-left:6px}
+
+  .final{background:var(--navy-d);border-left:5px solid var(--orange)}
+  .about{background:transparent;color:#e7eef5;padding:36px 34px 26px}
+  .about .ak{color:#f0a868;font-weight:700;text-transform:uppercase;letter-spacing:.14em;
+    font-size:8.6px;margin-bottom:18px}
+  .about p{font-size:10.9px;line-height:1.55;margin-bottom:16px}
+  .about p b{color:#fff;font-weight:700}
+
+  .bio{padding:8px 34px 40px;font-size:10.3px;line-height:1.5;color:#c2d0dd}
+  .bio b{color:#fff}
+  .refs{font-size:8.9px;color:#8ba0b3;line-height:1.5;margin-top:18px}
+  .refs b{color:#aebecd}
+  .refs i{font-style:italic}
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="band">Artigo · Política monetária · v4</div>
+
+  <div class="hero">
+    <div class="eyebrow">Sobrecarga institucional — Brasil, 2020–2022</div>
+    <h1>O instrumento que sobrou</h1>
+    <div class="sub">A Selic como substituta funcional da política industrial, diante de uma inflação de reconstrução.</div>
+    <div class="series">Série Selic × Inflação · para a compreensão da atividade econômica brasileira — <b>4ª edição</b> · base 2020–2022</div>
+    <hr>
+    <div class="q"><b>A pergunta:</b> por que um único instrumento — a taxa básica de juros — carregou todo o ajuste de uma inflação que, em sua maior parte, não era de demanda?</div>
+    <div class="by">Por Giuliano Tomazelli</div>
+  </div>
+
+  <div class="body">
+    <p class="lead">Entre 2021 e 2022, o Banco Central elevou a Selic de 2% para <span class="num">13,75%</span> ao ano — um dos ciclos de aperto mais intensos do mundo. O debate que se seguiu prendeu-se a uma régua única: a da dose. Foi alta demais? Campos Neto exagerou? São perguntas legítimas, mas todas presas à mesma suposição — a de que o instrumento era o certo e restava apenas calibrá-lo.</p>
+    <p>Este artigo desloca a pergunta. Não investiga se a Selic foi alta demais, e sim por que <b>um único instrumento carregou todo o ajuste</b>. A primeira pergunta audita uma decisão; a segunda, uma arquitetura. E é a segunda que revela o que a disputa de dose encobre.</p>
+
+    <div class="chartcard">
+      <div class="ck">Gráfico 1 · A escalada da taxa básica</div>
+      <h3>De 2% a 13,75% em dezoito meses</h3>
+      <svg viewBox="0 0 760 330" width="100%" role="img" aria-label="Selic 2020 a 2022">
+<line x1="58" y1="266.1" x2="742" y2="266.1" stroke="#e3e7ec" stroke-width="1"/><text x="48" y="271" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="17.7" fill="#8a97a4">2</text><line x1="58" y1="215.3" x2="742" y2="215.3" stroke="#e3e7ec" stroke-width="1"/><text x="48" y="220" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="17.7" fill="#8a97a4">5</text><line x1="58" y1="130.7" x2="742" y2="130.7" stroke="#e3e7ec" stroke-width="1"/><text x="48" y="136" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="17.7" fill="#8a97a4">10</text><line x1="58" y1="67.2" x2="742" y2="67.2" stroke="#e3e7ec" stroke-width="1"/><text x="48" y="72" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="17.7" fill="#8a97a4">13,75</text>
+<rect x="229.0" y="46" width="513.0" height="254" fill="#e07a28" opacity="0.06"/>
+<line x1="229.0" y1="46" x2="229.0" y2="300" stroke="#e07a28" stroke-width="1.5" stroke-dasharray="5 4"/>
+<polygon points="58.0,300.0 58.0,266.1 82.4,266.1 106.9,266.1 131.3,266.1 155.7,266.1 180.1,266.1 204.6,266.1 229.0,253.4 253.4,253.4 277.9,240.7 302.3,228.0 326.7,228.0 351.1,211.1 375.6,194.2 400.0,168.8 424.4,168.8 448.9,143.4 473.3,143.4 497.7,118.0 522.1,101.0 546.6,101.0 571.0,84.1 595.4,75.6 619.9,75.6 644.3,67.2 668.7,67.2 693.1,67.2 717.6,67.2 742.0,67.2 742.0,300.0" fill="#1A3A5C" opacity="0.07"/>
+<polyline points="58.0,266.1 82.4,266.1 106.9,266.1 131.3,266.1 155.7,266.1 180.1,266.1 204.6,266.1 229.0,253.4 253.4,253.4 277.9,240.7 302.3,228.0 326.7,228.0 351.1,211.1 375.6,194.2 400.0,168.8 424.4,168.8 448.9,143.4 473.3,143.4 497.7,118.0 522.1,101.0 546.6,101.0 571.0,84.1 595.4,75.6 619.9,75.6 644.3,67.2 668.7,67.2 693.1,67.2 717.6,67.2 742.0,67.2" fill="none" stroke="#1A3A5C" stroke-width="3.2" stroke-linejoin="round"/>
+<text x="64" y="252" font-family="Source Sans 3,sans-serif" font-size="20.1" font-weight="700" fill="#1A3A5C">2%</text>
+<text x="738" y="51" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="22.4" font-weight="700" fill="#1A3A5C">13,75%</text>
+<text x="237" y="68" font-family="Source Sans 3,sans-serif" font-size="17.1" fill="#c8631a">início do aperto · mar/2021</text>
+<text x="58" y="320" text-anchor="middle" font-family="Source Sans 3,sans-serif" font-size="17.7" fill="#8a97a4">2020</text>
+<text x="278" y="320" text-anchor="middle" font-family="Source Sans 3,sans-serif" font-size="17.7" fill="#8a97a4">2021</text>
+<text x="571" y="320" text-anchor="middle" font-family="Source Sans 3,sans-serif" font-size="17.7" fill="#8a97a4">2022</text>
+</svg>
+      <div class="src"><b>Fonte:</b> Banco Central do Brasil / Copom. Selic meta ao fim de cada mês.</div>
+    </div>
+
+    <div class="kicker">O diagnóstico</div>
+    <h2 class="sec">Era inflação de reconstrução, não de demanda</h2>
+    <div class="rule"></div>
+    <p>A inflação de 2020–2022 não foi a de uma economia superaquecida. Foi a dinâmica de preços de um sistema produtivo sendo religado após uma paralisação: estoques zerados, cadeias rompidas, reabertura descoordenada entre setores e entre países. É uma inflação de <b>reconstrução</b> — variante periférica da inflação de realocação descrita por Guerrieri, Lorenzoni, Straub e Werning.</p>
+    <p>A composição oficial do IPCA de 2021 confirma. O índice fechou em <span class="num">10,06%</span>, o maior desde 2015, puxado por oferta e câmbio: combustíveis subiram 49%, e só o transporte respondeu por mais de 4 dos 10 pontos. Energia e alimentos vieram logo atrás. O núcleo de serviços — o item sensível à demanda — não foi o motor do surto.</p>
+    <p>Houve, sim, estímulo fiscal grande: o auxílio emergencial custou perto de 5% do PIB de 2020. Mas ele foi de 2020, encolheu em 2021, e a maior parte foi para alimentos — justo onde o choque também era de oferta. A demanda <i>permitiu</i> o repasse; não foi o gatilho.</p>
+
+    <div class="chartcard">
+      <div class="ck">Gráfico 2 · A composição do IPCA 2021</div>
+      <h3>O surto veio da oferta</h3>
+      <svg viewBox="0 0 760 306" width="100%" role="img" aria-label="Composição do IPCA 2021"><text x="218" y="36" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="20.1" fill="#28323c">Combustíveis</text><rect x="232" y="20" width="488" height="22" rx="3" fill="#eef1f4"/><rect x="232" y="20" width="459.8" height="22" rx="3" fill="#e07a28"/><text x="701.8" y="37" font-family="Source Sans 3,sans-serif" font-size="18.9" font-weight="700" fill="#1A3A5C">49,0%</text><text x="218" y="78" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="20.1" fill="#28323c">Transportes</text><rect x="232" y="62" width="488" height="22" rx="3" fill="#eef1f4"/><rect x="232" y="62" width="197.1" height="22" rx="3" fill="#e07a28"/><text x="439.1" y="79" font-family="Source Sans 3,sans-serif" font-size="18.9" font-weight="700" fill="#1A3A5C">21,0%</text><text x="218" y="120" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="20.1" fill="#28323c">Administrados</text><rect x="232" y="104" width="488" height="22" rx="3" fill="#eef1f4"/><rect x="232" y="104" width="122.9" height="22" rx="3" fill="#e07a28"/><text x="364.9" y="121" font-family="Source Sans 3,sans-serif" font-size="18.9" font-weight="700" fill="#1A3A5C">13,1%</text><text x="218" y="162" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="20.1" fill="#28323c">Art. residenciais</text><rect x="232" y="146" width="488" height="22" rx="3" fill="#eef1f4"/><rect x="232" y="146" width="113.6" height="22" rx="3" fill="#e07a28"/><text x="355.6" y="163" font-family="Source Sans 3,sans-serif" font-size="18.9" font-weight="700" fill="#1A3A5C">12,1%</text><text x="218" y="204" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="20.1" fill="#28323c">Vestuário</text><rect x="232" y="188" width="488" height="22" rx="3" fill="#eef1f4"/><rect x="232" y="188" width="96.7" height="22" rx="3" fill="#e07a28"/><text x="338.7" y="205" font-family="Source Sans 3,sans-serif" font-size="18.9" font-weight="700" fill="#1A3A5C">10,3%</text><text x="218" y="246" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="20.1" fill="#28323c">Alim. no domicílio</text><rect x="232" y="230" width="488" height="22" rx="3" fill="#eef1f4"/><rect x="232" y="230" width="74.1" height="22" rx="3" fill="#e07a28"/><text x="316.1" y="247" font-family="Source Sans 3,sans-serif" font-size="18.9" font-weight="700" fill="#1A3A5C">7,9%</text><line x1="326.4" y1="16" x2="326.4" y2="268" stroke="#15243f" stroke-width="2" stroke-dasharray="5 4"/><text x="334.4" y="288" font-family="Source Sans 3,sans-serif" font-size="18.3" font-weight="700" fill="#15243f">IPCA cheio 10,06%</text></svg>
+      <div class="src"><b>Fonte:</b> IBGE. Variação no ano por grupo; linha tracejada = IPCA cheio.</div>
+    </div>
+
+    <div class="kicker">O instrumento cego</div>
+    <h2 class="sec">Por que o juro não resolve um choque de oferta</h2>
+    <div class="rule"></div>
+    <p>A taxa básica move toda a economia na mesma direção e com o mesmo sinal. É essa homogeneidade que a torna potente contra um excesso de demanda generalizado — e cega diante de um gargalo localizado. Elevar o juro não cria fertilizante, chip ou energia: encarece o financiamento de quem os produziria. Contra um choque de oferta, o instrumento não ataca a causa; redistribui o custo.</p>
+    <p>A própria literatura de política ótima sustenta que a inflação de realocação não deveria ser plenamente combatida pela taxa básica, porque parte dela é o mercado realocando recursos entre setores. O modelo do próprio Banco Central, no Relatório de Inflação de setembro de 2022, decompôs a inflação reconhecendo o peso de gargalos globais, câmbio e escassez hídrica — fatores de oferta.</p>
+
+    <div class="kicker">A sobrecarga</div>
+    <h2 class="sec">Um Estado que chegou ao choque sem ferramentas</h2>
+    <div class="rule"></div>
+    <p>Se o juro era inadequado, por que foi o único a agir? Porque era o único que ainda funcionava. Os instrumentos que atacariam a oferta estavam desativados: o BNDES havia encolhido a <span class="num">0,74%</span> do PIB em 2021 — o menor nível desde 1995 —, com a TLP atando seu custo aos títulos públicos; a CONAB estava esvaziada de estoques reguladores; a política industrial, ausente da agenda.</p>
+    <p>A consequência é a <b>sobrecarga institucional</b>: a Selic recebeu, de fato, responsabilidades que pertenciam a políticas de oferta inexistentes. O Banco Central operou — não por escolha deliberada, mas por ausência de alternativa — como substituta funcional da política industrial.</p>
+
+    <div class="pull">O Banco Central não escolheu carregar tudo. Sobrou só ele.</div>
+
+    <div class="kicker">O contrafactual</div>
+    <h2 class="sec">Herança, não escolha do período</h2>
+    <div class="rule"></div>
+    <p>A objeção óbvia é temporal: política de oferta não matura em dezoito meses. Verdade — e é justamente a tese. O contrafactual de repartir o ajuste estava indisponível porque os instrumentos haviam sido fechados <i>antes</i>, em décadas de desmonte. A CONAB não tinha estoques a liberar porque já os havia reduzido a mínimos; o BNDES não pôde expandir crédito barato porque a regra o impedia.</p>
+    <p>A crítica, portanto, não recai sobre quem decidiu a taxa. O Copom agiu dentro do mandato e diante de riscos reais. A falha é da <b>arquitetura</b> que deixou o decisor sem alternativa. A responsabilidade migra do Copom para o Estado que consumiu seus próprios instrumentos.</p>
+
+    <div class="kicker">O teste honesto</div>
+    <h2 class="sec">A hipótese que o dado não confirmou</h2>
+    <div class="rule"></div>
+    <p>O artigo levantou uma aposta mais ousada: a de que o aperto teria comprimido o horizonte do investimento produtivo, deslocando capital do produtivo longo para o financeiro curto. Era falseável — e foi testada contra dado primário. O resultado é <b>negativo</b>, e é reportado como tal.</p>
+    <p>Dois testes diretos. O prazo médio do crédito às empresas não encurtou no aperto — manteve-se estável em torno de 54 meses. E a FBCF real <span class="num">cresceu 17,2%</span> em 2021, com alta em todos os componentes — inclusive a construção (+12,8%), o investimento de horizonte mais longo. Avançou ainda em 2022 e só recuou em 2023, já fora do aperto. A compressão do investimento produtivo, no agregado, não ocorreu.</p>
+
+    <div class="chartcard">
+      <div class="ck">Gráfico 3 · FBCF real — variação anual</div>
+      <h3>O investimento subiu no aperto — caiu só em 2023</h3>
+      <svg viewBox="0 0 760 330" width="100%" role="img" aria-label="FBCF variação real anual 2021 a 2023">
+<line x1="58" y1="268.8" x2="742" y2="268.8" stroke="#e3e7ec" stroke-width="1"/><text x="48" y="274" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="17.7" fill="#8a97a4">-5%</text><line x1="58" y1="223.1" x2="742" y2="223.1" stroke="#e3e7ec" stroke-width="1"/><text x="48" y="228" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="17.7" fill="#8a97a4">0%</text><line x1="58" y1="177.3" x2="742" y2="177.3" stroke="#e3e7ec" stroke-width="1"/><text x="48" y="182" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="17.7" fill="#8a97a4">5%</text><line x1="58" y1="131.5" x2="742" y2="131.5" stroke="#e3e7ec" stroke-width="1"/><text x="48" y="137" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="17.7" fill="#8a97a4">10%</text><line x1="58" y1="85.8" x2="742" y2="85.8" stroke="#e3e7ec" stroke-width="1"/><text x="48" y="91" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="17.7" fill="#8a97a4">15%</text><line x1="58" y1="40.0" x2="742" y2="40.0" stroke="#e3e7ec" stroke-width="1"/><text x="48" y="45" text-anchor="end" font-family="Source Sans 3,sans-serif" font-size="17.7" fill="#8a97a4">20%</text><rect x="67.1" y="40" width="437.8" height="238.0" fill="#1A3A5C" opacity="0.05"/><text x="286" y="58" text-anchor="middle" font-family="Source Sans 3,sans-serif" font-size="17.1" fill="#3a5670">durante o aperto</text><line x1="58" y1="223.1" x2="742" y2="223.1" stroke="#9aa6b2" stroke-width="1.5"/><rect x="124.1" y="65.6" width="95.8" height="157.4" fill="#1A3A5C" rx="2"/><rect x="352.1" y="213.0" width="95.8" height="10.1" fill="#1A3A5C" rx="2"/><rect x="580.1" y="223.1" width="95.8" height="27.5" fill="#e07a28" rx="2"/><text x="172" y="54" text-anchor="middle" font-family="Source Sans 3,sans-serif" font-size="23.6" font-weight="700" fill="#1A3A5C">+17,2%</text><text x="172" y="306" text-anchor="middle" font-family="Source Sans 3,sans-serif" font-size="18.9" fill="#8a97a4">2021</text><text x="400" y="201" text-anchor="middle" font-family="Source Sans 3,sans-serif" font-size="23.6" font-weight="700" fill="#1A3A5C">+1,1%</text><text x="400" y="306" text-anchor="middle" font-family="Source Sans 3,sans-serif" font-size="18.9" fill="#8a97a4">2022</text><text x="628" y="275" text-anchor="middle" font-family="Source Sans 3,sans-serif" font-size="23.6" font-weight="700" fill="#e07a28">-3,0%</text><text x="628" y="306" text-anchor="middle" font-family="Source Sans 3,sans-serif" font-size="18.9" fill="#8a97a4">2023</text>
+</svg>
+      <div class="src"><b>Fonte:</b> IBGE / Contas Nacionais. Variação real anual da FBCF. Em 2021, todos os componentes subiram (construção +12,8%).</div>
+    </div>
+
+    <p>Mas a leitura exige cautela. A não-queda não prova que o juro não freou: o aperto conviveu com forças expansionistas extraordinárias — Auxílio Emergencial (~5% do PIB), alívio fiscal aos estados, boom de commodities, reconstrução pós-pandemia — capazes de compensar o efeito do juro. Foi um <i>policy clash</i>, não um <i>policy mix</i>: o fiscal expandindo enquanto o monetário contraía. A compressão não se confirma — mas tampouco se pode declará-la inexistente. Fica em aberto, para um período em que essas forças não estejam presentes.</p>
+
+    <p>O que o dado sustenta é mais estreito: houve <b>financeirização da poupança</b> — migração massiva para a renda fixa remunerada pela Selic, com captação recorde de fundos e forte alta dos depósitos a prazo. Mas isso é a poupança das famílias realocando, não o investimento das empresas sendo subtraído. O custo do ajuste foi real, e recaiu sobre o serviço da dívida e a remuneração do setor financeiro — não sobre uma contração do investimento.</p>
+
+    <div class="pull">Enunciar a hipótese, testá-la e reportar que o dado não a sustentou <span style="font-style:normal;color:var(--orange-d)">— é o método funcionando, não a sua falha.</span></div>
+
+    <div class="twin">
+      <div class="tbox">
+        <div class="tk">O que o artigo afirma</div>
+        <p>Inflação predominantemente de oferta e reconstrução. Taxa básica inadequada a um choque setorial. Sobrecarga institucional herdada de décadas de desmonte. Financeirização da poupança no aperto.</p>
+      </div>
+      <div class="tbox no">
+        <div class="tk">O que o artigo não afirma</div>
+        <p>Que a Selic destruiu o investimento produtivo — hipótese testada e <b>não confirmada</b> no agregado. Que o Copom errou a dose. Um contrafactual quantificado do mundo alternativo.</p>
+      </div>
+    </div>
+
+    <div class="note">
+      <div class="nk">Nota de método</div>
+      <p>As proposições foram enunciadas <b>antes</b> da evidência e com condições explícitas de falseamento. A aposta mais original foi testada contra fonte primária (IBGE, BCB/SGS) e seu resultado negativo, registrado. O artigo separa o que <b>afirma</b> do que apenas <b>propõe</b> — e não vende o contrafactual como se fosse fato.</p>
+    </div>
+
+    <p>O caso é menos um veredito sobre uma dose do que um diagnóstico sobre uma arquitetura. A pergunta deixa de ser “qual o nível certo da Selic?” e passa a ser outra: qual instrumento deve carregar qual parte da tarefa — e o que resta de um Estado que consumiu todos, menos um.<span class="sq"></span></p>
+  </div>
+
+  <div class="final">
+  <div class="about">
+    <div class="ak">Sobre o artigo</div>
+    <p>Análise de economia institucional construída sobre <b>fontes primárias</b> (IBGE, Banco Central, série SGS), com separação rigorosa entre <b>fato</b> e <b>hipótese</b>.</p>
+    <p>A contribuição mais ousada — a compressão de horizonte — foi testada contra dado primário e não se confirmou no agregado; a ressalva de forças compensatórias mantém o caso em aberto. O resultado negativo é declarado, não escondido. É refutabilidade em exercício.</p>
+  </div>
+
+  <div class="bio">
+    <b>Giuliano Tomazelli</b> — Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.
+    <div class="refs"><b>Referências principais:</b> IBGE (IPCA; Contas Nacionais); Banco Central do Brasil (SGS 20853; Relatório de Inflação set/2022, modelo Samba); Guerrieri, Lorenzoni, Straub &amp; Werning (2021); Shapiro (2024); BNDES (série de desembolsos); Feijó, Araújo &amp; Bresser-Pereira (2022).</div>
+  </div>
+  </div>
+
+</div>
+</body>
+</html>
