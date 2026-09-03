@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autonomia de Terceira Geração e a transformação da accountability | Giuliano Tomazelli</title>
+<meta name="description" content="Segunda edição da série Sistema Financeiro Bancário em discussão: por que ampliar a autonomia financeira de um banco central redistribui, em vez de aumentar, a prestação de contas. Distinção entre controle ex ante e accountability ex post, as três fontes de legitimidade e o que isso exige da PEC 65.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/artigos/autonomia-terceira-geracao.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="Autonomia de Terceira Geração e a transformação da accountability">
+<meta property="og:description" content="Quando um banco central passa da autonomia operacional para a financeira, a prestação de contas precisa aumentar — ou mudar de forma?">
+<meta property="og:url" content="https://gof8008.github.io/artigos/autonomia-terceira-geracao.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Autonomia de Terceira Geração e a transformação da accountability">
+<meta name="twitter:description" content="Quando um banco central passa da autonomia operacional para a financeira, a prestação de contas precisa aumentar — ou mudar de forma?">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root{
+  --navy:#1A3A5C; --navy-deep:#14283f; --orange:#D9772C; --orange-dk:#C2611C;
+  --ink:#272727; --muted:#6c7783; --line:#e7e6e0;
+  --cool:#F3F4F5; --warm:#FBF3EA; --page:#E8E9EC;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Source Sans 3',system-ui,sans-serif;
+  --u:clamp(11.5px, 3.5vw, 14px);          /* unidade responsiva do corpo */
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--page);font-family:var(--sans);color:var(--ink);line-height:1.5;
+  -webkit-font-smoothing:antialiased;padding:clamp(8px,2.5vw,16px) clamp(4px,1.5vw,9px) calc(220px + env(safe-area-inset-bottom));}
+.card{max-width:480px;margin:0 auto;background:#fff;border-radius:16px;
+  box-shadow:0 6px 30px rgba(20,40,63,.10);
+  padding:clamp(10px,3vw,14px) clamp(8px,2.5vw,12px) clamp(18px,5vw,24px);overflow:hidden;}
+
+/* HERO */
+.hero{background:var(--navy);border-radius:11px;overflow:hidden;position:relative;
+  padding:clamp(20px,6vw,28px) clamp(15px,4.5vw,24px);color:#fff;}
+.hero::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--orange);}
+.eyebrow{font-weight:700;font-size:calc(var(--u)*0.74);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--orange);margin:6px 0 14px;line-height:1.3;}
+.title{font-family:var(--serif);font-weight:800;font-size:calc(var(--u)*2.0);
+  line-height:1.1;letter-spacing:-.01em;margin-bottom:13px;}
+.dek{font-family:var(--serif);font-style:italic;font-weight:500;font-size:calc(var(--u)*1.38);
+  line-height:1.34;color:#eaf0f6;margin-bottom:17px;}
+.serie{font-weight:600;font-size:calc(var(--u)*0.84);color:#b9c6d4;margin-bottom:16px;line-height:1.4;}
+.serie b{color:var(--orange);font-weight:700;}
+.hr{height:1px;background:rgba(255,255,255,.18);margin:16px 0;}
+.ask{font-size:var(--u);line-height:1.46;color:#e9eff5;margin-bottom:16px;}
+.ask b{color:var(--orange);font-weight:700;}
+.byline{font-weight:700;font-size:calc(var(--u)*0.78);letter-spacing:.13em;
+  text-transform:uppercase;color:var(--orange);}
+
+/* BODY */
+.body{padding:clamp(20px,6vw,28px) clamp(13px,4vw,18px) 0;}
+.body p{font-size:var(--u);line-height:1.6;margin-bottom:calc(var(--u)*0.95);}
+.body p b{color:var(--navy);font-weight:700;}
+.lead::first-letter{font-family:var(--serif);font-weight:800;color:var(--orange);
+  float:left;font-size:calc(var(--u)*3.0);line-height:.8;padding:5px 8px 0 0;}
+
+.kicker{font-weight:700;font-size:calc(var(--u)*0.74);letter-spacing:.13em;
+  text-transform:uppercase;color:var(--orange-dk);margin:calc(var(--u)*1.7) 0 calc(var(--u)*0.5);}
+h2.head{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.8);
+  line-height:1.13;color:var(--navy);margin-bottom:calc(var(--u)*0.55);}
+h2.head::after{content:"";display:block;width:42px;height:3px;background:var(--orange);
+  margin-top:10px;border-radius:2px;}
+
+.pull{border-left:5px solid var(--orange);padding:4px 0 4px clamp(14px,4vw,18px);
+  margin:calc(var(--u)*1.4) 0;}
+.pull p{font-family:var(--serif);font-style:italic;font-weight:500;font-size:calc(var(--u)*1.55);
+  line-height:1.34;color:var(--navy-deep);margin:0;}
+
+/* QUADRO */
+.quadro{background:var(--cool);border:1px solid var(--line);border-radius:8px;
+  padding:clamp(16px,4.5vw,22px);margin:calc(var(--u)*1.5) 0;}
+.quadro .kicker{margin-top:0;}
+.quadro h3{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.45);
+  color:var(--navy);line-height:1.16;margin-bottom:14px;}
+.qcard{background:#fff;border:1px solid var(--line);border-radius:6px;padding:11px 13px;margin-bottom:10px;}
+.qcard .n{font-weight:700;font-size:var(--u);color:var(--navy);margin-bottom:3px;}
+.qcard .d{font-size:calc(var(--u)*0.95);color:var(--muted);line-height:1.4;}
+.cap{font-size:calc(var(--u)*0.84);color:var(--muted);line-height:1.5;margin-top:6px;}
+.cap b{color:var(--navy);font-weight:700;}
+
+/* CAIXAS */
+.box{border-radius:8px;padding:clamp(16px,4.5vw,22px);margin:calc(var(--u)*1.4) 0;border:1px solid var(--line);}
+.box.afirma{background:var(--cool);}
+.box.nao{background:var(--warm);}
+.box.note{background:var(--warm);}
+.box .kicker{margin-top:0;}
+.box ul{list-style:none;}
+.box li{position:relative;padding-left:16px;font-size:calc(var(--u)*0.96);line-height:1.5;margin-bottom:calc(var(--u)*0.7);}
+.box li:last-child{margin-bottom:0;}
+.box li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--orange);}
+.box li b{color:var(--navy);font-weight:700;}
+.box.note p{font-size:calc(var(--u)*0.96);line-height:1.55;margin-bottom:calc(var(--u)*0.7);}
+.box.note p:last-child{margin-bottom:0;}
+.box.note p b{color:var(--navy);font-weight:700;}
+
+.close p{font-size:var(--u);line-height:1.6;margin-bottom:0;}
+.endmark{display:inline-block;width:9px;height:9px;background:var(--orange);margin-left:7px;}
+
+/* GLOSSÁRIO */
+.gloss{background:var(--cool);border:1px solid var(--line);border-radius:8px;padding:clamp(16px,4.5vw,22px);margin:calc(var(--u)*1.6) 0 0;}
+.gloss .kicker{margin-top:0;}
+.gloss p{font-size:calc(var(--u)*0.9);line-height:1.5;margin-bottom:calc(var(--u)*0.55);}
+.gloss p:last-child{margin-bottom:0;}
+.gloss b{color:var(--navy);font-weight:700;}
+
+/* SOBRE / AUTOR / REFS */
+.about{background:var(--navy);color:#dfe7ef;border-radius:9px;padding:clamp(16px,4.5vw,22px);margin:calc(var(--u)*1.8) 0 0;}
+.about .kicker{color:var(--orange);margin-top:0;}
+.about p{font-size:calc(var(--u)*0.92);line-height:1.55;}
+.about i{font-style:italic;}
+.author{background:var(--cool);border:1px solid var(--line);border-left:5px solid var(--orange);
+  border-radius:6px;padding:clamp(14px,4vw,20px);margin:calc(var(--u)*1.1) 0 0;}
+.author .name{font-weight:700;font-size:calc(var(--u)*1.18);color:var(--navy);margin-bottom:6px;}
+.author .bio{font-size:calc(var(--u)*0.92);line-height:1.5;color:#3a3a3a;}
+.refs{font-size:calc(var(--u)*0.82);line-height:1.55;color:var(--muted);margin:calc(var(--u)*1.2) 4px 0;}
+.refs b{color:#3a3a3a;font-weight:700;}
+em{font-style:italic;}
+</style>
+</head>
+<body>
+<div class="card">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">Artigo · Sistema Financeiro Bancário · v5</div>
+    <div class="title">Autonomia de Terceira Geração e a Transformação da Accountability</div>
+    <div class="dek">Por que ampliar a autonomia financeira redistribui — em vez de aumentar — a prestação de contas, e o que isso exige da PEC&nbsp;65.</div>
+    <div class="serie">Série <b>Sistema Financeiro Bancário em discussão</b> — <b>2ª edição</b> · base 2021–2026</div>
+    <div class="hr"></div>
+    <div class="ask"><b>A pergunta:</b> quando um banco central passa da autonomia operacional para a autonomia financeira, a prestação de contas precisa aumentar — ou precisa mudar de forma?</div>
+    <div class="byline">Por Giuliano Tomazelli</div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <p class="lead">Há uma fórmula que soa prudente e é, no fundo, autodestrutiva: a de que mais autonomia exige mais controle. O controle que se imagina acrescentar é quase sempre prévio — orçamento, instrução, ingerência sobre nomeações —, e cada um deles subtrai exatamente a autonomia que se queria conceder. Somar esse controle não equilibra a autonomia; anula-a.</p>
+
+    <p>O erro está em tratar autonomia e accountability como grandezas independentes, e em confundir <b>controle</b>, que veta a decisão antes, com <b>accountability</b>, que responde por ela depois. Esta edição parte de um fio que a 1ª deixou aberto: ao tratar do registro imutável contra a captura, “A Camada que Não se Vê” concluiu que o antídoto real é institucional e político, fora do que aquele artigo resolvia. É esse antídoto que esta edição assume — e a pergunta deixa de ser <em>quanto</em> controle para virar <em>qual forma</em>.</p>
+
+    <!-- 2 -->
+    <div class="kicker">Controle ≠ accountability</div>
+    <h2 class="head">O motor do argumento</h2>
+    <p>Três distinções sustentam tudo. A primeira: delegar a um agente não eleito é abrir mão do controle corrente, não do direito de pedir contas — quem delega troca controle <em>ex ante</em> por accountability <em>ex post</em>. A segunda decompõe a legitimidade em três fontes, na tradição de Scharpf e Schmidt: <b>input</b> (a autorização a montante — mandato e nomeação), <b>output</b> (a eficácia a jusante — a entrega do mandato) e, entre elas, <b>throughput</b> (a qualidade do processo enquanto ele corre). É no throughput que vive a maior parte da accountability de um banco central independente — e é ele o termo que a fórmula ingênua ignora.</p>
+    <p>A terceira distinção é elaboração própria, não categoria consolidada: propõe-se aqui subdividir o throughput, que a literatura trata como bloco único. Há o <b>throughput estrutural ex post</b> — auditoria, porta giratória, conflito de interesse, separação funcional —, cujo custo para a autonomia é baixo, porque expõe sem constranger. E há a transparência em tempo real, que na supervisão tem custo real: divulgar uma posição corrente de fiscalização pode estigmatizar a instituição e disparar a corrida que se queria evitar. Quem confunde as duas conclui, erradamente, que toda accountability adicional cobra autonomia.</p>
+    <p>Convém uma régua para não confundir o estrutural com o meramente formal: um mecanismo é estrutural quando está previsto em lei, carrega sanção efetiva e é fiscalizado por órgão externo independente. É por ela que a quarentena de seis meses da PEC 65, sem fiscalização dedicada, se revela mais cosmética que estrutural.</p>
+
+    <div class="pull"><p>Throughput estrutural ex post é exposição, não constrangimento da decisão: reduz a capacidade de ocultar, não a discricionariedade.</p></div>
+
+    <!-- 3 -->
+    <div class="kicker">Três gerações de autonomia</div>
+    <h2 class="head">Operacional, administrativa, financeira</h2>
+    <p>A independência de um banco central não é um bloco; é um feixe de dimensões medidas separadamente. A primeira geração é operacional — no Brasil, a LC 179/2021. A segunda é administrativa. A terceira, que a PEC 65 persegue, é financeira: receita própria, saída do Orçamento da União, patrimônio e quadro próprios. Cada geração remove um vetor distinto de controle político.</p>
+    <p>“Autonomia de terceira geração” não é categoria inventada: corresponde à dimensão de <b>independência financeira</b> já mensurada no índice CBIE de Romelli. A contribuição é lê-la como etapa de uma sequência — e distingui-la da dimensão, também medida e <b>separada</b>, de reporte e divulgação. É dessa folga entre as duas que depende a tese.</p>
+
+    <!-- 4 -->
+    <div class="kicker">A tese</div>
+    <h2 class="head">A redistribuição — e como testá-la</h2>
+    <p>A tese cabe em uma linha: a autonomia de terceira geração não exige <em>mais</em> accountability; ela <b>redistribui</b> a sua estrutura — desloca o controle democrático do input (orçamento, nomeação) para o throughput e o output. É P1, a tese da redistribuição.</p>
+    <p>O aparato é de economia institucional: delegação a um agente não eleito (Alesina-Tabellini), contratos incompletos, custos de agência — a accountability como alocação <em>ex post</em> dos direitos de controle residuais. A legitimidade democrática não é trocada por eficiência; é o critério que emerge do próprio problema de delegação. E convém precisar o alcance, para não provar demais: não se afirma que o throughput aumente a legitimidade em qualquer contexto, mas que ele é o mecanismo <b>compatível</b> com a autonomia financeira — afirmação de compatibilidade, não de suficiência.</p>
+    <p>P1 é proposição observável. Ela prediz que, onde um banco ganhou independência financeira, deveria ter ganhado em reporte e divulgação. Como as duas dimensões são medidas em separado no CBIE — 155 bancos centrais —, a previsão é testável num painel: o co-movimento aparece, ou a tese cai. A PEC 65 é o caso que sobe numa dimensão sem subir na outra: o desviante que a teoria previa.</p>
+
+    <!-- 5 -->
+    <div class="kicker">Quatro bancos centrais</div>
+    <h2 class="head">Autonomia financeira não é a anomalia</h2>
+    <p>O debate brasileiro alardeia que a PEC 65 criaria uma entidade sem paralelo. No que toca à autonomia financeira, é falso: o Federal Reserve não se sujeita a apropriações do Congresso e se financia pela renda dos títulos que detém. O que varia entre os grandes bancos centrais não é <em>se</em> têm receita própria — é <b>quanto throughput a acompanha</b>.</p>
+
+    <div class="quadro">
+      <div class="kicker">Quadro 1 · Accountability comparada</div>
+      <h3>O que acompanha a autonomia financeira</h3>
+      <div class="qcard"><div class="n">Federal Reserve (EUA)</div><div class="d">Autofinanciado · relatório e depoimento semestrais · demonstrações auditadas · atas do FOMC · auditoria da GAO.</div></div>
+      <div class="qcard"><div class="n">Banco Central Europeu</div><div class="d">Independência por tratado · diálogos monetários regulares com o Parlamento Europeu.</div></div>
+      <div class="qcard"><div class="n">Banco da Inglaterra</div><div class="d">Treasury Committee · <em>open letter</em> obrigatória quando a inflação foge da meta.</div></div>
+      <div class="qcard"><div class="n">Banco do Canadá</div><div class="d">Prestação ao Parlamento · poder de diretiva escrita do Executivo — nunca usado.</div></div>
+      <div class="cap"><b>Quatro desenhos distintos; nenhuma autonomia financeira sobre o vazio.</b> Mecanismos conforme estatutos e relatórios oficiais.</div>
+    </div>
+
+    <!-- 6 -->
+    <div class="kicker">Por que output não basta</div>
+    <h2 class="head">A legitimidade que colapsa na crise</h2>
+    <p>Há uma resposta tentadora: se o banco entrega o resultado — inflação na meta, sistema estável —, a legitimidade está dada; bastaria a accountability de resultado. É coerente e está errada, por três razões. A legitimidade só de output é <b>emprestada</b>: some na crise, justo quando mais se precisa dela. Sofre de <b>atribuição</b>: o resultado é coproduzido por choques fora do controle do banco. E é <b>distributiva</b>: supervisão e resolução têm efeitos políticos que a estabilidade de preços não legitima sozinha.</p>
+    <p>Mas a objeção decisiva vem do próprio caso desta série: a captura de um supervisor opera no nível granular, e instituições não-sistêmicas não movem nenhuma métrica agregada. Um banco de médio porte capturado deixa tudo verde até o dia em que colapsa.</p>
+
+    <div class="pull"><p>Output accountability é estruturalmente cega à captura de uma instituição não-sistêmica — até que ela deixe de ser não-sistêmica.</p></div>
+
+    <!-- 7 -->
+    <div class="kicker">Captura sob autonomia</div>
+    <h2 class="head">O vetor que se desloca</h2>
+    <p>É preciso resistir a cravar uma direção. A autonomia financeira <b>reconfigura</b> os vetores de captura, com efeitos que se compensam: reduz a captura fiscal-política (o Executivo não pode mais estrangular o orçamento); pode reduzir a porta giratória, ao permitir remuneração competitiva que retém quadros; mas aumenta o insulamento. O sinal líquido é questão empírica — tratá-lo como teorema seria assumir a conclusão que se quer provar.</p>
+    <p>O que se afirma é mais modesto e mais útil: qualquer que seja o sinal, o vetor que cresce — o industrial-cognitivo, no nível supervisório — é justamente o que a accountability de resultado não enxerga. Logo, o instrumento de detecção não é o output, nem a transparência em tempo real, mas o <b>throughput supervisório estrutural ex post</b>. É o corolário P2.</p>
+
+    <!-- 8 -->
+    <div class="kicker">Estudo de caso</div>
+    <h2 class="head">Banco Master, rastreamento de mecanismo</h2>
+    <p>Fixe-se o estatuto antes de usá-lo: o caso entra como <b>evidência corroborativa e ilustrativa, não como prova</b>. Os atos que o cercam são fato — a liquidação decretada pelo Banco Central, o veto à aquisição pelo BRB, o afastamento de dirigentes da supervisão por ordem do STF. A caracterização da captura permanece <b>alegação sob investigação, que as partes negam</b>.</p>
+    <p>A captura, no caso, não se deu na cúpula nem nos agregados — deu-se na supervisão granular, sobre um banco de médio porte (S3) acompanhado pelos escalões inferiores. E a falha não foi de informação, foi de ação: segundo a apuração, a supervisão já teria identificado, em 2024, ativos problemáticos e insuficiência de capital — e ainda assim faltou quem agisse. É a forma exata do mecanismo de P2 — e é aqui que as duas edições se encontram: a 1ª precisou do registro imutável para tornar a captura <em>custosa</em>; esta precisa da arquitetura de accountability para torná-la <em>punível</em>.</p>
+
+    <!-- 9 -->
+    <div class="kicker">Caso desviante</div>
+    <h2 class="head">A PEC 65 sobe uma dimensão, não a outra</h2>
+    <p>Do lado da independência financeira, a proposta é coerente e ambiciosa: senhoriagem retida, saída do Orçamento, patrimônio próprio, fim do regime de autarquia. Do lado do reporte e da divulgação, pouco acrescenta — e o que existe é estreito: a arguição semestral ao Senado é macro-monetária, não cobre as decisões supervisórias granulares, exatamente a camada onde a captura morou. A isso somam-se o quadro celetista, a quarentena de seis meses (das mais curtas do mundo) e a opacidade que o sigilo de oito anos sobre a liquidação tornou visível — sigilo cujo núcleo é legítimo, mas que não pode durar indefinidamente.</p>
+    <p>Há ainda uma tensão que a PEC não toca: ela não altera o Conselho Monetário Nacional, de composição política, a quem cabe fixar as metas. Autonomia de meios sob heteronomia de fins é arranjo que a reforma não equaciona. E um sinal revelador: as entidades reguladas apoiam a proposta, enquanto a academia alerta para a captura. Quando o regulado quer blindar o regulador, vale perguntar por quê.</p><p>E o reverso completa o quadro: do outro lado, o sindicato dos próprios servidores do Banco Central financia a oposição — segundo a Folha de S.Paulo, o Sinal-DF teria aprovado cerca de R$ 800 mil em publicidade contrária, incluindo um contrato de R$ 300 mil com a atriz Luana Piovani por um vídeo de campanha. Reguladas a favor, servidores contra: cada grupo se posiciona pelo que a autonomia faz com o seu próprio interesse, não pelo desenho da accountability.</p><p>E há o ângulo fiscal, de peso: a senhoriagem (~R$ 23,3 bi/ano) supera em cinco vezes o custo de funcionar do BC (~R$ 4,8 bi), e hoje seu resultado positivo abate dívida; a PEC remove essa obrigação e deixa o destino do excedente a lei futura (art. 164, §§ 7º-8º). Há o que conceder — o BC não terá fim lucrativo, e a reengenharia da casa tem custo real nos primeiros anos, o que justifica a mudança. Mas o teste não é o orçamento: é a supervisão. O que não pode é, ano após ano, instituição financeira em manchete policial com fraude bilionária.</p><p>A PEC 65 não é, então, a entidade sem paralelo do discurso — é algo mais preciso: um arranjo que eleva uma dimensão da autonomia sem elevar a que a equilibra.</p>
+
+    <!-- 10 -->
+    <div class="kicker">Arquitetura corretiva</div>
+    <h2 class="head">O que uma reforma coerente exige</h2>
+    <p>Cautela de método: a legislação varia entre sistemas jurídicos, e os mecanismos estrangeiros a seguir são <b>referências funcionais, não prescrição transplantável</b>. O princípio decorre de P1: não somar controle, mas parear cada autonomia com um contrapeso que não toque na decisão. À autonomia financeira, auditoria externa de regularidade e demonstrações públicas; à administrativa, regime reforçado de porta giratória; ao regime de direito privado, ancoragem das funções de Estado e revisão judicial; ao mandato, que seja estreito.</p>
+    <p>E quanto ao resultado em si: reter o custo da operação mais uma reserva de contingência com teto, remetendo o excedente ao Tesouro por mandato legal vinculado ao abate da dívida — como nos bancos centrais que se autofinanciam — em vez de deixá-lo a lei futura. Preserva a autonomia operacional sem abrir a apropriação da senhoriagem.</p>
+    <p>Sobre essa base, seis melhorias: estender a quarentena de seis para doze a vinte e quatro meses com dente; criar throughput supervisório <em>ex post</em> (divulgação da fundamentação após a resolução); separar funcionalmente supervisão e política monetária; instituir um escritório de avaliação independente; uma cláusula de revisão periódica; e um critério mensurável — elevar, juntas, as duas dimensões do CBIE. Tudo isso na Constituição ou na lei complementar, <b>nunca no regimento do próprio banco</b> — sob pena de o regulador autorregular a própria accountability. Nenhum arranjo elimina a captura; reaponta o vetor e a torna detectável e punível.</p>
+
+    <div class="box afirma">
+      <div class="kicker">O que afirma</div>
+      <ul>
+        <li>A autonomia financeira <b>redistribui</b> a accountability — do insumo para o processo e o resultado — em vez de aumentá-la.</li>
+        <li>A perda do controle prévio só se legitima se compensada por throughput estrutural <em>ex post</em> e mandato estreito.</li>
+        <li>A autonomia reconfigura os vetores de captura; o <b>sinal líquido é questão empírica</b>.</li>
+      </ul>
+    </div>
+
+    <div class="box nao">
+      <div class="kicker">O que não afirma</div>
+      <ul>
+        <li>Que “mais autonomia exige mais controle” — a fórmula que substitui.</li>
+        <li>Que a autonomia financeira <b>aumente</b> a captura: os efeitos são compensatórios.</li>
+        <li>Que o caso Banco Master prove o sinal causal — ele instancia o mecanismo, não o demonstra.</li>
+        <li>Que o resultado baste para preservar legitimidade.</li>
+      </ul>
+    </div>
+
+    <div class="box note">
+      <div class="kicker">Nota de método</div>
+      <p>O artigo declara as condições que o tornariam falso. <b>P1</b>: se, num painel pré-registrado dos 155 bancos do CBIE — controlado por um índice geral de governança —, a independência financeira não co-mover com o reporte, a tese cai. <b>P2</b>: seria falsa se a captura de uma instituição não-sistêmica fosse, em algum caso, detectada por métrica de output antes de virar sistêmica.</p>
+      <p>Riscos declarados: o co-movimento pode ser confundido por uma onda geral de modernização — daí o controle de governança; “terceira geração” depende de uma leitura sequencial do autor; e o teste de painel <b>ainda não foi rodado</b>. O que se tem é um programa de falseamento, não uma tese já exposta ao erro. Caso Master <em>sub judice</em>: rastreamento, não prova de sinal.</p>
+    </div>
+
+    <div class="close">
+      <p>A autonomia de terceira geração é legitimável <b>condicionalmente</b> — não incondicionalmente. A teoria generaliza para qualquer instituição que recebe autonomia crescente; o teste, não — ele é específico de banco central. A opacidade que a 1ª edição rastreou nasce num nó e viaja; esta mostrou que ela também se abriga na arquitetura do supervisor, quando a autonomia cresce sem que a accountability se redistribua. O painel do CBIE que confirma P1 fica anunciado como tarefa, não como promessa.<span class="endmark"></span></p>
+    </div>
+
+    <div class="gloss">
+      <div class="kicker">Glossário</div>
+      <p><b>Accountability</b> — prestação de contas: o dever de explicar e responder por decisões já tomadas, distinto de controle, que veta antes.</p>
+      <p><b>Input · throughput · output</b> — as três fontes de legitimidade: de insumo (a autorização — mandato e nomeação), de processo (a qualidade do processo enquanto a decisão corre) e de resultado (a entrega do mandato).</p>
+      <p><b>Open letter</b> — carta pública que o Banco da Inglaterra deve emitir quando a inflação se afasta da meta.</p>
+      <p><b>Ex ante · ex post</b> — antes · depois da decisão.</p>
+      <p><b>Sub judice</b> — sob apreciação do Judiciário, ainda sem decisão definitiva.</p>
+    </div>
+
+    <div class="about">
+      <div class="kicker">Sobre o artigo</div>
+      <p>Ensaio de economia institucional, em registro próprio, sobre como a autonomia financeira redistribui — não aumenta — a accountability dos bancos centrais. Apoia-se na literatura de delegação e no índice CBIE, separa fato de alegação em matéria <i>sub judice</i> e se apresenta como proposição para debate — não como veredito técnico.</p>
+    </div>
+
+    <div class="author">
+      <div class="name">Giuliano Tomazelli</div>
+      <div class="bio">Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</div>
+    </div>
+
+    <div class="refs"><b>Referências principais:</b> Scharpf (1999); Schmidt (2013), throughput legitimacy; Tucker, <em>Unelected Power</em> (2018); Alesina &amp; Tabellini (2007/2008); Romelli, índice CBIE (2022; 2024); Carpenter &amp; Moss (2014); Comitê de Basileia, WP 45; Brasil, LC 179/2021 (art. 11) e PEC 65/2023; Congressional Research Service / Federal Reserve.</div>
+
+  </div>
+</div>
+</body>
+</html>
