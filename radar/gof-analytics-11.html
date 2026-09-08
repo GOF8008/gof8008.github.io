@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltou o capital. Resistiu o choque. — GOF Analytics Nº 11 | Giuliano Tomazelli</title>
+<meta name="description" content="Leitura semanal dos mercados (31/08 a 04/09/2026): o Ibovespa sobe 5,40% na semana, com onze pregões seguidos de valorização e três dias confirmados de entrada de capital estrangeiro. Na sexta, o payroll americano surpreende para cima e a bolsa não devolve a alta.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/radar/gof-analytics-11.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras · Analytics">
+<meta property="og:title" content="Voltou o capital. Resistiu o choque. — GOF Analytics Nº 11">
+<meta property="og:description" content="O Ibovespa subiu 5,40% na semana e o fluxo estrangeiro confirmou três dias de entrada. O payroll surpreendeu — e a alta resistiu.">
+<meta property="og:url" content="https://gof8008.github.io/radar/gof-analytics-11.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Voltou o capital. Resistiu o choque. — GOF Analytics Nº 11">
+<meta name="twitter:description" content="O Ibovespa subiu 5,40% na semana e o fluxo estrangeiro confirmou três dias de entrada. O payroll surpreendeu — e a alta resistiu.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --u: clamp(12px, 3.4vw, 14.5px);
+    --ink:#1A1D24; --bg:#F3EFE6; --paper:#FFFFFF;
+    --accent:#B8862F; --accent-dk:#8A6420; --tint:#FAF6EC;
+    --pos:#1F7A4D; --neg:#B23A36; --muted:#6B6F76; --hair:#E4DECF;
+    --serif:'Playfair Display', Georgia, 'Times New Roman', serif;
+    --sans:'Source Sans 3', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg);}
+  body{font-family:var(--sans);color:var(--ink);font-size:var(--u);line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    padding:clamp(14px,4vw,44px) clamp(10px,3vw,24px) 240px;}
+  .card{width:100%;max-width:740px;margin:0 auto;background:var(--paper);border:1px solid var(--hair);
+    box-shadow:0 1px 0 rgba(0,0,0,.02), 0 22px 50px -30px rgba(26,29,36,.32);
+    padding:clamp(22px,5.2vw,48px);}
+
+  .masthead-top{display:flex;justify-content:space-between;align-items:baseline;
+    font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.72);
+    letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
+  .masthead-top .ed-date{color:var(--accent-dk);}
+  .brand-row{display:flex;justify-content:space-between;align-items:center;gap:1em;margin:.25em 0 .55em;}
+  .wordmark{font-family:var(--serif);line-height:.98;letter-spacing:-.01em;}
+  .wordmark .g{display:block;font-weight:800;font-size:clamp(23px,6.2vw,38px);}
+  .wordmark .a{display:block;font-weight:500;font-style:italic;font-size:clamp(14px,3.4vw,18px);
+    letter-spacing:.05em;color:var(--accent-dk);margin-top:.12em;}
+  .badge{flex:none;text-align:center;border:2px solid var(--accent);padding:.45em .7em;
+    min-width:4.6em;border-radius:2px;}
+  .badge .b-lab{font-size:calc(var(--u)*.58);font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--accent-dk);display:block;}
+  .badge .b-num{font-family:var(--serif);font-weight:800;font-size:clamp(22px,6vw,30px);
+    line-height:1;color:var(--ink);}
+  .rule-dbl{border:none;border-top:3px solid var(--ink);box-shadow:0 3px 0 var(--accent);margin:.2em 0 1.4em;}
+
+  h1{font-family:var(--serif);font-weight:800;font-size:clamp(27px,7.2vw,42px);line-height:1.05;
+    margin:0 0 .18em;letter-spacing:-.012em;}
+  .dek{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--accent-dk);
+    font-size:calc(var(--u)*1.16);line-height:1.35;max-width:54ch;margin:0;}
+
+  .geo{border:1px solid var(--hair);border-left:3px solid var(--ink);background:#F7F4ED;
+    padding:.95em 1.15em;margin:1.3em 0 .2em;border-radius:2px;}
+  .geo.eleitoral{border-left-color:var(--accent);background:var(--tint);}
+  .geo .g-lab{font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.64);
+    letter-spacing:.18em;text-transform:uppercase;color:var(--accent-dk);display:flex;align-items:center;gap:.6em;}
+  .geo .g-lab::after{content:"";flex:1;height:1px;background:var(--hair);}
+  .geo p{margin:.5em 0 0;font-size:calc(var(--u)*.88);color:#3A3D44;line-height:1.5;}
+  .geo .g-rel{display:inline-block;margin-top:.5em;font-size:calc(var(--u)*.7);font-weight:700;
+    letter-spacing:.03em;background:var(--ink);color:#F3EFE6;padding:.28em .65em;border-radius:2px;}
+
+  .indicador{background:var(--ink);color:#F3EFE6;padding:1.15em 1.3em;margin:1.4em 0 .2em;border-radius:2px;}
+  .indicador .i-lab{font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.66);
+    letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:.6em;}
+  .indicador .i-lab::after{content:"";flex:1;height:1px;background:var(--accent);opacity:.5;}
+  .indicador .i-term{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.4);
+    margin:.25em 0 .35em;color:#fff;}
+  .indicador .i-text{font-size:calc(var(--u)*.94);line-height:1.5;color:#E8E2D4;margin:0;}
+
+  .sec{border-top:1px solid var(--hair);padding-top:1.2em;margin-top:1.5em;}
+  .sec-head{display:flex;align-items:baseline;gap:.6em;margin-bottom:.5em;}
+  .num{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.05);color:var(--accent);min-width:1.5em;}
+  .sec-title{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.25);letter-spacing:-.005em;}
+  .sec p{margin:.2em 0 0;} .sec p + p{margin-top:.7em;} .lbl{font-weight:700;color:var(--ink);}
+
+  .chart-wrap{margin:.4em 0 .2em;}
+  .chart-cap{font-size:calc(var(--u)*.78);color:var(--muted);margin-top:.3em;}
+  svg{width:100%;height:auto;display:block;}
+  .bar-val{font-family:var(--sans);font-weight:700;font-size:14px;fill:var(--ink);}
+  .bar-lab{font-family:var(--sans);font-weight:600;font-size:13px;fill:var(--muted);}
+  .axis{stroke:var(--hair);stroke-width:1;}
+
+  table{width:100%;border-collapse:collapse;margin:.3em 0 .1em;
+    font-variant-numeric:tabular-nums;font-size:calc(var(--u)*.92);}
+  caption{text-align:left;font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.72);
+    letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-bottom:.5em;}
+  th,td{padding:.46em .4em;text-align:right;border-bottom:1px solid var(--hair);}
+  th{font-weight:700;color:var(--muted);font-size:calc(var(--u)*.72);letter-spacing:.05em;text-transform:uppercase;}
+  th:first-child,td:first-child{text-align:left;} td:first-child{font-weight:600;}
+  tbody tr:last-child td{border-bottom:none;}
+  .up{color:var(--pos);font-weight:700;} .down{color:var(--neg);font-weight:700;} .flat{color:var(--muted);}
+
+  .radar-synth{font-size:calc(var(--u)*.96);line-height:1.5;margin:.2em 0 1em;
+    padding-bottom:.9em;border-bottom:1px dashed var(--hair);}
+  .tier{border-left:3px solid var(--c);padding:.5em 0 .5em .85em;margin:.65em 0;}
+  .tier.t-blue{--c:#2F6FB0;} .tier.t-amber{--c:#CC7A22;} .tier.t-green{--c:#1F7A4D;} .tier.t-red{--c:#B23A36;}
+  .tier-head{display:flex;align-items:center;gap:.5em;font-weight:700;font-size:calc(var(--u)*.98);color:var(--c);margin-bottom:.15em;}
+  .tier-dot{width:.7em;height:.7em;border-radius:50%;background:var(--c);flex:none;}
+  .tier-items{font-size:calc(var(--u)*.9);color:#3A3D44;line-height:1.45;}
+  .cal{margin-top:1em;} .cal caption{padding-bottom:.4em;}
+
+  .sobre{border:1px solid var(--hair);border-left:3px solid var(--accent);background:var(--tint);
+    padding:1.05em 1.2em;margin:1.45em 0 .2em;border-radius:2px;}
+  .sobre .g-lab{font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.66);
+    letter-spacing:.2em;text-transform:uppercase;color:var(--accent-dk);display:flex;align-items:center;gap:.6em;}
+  .sobre .g-lab::after{content:"";flex:1;height:1px;background:var(--hair);}
+
+  .foot{border-top:2px solid var(--ink);box-shadow:0 2px 0 var(--accent);margin-top:1.9em;padding-top:1.1em;}
+  .seal{display:inline-block;border:1px solid var(--accent);color:var(--accent-dk);font-size:calc(var(--u)*.68);
+    font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.32em .7em;border-radius:2px;margin-bottom:.85em;}
+  .foot-brand{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.02);}
+  .foot-brand .ed{color:var(--accent-dk);font-weight:600;}
+  .foot-tag{font-style:italic;color:var(--muted);font-size:calc(var(--u)*.86);margin:.2em 0 .8em;max-width:46ch;}
+  .byline{font-weight:700;font-size:calc(var(--u)*.94);}
+  .bio{color:var(--muted);font-size:calc(var(--u)*.82);margin-top:.12em;}
+  .disclaimer{margin-top:.85em;font-size:calc(var(--u)*.8);color:var(--muted);font-style:italic;
+    border-left:2px solid var(--accent);padding-left:.8em;}
+</style>
+</head>
+<body>
+<main class="card">
+
+  <div class="masthead-top">
+    <span>Leitura Semanal dos Mercados</span>
+    <span class="ed-date">Semana de 31/08 a 04/09/2026</span>
+  </div>
+  <div class="brand-row">
+    <div class="wordmark"><span class="g">Gestão de Opções Futuras</span><span class="a">Analytics</span></div>
+    <div class="badge"><span class="b-lab">Edição</span><span class="b-num">Nº 11</span></div>
+  </div>
+  <hr class="rule-dbl">
+
+  <h1>Voltou o capital. Resistiu o choque.</h1>
+  <p class="dek">O Ibovespa subiu 5,40% na semana, com o fluxo estrangeiro confirmando três dias seguidos de entrada. Na sexta, o payroll surpreendeu para cima — e a bolsa não devolveu a alta acumulada na semana.</p>
+
+  <!-- GEOPOLÍTICA compacta -->
+  <div class="geo">
+    <div class="g-lab">Geopolítica · Leitura Institucional</div>
+    <p><b>Irã e EUA trocaram ataques na virada de domingo (30/08) para segunda (31/08)</b> — a primeira troca direta em mais de um mês, reacendendo o risco de conflito. O Brent fechou a segunda em alta de 2,71%, a US$ 90,49; no mesmo pregão, Petrobras PN (PETR4) subiu 3,38% e Petrobras ON (PETR3), 4,23%. A leitura de mercado atribuiu parte do desempenho do Ibovespa naquele dia ao movimento do petróleo — mecanismo plausível dado o peso da Petrobras no índice, não uma relação automática.</p>
+    <span class="g-rel">Relevância para a B3: Moderada</span>
+  </div>
+
+  <!-- INDICADOR DA SEMANA -->
+  <div class="indicador">
+    <div class="i-lab">Indicador da Semana</div>
+    <div class="i-term">Fluxo Estrangeiro: três dias confirmados de entrada</div>
+    <p class="i-text">Depois de fechar agosto ainda negativo (-R$ 86 mi em 28/08), o fluxo estrangeiro passou a registrar entradas por três pregões consecutivos: +R$ 458 mi (31/08), +R$ 811 mi (01/09) e +R$ 1,39 bi (02/09) — +R$ 2,66 bi no total, confirmados direto na fonte. Quinta e sexta (03 e 04/09) ainda não têm dado divulgado — mesma defasagem de sempre. No acumulado dos últimos 20 pregões, porém, o estrangeiro ainda é negativo em cerca de R$ 15 bi: é cedo para chamar de mudança estrutural, mas a virada diária é real.</p>
+  </div>
+
+  <!-- 1 · O QUE MEXEU -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">1</span><span class="sec-title">O que mexeu</span></div>
+    <p><span class="lbl">Brasil.</span> O Ibovespa fechou a segunda (31/08, 177.419 pts, +1,00%) na 9ª alta seguida de uma sequência iniciada em 19/08; a sequência se estendeu até quarta (02/09, 185.205 pts, +3,05% no dia — a maior alta diária desde março), somando 11 pregões seguidos de valorização e +11,34% acumulados. Ao longo da semana, circularam pesquisas eleitorais de diferentes institutos (AtlasIntel/Bloomberg e BTG/Nexus na segunda, Real Time Big Data na terça, Datafolha depois) mostrando o mesmo sentido — vantagem de Lula sobre Flávio Bolsonaro encolhendo para uma margem tecnicamente empatada num eventual segundo turno —, mas a atribuição de um pregão específico a uma pesquisa específica não é sustentável com os dados desta edição. A sequência foi interrompida na quinta (03/09): o índice chegou a subir quase 2% no dia, tocando 188.892 pontos, mas devolveu o ganho com realização de lucro em Vale e Petrobras e fechou em 185.188 pontos (-0,01%), praticamente estável. Na sexta (04/09), novo teste: o índice oscilou entre 183.252 e 186.545 pontos — quase 3,3 mil pontos de amplitude — antes de fechar em 185.147 (-0,02%). A B3 confirmou a nova composição do Ibovespa para setembro-dezembro (vigência 8/09): entra Tenda, saem PetroRecôncavo e SLC Agrícola.</p>
+    <p><span class="lbl">Exterior.</span> O payroll americano de agosto veio muito acima do esperado: 162 mil vagas contra ~55-56 mil projetadas — quase o triplo —, com julho revisado para cima. A taxa de desemprego seguiu em 4,1%. A probabilidade de alta de 0,25 p.p. em setembro, segundo o CME FedWatch, subiu para cerca de 58% ao fim da sexta-feira, ante ~48% no dia anterior — salto atribuído diretamente ao payroll. Treasuries e dólar subiram após o dado; o dólar fechou a semana em queda de 1,28%, a R$ 5,13.</p>
+  </section>
+
+  <!-- CALENDÁRIO ELEITORAL -->
+  <div class="geo eleitoral">
+    <div class="g-lab">Calendário Eleitoral</div>
+    <p>Sete institutos tinham pesquisa prevista para a semana (AtlasIntel, BTG/Nexus, Real Time Big Data, Genial/Quaest, Datafolha, Futura/Apex, PoderData). Na segunda (31/08), saíram AtlasIntel/Bloomberg (Lula 47,1% x Flávio Bolsonaro 42,6% num 2º turno, ante 49,2% x 42,9% em julho) e BTG/Nexus (2º turno: 46% x 45%, empate técnico; 1º turno: Lula 39%, Flávio 33%); na terça, Real Time Big Data; Datafolha saiu depois, na mesma semana. Todas no mesmo sentido — vantagem de Lula encolhendo. Não é sustentável, com os dados desta edição, atribuir a alta de um pregão específico a uma pesquisa específica — o efeito de preço agregado da semana é o fato registrável; a leitura de por que o mercado reagiu assim varia por fonte e não é objeto deste Radar.</p>
+  </div>
+
+  <!-- 2 · OS NÚMEROS -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">2</span><span class="sec-title">Os números</span></div>
+
+    <div class="chart-wrap">
+      <svg viewBox="0 0 620 260" role="img" aria-label="Ibovespa, semana de 31 de agosto a 4 de setembro de 2026: nove pregões de alta na segunda, sequência de 11 altas encerrada na quinta perto de 189 mil pontos, e teste do payroll na sexta">
+        <line class="axis" x1="50" y1="205" x2="580" y2="205"/>
+
+        <polyline points="85,185 190,148 295,61 400,62 495,62" fill="none" stroke="#8A6420" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/>
+        <g>
+          <circle cx="85"  cy="185" r="5.5" fill="#8A6420"/>
+          <circle cx="190" cy="148" r="5" fill="#FAF6EC" stroke="#8A6420" stroke-width="2"/>
+          <circle cx="295" cy="61"  r="5.5" fill="#8A6420"/>
+          <circle cx="400" cy="62"  r="5.5" fill="#8A6420"/>
+          <circle cx="495" cy="62"  r="5.5" fill="#8A6420"/>
+        </g>
+        <text class="bar-val" x="85"  y="171" text-anchor="middle" font-weight="700">177.419</text>
+        <text class="bar-val" x="190" y="134" text-anchor="middle" opacity="0.75">~179.760*</text>
+        <text class="bar-val" x="295" y="47"  text-anchor="middle" font-weight="700">185.205</text>
+        <text class="bar-val" x="400" y="80"  text-anchor="middle" font-weight="700">185.188</text>
+        <text class="bar-val" x="495" y="48"  text-anchor="middle" font-weight="700">185.147</text>
+
+        <!-- whisker de sexta: coluna própria, à direita do ponto de fechamento -->
+        <line x1="560" y1="40" x2="560" y2="93" stroke="#B23A36" stroke-width="2" stroke-dasharray="3 3"/>
+        <text x="560" y="30" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-weight="700" font-size="11.5" fill="#B23A36">máx. 186.545</text>
+        <text x="560" y="107" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-weight="700" font-size="11.5" fill="#B23A36">mín. 183.252</text>
+
+        <text class="bar-lab" x="85"  y="223" text-anchor="middle">Seg 31/08</text>
+        <text class="bar-lab" x="190" y="223" text-anchor="middle">Ter 01/09</text>
+        <text class="bar-lab" x="295" y="223" text-anchor="middle">Qua 02/09</text>
+        <text class="bar-lab" x="400" y="223" text-anchor="middle">Qui 03/09</text>
+        <text class="bar-lab" x="495" y="223" text-anchor="middle">Sex 04/09</text>
+      </svg>
+      <div class="chart-cap">Ibovespa — fechamento diário, pontos. Quatro pontos são fechamento oficial confirmado; *terça é estimativa por interpolação (fechamento exato não localizado nesta apuração). A sequência de 11 altas (19/08–02/09) foi interrompida na quinta, que chegou a tocar 188.892 pontos intradia antes de fechar praticamente estável. À direita do ponto de sexta, a faixa vermelha mostra a amplitude do dia do payroll. Fonte: B3 / agências.</div>
+    </div>
+
+    <table>
+      <caption>Panorama da semana</caption>
+      <thead><tr><th>Indicador</th><th>Situação</th></tr></thead>
+      <tbody>
+        <tr><td>Ibovespa</td><td class="up">185.147 pts (+5,40% sem.)</td></tr>
+        <tr><td>Fluxo estrangeiro (3 dias confirmados)</td><td class="up">+R$ 2,66 bi</td></tr>
+        <tr><td>Fluxo estrangeiro (20 pregões)</td><td class="down">~-R$ 15 bi</td></tr>
+        <tr><td>Payroll EUA (ago.)</td><td class="up">+162 mil (vs. ~55 mil esp.)</td></tr>
+        <tr><td>Prob. alta de juros EUA (set., FedWatch)</td><td class="flat">~58%</td></tr>
+        <tr><td>Dólar (R$)</td><td class="down">5,13 (-1,28% sem.)</td></tr>
+        <tr><td>Petróleo (Brent)</td><td class="up">~US$ 90 (patamar da semana, sem % fechado)</td></tr>
+        <tr><td>DI jan/27</td><td class="flat">13,575% (ajuste de sexta; +0,8 p.b. no dia)</td></tr>
+      </tbody>
+    </table>
+    <div class="chart-cap">Verde/vermelho indicam o sinal favorável/desfavorável ao ambiente brasileiro, não o sinal aritmético. A curva DI é dado de posicionamento do mercado de juros — não determina a Selic nem serve para prever seu rumo.</div>
+  </section>
+
+  <!-- 3 · LEITURA -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">3</span><span class="sec-title">Leitura</span></div>
+    <p>O vetor que melhor organiza a leitura da semana foi a entrada estrangeira observada em três pregões consecutivos, com dois fatores concorrentes subordinados a ele: o petróleo (via Petrobras, amplificado pela escalada Irã-EUA) e o calendário eleitoral (via o salto de quarta-feira) coincidiram com a aceleração da alta, sem serem, isoladamente, a causa. O teste da semana veio na sexta: um payroll quase três vezes acima do esperado é, em outras condições, o tipo de choque que costuma devolver parte da alta — juros americanos sobem, dólar fortalece, DI local abre. Desta vez, o Ibovespa oscilou quase 3,3 mil pontos no dia e fechou praticamente estável. Isso é evidência de resistência intradiária a um choque externo real — não, ainda, prova de que a reprecificação virou regime: o acumulado de 20 pregões segue negativo em ~R$15 bi.</p>
+    <p><span class="lbl">Contraleitura.</span> A resistência de sexta também pode refletir só a magnitude do movimento acumulado (uma alta de 5,4% tem folga para absorver um dia ruim) ou antecipação de operações ligadas ao rebalanceamento do índice que entra em vigor em 8/09 — hipótese plausível, não comprovada por dados de composição ou volume disponíveis nesta edição. A pergunta que fica: o estrangeiro está recompondo posições depois da saída de agosto, ou aumentando estruturalmente a exposição? É falsificável já na próxima semana — se o fluxo voltar a negativo no primeiro choque externo, a hipótese de mudança de regime perde força; se resistir de novo, ganha.</p>
+  </section>
+
+  <!-- 4 · SÍNTESE ESTRATÉGICA -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">4</span><span class="sec-title">Síntese estratégica</span></div>
+    <p class="radar-synth">A pergunta deixou de ser "por que subiu 5,4%" e passou a ser se o fluxo que voltou fica. A atenção vai para a continuidade do fluxo diário e para o próximo choque externo — mapa de onde olhar, não sinal de compra ou venda.</p>
+
+    <div class="tier t-blue">
+      <div class="tier-head"><span class="tier-dot"></span>Atenção elevada</div>
+      <div class="tier-items">Continuidade do fluxo estrangeiro diário — se as entradas de 31/08–02/09 persistem ou revertem quando saírem os dados de quinta e sexta.</div>
+    </div>
+    <div class="tier t-amber">
+      <div class="tier-head"><span class="tier-dot"></span>Atenção moderada</div>
+      <div class="tier-items">Escalada (ou não) entre Irã e EUA · reunião do FOMC em 16/09 · novas pesquisas eleitorais · rebalanceamento do Ibovespa em 8/09.</div>
+    </div>
+    <div class="tier t-green">
+      <div class="tier-head"><span class="tier-dot"></span>Oportunidades de observação</div>
+      <div class="tier-items">Setores sensíveis a fluxo estrangeiro, se a entrada persistir · exportadoras de petróleo enquanto o Brent seguir elevado · comportamento do câmbio, da curva de juros e dos ativos domésticos diante de novas pesquisas eleitorais.</div>
+    </div>
+    <div class="tier t-red">
+      <div class="tier-head"><span class="tier-dot"></span>Riscos no radar</div>
+      <div class="tier-items">Reversão do fluxo se o FOMC confirmar tom duro em 16/09 · nova escalada Irã-EUA · alta concentrada demais para ser resiliente a mais de um choque seguido.</div>
+    </div>
+
+    <table class="cal">
+      <caption>Calendário da semana</caption>
+      <thead><tr><th>Data</th><th>Evento</th><th>O que observar</th></tr></thead>
+      <tbody>
+        <tr><td>08/09</td><td>Novo rebalanceamento do Ibovespa entra em vigor</td><td>Tenda entra; PetroRecôncavo e SLC Agrícola saem</td></tr>
+        <tr><td>~11/09</td><td>CPI dos EUA (agosto)</td><td>dado mais direto para a precificação do Fed do que a própria decisão isolada</td></tr>
+        <tr><td>16/09</td><td>Decisão do FOMC (Fed)</td><td>observar a decisão, o comunicado e a reação das taxas americanas — não só se sobe ou não</td></tr>
+        <tr><td>—</td><td>Fluxo estrangeiro diário (03 e 04/09, quando saírem)</td><td>testa se a virada resiste ao payroll</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SOBRE ESTA PUBLICAÇÃO -->
+  <div class="sobre">
+    <div class="g-lab">Sobre esta publicação</div>
+    <p style="margin:.5em 0 0;font-size:calc(var(--u)*.9);color:#3A3D44;line-height:1.55;">Gestão de Opções Futuras Analytics é uma publicação semanal dedicada à interpretação dos mercados financeiros e da economia brasileira. Cada edição identifica o indicador que melhor explicou a semana, organiza os principais acontecimentos econômicos e propõe uma leitura estruturada dos fatores capazes de alterar a trajetória do mercado — distinguindo o que muda a rota do que apenas a agita no curto prazo. As publicações têm caráter educacional e analítico.</p>
+  </div>
+
+  <!-- RODAPÉ -->
+  <div class="foot">
+    <div class="seal">Indicador da Semana #11 · Fluxo Estrangeiro</div>
+    <div class="foot-brand">Gestão de Opções Futuras <span class="ed">· Analytics · Edição Nº 11</span></div>
+    <div class="foot-tag">Leitura semanal e estruturada dos mercados e da economia brasileira.</div>
+    <div class="byline">Giuliano Tomazelli</div>
+    <div class="bio">Economista, especialista em Políticas Públicas, pesquisador independente e analista de mercado.</div>
+    <div class="disclaimer">Análise de cenário com base em dados de mercado. Não constitui recomendação de investimento.</div>
+  </div>
+
+</main>
+</body>
+</html>
