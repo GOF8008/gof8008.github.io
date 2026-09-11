@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A Medição como Fronteira — o habeas corpus e os limites do poder sobre a esfera não exposta | Giuliano Tomazelli</title>
+<meta name="description" content="Ensaio sobre onde o poder legítimo se detém quando não pode medir sem fabricar a medida que lhe falta. Propõe uma leitura estrutural do habeas corpus como regra de humildade diante do imensurável e delimita a fronteira defensável: inferir a partir do exposto é legítimo; fabricar a partir do não exposto, não.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/ejp/medicao-como-fronteira.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="A Medição como Fronteira">
+<meta property="og:description" content="Onde o poder legítimo se detém quando não pode medir sem fabricar a medida que lhe falta. Uma leitura estrutural do habeas corpus.">
+<meta property="og:url" content="https://gof8008.github.io/ejp/medicao-como-fronteira.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Medição como Fronteira">
+<meta name="twitter:description" content="Onde o poder legítimo se detém quando não pode medir sem fabricar a medida que lhe falta. Uma leitura estrutural do habeas corpus.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#15243f; --navy-2:#22375c; --navy-3:#33507e;
+    --orange:#e07a28; --orange-soft:#f0a25a; --orange-tint:#fbeede;
+    --ink:#202733; --ink-soft:#4a525f; --paper:#fff;
+    --line:#dde1e8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{background:#EDF0F3;font-family:'Source Sans 3',system-ui,sans-serif;
+       color:var(--ink);-webkit-font-smoothing:antialiased;
+       padding:16px 10px 240px}
+  .page{width:100%;max-width:760px;margin:0 auto;background:var(--paper);
+        border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(18,41,63,.15)}
+
+  header{background:var(--navy);color:#fff;padding:34px clamp(16px,4vw,48px) 30px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;
+                border-radius:50%;background:radial-gradient(circle at center,rgba(224,122,40,.22),transparent 68%)}
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:22px;position:relative;z-index:2}
+  .brand-mark{width:34px;height:34px;border:2px solid var(--orange);border-radius:50%;
+              display:flex;align-items:center;justify-content:center;flex:none;
+              font-family:'Playfair Display',serif;font-weight:800;font-size:16px;color:var(--orange)}
+  .brand-word{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.05em;font-size:12.5px;color:#eef2f8}
+  .brand-word span{color:var(--orange)}
+  .marker{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-soft);
+          font-weight:700;margin-bottom:14px;position:relative;z-index:2;line-height:1.5}
+  h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,6.4vw,46px);
+     line-height:1.05;color:#fff;position:relative;z-index:2}
+  .sub{margin-top:15px;font-size:14.5px;line-height:1.55;color:#c3cee0;position:relative;z-index:2}
+  .byline{margin-top:20px;position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.16);padding-top:15px}
+  .byline b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:5px}
+  .byline p{font-size:12.4px;line-height:1.55;color:#aeb9cc}
+
+  .quest{background:var(--orange-tint);border-left:5px solid var(--orange);padding:22px clamp(16px,4vw,48px)}
+  .quest b{display:block;font-size:10.5px;letter-spacing:.19em;text-transform:uppercase;color:#a35d12;margin-bottom:9px}
+  .quest p{font-family:'Playfair Display',serif;font-style:italic;font-size:17.5px;line-height:1.42;color:var(--navy)}
+
+  main{padding:30px clamp(16px,4vw,48px) 14px}
+  section{margin-bottom:32px}
+  .sec-head{display:flex;align-items:baseline;gap:11px;margin-bottom:11px}
+  .sec-num{font-family:'Playfair Display',serif;font-weight:800;font-size:15px;color:var(--orange);flex:none}
+  h2{font-family:'Playfair Display',serif;font-weight:700;font-size:21px;line-height:1.18;color:var(--navy-2)}
+  p{font-size:13.6px;line-height:1.64;color:var(--ink-soft);margin-bottom:10px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  p strong{color:var(--ink);font-weight:600}
+  h3{font-family:'Playfair Display',serif;font-size:15.5px;color:var(--navy);font-weight:700;margin:16px 0 6px}
+
+  .pull{border-left:4px solid var(--navy-3);background:#f6f7f9;border-radius:0 6px 6px 0;
+        padding:15px 18px;margin:14px 0}
+  .pull p{margin-bottom:0;font-size:14.2px;color:var(--navy-2);font-weight:600;text-align:left}
+
+  .chain{background:var(--navy);border-radius:8px;padding:20px 22px;margin:14px 0 6px}
+  .chain .lbl{font-size:10.3px;letter-spacing:.17em;text-transform:uppercase;color:var(--orange-soft);font-weight:700;margin-bottom:11px}
+  .chain .seq{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:11px}
+  .chain .st{background:rgba(255,255,255,.08);border:1px solid rgba(240,162,90,.35);border-radius:5px;
+             padding:6px 10px;font-size:12.3px;color:#fff;font-weight:600}
+  .chain .ar{color:var(--orange);font-weight:700;font-size:14px}
+  .chain p{margin:0;font-size:12.6px;line-height:1.55;color:#c3cee0;text-align:left}
+
+  .two{display:flex;gap:11px;flex-wrap:wrap;margin:14px 0 4px}
+  .two .col{flex:1;min-width:210px;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .two .col .hd{padding:10px 14px;font-size:11.5px;font-weight:700;letter-spacing:.04em;color:#fff}
+  .two .ok .hd{background:var(--navy-2)}
+  .two .no .hd{background:#8c3a12}
+  .two .col .bd{padding:12px 14px;background:#fafbfc}
+  .two .col .bd p{margin-bottom:0;font-size:12.9px}
+
+  .rows{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+  .row{display:flex;gap:13px;align-items:flex-start;padding:13px 15px;background:#f6f7f9;
+       border:1px solid var(--line);border-radius:6px}
+  .row .n{font-family:'Playfair Display',serif;font-weight:800;font-size:15px;color:var(--orange);min-width:78px;line-height:1.35;flex:none}
+  .row .t{font-size:12.9px;line-height:1.55;color:var(--ink-soft)}
+  .row .t b{color:var(--navy);font-weight:700}
+
+  .falsif{background:#f6f7f9;border:1px solid var(--line);border-left:4px solid var(--navy-3);
+          border-radius:6px;padding:16px 18px;margin-top:12px}
+  .falsif b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy-2);margin-bottom:7px}
+  .falsif p{margin-bottom:8px;font-size:13px}
+  .falsif p:last-child{margin-bottom:0}
+
+  .gloss{border-top:1px solid var(--line);padding-top:16px;margin-top:4px}
+  .gloss b.h{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:9px}
+  .gloss p{font-size:12.4px;line-height:1.55;color:#5c6873;margin-bottom:7px;text-align:left}
+  .gloss p b{color:var(--navy);font-weight:700}
+
+  .srcs{border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+  .srcs b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .srcs p{font-size:11.8px;line-height:1.55;color:#6c757f;text-align:left}
+
+  footer{background:var(--navy);color:#fff;padding:28px clamp(16px,4vw,48px) 32px;margin-top:22px}
+  .fquote{border-left:4px solid var(--orange);padding-left:17px;margin-bottom:22px}
+  .fquote p{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;line-height:1.45;
+            color:#f0f5fa;margin:0;text-align:left}
+  .fauth b{display:block;font-size:13.5px;color:#fff;font-weight:600;margin-bottom:4px}
+  .fauth p{font-size:12.2px;line-height:1.55;color:#aeb9cc;margin-bottom:15px;text-align:left}
+  .fnote{font-size:11.3px;line-height:1.55;color:#7f93a6;border-top:1px solid rgba(255,255,255,.16);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand"><div class="brand-mark">G</div><div class="brand-word">GOF · <span>ENSAIO</span></div></div>
+    <div class="marker">Poder e pessoa · Limites do Estado · 2026</div>
+    <h1>A Medição<br>como Fronteira</h1>
+    <p class="sub">O Estado decide sobre coisas que não consegue ver. Às vezes, sobre coisas que não consegue sequer medir. Este ensaio propõe ler o habeas corpus como resposta institucional a esse problema — e perguntar o que ele ainda tem a dizer sobre o que o poder pode e não pode alcançar.</p>
+    <div class="byline">
+      <b>Por Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado. Chapecó, 2026.</p>
+    </div>
+  </header>
+
+  <div class="quest">
+    <b>A pergunta organizadora</b>
+    <p>“Onde o poder legítimo se detém quando não pode medir sem fabricar a medida que lhe falta?”</p>
+  </div>
+
+  <main>
+
+    <section>
+      <p>Todo poder decide sobre o que não vê. O juiz não assistiu ao crime; o fiscal não acompanhou a operação; o agente não estava lá quando o fato aconteceu. Decidir sobre o invisível é a condição normal de quem exerce autoridade, e nada nisso é escandaloso: para isso existem prova, testemunho, indício.</p>
+      <p>Há, porém, uma segunda situação, e ela é de outra ordem. Às vezes o poder precisa decidir não apenas sobre o que não viu, mas sobre o que não consegue medir. <strong>Enxergar é ter acesso ao fato. Medir é converter esse fato em algo que autorize, com segurança, uma decisão sobre alguém.</strong> E existe uma região da vida humana em que o poder falha nas duas coisas ao mesmo tempo: o que a pessoa pensa e não disse.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">1</span><h2>Um problema que sobrevive às constituições</h2></div>
+      <p>Constituições são respostas datadas. Nascem, envelhecem, são emendadas, revogadas, substituídas. O que não desaparece são os problemas que elas tentaram resolver — e quem herda o problema é a geração seguinte.</p>
+      <p>Alguns são antigos e conhecidos: repartir o escasso, suceder quem manda sem que a sucessão vire violência, resolver conflito sem que a força decida sozinha. E há um que talvez seja o mais difícil de todos: até onde vai o alcance do poder sobre a pessoa.</p>
+      <p>Esse problema tem uma característica que o separa dos demais. Escassez, sucessão e conflito se manifestam em coisas que acontecem no mundo — são observáveis. O limite do poder sobre a pessoa, não. <strong>É o único desses problemas permanentes que empurra a autoridade para o terreno onde ela menos enxerga.</strong></p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">2</span><h2>Enxergar não é medir</h2></div>
+      <p>Quando um tribunal julga um fato passado, ele não o vê — mas dispõe de meios para reconstruí-lo: documentos, testemunhas, perícia. A reconstrução pode falhar, e falha muitas vezes; ainda assim, existe procedimento reconhecido para transformar vestígio em prova, e existe padrão para dizer quando a prova basta.</p>
+      <p>O pensamento não exposto não oferece nada disso. Não há vestígio, porque não houve manifestação. Não há testemunha, porque não houve o que testemunhar. E é aqui que aparece o risco — porque a falta de base demonstrável não costuma paralisar o poder: <strong>ela o convida a fabricar a base que não tem.</strong></p>
+      <p>Fabricar a medida tem formas reconhecíveis. Dar peso jurídico a um rótulo, como se o rótulo fosse um fato. Tratar probabilidade como se fosse prova — “pessoas assim costumam fazer aquilo”. Converter passado em prognóstico, como se o que alguém fez determinasse o que agora pensa. Em todos esses casos, o poder produz um número, uma classificação ou uma certeza que não existiam antes dele. Não mediu: criou a medida e depois a usou como se a tivesse encontrado.</p>
+      <div class="pull"><p>Não medir e agir mesmo assim é uma coisa. Fabricar a medida que falta é outra — e é essa que corrói a distinção entre fato e imputação.</p></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">3</span><h2>O habeas corpus como regra de humildade</h2></div>
+      <p>Costuma-se explicar o habeas corpus pelo que ele faz: obriga quem prendeu a apresentar o preso e justificar a prisão. É descrição correta e insuficiente. Vista de perto, a ordem responde a um problema de conhecimento antes de responder a um problema de liberdade.</p>
+      <p><strong>Uma ressalva antes de prosseguir.</strong> A pergunta aqui não é de onde veio o instituto: a historiografia recente mostra que sua origem tem menos de garantia libertária e mais de disputa entre jurisdições. A pergunta é estrutural — o que há no funcionamento maduro do writ.</p>
+      <p>O desenho está na forma do próprio mandado. O writ clássico ordena que se apresente o detido junto com o dia e a <em>causa</em> da detenção — a exigência de causa é elemento da estrutura, não acréscimo posterior. Coke sustenta que ninguém deve ser preso senão por causa certa. Blackstone escreve que o rei tem, a todo tempo, direito a uma explicação de por que a liberdade de um súdito foi restringida. Dicey observa que, pelo writ, a Corte obtém conhecimento da razão pela qual alguém está preso, e o solta se a razão for ilegal.</p>
+      <p>Em nenhum desses casos cabe ao detido demonstrar inocência: cabe a quem detém justificar a custódia. A razão dessa inversão está na assimetria da situação — quem está preso não tem acesso a nada; quem prendeu detém a informação, os meios e o poder. <strong>É exatamente no ponto de menor visibilidade que o ônus se desloca para o Estado.</strong></p>
+      <p>Isso não é generosidade. É uma regra sobre quem paga o preço do erro. Quando a base é precária, alguém vai errar — e o habeas corpus responde que o custo recai sobre o Estado, não sobre a pessoa.</p>
+      <p>Há ainda um efeito que não está no resultado da ordem. Mesmo quando a autoridade consegue justificar a detenção, algo já mudou: a pessoa foi tratada como alguém a quem se deve explicação. <strong>Quem foi rotulado já está fora e não tem o que contestar; quem foi interpelado permanece dentro, com a posição de quem pode responder</strong> — ganhe ou perca ao final.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">4</span><h2>A esfera mental é o novo corpo?</h2></div>
+      <p>Durante séculos, o corpo foi o lugar onde o poder agia sem medir: prendia-se com base em suspeita, e a suspeita raramente prestava contas. Hoje, os sistemas que classificam pessoas trabalham em outro terreno — o das inferências sobre o que alguém é, pensa ou fará. Perfis construídos a partir de dados, escores de risco, classificações automáticas que atribuem a alguém uma propensão que ninguém observou.</p>
+      <p>A pergunta se impõe: a esfera mental virou o novo lugar onde o poder age sem medir? E, se virou, a regra de humildade deveria valer ali como valeu para o corpo?</p>
+      <div class="pull"><p>O algoritmo não inaugura o problema; ele o barateia — e dá à medida fabricada a aparência de medida encontrada.</p></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">5</span><h2>A fronteira defensável</h2></div>
+      <p>Aqui é preciso ser exato, porque a versão fácil deste argumento é frágil e cai em uma linha.</p>
+      <p><strong>A versão fácil diria:</strong> o Estado não pode julgar o pensamento. Soa bem e não resiste. O direito penal já pune atos preparatórios, associação para delinquir, ameaça. Inferir estados mentais a partir de condutas é operação corriqueira e legítima — dolo é exatamente isso.</p>
+      <p>A fronteira defensável é outra, e mais estreita. <strong>Não é entre inferir e não inferir.</strong></p>
+
+      <div class="two">
+        <div class="col ok"><div class="hd">Legítimo — inferir do exposto</div><div class="bd"><p>A partir de uma conduta, uma manifestação, um ato com relevância jurídica. É o que qualquer sistema de justiça faz todos os dias.</p></div></div>
+        <div class="col no"><div class="hd">Ilegítimo — fabricar do não exposto</div><div class="bd"><p>A partir de um rótulo, uma origem, um histórico convertido em prognóstico. Aqui o poder cria o objeto que lhe faltava.</p></div></div>
+      </div>
+
+      <div class="chain">
+        <div class="lbl">O caminho ilegítimo, escrito com precisão</div>
+        <div class="seq">
+          <span class="st">fato passado</span><span class="ar">→</span>
+          <span class="st">rótulo</span><span class="ar">→</span>
+          <span class="st">pensamento presumido</span><span class="ar">→</span>
+          <span class="st">restrição presente</span>
+        </div>
+        <p>Cada seta parece pequena, e o percurso inteiro destrói a distinção entre o que uma pessoa fez e o que se imputa a ela. No fim da sequência, a restrição não recai sobre uma conduta — recai sobre uma identidade atribuída. E identidade atribuída não se defende, porque não se refuta o que nunca foi demonstrado.</p>
+      </div>
+
+      <h3>Não é presunção de inocência</h3>
+      <p>Dirá o leitor que isso já tem nome: presunção de inocência, ônus da prova, <em>in dubio pro reo</em>. A pergunta deste ensaio é anterior a essas. A teoria da prova pergunta, dado um fato controvertido, a quem cabe demonstrá-lo. <strong>A pergunta aqui é se aquilo que a autoridade invoca é sequer um fato demonstrável</strong> — ou uma construção inferencial apresentada como fato.</p>
+      <p>E é preciso ser exato sobre o que se pede. Não se pede que a autoridade deixe de decidir onde falta evidência: o direito conhece a insuficiência probatória e criou presunções justamente para decidir sob incerteza. <strong>Decidir sob incerteza declarada é legítimo; decidir sobre uma certeza fabricada não é.</strong></p>
+      <p><strong>Uma lacuna assumida.</strong> Resta dizer o que conta como exposto, e aqui o ensaio deve mais do que entrega. Uma conduta pública é exposta; um estado mental jamais manifestado não é. Entre os extremos há casos que exigem trabalho: um dado fornecido para outra finalidade, um padrão agregado, um silêncio. Reconhecer essa lacuna é preferível a preenchê-la com uma régua improvisada.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">6</span><h2>Limites deste ensaio</h2></div>
+      <p>Este é um ensaio, não um estudo documental. Propõe uma forma de olhar; não demonstra tese empírica. <strong>Não sustenta que o pensamento seja juridicamente intocável</strong> — sustenta que há diferença entre inferir do exposto e fabricar a partir do não exposto. Não afirma que os sistemas de classificação atuais sejam ilegítimos; afirma que operam no terreno em que a autoridade pode não dispor de base demonstrável.</p>
+
+      <h3>O que já foi dito, e por quem</h3>
+      <p>Os elementos aqui reunidos não são apresentados como inéditos. O que o ensaio propõe é a articulação entre eles — a recombinação, não a invenção.</p>
+      <div class="rows">
+        <div class="row"><div class="n">Fricker<br><span style="font-size:11px;color:#8b939b">2007</span></div><div class="t">Relações de poder afetam quem é reconhecido como conhecedor confiável. <b>Trata do dano a alguém em sua condição de conhecedor</b> — não do que a autoridade pode afirmar saber ao decidir sobre alguém.</div></div>
+        <div class="row"><div class="n">Harcourt<br><span style="font-size:11px;color:#8b939b">2007</span></div><div class="t">Ataca a predição atuarial na justiça penal e seu efeito catraca. <b>Ataca a eficácia e os efeitos distributivos</b> — não o déficit de conhecimento que a antecede.</div></div>
+        <div class="row"><div class="n">Halliday<br><span style="font-size:11px;color:#8b939b">2010</span></div><div class="t">O habeas corpus não nasceu como garantia de liberdade, mas como instrumento de poder jurisdicional. <b>Confirma a estrutura de exigir contas</b> — e é por isso que a leitura aqui é estrutural, não genealógica.</div></div>
+        <div class="row"><div class="n">Ho Hock Lai<br><span style="font-size:11px;color:#8b939b">2008</span></div><div class="t">Ler o standard de prova em termos epistêmicos, e não probabilísticos; o passado desabonador não pode ser usado diretamente contra o acusado. <b>É o apoio mais próximo da distinção aqui proposta.</b></div></div>
+        <div class="row"><div class="n">Laudan<br><span style="font-size:11px;color:#8b939b">2006</span></div><div class="t">Análise integrada dos mecanismos que distribuem o risco de erro. <b>Duas diferenças:</b> o objeto dele é o julgamento, e o critério é calibrável — quanto erro aceitar. A fronteira aqui é anterior ao julgamento e não é calibrável.</div></div>
+      </div>
+
+      <div class="falsif">
+        <b>Condição de falseamento e fragilidade</b>
+        <p>A tese seria falsa se, examinadas as restrições que o poder impõe hoje, <strong>todas nascessem de conduta com relevância jurídica demonstrada, e nenhuma de inferência sobre o não exposto.</strong> Não é questão de princípio: é questão de fato. O teste é factual e descritível — examinar, num conjunto definido de decisões estatais que restringem alguém, se o fundamento invocado repousa em conduta demonstrada ou em atribuição derivada de origem, histórico ou perfil.</p>
+        <p><strong>Uma condição pressuposta, agora declarada.</strong> Pedir que a autoridade não converta o não exposto em fato só tem efeito onde exista quem examine se ela o fez. O habeas corpus contém porque há um tribunal a quem a causa deve ser apresentada e que pode recusá-la. Onde a classificação se produz sem que ninguém possa pedir contas — e é o caso de boa parte dos sistemas contemporâneos —, a regra não encontra a quem se dirigir. O ensaio não resolve esse problema: nomear a exigência é o passo anterior a construir a instância capaz de fazê-la valer.</p>
+        <p><strong>Se cair, cai</strong> por confundir conter o poder onde ele não pode medir com proibir o Estado de inferir a partir de condutas — que é legítimo e necessário.</p>
+      </div>
+
+      <div class="gloss">
+        <b class="h">Glossário</b>
+        <p><b>Habeas corpus</b> — ordem judicial que obriga quem detém alguém a apresentá-lo e justificar a detenção. Cabe a quem detém o poder e a informação apresentar a causa da restrição.</p>
+        <p><b>Ônus da prova</b> — a quem cabe demonstrar. Quem carrega o ônus perde a disputa se não conseguir provar — por isso a escolha de quem o carrega é decisiva.</p>
+        <p><b>Inferência</b> — concluir algo não observado a partir de algo observado. Legítima quando parte de conduta; torna-se fabricação quando parte de rótulo.</p>
+        <p><b>Imputação</b> — atribuir a alguém a responsabilidade por um fato. O fato ocorre; a imputação é o ato de vinculá-lo a uma pessoa.</p>
+        <p><b>Atos preparatórios</b> — condutas anteriores ao crime que a lei pune por si mesmas em certos casos. Mostram que o direito já lida com intenção — a partir de atos, não de suposições.</p>
+        <p><b>Esfera não exposta</b> — o que a pessoa pensa e não manifestou. Não produz vestígio, não admite prova, e é onde falta ao poder qualquer base demonstrável.</p>
+      </div>
+
+      <div class="srcs">
+        <b>Obras citadas</b>
+        <p>COKE, Edward. <i>The Second Part of the Institutes of the Laws of England</i>. BLACKSTONE, William. <i>Commentaries on the Laws of England</i>, livro III, cap. 8, 1768. DICEY, A. V. <i>Introduction to the Study of the Law of the Constitution</i>, 8. ed., 1915. HALLIDAY, Paul D. <i>Habeas Corpus: From England to Empire</i>. Cambridge: Harvard University Press, 2010. LAUDAN, Larry. <i>Truth, Error, and Criminal Law: An Essay in Legal Epistemology</i>. Cambridge: Cambridge University Press, 2006. FRICKER, Miranda. <i>Epistemic Injustice: Power and the Ethics of Knowing</i>. Oxford: Oxford University Press, 2007. HARCOURT, Bernard E. <i>Against Prediction: Profiling, Policing, and Punishing in an Actuarial Age</i>. Chicago: University of Chicago Press, 2007. HO, Hock Lai. <i>A Philosophy of Evidence Law: Justice in the Search for Truth</i>. Oxford: Oxford University Press, 2008.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="fquote"><p>“Decidir sob incerteza declarada é legítimo; decidir sobre uma certeza fabricada não é.”</p></div>
+    <div class="fauth">
+      <b>Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</p>
+    </div>
+    <div class="fnote">Versão 12. Ensaio submetido a protocolo próprio de avaliação crítica após a redação final; não é peça de pesquisa documental. A leitura do habeas corpus é estrutural, não genealógica: apoia-se no desenho do instituto, não em afirmação sobre sua origem — que a historiografia recente desautoriza. É hipótese interpretativa do autor, não conclusão historicamente demonstrada; as atribuições a autores foram conferidas em fonte. O protocolo localizou duas lacunas, ambas incorporadas ao texto, e registrou uma tensão não resolvida por escolha: o título nomeia o problema investigado — a medição —, enquanto a fronteira que o ensaio efetivamente propõe é a que separa o exposto do não exposto. Proposição para debate, não veredito técnico.</div>
+  </footer>
+
+</div>
+</body>
+</html>
