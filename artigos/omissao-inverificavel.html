@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A Omissão Inverificável — supervisão, sigilo e accountability no colapso do Banco Master | Giuliano Tomazelli</title>
+<meta name="description" content="Trinta e uma notificações formais precederam um colapso de mais de R$ 50 bilhões. O ordenamento oferece instrumentos para responsabilizar a omissão regulatória — mas o desenho institucional não oferece à sociedade caminho para verificar se ela existiu. Artigo sobre willful blindness, autonomia sem accountability e nexo causal na omissão.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/artigos/omissao-inverificavel.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="A Omissão Inverificável">
+<meta property="og:description" content="Um sistema em que a pergunta não pode ser respondida é, para fins de accountability, indistinguível de um sistema em que a resposta é negativa.">
+<meta property="og:url" content="https://gof8008.github.io/artigos/omissao-inverificavel.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Omissão Inverificável">
+<meta name="twitter:description" content="Um sistema em que a pergunta não pode ser respondida é, para fins de accountability, indistinguível de um sistema em que a resposta é negativa.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#15243f; --navy-2:#22375c; --navy-3:#33507e;
+    --orange:#e07a28; --orange-soft:#f0a25a; --orange-tint:#fbeede;
+    --ink:#202733; --ink-soft:#4a525f; --paper:#fff;
+    --line:#dde1e8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{background:#EDF0F3;font-family:'Source Sans 3',system-ui,sans-serif;
+       color:var(--ink);-webkit-font-smoothing:antialiased;
+       padding:16px 10px 240px}
+  .page{width:100%;max-width:760px;margin:0 auto;background:var(--paper);
+        border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(18,41,63,.15)}
+
+  header{background:var(--navy);color:#fff;padding:34px clamp(16px,4vw,48px) 30px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;
+                border-radius:50%;background:radial-gradient(circle at center,rgba(224,122,40,.22),transparent 68%)}
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:22px;position:relative;z-index:2}
+  .brand-mark{width:34px;height:34px;border:2px solid var(--orange);border-radius:50%;
+              display:flex;align-items:center;justify-content:center;flex:none;
+              font-family:'Playfair Display',serif;font-weight:800;font-size:16px;color:var(--orange)}
+  .brand-word{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.05em;font-size:12.5px;color:#eef2f8}
+  .brand-word span{color:var(--orange)}
+  .marker{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-soft);
+          font-weight:700;margin-bottom:14px;position:relative;z-index:2;line-height:1.5}
+  h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,6.4vw,46px);
+     line-height:1.05;color:#fff;position:relative;z-index:2}
+  .sub{margin-top:15px;font-size:14.5px;line-height:1.55;color:#c3cee0;position:relative;z-index:2}
+  .byline{margin-top:20px;position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.16);padding-top:15px}
+  .byline b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:5px}
+  .byline p{font-size:12.4px;line-height:1.55;color:#aeb9cc}
+
+  .scope{background:var(--orange-tint);border-left:5px solid var(--orange);padding:20px clamp(16px,4vw,48px)}
+  .scope b{display:block;font-size:10.5px;letter-spacing:.19em;text-transform:uppercase;color:#a35d12;margin-bottom:8px}
+  .scope p{font-size:13.4px;line-height:1.6;color:#5c4a2c;text-align:justify;hyphens:auto;margin-bottom:9px}
+  .scope p:last-child{margin-bottom:0}
+
+  main{padding:30px clamp(16px,4vw,48px) 14px}
+  section{margin-bottom:32px}
+  .sec-head{display:flex;align-items:baseline;gap:11px;margin-bottom:11px}
+  .sec-num{font-family:'Playfair Display',serif;font-weight:800;font-size:15px;color:var(--orange);flex:none}
+  h2{font-family:'Playfair Display',serif;font-weight:700;font-size:21px;line-height:1.18;color:var(--navy-2)}
+  p{font-size:13.6px;line-height:1.64;color:var(--ink-soft);margin-bottom:10px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  p strong{color:var(--ink);font-weight:600}
+  h3{font-family:'Playfair Display',serif;font-size:15.5px;color:var(--navy);font-weight:700;margin:16px 0 6px}
+
+  .abst{background:#f6f7f9;border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin-bottom:26px}
+  .abst b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .abst p{margin-bottom:0;font-size:13.2px}
+
+  .pull{border-left:4px solid var(--navy-3);background:#f6f7f9;border-radius:0 6px 6px 0;
+        padding:15px 18px;margin:14px 0}
+  .pull p{margin-bottom:0;font-size:14.2px;color:var(--navy-2);font-weight:600;text-align:left}
+
+  .chain{background:var(--navy);border-radius:8px;padding:20px 22px;margin:14px 0 6px}
+  .chain .lbl{font-size:10.3px;letter-spacing:.17em;text-transform:uppercase;color:var(--orange-soft);font-weight:700;margin-bottom:11px}
+  .chain .seq{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:11px}
+  .chain .st{background:rgba(255,255,255,.08);border:1px solid rgba(240,162,90,.35);border-radius:5px;
+             padding:6px 10px;font-size:12.3px;color:#fff;font-weight:600}
+  .chain .ar{color:var(--orange);font-weight:700;font-size:14px}
+  .chain p{margin:0;font-size:12.6px;line-height:1.55;color:#c3cee0;text-align:left}
+
+  .stat{background:var(--navy);border-radius:8px;padding:20px 22px;margin:12px 0 4px;display:flex;gap:22px;flex-wrap:wrap}
+  .stat .item{flex:1;min-width:128px}
+  .stat .big{font-family:'Playfair Display',serif;font-weight:800;font-size:28px;color:var(--orange-soft);line-height:1}
+  .stat .lbl{font-size:11.4px;line-height:1.45;color:#c3cee0;margin-top:6px}
+  .stat .lbl b{color:#fff;font-weight:600}
+
+  .rows{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+  .row{display:flex;gap:13px;align-items:flex-start;padding:13px 15px;background:#f6f7f9;
+       border:1px solid var(--line);border-radius:6px}
+  .row .n{font-family:'Playfair Display',serif;font-weight:800;font-size:17px;color:var(--orange);min-width:20px;line-height:1.25;flex:none}
+  .row .t{font-size:13.1px;line-height:1.55;color:var(--ink-soft)}
+  .row .t b{color:var(--navy);font-weight:700;display:block;margin-bottom:2px}
+
+  .vias{display:flex;flex-direction:column;gap:10px;margin:12px 0 4px}
+  .via{border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .via .hd{background:var(--navy-2);color:#fff;padding:10px 15px;font-size:13px;font-weight:600;
+           display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+  .via .hd .tag{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--orange-soft);font-weight:700}
+  .via.best .hd{background:var(--navy);border-bottom:3px solid var(--orange)}
+  .via .bd{padding:12px 15px;background:#fafbfc}
+  .via .bd p{margin-bottom:0;font-size:12.9px}
+
+  .caut{background:#f6f7f9;border:1px solid var(--line);border-left:4px solid var(--navy-3);
+        border-radius:6px;padding:16px 18px;margin-top:12px}
+  .caut b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy-2);margin-bottom:7px}
+  .caut p{margin-bottom:9px;font-size:13px}
+  .caut p:last-child{margin-bottom:0}
+
+  .foot-status{background:var(--navy);border-radius:8px;padding:20px 22px;margin-top:18px}
+  .foot-status .fs-tag{display:block;font-size:10.3px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--orange-soft);font-weight:700;margin-bottom:8px}
+  .foot-status p{margin:0;font-size:12.7px;line-height:1.55;color:#c3cee0;text-align:left}
+  .foot-status b{color:#fff;font-weight:600}
+  .foot-status .fs-dl{display:inline-block;margin:13px 0 10px;background:var(--orange);color:#fff;
+    text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.02em;
+    padding:11px 18px;border-radius:6px}
+  .foot-status .fs-ver{font-size:11.4px;color:#93a8bb;line-height:1.5}
+  .srcs{border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+  .srcs b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .srcs p{font-size:11.8px;line-height:1.55;color:#6c757f;text-align:left;margin-bottom:7px}
+
+  footer{background:var(--navy);color:#fff;padding:28px clamp(16px,4vw,48px) 32px;margin-top:22px}
+  .fquote{border-left:4px solid var(--orange);padding-left:17px;margin-bottom:22px}
+  .fquote p{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;line-height:1.45;
+            color:#f0f5fa;margin:0;text-align:left}
+  .fauth b{display:block;font-size:13.5px;color:#fff;font-weight:600;margin-bottom:4px}
+  .fauth p{font-size:12.2px;line-height:1.55;color:#aeb9cc;margin-bottom:15px;text-align:left}
+  .fnote{font-size:11.3px;line-height:1.55;color:#7f93a6;border-top:1px solid rgba(255,255,255,.16);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand"><div class="brand-mark">G</div><div class="brand-word">GOF · <span>ARTIGO</span></div></div>
+    <div class="marker">Direito financeiro · Desenho institucional · Abril de 2026</div>
+    <h1>A Omissão<br>Inverificável</h1>
+    <p class="sub">Supervisão, sigilo e os limites da accountability no colapso do Banco Master. Trinta e uma notificações formais precederam um rombo de mais de R$ 50 bilhões — e não há, no desenho vigente, caminho pelo qual a sociedade possa saber se a autoridade respondeu.</p>
+    <div class="byline">
+      <b>Por Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado. Chapecó, 2026.</p>
+    </div>
+  </header>
+
+  <div class="scope">
+    <b>Delimitação</b>
+    <p>Este artigo <strong>não afirma que houve omissão deliberada</strong>, nem imputa conduta ilícita a qualquer agente público ou a qualquer ministro do Supremo Tribunal Federal. O objeto é de desenho institucional. A análise se apoia em fatos públicos disponíveis até abril de 2026, com finalidade exclusivamente acadêmica, e não constitui acusação formal nem juízo de culpabilidade individual.</p>
+    <p>A expressão <em>willful blindness</em> é empregada em sentido técnico-jurídico — cegueira deliberada —, não como juízo de valor pessoal sobre qualquer das partes investigadas.</p>
+  </div>
+
+  <main>
+
+    <div class="abst">
+      <b>Resumo</b>
+      <p>A conclusão é dupla. <strong>O ordenamento vigente oferece instrumentos suficientes para responsabilizar a omissão regulatória, quando ela possa ser demonstrada.</strong> Mas o desenho institucional não oferece à sociedade caminho para verificar se houve omissão: o procedimento de supervisão corre sob sigilo legal, e a ausência de registro público de resposta não equivale a ausência de resposta. A falha que o artigo nomeia não depende de estabelecer o que ocorreu — decorre de não haver caminho para estabelecê-lo.</p>
+    </div>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">1</span><h2>O paradoxo do formulador</h2></div>
+      <p>Toda arquitetura de supervisão financeira repousa sobre uma premissa implícita: <strong>o formulador vê.</strong> Recebe os dados, analisa os fluxos, identifica as anomalias e age. É essa capacidade de percepção e resposta que justifica a existência de um regulador independente dotado de poder normativo e interventivo.</p>
+      <p>O caso do Banco Master desafia essa premissa em sua raiz. Entre 2022 e 2024, a diretoria de fiscalização do Banco Central enviou pelo menos trinta e uma notificações formais de irregularidades relativas ao banco. Em novembro de 2025, a autarquia decretou o Regime de Administração Especial Temporária — mais de três anos após os primeiros alertas.</p>
+      <p>A questão central: <strong>em que medida o silêncio institucional diante de alertas formais e reiterados configura omissão juridicamente relevante e passível de sanção?</strong></p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">2</span><h2>A cronologia e o que ela sustenta</h2></div>
+
+      <div class="stat">
+        <div class="item"><div class="big">31</div><div class="lbl">notificações formais de irregularidade entre <b>2022 e 2024</b></div></div>
+        <div class="item"><div class="big">R$ 50 bi</div><div class="lbl">rombo verificado pelos liquidantes, com acionamento do <b>FGC em escala inédita</b></div></div>
+        <div class="item"><div class="big">3 anos</div><div class="lbl">entre o primeiro alerta formal e o <b>RAET de 18/11/2025</b></div></div>
+      </div>
+
+      <p style="margin-top:14px">O modelo de crescimento combinava expansão acelerada da carteira e lucratividade declarada extraordinariamente elevada — combinação rara em instituições sólidas. O instrumento central foi o Credcesta, crédito consignado voltado a aposentados e pensionistas do INSS.</p>
+      <p>Em 4 de dezembro de 2024, após o acúmulo das notificações e às vésperas da liquidação, realizou-se no Palácio do Planalto reunião fora da agenda oficial entre o Presidente da República, o controlador do banco e o então futuro presidente do Banco Central. <strong>Para os fins deste artigo, não é episódio político: é dado de Direito Administrativo</strong> — demonstra que o caso chegou ao mais alto nível de interlocução institucional antes de eclodir publicamente, o que retira sustento ao argumento de isolamento informacional do aparato regulatório.</p>
+
+      <div class="chain">
+        <div class="lbl">A espinha dorsal do argumento</div>
+        <div class="seq">
+          <span class="st">alerta documentado</span><span class="ar">→</span>
+          <span class="st">acesso institucional</span><span class="ar">→</span>
+          <span class="st">sem registro público de ação</span><span class="ar">→</span>
+          <span class="st">dano sistêmico</span>
+        </div>
+        <p>Repare no terceiro elo: não é "ausência de ação", é ausência de <em>registro público</em> de ação. A diferença entre as duas formulações é o núcleo deste artigo.</p>
+      </div>
+
+      <h3>O estatuto das fontes, declarado</h3>
+      <p>Os atos institucionais — a decretação do RAET, a Lei Complementar 179/2021, as decisões judiciais citadas — constam de fontes oficiais. Já a existência das trinta e uma notificações, o episódio da Caixa Asset e a reunião de 4 de dezembro de 2024 foram estabelecidos por apuração jornalística e por documentos referidos em investigação.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">3</span><h2>A cautela que atinge o núcleo</h2></div>
+      <p>A afirmação de que os alertas não produziram resposta exige prudência que o estágio da apuração impõe. <strong>O procedimento de supervisão bancária corre sob sigilo legal, e a ausência de registro público de resposta não equivale a ausência de resposta</strong> — podem existir, nos autos da autarquia, atos de exigência, planos de adequação ou decisões técnicas motivadas que a apuração venha a revelar.</p>
+      <p>O que se pode afirmar sem depender do que o sigilo cobre é mais estreito e não menos grave: trinta e uma notificações formais precederam um colapso de dezenas de bilhões, e não existe, no desenho vigente, mecanismo pelo qual a sociedade possa verificar se e como a autoridade respondeu.</p>
+      <div class="pull"><p>A falha nomeada aqui não depende de estabelecer o que houve — decorre de não haver caminho para estabelecê-lo.</p></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">4</span><h2>Willful blindness: ver sem querer ver</h2></div>
+      <p>A doutrina tem origem no Direito anglo-saxão — formulação clássica em <em>Spurr v. United States</em> (1899) — e sustenta que, diante de sinais objetivos de irregularidade em seu âmbito de competência, o agente que deliberadamente evita aprofundar o conhecimento para preservar a alegação futura de desconhecimento não pode ser tratado como genuinamente ignorante. <strong>A cegueira auto-imposta equivale, para fins de responsabilização, ao dolo eventual.</strong></p>
+      <p>No Brasil, a recepção veio pela jurisprudência criminal. No campo administrativo, a lógica é ainda mais favorável: o art. 11 da Lei 8.429/1992 tipifica atos que violam os deveres de honestidade, imparcialidade e legalidade, independentemente de enriquecimento ilícito.</p>
+      <p><strong>A objeção previsível, enfrentada.</strong> A reforma da Lei 14.230/2021 exige dolo específico e não se satisfaz com dolo eventual ou culpa grave — a defesa poderia sustentar que a categoria anglo-saxã não se traduz automaticamente no dolo exigido pelo regime brasileiro reformado. O artigo enfrenta essa objeção no plano da requalificação do elemento subjetivo.</p>
+      <p>Os sistemas de monitoramento da autarquia operam de forma automatizada e produzem relatórios periódicos destinados à presidência. Para que a alegação de desconhecimento fosse juridicamente válida, seria necessário demonstrar impedimento estrutural de acesso — insustentável diante da arquitetura hierárquica de informação.</p>
+      <div class="pull"><p>Quando o titular de um cargo cujo núcleo é a vigilância afirma não ter visto o que seus próprios sistemas registraram, a cegueira deixa de poder ser tratada como fato e passa a exigir exame como escolha. É esse exame — e não a conclusão que dele resulte — que o ordenamento deve assegurar.</p></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">5</span><h2>Autonomia versus accountability</h2></div>
+      <p>A Lei Complementar 179/2021 formalizou a autonomia operacional do Banco Central: mandatos fixos, vedação de exoneração <em>ad nutum</em>, estatuto de autarquia de natureza especial. Mas toda arquitetura de independência bem desenhada carrega o antídoto para seu próprio abuso. <strong>Independência sem accountability não é virtude institucional — é patologia.</strong></p>
+
+      <h3>O paradoxo da independência-escudo</h3>
+      <p>A autonomia concedida para proteger a autoridade monetária de interferência política pode ser instrumentalizada para blindar dirigentes de responsabilização por omissões documentadas. A distinção analítica fundamental: <strong>independência para decidir é democrática e funcionalmente necessária; independência para não responder é inconstitucional.</strong></p>
+
+      <h3>A falha de design, e o que ela não exonera</h3>
+      <p>A LC 179/2021 garantiu autonomia política, mas não modernizou os mecanismos de resposta a crises de liquidez acelerada nem dotou a autoridade de instrumentos preditivos à altura da velocidade de ocultação de risco viabilizada por modelos algorítmicos e por estruturas fragmentadas em SPEs. <strong>Reconhecer o vício de design não exonera o dirigente — situa-o:</strong> a responsabilização deve recair tanto sobre o agente que operou dentro de um sistema deficiente sem sinalizá-lo, quanto sobre o próprio desenho que a lei deixou incompleto.</p>
+      <p>Some-se o fator estrutural: não há mecanismo de accountability ex post robusto e específico para o sistema financeiro. O TCU detém competência genérica, mas carece de capacidade técnica especializada para auditar a microestrutura das decisões de supervisão. O resultado é um vácuo — o agente resiste às instâncias ordinárias, e as extraordinárias dependem de vontade política para se ativarem.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">6</span><h2>As vias de responsabilização</h2></div>
+      <div class="vias">
+        <div class="via">
+          <div class="hd"><span>Prevaricação — art. 319 do Código Penal</span><span class="tag">maior dificuldade probatória</span></div>
+          <div class="bd"><p>Exige satisfação de interesse ou sentimento pessoal. É o elemento subjetivo mais difícil de demonstrar no caso concreto.</p></div>
+        </div>
+        <div class="via best">
+          <div class="hd"><span>Improbidade administrativa — Lei 8.429/1992</span><span class="tag">a mais robusta</span></div>
+          <div class="bd"><p>Conjugando willful blindness e culpa in vigilando, constrói-se o argumento de violação dolosa — no sentido de dolo eventual — ao dever de lealdade institucional. Sanções: perda da função, suspensão de direitos políticos por até doze anos, multa civil e proibição de contratar com o poder público.</p></div>
+        </div>
+        <div class="via">
+          <div class="hd"><span>Inabilitação pelo CRSFN</span><span class="tag">maior impacto prático</span></div>
+          <div class="bd"><p>Até vinte anos de inabilitação para atuar no mercado financeiro. Não exige demonstração de dolo. Sua aplicação a um ex-presidente do próprio Banco Central seria inédita — ineditismo que o artigo trata como argumento a favor, não contra.</p></div>
+        </div>
+        <div class="via">
+          <div class="hd"><span>Responsabilidade civil do Estado — art. 37, § 6º, CF</span><span class="tag">via institucional</span></div>
+          <div class="bd"><p>O STJ tem reconhecido responsabilidade estatal por omissão de órgão supervisor quando há poder de fiscalização estabelecido, conhecimento formal de irregularidades e contribuição causal da inação.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">7</span><h2>O STF como variável do problema</h2></div>
+      <p>A seção trata de desenho institucional, não de conduta individual. O tribunal que seria o árbitro final do processo carrega, no próprio desenho, vulnerabilidades que o tornam parte do problema que deveria resolver.</p>
+      <p><strong>O autojulgamento.</strong> O único órgão com poder para declarar a suspeição de um ministro do STF é o próprio ministro. O Regimento Interno não prevê mecanismo colegiado vinculante para declaração compulsória de impedimento quando os demais identificam o conflito. A imparcialidade depende, portanto, da virtude individual — não de verificação externa.</p>
+      <p><strong>A captura como categoria analítica.</strong> A teoria de Stigler descreve o órgão criado para regular em benefício do público que passa a operar em benefício dos regulados. Aplicada ao Judiciário, assume contornos distintos. No caso, a afirmação sustentável a partir de fatos públicos é estreita: o controlador construiu deliberadamente uma rede de relações com o meio institucional — o que é distinto de afirmar que tais figuras tenham sido cooptadas, conclusão que a apuração ainda não autoriza.</p>
+      <div class="pull"><p>Um tribunal que não pode ser auditado em sua imparcialidade por nenhuma instância externa não é um guardião da Constituição — é o último elo de uma cadeia onde cada elo anterior também falhou.</p></div>
+      <p>A experiência comparada oferece alternativa: o modelo europeu continental separa a jurisdição constitucional da ordinária de última instância, com composição mista e mandatos fixos. A proposta não é a condenação do STF, mas o reconhecimento de que nenhuma instituição pode ser simultaneamente parte interessada e árbitro imparcial do mesmo contexto.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">8</span><h2>Três ressalvas ao que se propõe</h2></div>
+      <div class="rows">
+        <div class="row"><div class="n">1</div><div class="t"><b>O modo de falha da própria proposta</b>Sancionar por omissão pode produzir supervisão defensiva — o regulador que, para não responder por não ter agido, age em excesso, intervém precocemente e transfere ao mercado o custo da própria proteção jurídica. O critério que evita isso não é o acerto da decisão, mas a existência formal dela: <b style="display:inline">a discricionariedade protege o conteúdo de um juízo, não a sua ausência</b>, e decidir aguardar é ato administrativo que exige motivação e registro.</div></div>
+        <div class="row"><div class="n">2</div><div class="t"><b>O que a proposição pressupõe sem declarar</b>Responsabilizar o dirigente exige instância capaz de examinar com independência se houve omissão — e é precisamente essa instância que o artigo identificou como ausente ou comprometida. Nomear a exigência não é construir o mecanismo capaz de fazê-la valer: é o passo anterior a ele.</div></div>
+        <div class="row"><div class="n">3</div><div class="t"><b>A circunstância de tempo</b>A demora não é neutra: quanto mais um caso de magnitude sistêmica permanece sem definição, mais a ausência de resposta se converte, ela mesma, em decisão. O colapso ocorreu em novembro de 2025; a definição alcança agora o período que antecede eleições presidenciais. Não se sugere que o tempo processual devesse acompanhar o eleitoral — registra-se um efeito objetivo: <b style="display:inline">o custo da indefinição não recai sobre as instituições que a produzem, e sim sobre quem precisa decidir sem ela.</b></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">9</span><h2>Conclusão</h2></div>
+      <p>O colapso do Banco Master não é apenas uma história de fraude bancária. É uma história sobre o que acontece quando cada camada do sistema de controle — a supervisão bancária, a independência regulatória, a investigação parlamentar e o controle jurisdicional de cúpula — deixa de produzir, ao mesmo tempo e pelo mesmo motivo, algo verificável.</p>
+      <p>A pergunta que o caso deixa ao Direito brasileiro é uma só: <strong>existe algum cargo suficientemente elevado a ponto de tornar seu ocupante estruturalmente imune — não por lei, mas por design — às consequências jurídicas de omissões documentadas?</strong></p>
+      <p>O ordenamento vigente responde que não. A prática institucional, até o momento, não oferece resposta que possa ser examinada. Não se afirma aqui que houve omissão deliberada: afirma-se que não existe, no desenho vigente, caminho pelo qual a sociedade possa saber se houve.</p>
+
+      <div class="caut">
+        <b>A indistinção que o artigo nomeia</b>
+        <p>Um sistema em que a pergunta não pode ser respondida é, para os fins de accountability, <strong>indistinguível</strong> de um sistema em que a resposta é negativa. E nomear essa indistinção, com precisão e com fundamento, é o primeiro ato de qualquer reforma possível.</p>
+        <p>O desenvolvimento completo das implicações do problema do STF — competência, composição, conflitos de interesse no caso concreto e alternativas de reforma constitucional — será objeto de artigo subsequente.</p>
+      </div>
+
+      <div class="foot-status">
+        <span class="fs-tag">Artigo completo</span>
+        <p><b>Versão integral disponível.</b> O card acima é um resumo estruturado. O artigo completo, com as oito seções, o desenvolvimento doutrinário e o aparato de notas, está aberto para leitura e download.</p>
+        <a class="fs-dl" href="https://gof8008.github.io/artigos/omissao-inverificavel-v16.pdf">Baixar o artigo completo (PDF) &rarr;</a>
+        <p class="fs-ver">Versão 16 &middot; 21 páginas &middot; abril de 2026. O texto segue em revisão; versões posteriores podem alterar formulações, dados e conclusões.</p>
+      </div>
+
+      <div class="srcs">
+        <b>Fontes e referências</b>
+        <p><b>Normativas:</b> Constituição Federal de 1988; Lei nº 8.429/1992, com redação da Lei nº 14.230/2021; Lei Complementar nº 179/2021; art. 319 do Código Penal; arts. 144 e 145 do Código de Processo Civil.</p>
+        <p><b>Institucionais:</b> Banco Central do Brasil, nota institucional sobre a liquidação (nov. 2025); relatórios públicos da CPI do Crime Organizado; TCU, acórdão sobre responsabilidade de dirigentes de agências reguladoras (2019); <em>Spurr v. United States</em>, 174 U.S. 728 (1899).</p>
+        <p><b>Doutrina:</b> ROXIN, <em>Autoria e Domínio do Fato</em>; STIGLER, <em>The Theory of Economic Regulation</em> (1971); DI PIETRO; JUSTEN FILHO; MENDES e BRANCO; SILVA; STRECK; ZAFFARONI e PIERANGELI; ALEXY; JAKOBS e MELIÁ.</p>
+        <p><b>Jornalísticas:</b> Correio Braziliense, Folha de S.Paulo, O Globo, CNN Brasil, Poder360, Carta Capital, Agência Pública, Agência Brasil (2024–2026).</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="fquote"><p>“Não se afirma que houve omissão deliberada: afirma-se que não existe caminho pelo qual a sociedade possa saber se houve.”</p></div>
+    <div class="fauth">
+      <b>Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</p>
+    </div>
+    <div class="fnote">Versão 16 — abril de 2026. Artigo submetido a protocolo próprio de avaliação crítica após a redação final. Análise de fatos públicos disponíveis até abril de 2026, para fins exclusivamente acadêmicos; não constitui acusação formal nem juízo de culpabilidade individual de qualquer agente público ou membro do Judiciário. As questões relativas ao papel dos dirigentes no caso são objeto de investigação em curso. Proposição para debate, não veredito técnico.</div>
+  </footer>
+
+</div>
+</body>
+</html>
