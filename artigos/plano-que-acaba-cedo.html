@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>O Plano que Acaba Cedo — seleção algorítmica de ofertas e os limites da verificação externa em telecom | Giuliano Tomazelli</title>
+<meta name="description" content="Prestadoras de telecomunicações no Brasil declaram usar modelos de propensão sobre a base de clientes. Selecionar a oferta a partir do perfil e dimensionar o plano aquém da necessidade produzem, para o consumidor, o mesmo resultado observável — e não existia, até setembro de 2026, instrumento publicado que distinguisse um do outro. Cinco desenhos de verificação, executáveis por terceiro, e o caso português que prova que a verificação é barata.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/artigos/plano-que-acaba-cedo.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="O Plano que Acaba Cedo">
+<meta property="og:description" content="Selecionar a oferta a partir do perfil e dimensionar o plano aquém da necessidade produzem, para o consumidor, exatamente a mesma sequência. Não se conhecia, até setembro de 2026, instrumento que as distinguisse.">
+<meta property="og:url" content="https://gof8008.github.io/artigos/plano-que-acaba-cedo.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O Plano que Acaba Cedo">
+<meta name="twitter:description" content="Selecionar a oferta a partir do perfil e dimensionar o plano aquém da necessidade produzem, para o consumidor, exatamente a mesma sequência.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#15243f; --navy-2:#22375c; --navy-3:#33507e;
+    --orange:#e07a28; --orange-soft:#f0a25a; --orange-tint:#fbeede;
+    --ink:#202733; --ink-soft:#4a525f; --paper:#fff;
+    --line:#dde1e8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{background:#EDF0F3;font-family:'Source Sans 3',system-ui,sans-serif;
+       color:var(--ink);-webkit-font-smoothing:antialiased;
+       padding:16px 10px 240px}
+  .page{width:100%;max-width:760px;margin:0 auto;background:var(--paper);
+        border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(18,41,63,.15)}
+
+  header{background:var(--navy);color:#fff;padding:34px clamp(16px,4vw,48px) 30px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;
+                border-radius:50%;background:radial-gradient(circle at center,rgba(224,122,40,.22),transparent 68%)}
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:22px;position:relative;z-index:2}
+  .brand-mark{width:34px;height:34px;border:2px solid var(--orange);border-radius:50%;
+              display:flex;align-items:center;justify-content:center;flex:none;
+              font-family:'Playfair Display',serif;font-weight:800;font-size:16px;color:var(--orange)}
+  .brand-word{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.05em;font-size:12.5px;color:#eef2f8}
+  .brand-word span{color:var(--orange)}
+  .marker{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-soft);
+          font-weight:700;margin-bottom:14px;position:relative;z-index:2;line-height:1.5}
+  h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,6.4vw,46px);
+     line-height:1.05;color:#fff;position:relative;z-index:2}
+  .sub{margin-top:15px;font-size:14.5px;line-height:1.55;color:#c3cee0;position:relative;z-index:2}
+  .byline{margin-top:20px;position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.16);padding-top:15px}
+  .byline b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:5px}
+  .byline p{font-size:12.4px;line-height:1.55;color:#aeb9cc}
+
+  .scope{background:var(--orange-tint);border-left:5px solid var(--orange);padding:20px clamp(16px,4vw,48px)}
+  .scope b{display:block;font-size:10.5px;letter-spacing:.19em;text-transform:uppercase;color:#a35d12;margin-bottom:8px}
+  .scope p{font-size:13.4px;line-height:1.6;color:#5c4a2c;text-align:justify;hyphens:auto;margin-bottom:9px}
+  .scope p:last-child{margin-bottom:0}
+
+  main{padding:30px clamp(16px,4vw,48px) 14px}
+  section{margin-bottom:32px}
+  .sec-head{display:flex;align-items:baseline;gap:11px;margin-bottom:11px}
+  .sec-num{font-family:'Playfair Display',serif;font-weight:800;font-size:15px;color:var(--orange);flex:none}
+  h2{font-family:'Playfair Display',serif;font-weight:700;font-size:21px;line-height:1.18;color:var(--navy-2)}
+  p{font-size:13.6px;line-height:1.64;color:var(--ink-soft);margin-bottom:10px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  p strong{color:var(--ink);font-weight:600}
+  h3{font-family:'Playfair Display',serif;font-size:15.5px;color:var(--navy);font-weight:700;margin:16px 0 6px}
+
+  .abst{background:#f6f7f9;border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin-bottom:26px}
+  .abst b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .abst p{margin-bottom:0;font-size:13.2px}
+
+  .props{display:flex;flex-direction:column;gap:8px;margin:12px 0 4px}
+  .prop{padding:11px 14px;background:#f6f7f9;border:1px solid var(--line);border-radius:6px}
+  .prop .top{display:flex;gap:12px;align-items:flex-start}
+  .prop .tag{font-family:'Playfair Display',serif;font-weight:800;font-size:13px;color:var(--orange);
+             min-width:26px;line-height:1.4;flex:none}
+  .prop .t{font-size:12.6px;line-height:1.52;color:var(--ink-soft)}
+  .prop .fals{margin-top:6px;margin-left:38px;font-size:11.3px;line-height:1.5;color:#7a828c;font-style:italic}
+
+  .two{display:flex;gap:11px;flex-wrap:wrap;margin:14px 0 4px}
+  .two .col{flex:1;min-width:210px;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .two .col .hd{padding:10px 14px;font-size:11.5px;font-weight:700;letter-spacing:.04em;color:#fff}
+  .two .a .hd{background:var(--navy-2)}
+  .two .b .hd{background:#8c3a12}
+  .two .col .bd{padding:12px 14px;background:#fafbfc}
+  .two .col .bd p{margin-bottom:0;font-size:12.9px}
+
+  .pull{border-left:4px solid var(--navy-3);background:#f6f7f9;border-radius:0 6px 6px 0;
+        padding:15px 18px;margin:14px 0}
+  .pull p{margin-bottom:0;font-size:14.2px;color:var(--navy-2);font-weight:600;text-align:left}
+
+  .desenhos{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+  .desenho{border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .desenho .hd{background:var(--navy);color:#fff;padding:10px 15px;font-size:13px;font-weight:600}
+  .desenho .bd{padding:12px 15px;background:#fafbfc}
+  .desenho .bd p{margin-bottom:0;font-size:12.7px}
+
+  .stat{background:var(--navy);border-radius:8px;padding:20px 22px;margin:12px 0 4px;display:flex;gap:22px;flex-wrap:wrap}
+  .stat .item{flex:1;min-width:140px}
+  .stat .big{font-family:'Playfair Display',serif;font-weight:800;font-size:22px;color:var(--orange-soft);line-height:1.2}
+  .stat .lbl{font-size:11.2px;line-height:1.42;color:#c3cee0;margin-top:6px}
+  .stat .lbl b{color:#fff;font-weight:600}
+
+  .rows{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+  .row{display:flex;gap:13px;align-items:flex-start;padding:13px 15px;background:#f6f7f9;
+       border:1px solid var(--line);border-radius:6px}
+  .row .n{font-family:'Playfair Display',serif;font-weight:800;font-size:15px;color:var(--orange);min-width:20px;line-height:1.25;flex:none}
+  .row .t{font-size:13px;line-height:1.55;color:var(--ink-soft)}
+
+  .posic{display:flex;flex-direction:column;gap:8px;margin:12px 0 4px}
+  .pos{padding:11px 14px;background:#f6f7f9;border:1px solid var(--line);border-radius:6px}
+  .pos .who{font-size:11.5px;font-weight:700;color:var(--navy);margin-bottom:4px}
+  .pos p{margin-bottom:0;font-size:12.5px}
+
+  .falsif{background:#f6f7f9;border:1px solid var(--line);border-left:4px solid var(--navy-3);
+          border-radius:6px;padding:16px 18px;margin-top:12px}
+  .falsif b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy-2);margin-bottom:7px}
+  .falsif p{margin-bottom:9px;font-size:13px}
+  .falsif p:last-child{margin-bottom:0}
+
+  .hist{background:var(--navy);border-radius:8px;padding:20px 22px;margin-top:14px}
+  .hist b.h{display:block;font-size:10.3px;letter-spacing:.17em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:11px}
+  .hist .step{display:flex;gap:10px;margin-bottom:9px;align-items:flex-start}
+  .hist .step:last-child{margin-bottom:0}
+  .hist .step .v{font-family:'Playfair Display',serif;font-weight:800;font-size:12px;color:var(--orange-soft);
+                 min-width:32px;flex:none}
+  .hist .step p{margin:0;font-size:12.2px;line-height:1.5;color:#c3cee0;text-align:left}
+
+  .gloss{border-top:1px solid var(--line);padding-top:16px;margin-top:4px}
+  .gloss b.h{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:9px}
+  .gloss p{font-size:12.4px;line-height:1.55;color:#5c6873;margin-bottom:7px;text-align:left}
+  .gloss p b{color:var(--navy);font-weight:700}
+
+  .srcs{border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+  .srcs b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .srcs p{font-size:11.6px;line-height:1.55;color:#6c757f;text-align:left;margin-bottom:6px}
+
+  footer{background:var(--navy);color:#fff;padding:28px clamp(16px,4vw,48px) 32px;margin-top:22px}
+  .fquote{border-left:4px solid var(--orange);padding-left:17px;margin-bottom:22px}
+  .fquote p{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;line-height:1.45;
+            color:#f0f5fa;margin:0;text-align:left}
+  .fauth b{display:block;font-size:13.5px;color:#fff;font-weight:600;margin-bottom:4px}
+  .fauth p{font-size:12.2px;line-height:1.55;color:#aeb9cc;margin-bottom:15px;text-align:left}
+  .fnote{font-size:11.3px;line-height:1.55;color:#7f93a6;border-top:1px solid rgba(255,255,255,.16);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand"><div class="brand-mark">G</div><div class="brand-word">GOF · <span>ARTIGO</span></div></div>
+    <div class="marker">Telecomunicações e verificação externa · Peça autônoma · Setembro de 2026</div>
+    <h1>O Plano que<br>Acaba Cedo</h1>
+    <p class="sub">Seleção algorítmica de ofertas e os limites da verificação externa no mercado brasileiro de telecomunicações. A pergunta nasceu de uma observação direta: planos de franquia baixa se esgotam mais rápido do que o padrão de uso aparente explicaria. O que a peça encontra é mais estreito, e mais grave.</p>
+    <div class="byline">
+      <b>Por Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado. Atuação profissional anterior no setor de telecomunicações. Chapecó, 2026.</p>
+    </div>
+  </header>
+
+  <div class="scope">
+    <b>Escopo honesto</b>
+    <p>Não se afirma que prestadoras reduzam franquias contratadas, manipulem o consumo de dados ou pratiquem preços individualizados. Não há evidência documental de nenhuma das três — a pesquisa procurou por elas em duas rodadas adversariais e não as encontrou. Não se afirma intenção de contornar obrigação legal.</p>
+      <p>A tese é mais restrita: do lado de fora, <strong>selecionar a oferta a partir do perfil</strong> e <strong>dimensionar o plano aquém da necessidade da linha</strong> produzem o mesmo resultado observável para o consumidor — e não se conhecia, até setembro de 2026, instrumento publicado no Brasil que distinguisse um do outro. Esta peça não prescreve, não indica destinatário, não recomenda sanção.</p>
+    </div>
+
+  <main>
+
+    <div class="abst">
+      <b>Resumo</b>
+      <p>Prestadoras de telecomunicações no Brasil declaram utilizar modelos de propensão e motores de seleção de oferta sobre a base de clientes. O artigo parte de uma observação direta do autor e pergunta o que seria necessário para que um terceiro — sem acesso a código-fonte, sem cooperação da prestadora — pudesse reconstruir por que uma oferta específica chegou a uma linha específica. A resposta é dupla: <strong>os instrumentos de verificação existem e são baratos</strong> — uma jurisdição comparável já os empregou —, e <strong>não consta registro público de que tenham sido empregados no Brasil.</strong></p>
+    </div>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">·</span><h2>Cinco proposições, antes da evidência</h2></div>
+      <p>Enunciadas para que as seções seguintes as confrontem, não para que as ilustrem. Nenhuma é apresentada como demonstrada.</p>
+      <div class="props">
+        <div class="prop"><div class="top"><span class="tag">P1</span><span class="t">Prestadoras dispõem, sobre cada linha, de informação suficiente para antecipar o esgotamento da franquia e verificar a viabilidade de oferta fixa no endereço cadastrado.</span></div><div class="fals">Falseável por: demonstração de que dados de endereço e consumo não alimentam os motores de seleção.</div></div>
+        <div class="prop"><div class="top"><span class="tag">P2</span><span class="t">Essa informação é usada para determinar qual oferta é apresentada a cada linha, e em que momento.</span></div><div class="fals">Falseável por: demonstração de que a exibição de ofertas é invariante ao perfil e ao endereço.</div></div>
+        <div class="prop"><div class="top"><span class="tag">P3</span><span class="t">O resultado observável, quando a seleção opera, é indistinguível do resultado de um plano dimensionado aquém da necessidade real.</span></div><div class="fals">Falseável por: medição que mostre exibição equivalente entre perfis de consumo deliberadamente distintos.</div></div>
+        <div class="prop"><div class="top"><span class="tag">P4</span><span class="t">Os cinco instrumentos de verificação da Seção IV são executáveis por terceiro sem acesso a código-fonte e sem cooperação da prestadora — e seu emprego no Brasil não consta de registro público.</span></div><div class="fals">Falseável por: localização de execução publicada, ou demonstração de que algum desenho exige acesso indisponível.</div></div>
+        <div class="prop"><div class="top"><span class="tag">P5</span><span class="t">A distinção entre selecionar a oferta a partir do perfil e dimensionar o plano aquém da necessidade não é verificável por terceiro com os instrumentos disponíveis em setembro de 2026.</span></div><div class="fals">Falseável por: execução e publicação de qualquer um dos cinco desenhos da Seção IV.</div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">I—II</span><h2>O que existe, e o que já está decidido</h2></div>
+      <p>A competência para examinar o que ocorre entre a base de dados da prestadora e a oferta que chega ao consumidor está repartida entre quatro instâncias — Anatel, ANPD, CADE e Sistema Nacional de Defesa do Consumidor —, e nenhuma detém o conjunto. Quatro coisas estão fixadas: o uso comercial de perfilização não é ilícito no Brasil; o direito de revisão de decisão automatizada existe em lei desde 2018 (art. 20 da LGPD); a regra setorial de isonomia de oferta que vigorou entre 2014 e 2023 foi retirada do ordenamento por decisão judicial — e <strong>reapareceu</strong>, no art. 28 do regulamento vigente desde setembro de 2025, com um repositório permanente de ofertas que a prestadora deve manter por três anos.</p>
+      <p>No nível mais firme de fonte, o caso brasileiro mais próximo de escrutínio regulatório sobre algoritmo de prestadora — o ofício de 2024 da Anatel à Telefônica Brasil — não trata de seleção de oferta comercial: trata de assistência automatizada ao atendimento de reclamação. No segundo nível, o mais próximo que a pesquisa chegou das proposições P1 e P2 é declaração pública de uma diretora de marketing, reportada por imprensa setorial: a empresa segue, para cerca de sessenta milhões de cadastros, um ranqueamento do curso de ação a adotar. Não descreve arquitetura, nem peso de variáveis, nem grau de autonomia do sistema.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">III</span><h2>O mecanismo possível — e as duas leituras que não se separam de fora</h2></div>
+      <p>O que segue é reconstrução, não constatação, conferida contra o conhecimento setorial do autor — âncora que o autor pode citar e que um terceiro não pode verificar. Se a reconstrução estiver correta, o motor não decide: seleciona e ordena, dentro de um conjunto de ofertas decidido antes, por pessoas.</p>
+
+      <div class="two">
+        <div class="col a"><div class="hd">Leitura A — Seleção</div><div class="bd"><p>A prestadora observa o padrão de consumo e a viabilidade de fibra no endereço, prevê o esgotamento da franquia e apresenta, nesse momento, a oferta seguinte. Nada foi alterado no plano — a informação só decide a hora e o canal. Prática lícita e corriqueira.</p></div></div>
+        <div class="col b"><div class="hd">Leitura B — Dimensionamento</div><div class="bd"><p>A mesma informação é usada antes, na composição da oferta no momento da contratação, de modo que a franquia oferecida àquela linha seja sistematicamente menor do que o seu padrão de uso exigiria — criando a necessidade que a oferta seguinte atenderá. Tensionaria o dever de informação.</p></div></div>
+      </div>
+
+      <div class="pull"><p>Para o consumidor, as duas produzem exatamente a mesma sequência: plano que acaba cedo, oferta que chega na hora. Nenhum documento público brasileiro localizado permite dizer qual das duas está em curso — nem se são a mesma coisa vista de dois ângulos.</p></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">IV</span><h2>A lacuna, medida: cinco desenhos executáveis</h2></div>
+      <p>A indeterminação não é dificuldade técnica. Os cinco desenhos abaixo distinguem as duas leituras, não exigem acesso a código-fonte, não dependem de cooperação da prestadora, e podem ser executados por pesquisador isolado, entidade de defesa do consumidor ou pela própria agência.</p>
+      <div class="desenhos">
+        <div class="desenho"><div class="hd">1 · Variação de risco de cancelamento</div><div class="bd"><p>Duas linhas de perfil equivalente; em uma, intenção verificável de portabilidade. Mede se, e em quanto tempo, a cesta de ofertas se altera.</p></div></div>
+        <div class="desenho"><div class="hd">2 · Viabilidade de rede fixa</div><div class="bd"><p>Perfis idênticos, variando só o endereço cadastral entre área com e sem viabilidade de fibra. Isola a variável geográfica.</p></div></div>
+        <div class="desenho"><div class="hd">3 · Intervalo entre esgotamento e abordagem</div><div class="bd"><p>Esgotamento deliberado da franquia em momentos distintos do ciclo; mede o intervalo até a oferta seguinte. É o que mede diretamente a antecipação.</p></div></div>
+        <div class="desenho"><div class="hd">4 · Exercício formal do direito de revisão</div><div class="bd"><p>Pedido ao encarregado de dados, com base no art. 20 da LGPD, pela lógica de uma oferta automatizada recebida. O mais barato dos cinco, e o mais revelador: produz dado primário qualquer que seja a resposta.</p></div></div>
+        <div class="desenho"><div class="hd">5 · Repositório contra vitrine</div><div class="bd"><p>Compara o repositório público de ofertas, que a prestadora é obrigada a manter, contra o que é de fato exibido a um consumidor específico. Testa a diferença entre <em>estar disponível</em> e <em>ser apresentado.</em></p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">V</span><h2>Uma janela: a decisão portuguesa</h2></div>
+      <p>A Seção IV sustenta que a verificação é barata. Há um caso que o demonstra, e não é hipotético: em julho de 2024, a ANACOM — autoridade reguladora portuguesa — determinou a cessação da ativação automática de pacotes adicionais sem consentimento prévio do usuário.</p>
+      <div class="stat">
+        <div class="item"><div class="big">Instrumentos ordinários</div><div class="lbl">reclamações, pedidos de esclarecimento, consulta pública. <b>Nenhum acesso a código-fonte, nenhuma auditoria de modelo</b> — exatamente o que a Seção IV sustenta ser possível.</div></div>
+      </div>
+      <p style="margin-top:14px">Três coisas o caso estabelece, e uma quarta ele retira. Estabelece que o fenômeno existe em mercado comparável e foi confirmado por autoridade. Estabelece que a verificação não exige sofisticação técnica. <strong>E retira:</strong> a defesa das prestadoras revelou que o consentimento residia no contrato, não no momento do gasto — mecanismo que independe de qualquer perfilização. Se a ativação estiver prevista em contrato, o efeito que o consumidor sente se produz sem escore e sem motor de seleção. Portugal não é o Brasil, e o caso entra aqui como janela comparativa, não como analogia de mérito.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">VI</span><h2>Quatro implicações</h2></div>
+      <div class="rows">
+        <div class="row"><div class="n">1</div><div class="t">A regra de isonomia de oferta existe, e a pergunta tem endereço: declarada inconstitucional em 2023, reapareceu no art. 28 do regulamento vigente.</div></div>
+        <div class="row"><div class="n">2</div><div class="t">Competência fragmentada entre quatro instâncias. Uma pergunta que atravessa transparência de oferta, dados e efeito concorrencial não tem destinatário natural.</div></div>
+        <div class="row"><div class="n">3</div><div class="t">Direito formal, acesso prático não demonstrado. O art. 20 da LGPD é lei desde 2018; a ausência de caso conhecido admite três leituras, e nenhuma foi testada.</div></div>
+        <div class="row"><div class="n">4</div><div class="t"><strong>O custo da não verificação recai sobre quem não pode arcar com ele.</strong> Enquanto a distinção da Seção III ficar indeterminada, a prestadora não tem o que provar — e o consumidor não tem como perguntar.</div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">VII</span><h2>Limites e condições de refutação</h2></div>
+      <p><strong>O que não se afirma.</strong> Não se afirma que qualquer prestadora tenha reduzido franquia, manipulado consumo ou praticado preço individualizado. Não se afirma que motores comerciais decidam, em sentido forte, a oferta apresentada. Não se afirma intenção de contornar obrigação legal, nem que a Anatel seja incapaz de fiscalizar.</p>
+
+      <div class="falsif">
+        <b>O que derrubaria</b>
+        <p>Publicação, por órgão regulador, de auditoria de motor comercial com metodologia acessível a terceiros. Execução de qualquer um dos cinco desenhos com resultado que mostre exibição de ofertas invariante ao perfil. Localização de caso de exercício do art. 20 contra prestadora, com resultado publicado.</p>
+        <p><strong>Onde o texto é mais frágil.</strong> A observação que gerou a pergunta é compatível com ao menos quatro explicações mais simples que o artigo não afastou — entre elas, a assistência de conexão dos sistemas operacionais móveis, que comuta para dados quando o sinal de wi-fi degrada, sem qualquer intervenção comercial. E a reconstrução da Seção III repousa no conhecimento setorial do autor, não em documento de prestadora brasileira: se estiver errada em qualquer etapa, a indeterminação pode ser menor do que a peça sustenta.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">VIII</span><h2>Conclusão</h2></div>
+      <p>A pergunta com que a investigação começou era se prestadoras usam algoritmos em desfavor do consumidor. Essa pergunta não pôde ser respondida — e é provável que não possa pela via documental: a evidência que a responderia afirmativamente seria, por definição, evidência de conduta que ninguém documenta voluntariamente.</p>
+      <p>A pergunta que sobrevive é outra, e é melhor: <strong>quando um sistema automatizado participa da seleção de uma oferta individual, que elementos precisam estar disponíveis para que um terceiro reconstrua por que aquela oferta chegou àquela linha, naquele momento?</strong></p>
+      <p>O que se afirma: a regra existe, os instrumentos de verificação existem, um deles nasceu com o regulamento que entrou em vigor em setembro de 2025, todos foram empregados em outra jurisdição sob forma equivalente — e não consta emprego publicado aqui.</p>
+
+      <div class="hist">
+        <b class="h">Registro de correções materiais — quatro marcos</b>
+        <div class="step"><span class="v">v1</span><p>Sustentava que prestadoras reduziam obrigações regulatórias na prática. A rodada adversarial derrubou: não se localizou punição a motor comercial por descumprimento consumerista.</p></div>
+        <div class="step"><span class="v">v2</span><p>Apoiava a evidência principal em documento atribuído a prestadora brasileira. A recuperação na origem mostrou tratar-se do plano estratégico 2018–2020 da Telecom Italia, para o mercado italiano.</p></div>
+        <div class="step"><span class="v">v3</span><p>Afirmava, em quatro passagens, que fatos não existem, quando a pesquisa só estabelecia não tê-los localizado. Corrigido para a formulação exata: "não localizado" no lugar de "inexistente".</p></div>
+        <div class="step"><span class="v">v3.2–3.3</span><p>A v3.2 atribuía a indeterminação à falta de exame — a pesquisa não sustenta isso; a versão final corrige para ausência de <em>verificação publicada</em>, não de exame.</p></div>
+      </div>
+
+      <div class="gloss">
+        <b class="h">Glossário</b>
+        <p><b>Motor de seleção de oferta</b> — sistema que ordena, entre ofertas de um portfólio previamente aprovado, a que será apresentada a um cliente em canal e momento determinados.</p>
+        <p><b>Escore de propensão</b> — estimativa da probabilidade de aceitar um produto ou cancelar o serviço, calculada em rotina periódica sobre a base.</p>
+        <p><b>Verificação externa</b> — capacidade de um terceiro que não a prestadora reconstruir por que uma decisão comercial foi produzida, sem acesso a código-fonte.</p>
+        <p><b>Isonomia de oferta</b> — dever de que ofertas sejam acessíveis a consumidores em condição equivalente na mesma área. No Brasil, art. 46 do regulamento de 2014 (declarado inconstitucional) e, desde setembro de 2025, art. 28 do regulamento de 2023.</p>
+      </div>
+
+      <div class="srcs">
+        <b>Fontes principais</b>
+        <p>Anatel, Ofício nº 159/2024/AF-ANATEL (25/6/2024); ANPD, Nota Técnica nº 12/2025/CON1/CGN/ANPD (15/5/2025); TJDFT, Conselho Especial, arguição de inconstitucionalidade do art. 46 da Resolução 632/2014 (2023); Anatel, Resolução nº 765/2023 (vigência desde 1º/9/2025), arts. 22 e 28; ANACOM, decisão final de 22/7/2024; Lei nº 13.709/2018 (LGPD), art. 20; Lei nº 8.078/1990 (CDC), arts. 6º e 39.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="fquote"><p>“Enquanto a distinção ficar indeterminada, a prestadora não tem o que provar — e o consumidor não tem como perguntar.”</p></div>
+    <div class="fauth">
+      <b>Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</p>
+    </div>
+    <div class="fnote">Versão 3.3 — 20 de setembro de 2026. Fontes conferidas na mesma data. Peça submetida a avaliação adversarial em duas rodadas, sob a regra de que nenhum achado externo é incorporado antes de conferência literal contra a fonte de origem. Onde o autor infere, o texto diz que infere; onde não localizou documento, diz que não localizou. Proposição para debate, não veredito técnico.</div>
+  </footer>
+
+</div>
+</body>
+</html>
