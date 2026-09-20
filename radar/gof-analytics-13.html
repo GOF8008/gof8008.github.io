@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selic caiu. O Fed subiu. A Bolsa sentiu os dois. — GOF Analytics Nº 13 | Giuliano Tomazelli</title>
+<meta name="description" content="Leitura semanal dos mercados (14 a 18/09/2026): o Ibovespa recuou 1,06% na semana da Superquarta, com o Copom cortando a Selic pela quinta vez seguida e o Fed subindo os juros pela primeira vez desde 2023 — os dois lados da mesma divergência, no mesmo dia.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/radar/gof-analytics-13.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras · Analytics">
+<meta property="og:title" content="Selic caiu. O Fed subiu. A Bolsa sentiu os dois. — GOF Analytics Nº 13">
+<meta property="og:description" content="Selic caiu. O Fed subiu. A Bolsa sentiu os dois. Semana de 14 a 18 de setembro de 2026.">
+<meta property="og:url" content="https://gof8008.github.io/radar/gof-analytics-13.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Selic caiu. O Fed subiu. A Bolsa sentiu os dois. — GOF Analytics Nº 13">
+<meta name="twitter:description" content="Selic caiu. O Fed subiu. A Bolsa sentiu os dois. Semana de 14 a 18 de setembro de 2026.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<style>
+  :root{
+    --u: clamp(12px, 3.4vw, 14.5px);
+    --ink:#1A1D24; --bg:#F3EFE6; --paper:#FFFFFF;
+    --accent:#B8862F; --accent-dk:#8A6420; --tint:#FAF6EC;
+    --pos:#1F7A4D; --neg:#B23A36; --muted:#6B6F76; --hair:#E4DECF;
+    --serif:'Playfair Display', Georgia, 'Times New Roman', serif;
+    --sans:'Source Sans 3', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg);}
+  body{font-family:var(--sans);color:var(--ink);font-size:var(--u);line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    padding:clamp(14px,4vw,44px) clamp(10px,3vw,24px) 240px;}
+  .card{width:100%;max-width:740px;margin:0 auto;background:var(--paper);border:1px solid var(--hair);
+    box-shadow:0 1px 0 rgba(0,0,0,.02), 0 22px 50px -30px rgba(26,29,36,.32);
+    padding:clamp(22px,5.2vw,48px);}
+
+  .masthead-top{display:flex;justify-content:space-between;align-items:baseline;
+    font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.72);
+    letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
+  .masthead-top .ed-date{color:var(--accent-dk);}
+  .brand-row{display:flex;justify-content:space-between;align-items:center;gap:1em;margin:.25em 0 .55em;}
+  .wordmark{font-family:var(--serif);line-height:.98;letter-spacing:-.01em;}
+  .wordmark .g{display:block;font-weight:800;font-size:clamp(23px,6.2vw,38px);}
+  .wordmark .a{display:block;font-weight:500;font-style:italic;font-size:clamp(14px,3.4vw,18px);
+    letter-spacing:.05em;color:var(--accent-dk);margin-top:.12em;}
+  .badge{flex:none;text-align:center;border:2px solid var(--accent);padding:.45em .7em;
+    min-width:4.6em;border-radius:2px;}
+  .badge .b-lab{font-size:calc(var(--u)*.58);font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--accent-dk);display:block;}
+  .badge .b-num{font-family:var(--serif);font-weight:800;font-size:clamp(22px,6vw,30px);
+    line-height:1;color:var(--ink);}
+  .rule-dbl{border:none;border-top:3px solid var(--ink);box-shadow:0 3px 0 var(--accent);margin:.2em 0 1.4em;}
+
+  h1{font-family:var(--serif);font-weight:800;font-size:clamp(27px,7.2vw,42px);line-height:1.05;
+    margin:0 0 .18em;letter-spacing:-.012em;}
+  .dek{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--accent-dk);
+    font-size:calc(var(--u)*1.16);line-height:1.35;max-width:54ch;margin:0;}
+
+  .geo{border:1px solid var(--hair);border-left:3px solid var(--ink);background:#F7F4ED;
+    padding:.95em 1.15em;margin:1.3em 0 .2em;border-radius:2px;}
+  .geo.institucional{border-left-color:#5B4A8A;}
+  .geo .g-lab{font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.64);
+    letter-spacing:.18em;text-transform:uppercase;color:var(--accent-dk);display:flex;align-items:center;gap:.6em;}
+  .geo.institucional .g-lab{color:#5B4A8A;}
+  .geo .g-lab::after{content:"";flex:1;height:1px;background:var(--hair);}
+  .geo p{margin:.5em 0 0;font-size:calc(var(--u)*.88);color:#3A3D44;line-height:1.5;}
+  .geo .g-rel{display:inline-block;margin-top:.5em;font-size:calc(var(--u)*.7);font-weight:700;
+    letter-spacing:.03em;background:var(--ink);color:#F3EFE6;padding:.28em .65em;border-radius:2px;}
+
+  .indicador{background:var(--ink);color:#F3EFE6;padding:1.15em 1.3em;margin:1.4em 0 .2em;border-radius:2px;}
+  .indicador .i-lab{font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.66);
+    letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:.6em;}
+  .indicador .i-lab::after{content:"";flex:1;height:1px;background:var(--accent);opacity:.5;}
+  .indicador .i-term{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.4);
+    margin:.25em 0 .35em;color:#fff;}
+  .indicador .i-text{font-size:calc(var(--u)*.94);line-height:1.5;color:#E8E2D4;margin:0;}
+
+  .sec{border-top:1px solid var(--hair);padding-top:1.2em;margin-top:1.5em;}
+  .sec-head{display:flex;align-items:baseline;gap:.6em;margin-bottom:.5em;}
+  .num{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.05);color:var(--accent);min-width:1.5em;}
+  .sec-title{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.25);letter-spacing:-.005em;}
+  .sec p{margin:.2em 0 0;} .sec p + p{margin-top:.7em;} .lbl{font-weight:700;color:var(--ink);}
+
+  .chart-wrap{margin:.4em 0 .2em;}
+  .chart-cap{font-size:calc(var(--u)*.78);color:var(--muted);margin-top:.3em;}
+  svg{width:100%;height:auto;display:block;}
+  .bar-val{font-family:var(--sans);font-weight:700;font-size:14px;fill:var(--ink);}
+  .bar-lab{font-family:var(--sans);font-weight:600;font-size:13px;fill:var(--muted);}
+  .axis{stroke:var(--hair);stroke-width:1;}
+
+  table{width:100%;border-collapse:collapse;margin:.3em 0 .1em;
+    font-variant-numeric:tabular-nums;font-size:calc(var(--u)*.92);}
+  caption{text-align:left;font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.72);
+    letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-bottom:.5em;}
+  th,td{padding:.46em .4em;text-align:right;border-bottom:1px solid var(--hair);}
+  th{font-weight:700;color:var(--muted);font-size:calc(var(--u)*.72);letter-spacing:.05em;text-transform:uppercase;}
+  th:first-child,td:first-child{text-align:left;} td:first-child{font-weight:600;}
+  tbody tr:last-child td{border-bottom:none;}
+  .up{color:var(--pos);font-weight:700;} .down{color:var(--neg);font-weight:700;} .flat{color:var(--muted);}
+
+  .radar-synth{font-size:calc(var(--u)*.96);line-height:1.5;margin:.2em 0 1em;
+    padding-bottom:.9em;border-bottom:1px dashed var(--hair);}
+  .tier{border-left:3px solid var(--c);padding:.5em 0 .5em .85em;margin:.65em 0;}
+  .tier.t-blue{--c:#2F6FB0;} .tier.t-amber{--c:#CC7A22;} .tier.t-green{--c:#1F7A4D;} .tier.t-red{--c:#B23A36;}
+  .tier-head{display:flex;align-items:center;gap:.5em;font-weight:700;font-size:calc(var(--u)*.98);color:var(--c);margin-bottom:.15em;}
+  .tier-dot{width:.7em;height:.7em;border-radius:50%;background:var(--c);flex:none;}
+  .tier-items{font-size:calc(var(--u)*.9);color:#3A3D44;line-height:1.45;}
+  .cal{margin-top:1em;} .cal caption{padding-bottom:.4em;}
+
+  .sobre{border:1px solid var(--hair);border-left:3px solid var(--accent);background:var(--tint);
+    padding:1.05em 1.2em;margin:1.45em 0 .2em;border-radius:2px;}
+  .sobre .g-lab{font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.66);
+    letter-spacing:.2em;text-transform:uppercase;color:var(--accent-dk);display:flex;align-items:center;gap:.6em;}
+  .sobre .g-lab::after{content:"";flex:1;height:1px;background:var(--hair);}
+
+  .foot{border-top:2px solid var(--ink);box-shadow:0 2px 0 var(--accent);margin-top:1.9em;padding-top:1.1em;}
+  .seal{display:inline-block;border:1px solid var(--accent);color:var(--accent-dk);font-size:calc(var(--u)*.68);
+    font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.32em .7em;border-radius:2px;margin-bottom:.85em;}
+  .foot-brand{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.02);}
+  .foot-brand .ed{color:var(--accent-dk);font-weight:600;}
+  .foot-tag{font-style:italic;color:var(--muted);font-size:calc(var(--u)*.86);margin:.2em 0 .8em;max-width:46ch;}
+  .byline{font-weight:700;font-size:calc(var(--u)*.94);}
+  .bio{color:var(--muted);font-size:calc(var(--u)*.82);margin-top:.12em;}
+  .disclaimer{margin-top:.85em;font-size:calc(var(--u)*.8);color:var(--muted);font-style:italic;
+    border-left:2px solid var(--accent);padding-left:.8em;}
+</style>
+</head>
+<body>
+<main class="card">
+
+  <div class="masthead-top">
+    <span>Leitura Semanal dos Mercados</span>
+    <span class="ed-date">Semana de 14 a 18/09/2026</span>
+  </div>
+  <div class="brand-row">
+    <div class="wordmark"><span class="g">Gestão de Opções Futuras</span><span class="a">Analytics</span></div>
+    <div class="badge"><span class="b-lab">Edição</span><span class="b-num">Nº 13</span></div>
+  </div>
+  <hr class="rule-dbl">
+
+  <h1>Selic caiu. O Fed subiu. A Bolsa sentiu os dois.</h1>
+  <p class="dek">Depois de quatro semanas seguidas de alta, o Ibovespa recuou 1,06% na semana da "Superquarta": o Copom cortou a Selic pela quinta vez seguida, enquanto o Fed subiu os juros pela primeira vez desde 2023 — os dois lados da mesma divergência, no mesmo dia.</p>
+
+  <!-- FATO INSTITUCIONAL DOMÉSTICO (compacto) -->
+  <div class="geo institucional">
+    <div class="g-lab">Fato Institucional Doméstico</div>
+    <p>Na terça (15/09), o STF examinou, em sessão extraordinária, uma <b>questão de ordem</b> na Petição 16.662 — o procedimento que reúne relatório da Polícia Federal sobre mensagens atribuídas a Daniel Vorcaro (ex-controlador do Banco Master) e ao ministro Alexandre de Moraes. A questão de ordem, proposta pelo decano Gilmar Mendes, trata da tramitação conjunta das Petições 16.662 e 16.704 e da redistribuição da relatoria — <b>não do mérito</b>. A análise foi interrompida por pedido de vista do ministro Flávio Dino, com placar parcial de 4 a 3 contra a reunião dos processos. O mérito não chegou a ser examinado. Em 17/09, Fachin retirou de pauta a sessão de 23/09, que analisaria a Petição 16.704 (atuação do ministro André Mendonça), sem nova data definida: o julgamento só volta à pauta depois que o plenário fixar os parâmetros de tramitação. São procedimentos em curso, sem conclusão de responsabilidade estabelecida sobre nenhum dos envolvidos.</p>
+    <span class="g-rel">Relevância para a B3: em aberto — sem efeito de mercado fechado nesta semana</span>
+  </div>
+
+  <!-- INDICADOR DA SEMANA -->
+  <div class="indicador">
+    <div class="i-lab">Indicador da Semana</div>
+    <div class="i-term">Ibovespa: -1,06% (evidência da divergência monetária)</div>
+    <p class="i-text">O índice fechou a semana em 185.229,17 pontos, primeira semana negativa depois de quatro seguidas de alta. O Ibovespa aqui não é o vetor — é a evidência de mercado de um vetor fundamental que, nesta edição, é a divergência entre a política monetária brasileira e a americana: o Brasil afrouxando, os EUA apertando, na mesma "Superquarta".</p>
+  </div>
+
+  <!-- 1 · O QUE MEXEU -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">1</span><span class="sec-title">O que mexeu</span></div>
+    <p><span class="lbl">Brasil.</span> Segunda (14/09): Ibovespa -0,91%, pressionado pelo petróleo (Brent chegou a US$ 109,80 intradia após ataque a drones ao oleoduto Leste-Oeste saudita, fechando o dia a US$ 105,68). Terça (15/09): +0,54%, com a sessão do STF em curso. Quarta (16/09), dia da "Superquarta": -0,51% — o Copom cortou a Selic de 14% para 13,75% (5º corte seguido de 0,25 p.p., decisão unânime), com comunicado mais confiante sobre a desaceleração da atividade, mas sem prometer o próximo passo; horas depois, o Fed subiu os juros para 3,75%-4,00% (unânime), o primeiro aumento desde 2023, com discurso mais duro sobre a resiliência da economia americana. Quinta (17/09): +0,24%. Sexta (18/09): -0,41%, a 185.229,17 pontos, com bancos e mineração/siderurgia entre as maiores perdas (CSN -6,40%, Santander -3,47%) e o vencimento de opções elevando o giro para R$ 38,37 bi.</p>
+    <p><span class="lbl">Exterior.</span> O petróleo seguiu como pano de fundo: Irã afirmou ter atingido um petroleiro no Estreito de Ormuz, e o mercado acompanhou tanto a escalada quanto a expectativa de reparo parcial do oleoduto saudita. O Treasury de 10 anos permaneceu na região de 5% após o Fed. O dólar fechou a semana em leve alta (~R$5,14-5,15).</p>
+  </section>
+
+  <!-- 2 · OS NÚMEROS -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">2</span><span class="sec-title">Os números</span></div>
+
+    <div class="chart-wrap">
+      <svg viewBox="0 0 600 240" role="img" aria-label="Ibovespa, fechamento diário de segunda a sexta, 14 a 18 de setembro de 2026: queda, alta, queda na Superquarta, alta, queda">
+        <line class="axis" x1="40" y1="195" x2="560" y2="195"/>
+        <polyline points="90,145 220,100 350,130 470,105 560,140" fill="none" stroke="#8A6420" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+        <g>
+          <circle cx="90"  cy="145" r="5.5" fill="#B23A36"/>
+          <circle cx="220" cy="100" r="5.5" fill="#1F7A4D"/>
+          <circle cx="350" cy="130" r="5.5" fill="#B23A36"/>
+          <circle cx="470" cy="105" r="5.5" fill="#1F7A4D"/>
+          <circle cx="560" cy="140" r="5.5" fill="#B23A36"/>
+        </g>
+        <text class="bar-val" x="90"  y="131" text-anchor="middle" fill="#B23A36">-0,91%</text>
+        <text class="bar-val" x="220" y="86"  text-anchor="middle" fill="#1F7A4D">+0,54%</text>
+        <text class="bar-val" x="350" y="116" text-anchor="middle" fill="#B23A36">-0,51%</text>
+        <text class="bar-val" x="470" y="91"  text-anchor="middle" fill="#1F7A4D">+0,24%</text>
+        <text class="bar-val" x="560" y="126" text-anchor="middle" fill="#B23A36">-0,41%</text>
+        <text class="bar-lab" x="90"  y="212" text-anchor="middle">Seg 14</text>
+        <text class="bar-lab" x="220" y="212" text-anchor="middle">Ter 15</text>
+        <text class="bar-lab" x="350" y="212" text-anchor="middle">Qua 16*</text>
+        <text class="bar-lab" x="470" y="212" text-anchor="middle">Qui 17</text>
+        <text class="bar-lab" x="560" y="212" text-anchor="middle">Sex 18</text>
+      </svg>
+      <div class="chart-cap">Ibovespa — variação diária. *Quarta é a "Superquarta": Copom e Fed decidiram no mesmo dia. Fechamento de sexta: 185.229,17 pts. Semana: -1,06%, primeira negativa após 4 semanas de alta. Fonte: B3/Reuters.</div>
+    </div>
+
+    <table>
+      <caption>Panorama da semana</caption>
+      <thead><tr><th>Indicador</th><th>Situação</th></tr></thead>
+      <tbody>
+        <tr><td>Ibovespa</td><td class="down">185.229,17 pts (-1,06% sem.)</td></tr>
+        <tr><td>Selic (Copom, 16/09)</td><td class="up">13,75% (5º corte seguido)</td></tr>
+        <tr><td>Fed funds (16/09)</td><td class="down">3,75%-4,00% (1ª alta desde 2023)</td></tr>
+        <tr><td>Treasury 10 anos</td><td class="down">~5,0%</td></tr>
+        <tr><td>Petróleo (Brent)</td><td class="down">~US$ 104 (tocou US$ 109,80 na semana)</td></tr>
+        <tr><td>Dólar (R$)</td><td class="down">~5,14-5,15</td></tr>
+        <tr><td>Fluxo estrangeiro (semana, est. XP)</td><td class="down">-R$ 1,04 bi</td></tr>
+        <tr><td>Fluxo estrangeiro (set., acumulado)</td><td class="up">+R$ 6,3 bi</td></tr>
+      </tbody>
+    </table>
+    <div class="chart-cap">Verde/vermelho indicam o sinal favorável/desfavorável ao ambiente brasileiro, não o sinal aritmético. Fluxo com defasagem de divulgação — não tratado como dado fechado do último pregão.</div>
+  </section>
+
+  <!-- 3 · LEITURA -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">3</span><span class="sec-title">Leitura</span></div>
+    <p>O vetor dominante da semana foi a divergência monetária entre Brasil e EUA, tornada concreta na "Superquarta": o Copom deu seu quinto corte seguido, sem prometer o próximo, enquanto o Fed subiu os juros pela primeira vez em mais de dois anos, com discurso resistente sobre a atividade americana. O segundo vetor, a crise institucional no STF em torno do caso Banco Master, produziu atos processuais relevantes mas nenhum desfecho — e, por isso, nenhum efeito de mercado que se possa isolar nesta semana. O petróleo, elevado desde o ataque ao oleoduto saudita, funcionou como ambiente externo pressionando o conjunto, não como vetor próprio. A evidência de mercado: o Ibovespa recuou 1,06%, interrompendo quatro semanas de alta, enquanto o fluxo estrangeiro registrou saída líquida semanal estimada em R$ 1,04 bilhão — mas o acumulado de setembro permaneceu positivo em cerca de R$ 6,3 bilhões. Houve reversão semanal do fluxo, não reversão do saldo do mês. O índice segue quase 11% acima do fundo de agosto.</p>
+    <p><span class="lbl">Contraleitura.</span> Parte da queda de sexta-feira tem explicação técnica, não só macro: o vencimento de opções elevou o giro para R$ 38,37 bilhões, o que não deve ser lido isoladamente como maior pressão vendedora. A composição também ajuda: CSN e mineração/siderurgia lideraram as perdas, enquanto Banco do Brasil e alguns nomes de consumo/varejo avançaram — a queda não foi uniforme entre os setores.</p>
+  </section>
+
+  <!-- 4 · SÍNTESE ESTRATÉGICA -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">4</span><span class="sec-title">Síntese estratégica</span></div>
+    <p class="radar-synth">A divergência monetária deixou de ser cenário e virou fato: o Copom reduziu a Selic enquanto o Fed elevou a sua, no mesmo dia. O Ibovespa recuou 1,06% na semana, interrompendo quatro semanas de alta, com saída líquida semanal de estrangeiros — mas sem reverter o saldo positivo de setembro. Mapa de onde olhar, não sinal de compra ou venda.</p>
+
+    <div class="tier t-blue">
+      <div class="tier-head"><span class="tier-dot"></span>Atenção elevada</div>
+      <div class="tier-items">Ata do Copom, 22/09 — pode detalhar se novembro é corte, pausa ou condicional · retomada da questão de ordem no STF após a vista de Dino, sem data definida — e, só depois dela, o julgamento da Petição 16.704 (Mendonça), retirado de pauta em 17/09.</div>
+    </div>
+    <div class="tier t-amber">
+      <div class="tier-head"><span class="tier-dot"></span>Atenção moderada</div>
+      <div class="tier-items">Petróleo e o ritmo de reparo do oleoduto saudita · Banco do Japão, decisão de política monetária na sequência do Fed · diferencial de juros Brasil-EUA, agora mais estreito.</div>
+    </div>
+    <div class="tier t-green">
+      <div class="tier-head"><span class="tier-dot"></span>Oportunidades de observação</div>
+      <div class="tier-items">Setores domésticos menos expostos a petróleo e minério, se a divergência monetária continuar favorecendo o Brasil · fluxo estrangeiro, para ver se a reversão da semana foi pontual ou o início de nova saída.</div>
+    </div>
+    <div class="tier t-red">
+      <div class="tier-head"><span class="tier-dot"></span>Riscos no radar</div>
+      <div class="tier-items">Escalada institucional no STF produzindo prêmio de risco próprio, independente do desfecho jurídico · petróleo persistente + Treasury em 5% comprimindo o espaço do Copom para novos cortes · reversão do fluxo estrangeiro além do observado nesta semana.</div>
+    </div>
+
+    <table class="cal">
+      <caption>Calendário da semana</caption>
+      <thead><tr><th>Data</th><th>Evento</th><th>O que observar</th></tr></thead>
+      <tbody>
+        <tr><td>22/09</td><td>Ata do Copom</td><td>sinalização (ou não) sobre novembro</td></tr>
+        <tr><td>s/ data</td><td>STF — retomada da questão de ordem (vista de Dino)</td><td>define tramitação; destrava a Pet. 16.704</td></tr>
+        <tr><td>—</td><td>Fluxo estrangeiro diário</td><td>testa se a reversão da semana persiste</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SOBRE ESTA PUBLICAÇÃO -->
+  <div class="sobre">
+    <div class="g-lab">Sobre esta publicação</div>
+    <p style="margin:.5em 0 0;font-size:calc(var(--u)*.9);color:#3A3D44;line-height:1.55;">Gestão de Opções Futuras Analytics é uma publicação semanal dedicada à interpretação dos mercados financeiros e da economia brasileira. Cada edição identifica o vetor que melhor explicou a semana — quantitativo ou fundamental —, organiza os principais acontecimentos econômicos e institucionais, e propõe uma leitura estruturada dos fatores capazes de alterar a trajetória do mercado. Fatos institucionais em apuração são tratados como investigação em curso, nunca como conclusão de responsabilidade. As publicações têm caráter educacional e analítico.</p>
+  </div>
+
+  <!-- RODAPÉ -->
+  <div class="foot">
+    <div class="seal">Vetor da Semana #13 · Divergência Monetária Brasil x EUA</div>
+    <div class="foot-brand">Gestão de Opções Futuras <span class="ed">· Analytics · Edição Nº 13</span></div>
+    <div class="foot-tag">Leitura semanal e estruturada dos mercados e da economia brasileira.</div>
+    <div class="byline">Giuliano Tomazelli</div>
+    <div class="bio">Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</div>
+    <div class="disclaimer">Análise de cenário com base em dados de mercado. Não constitui recomendação de investimento.</div>
+  </div>
+
+</main>
+</body>
+</html>
