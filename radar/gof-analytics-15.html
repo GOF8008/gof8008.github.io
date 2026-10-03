@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Bolsa subiu. O medo também. — GOF Analytics Nº 15 | Giuliano Tomazelli</title>
+<meta name="description" content="Leitura semanal dos mercados (28/09 a 02/10/2026): na última semana antes do primeiro turno, o Ibovespa sobe 4,71% e volta aos 192 mil pontos, enquanto o VIX Brasil bate recorde dois dias seguidos. Payroll e PCE fracos nos EUA, Treasury de 10 anos em 5,28%.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/radar/gof-analytics-15.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="A Bolsa subiu. O medo também. — GOF Analytics Nº 15">
+<meta property="og:description" content="Leitura semanal dos mercados (28/09 a 02/10/2026): na última semana antes do primeiro turno, o Ibovespa sobe 4,71% e volta aos 192 mil pontos, enquanto o VIX Brasil bate recorde dois dias seguidos. Payroll e PCE fracos nos EUA, Treasury de 10 anos em 5,28%.">
+<meta property="og:url" content="https://gof8008.github.io/radar/gof-analytics-15.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Bolsa subiu. O medo também. — GOF Analytics Nº 15">
+<meta name="twitter:description" content="Ibovespa +4,71% e VIX Brasil em recorde na véspera do primeiro turno. Semana de 28/09 a 02/10/2026.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<style>
+  :root{
+    --u: clamp(12px, 3.4vw, 14.5px);
+    --ink:#1A1D24; --bg:#F3EFE6; --paper:#FFFFFF;
+    --accent:#B8862F; --accent-dk:#8A6420; --tint:#FAF6EC;
+    --pos:#1F7A4D; --neg:#B23A36; --muted:#6B6F76; --hair:#E4DECF;
+    --serif:'Playfair Display', Georgia, 'Times New Roman', serif;
+    --sans:'Source Sans 3', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg);}
+  body{font-family:var(--sans);color:var(--ink);font-size:var(--u);line-height:1.5;
+    -webkit-font-smoothing:antialiased;padding:clamp(14px,4vw,44px) clamp(10px,3vw,24px) 240px;}
+  .card{width:100%;max-width:740px;margin:0 auto;background:var(--paper);border:1px solid var(--hair);
+    box-shadow:0 1px 0 rgba(0,0,0,.02), 0 22px 50px -30px rgba(26,29,36,.32);
+    padding:clamp(22px,5.2vw,48px);}
+
+  .masthead-top{display:flex;justify-content:space-between;align-items:baseline;
+    font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.72);
+    letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
+  .masthead-top .ed-date{color:var(--accent-dk);}
+  .brand-row{display:flex;justify-content:space-between;align-items:center;gap:1em;margin:.25em 0 .55em;}
+  .wordmark{font-family:var(--serif);line-height:.98;letter-spacing:-.01em;}
+  .wordmark .g{display:block;font-weight:800;font-size:clamp(23px,6.2vw,38px);}
+  .wordmark .a{display:block;font-weight:500;font-style:italic;font-size:clamp(14px,3.4vw,18px);
+    letter-spacing:.05em;color:var(--accent-dk);margin-top:.12em;}
+  .badge{flex:none;text-align:center;border:2px solid var(--accent);padding:.45em .7em;
+    min-width:4.6em;border-radius:2px;}
+  .badge .b-lab{font-size:calc(var(--u)*.58);font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--accent-dk);display:block;}
+  .badge .b-num{font-family:var(--serif);font-weight:800;font-size:clamp(22px,6vw,30px);
+    line-height:1;color:var(--ink);}
+  .rule-dbl{border:none;border-top:3px solid var(--ink);box-shadow:0 3px 0 var(--accent);margin:.2em 0 1.4em;}
+
+  h1{font-family:var(--serif);font-weight:800;font-size:clamp(27px,7.2vw,42px);line-height:1.05;
+    margin:0 0 .18em;letter-spacing:-.012em;}
+  .dek{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--accent-dk);
+    font-size:calc(var(--u)*1.16);line-height:1.35;max-width:54ch;margin:0;}
+
+  .geo{border:1px solid var(--hair);border-left:3px solid var(--ink);background:#F7F4ED;
+    padding:.95em 1.15em;margin:1.3em 0 .2em;border-radius:2px;}
+  .geo.institucional{border-left-color:#5B4A8A;}
+  .geo.eleitoral{border-left-color:var(--accent);background:var(--tint);}
+  .geo .g-lab{font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.64);
+    letter-spacing:.18em;text-transform:uppercase;color:var(--accent-dk);display:flex;align-items:center;gap:.6em;}
+  .geo.institucional .g-lab{color:#5B4A8A;}
+  .geo .g-lab::after{content:"";flex:1;height:1px;background:var(--hair);}
+  .geo p{margin:.5em 0 0;font-size:calc(var(--u)*.88);color:#3A3D44;line-height:1.5;}
+  .geo .g-rel{display:inline-block;margin-top:.5em;font-size:calc(var(--u)*.7);font-weight:700;
+    letter-spacing:.03em;background:var(--ink);color:#F3EFE6;padding:.28em .65em;border-radius:2px;}
+
+  .indicador{background:var(--ink);color:#F3EFE6;padding:1.15em 1.3em;margin:1.4em 0 .2em;border-radius:2px;}
+  .indicador .i-lab{font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.66);
+    letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:.6em;}
+  .indicador .i-lab::after{content:"";flex:1;height:1px;background:var(--accent);opacity:.5;}
+  .indicador .i-term{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.4);
+    margin:.25em 0 .35em;color:#fff;}
+  .indicador .i-text{font-size:calc(var(--u)*.94);line-height:1.5;color:#E8E2D4;margin:0;}
+
+  .sec{border-top:1px solid var(--hair);padding-top:1.2em;margin-top:1.5em;}
+  .sec-head{display:flex;align-items:baseline;gap:.6em;margin-bottom:.5em;}
+  .num{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.05);color:var(--accent);min-width:1.5em;}
+  .sec-title{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.25);letter-spacing:-.005em;}
+  .sec p{margin:.2em 0 0;} .sec p + p{margin-top:.7em;} .lbl{font-weight:700;color:var(--ink);}
+
+  .chart-wrap{margin:.4em 0 .2em;}
+  .chart-cap{font-size:calc(var(--u)*.78);color:var(--muted);margin-top:.3em;}
+  svg{width:100%;height:auto;display:block;}
+  .bar-val{font-family:var(--sans);font-weight:700;font-size:14px;fill:var(--ink);}
+  .bar-lab{font-family:var(--sans);font-weight:600;font-size:13px;fill:var(--muted);}
+  .axis{stroke:var(--hair);stroke-width:1;}
+
+  table{width:100%;border-collapse:collapse;margin:.3em 0 .1em;
+    font-variant-numeric:tabular-nums;font-size:calc(var(--u)*.92);}
+  caption{text-align:left;font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.72);
+    letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-bottom:.5em;}
+  th,td{padding:.46em .4em;text-align:right;border-bottom:1px solid var(--hair);}
+  th{font-weight:700;color:var(--muted);font-size:calc(var(--u)*.72);letter-spacing:.05em;text-transform:uppercase;}
+  th:first-child,td:first-child{text-align:left;} td:first-child{font-weight:600;}
+  tbody tr:last-child td{border-bottom:none;}
+  .up{color:var(--pos);font-weight:700;} .down{color:var(--neg);font-weight:700;} .flat{color:var(--muted);}
+
+  .radar-synth{font-size:calc(var(--u)*.96);line-height:1.5;margin:.2em 0 1em;
+    padding-bottom:.9em;border-bottom:1px dashed var(--hair);}
+  .tier{border-left:3px solid var(--c);padding:.5em 0 .5em .85em;margin:.65em 0;}
+  .tier.t-blue{--c:#2F6FB0;} .tier.t-amber{--c:#CC7A22;} .tier.t-green{--c:#1F7A4D;} .tier.t-red{--c:#B23A36;}
+  .tier-head{display:flex;align-items:center;gap:.5em;font-weight:700;font-size:calc(var(--u)*.98);color:var(--c);margin-bottom:.15em;}
+  .tier-dot{width:.7em;height:.7em;border-radius:50%;background:var(--c);flex:none;}
+  .tier-items{font-size:calc(var(--u)*.9);color:#3A3D44;line-height:1.45;}
+  .cal{margin-top:1.4em;}
+  .cal caption{font-family:var(--serif);font-weight:800;font-size:clamp(20px,5.2vw,26px);
+    letter-spacing:.01em;text-transform:none;color:var(--accent-dk);
+    padding:.1em 0 .45em;border-bottom:2px solid var(--accent);margin-bottom:.2em;}
+  .cal th,.cal td{text-align:left;vertical-align:top;} .cal td:first-child{white-space:nowrap;color:var(--accent-dk);}
+
+  .sobre{border:1px solid var(--hair);border-left:3px solid var(--accent);background:var(--tint);
+    padding:1.05em 1.2em;margin:1.45em 0 .2em;border-radius:2px;}
+  .sobre .g-lab{font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.66);
+    letter-spacing:.2em;text-transform:uppercase;color:var(--accent-dk);display:flex;align-items:center;gap:.6em;}
+  .sobre .g-lab::after{content:"";flex:1;height:1px;background:var(--hair);}
+
+  .foot{border-top:2px solid var(--ink);box-shadow:0 2px 0 var(--accent);margin-top:1.9em;padding-top:1.1em;}
+  .seal{display:inline-block;border:1px solid var(--accent);color:var(--accent-dk);font-size:calc(var(--u)*.68);
+    font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.32em .7em;border-radius:2px;margin-bottom:.85em;}
+  .foot-brand{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.02);}
+  .foot-brand .ed{color:var(--accent-dk);font-weight:600;}
+  .foot-tag{font-style:italic;color:var(--muted);font-size:calc(var(--u)*.86);margin:.2em 0 .8em;max-width:46ch;}
+  .byline{font-weight:700;font-size:calc(var(--u)*.94);}
+  .bio{color:var(--muted);font-size:calc(var(--u)*.82);margin-top:.12em;}
+  .disclaimer{margin-top:.85em;font-size:calc(var(--u)*.8);color:var(--muted);font-style:italic;
+    border-left:2px solid var(--accent);padding-left:.8em;}
+</style>
+</head>
+<body>
+<main class="card">
+
+  <div class="masthead-top">
+    <span>Leitura Semanal dos Mercados</span>
+    <span class="ed-date">Semana de 28/09 a 02/10/2026</span>
+  </div>
+  <div class="brand-row">
+    <div class="wordmark"><span class="g">Gestão de Opções Futuras</span><span class="a">Analytics</span></div>
+    <div class="badge"><span class="b-lab">Edição</span><span class="b-num">Nº 15</span></div>
+  </div>
+  <hr class="rule-dbl">
+
+  <h1>A Bolsa subiu. O medo também.</h1>
+  <p class="dek">O Ibovespa avançou 4,71% na última semana antes do primeiro turno e voltou aos 192 mil pontos. No mesmo intervalo, o VIX Brasil, que mede a volatilidade esperada nas opções, bateu recorde dois dias seguidos. Preço e risco percebido andaram juntos para cima.</p>
+
+  <!-- GEOPOLÍTICA -->
+  <div class="geo">
+    <div class="g-lab">Geopolítica</div>
+    <p>Na sexta (02/10), os países do G7 anunciaram, em comunicado conjunto, uma liberação coordenada de 100 milhões de barris de diesel e petróleo de reservas de emergência, por meio da Agência Internacional de Energia, com parte relevante do diesel em até 20 dias. O ato atinge diretamente o mercado de derivados: os futuros de diesel caíram nos EUA e na Europa no dia do anúncio, enquanto o Brent ficou praticamente estável, a US$ 102,25. Para o Brasil, importador de diesel, o canal passa pelo custo do combustível e pelas expectativas de inflação.</p>
+    <span class="g-rel">Relevância para a B3: Média</span>
+  </div>
+
+  <!-- CALENDÁRIO ELEITORAL -->
+  <div class="geo eleitoral">
+    <div class="g-lab">Calendário Eleitoral</div>
+    <p>A semana foi a última antes do primeiro turno, em 04/10. O efeito de preço registrável apareceu nas opções: o VIX Brasil fechou a 31,84 na segunda, 32,06 na terça, 31,67 na quarta, 32,39 na quinta e 32,77 na sexta — o maior nível desde a criação do índice, em março de 2024. Segundo a B3, os cinco maiores fechamentos da história do índice se concentraram entre o fim de setembro e o início de outubro. Nos EUA, o estoque de opções sobre o principal ETF de ações brasileiras também cresceu entre julho e o fim de setembro. Na sexta, o Ibovespa oscilou entre 186,1 mil e 190 mil pontos durante o pregão antes de fechar acima de 192 mil.</p>
+  </div>
+
+  <!-- INDICADOR DA SEMANA -->
+  <div class="indicador">
+    <div class="i-lab">Indicador da Semana</div>
+    <div class="i-term">VIX Brasil: 32,77 pontos (recorde do índice)</div>
+    <p class="i-text">Calculado pela B3 a partir das opções sobre o Ibovespa, o VIX Brasil mede quanto os preços das opções embutem de oscilação para os próximos 30 dias. Acima de 30 pontos, costuma indicar turbulência elevada. Nesta semana, os cinco pregões ficaram acima de 31,6 pontos e o índice fechou no maior nível de sua curta história, enquanto o próprio Ibovespa avançava. O índice não aponta direção: aponta a amplitude esperada do movimento, para cima ou para baixo.</p>
+  </div>
+
+  <!-- 1 · O QUE MEXEU -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">1</span><span class="sec-title">O que mexeu</span></div>
+    <p><span class="lbl">Brasil.</span> Segunda (28/09): Ibovespa -0,26%, a 182.991,13 pontos, quarto pregão seguido de queda, com bancos pressionando; o dólar subiu 0,78%, a R$ 5,22. Terça (29/09): +0,46%, a 183.827,59 pontos, interrompendo a sequência; bancos sustentaram o índice e a Vale recuou cerca de 2%. Quarta (30/09): +1,37%, a 186.340,46 pontos, no dia em que o PCE americano veio abaixo das projeções; o índice fechou setembro com alta de 5,03%, o melhor mês desde janeiro, e o trimestre com +8,32%. O dólar caiu 0,81%, a R$ 5,17. Quinta (01/10): +0,46%, a 187.197,46 pontos, depois de oscilar mais de 2.600 pontos no pregão; o dólar voltou a R$ 5,22. Sexta (02/10): +2,63%, a 192.114,55 pontos, a maior alta da semana, no dia do payroll americano. Petrobras subiu 2,81% (PN), após anunciar a segunda descoberta de petróleo no poço Morpho (bloco FZA-M-59), em águas ultraprofundas da costa do Amapá, na Bacia da Foz do Amazonas; Bradesco (+3,34%), Banco do Brasil (+3,04%) e Vale (+2,56%) acompanharam. O IBGE informou queda de 0,6% na produção industrial de agosto. O dólar fechou a R$ 5,22. Em setembro, o saldo do capital estrangeiro na B3 ficou positivo em R$ 9,1 bilhões, depois da saída de R$ 18,1 bilhões em agosto.</p>
+    <p><span class="lbl">Exterior.</span> O PCE de agosto subiu 0,3% no mês e 3,4% em 12 meses; o núcleo, 0,2% e 3,0% — todos abaixo das projeções. Na sexta, o payroll de setembro registrou apenas 29 mil vagas, contra cerca de 90 mil esperadas, com desemprego subindo de 4,1% para 4,2% e revisão de -60 mil vagas nos dois meses anteriores. Depois do dado, os contratos de juros passaram a indicar probabilidade bem menor de nova alta do Fed em outubro. O Treasury de 10 anos, porém, não acompanhou: pela curva oficial do Tesouro, foi de 5,17% na sexta anterior a 5,29% na quarta (30/09) e terminou a semana em 5,28%. As bolsas de Nova York subiram na sexta.</p>
+  </section>
+
+  <!-- 2 · OS NÚMEROS -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">2</span><span class="sec-title">Os números</span></div>
+
+    <div class="chart-wrap">
+      <svg viewBox="0 0 600 240" role="img" aria-label="Ibovespa, fechamento diário de segunda a sexta, 28 de setembro a 2 de outubro de 2026: uma queda seguida de quatro altas, a maior na sexta">
+        <line class="axis" x1="40" y1="195" x2="560" y2="195"/>
+        <polyline points="90,169 220,158 350,127 470,116 560,55" fill="none" stroke="#8A6420" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+        <g>
+          <circle cx="90"  cy="169" r="5.5" fill="#B23A36"/>
+          <circle cx="220" cy="158" r="5.5" fill="#1F7A4D"/>
+          <circle cx="350" cy="127" r="5.5" fill="#1F7A4D"/>
+          <circle cx="470" cy="116" r="5.5" fill="#1F7A4D"/>
+          <circle cx="560" cy="55"  r="5.5" fill="#1F7A4D"/>
+        </g>
+        <text class="bar-val" x="90"  y="155" text-anchor="middle" fill="#B23A36">-0,26%</text>
+        <text class="bar-val" x="220" y="144" text-anchor="middle" fill="#1F7A4D">+0,46%</text>
+        <text class="bar-val" x="350" y="113" text-anchor="middle" fill="#1F7A4D">+1,37%</text>
+        <text class="bar-val" x="470" y="102" text-anchor="middle" fill="#1F7A4D">+0,46%</text>
+        <text class="bar-val" x="560" y="41"  text-anchor="middle" fill="#1F7A4D">+2,63%</text>
+        <text class="bar-lab" x="90"  y="212" text-anchor="middle">Seg 28</text>
+        <text class="bar-lab" x="220" y="212" text-anchor="middle">Ter 29</text>
+        <text class="bar-lab" x="350" y="212" text-anchor="middle">Qua 30*</text>
+        <text class="bar-lab" x="470" y="212" text-anchor="middle">Qui 01</text>
+        <text class="bar-lab" x="560" y="212" text-anchor="middle">Sex 02**</text>
+      </svg>
+      <div class="chart-cap">Ibovespa — variação diária, pontos na escala do fechamento. *PCE dos EUA. **Payroll dos EUA. Fechamento de sexta: 192.114,55 pts. Semana: +4,71%. Fonte: B3/imprensa.</div>
+    </div>
+
+    <table>
+      <caption>Panorama da semana</caption>
+      <thead><tr><th>Indicador</th><th>Situação</th></tr></thead>
+      <tbody>
+        <tr><td>Ibovespa</td><td class="up">192.114,55 pts (+4,71% sem.)</td></tr>
+        <tr><td>VIX Brasil</td><td class="down">32,77 pts (recorde desde mar/2024)</td></tr>
+        <tr><td>Treasury 10 anos</td><td class="down">5,28% (5,29% na quarta)</td></tr>
+        <tr><td>Payroll (set.)</td><td class="up">29 mil vagas (esperado ~90 mil) · desemprego 4,2%</td></tr>
+        <tr><td>PCE (ago., 12 meses)</td><td class="up">3,4% · núcleo 3,0% (abaixo do esperado)</td></tr>
+        <tr><td>Chance de alta do Fed em out.</td><td class="up">em forte queda após o payroll</td></tr>
+        <tr><td>Dólar (R$)</td><td class="flat">5,22 (5,18 na sexta anterior)</td></tr>
+        <tr><td>Petróleo (Brent)</td><td class="flat">US$ 102,25 (sexta)</td></tr>
+        <tr><td>Produção industrial (ago.)</td><td class="down">-0,6% no mês</td></tr>
+        <tr><td>Capital estrangeiro na B3 (set.)</td><td class="up">+R$ 9,1 bi</td></tr>
+      </tbody>
+    </table>
+    <div class="chart-cap">Verde/vermelho indicam o sinal favorável/desfavorável ao ambiente brasileiro, não o sinal aritmético. Saldo estrangeiro de setembro como compilado pela imprensa a partir da B3; os dias de outubro ainda não estavam disponíveis.</div>
+  </section>
+
+  <!-- 3 · LEITURA -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">3</span><span class="sec-title">Leitura</span></div>
+    <p>Prestação de contas da #14: o teste apontado para a semana — PCE e payroll diante do Treasury acima de 5% — veio com dados americanos mais fracos que o esperado, e a chance de alta do Fed em outubro despencou. O Treasury de 10 anos, porém, não cedeu: voltou a níveis não observados desde 2007 e terminou a semana em 5,28%, 11 pontos-base acima da sexta anterior. Mesmo assim, o Ibovespa subiu 4,71%. A transmissão linear observada na #14 — Treasury subindo acompanhado de pressão sobre a Bolsa — não se confirmou nesta semana, o que não basta para invalidá-la: desta vez pesou mais o alívio na expectativa de curto prazo para o Fed do que o nível do juro longo. As duas maiores altas do índice coincidiram com os dois dados americanos — +1,37% no PCE, +2,63% no payroll. O vetor que esta edição destaca, porém, está nas opções: com o primeiro turno a dois dias, o VIX Brasil bateu recorde enquanto o preço subia. A Bolsa mais alta não significou risco menor: os preços das opções embutem oscilação maior à frente, nos dois sentidos.</p>
+    <p><span class="lbl">Contraleitura.</span> O recorde do VIX Brasil tem de ser lido com a régua certa: o índice existe desde março de 2024 e nunca atravessou uma eleição presidencial; "maior da história" significa maior em dois anos e meio, não maior que em 2018 ou 2022. A volatilidade efetivamente realizada pelo Ibovespa em 2026 seguiu abaixo da média histórica dos anos eleitorais. E a alta de sexta teve mais de um componente: o payroll, a descoberta da Petrobras e a liberação de reservas do G7 ocorreram no mesmo dia, e a cobertura também citou o posicionamento pré-eleitoral — sem que seja possível separar o peso de cada um.</p>
+    <p><i>Na segunda-feira, o resultado do primeiro turno deixa de ser hipótese: o VIX Brasil dirá se a incerteza embutida nas opções se dissipa ou se transfere para o segundo turno.</i></p>
+  </section>
+
+  <!-- 4 · SÍNTESE ESTRATÉGICA -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">4</span><span class="sec-title">Síntese estratégica</span></div>
+    <p class="radar-synth">Dados americanos mais fracos derrubaram a chance de alta do Fed em outubro, e o Ibovespa subiu 4,71% mesmo com o Treasury de 10 anos acima de 5%. Ao mesmo tempo, o VIX Brasil bateu recorde na véspera do primeiro turno: preço em alta e risco percebido em alta. Mapa de onde olhar, não sinal de compra ou venda.</p>
+
+    <div class="tier t-blue">
+      <div class="tier-head"><span class="tier-dot"></span>Atenção elevada</div>
+      <div class="tier-items">Resultado do primeiro turno (04/10) e a reação na abertura de segunda (05/10) — VIX Brasil, câmbio e curva DI dirão quanto da volatilidade embutida nas opções se realiza.</div>
+    </div>
+    <div class="tier t-amber">
+      <div class="tier-head"><span class="tier-dot"></span>Atenção moderada</div>
+      <div class="tier-items">Treasury de 10 anos acima de 5% sem ceder ao payroll fraco · ata do Fed (07/10) e decisão de 28/10 · diesel e petróleo após a liberação do G7, com o IPCA de setembro (09/10) no radar.</div>
+    </div>
+    <div class="tier t-green">
+      <div class="tier-head"><span class="tier-dot"></span>Oportunidades de observação</div>
+      <div class="tier-items">Trajetória do VIX Brasil depois do resultado, como medida de quanto da incerteza era eleitoral · composição da alta de sexta (bancos, Petrobras, Vale), para ver se a liderança se mantém.</div>
+    </div>
+    <div class="tier t-red">
+      <div class="tier-head"><span class="tier-dot"></span>Riscos no radar</div>
+      <div class="tier-items">Volatilidade se estendendo até um eventual segundo turno (25/10) · Treasury de 10 anos voltando a subir sem o contrapeso do alívio do Fed · atividade doméstica mais fraca, com a indústria em queda em agosto.</div>
+    </div>
+
+    <table class="cal">
+      <caption>Calendário da semana</caption>
+      <thead><tr><th>Data</th><th>Evento</th><th>O que observar</th></tr></thead>
+      <tbody>
+        <tr><td>04/10</td><td>Primeiro turno das eleições</td><td>efeito de preço, não preferência</td></tr>
+        <tr><td>05/10</td><td>Abertura pós-eleição · Focus</td><td>VIX Brasil, dólar e curva DI</td></tr>
+        <tr><td>07/10</td><td>Ata do Fed (reunião de setembro)</td><td>tom sobre nova alta em outubro</td></tr>
+        <tr><td>09/10</td><td>IPCA de setembro (IBGE)</td><td>energia elétrica após o IPCA-15 de 0,70%</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SOBRE ESTA PUBLICAÇÃO -->
+  <div class="sobre">
+    <div class="g-lab">Sobre esta publicação</div>
+    <p style="margin:.5em 0 0;font-size:calc(var(--u)*.9);color:#3A3D44;line-height:1.55;">Gestão de Opções Futuras Analytics é uma publicação semanal dedicada à interpretação dos mercados financeiros e da economia brasileira. Cada edição identifica o vetor que melhor explicou a semana — quantitativo ou fundamental —, organiza os principais acontecimentos econômicos e institucionais, e propõe uma leitura estruturada dos fatores capazes de alterar a trajetória do mercado. Fatos institucionais em apuração são tratados como investigação em curso, nunca como conclusão de responsabilidade. As publicações têm caráter educacional e analítico.</p>
+  </div>
+
+  <!-- RODAPÉ -->
+  <div class="foot">
+    <div class="seal">Vetor da Semana #15 · Volatilidade Pré-Eleitoral</div>
+    <div class="foot-brand">Gestão de Opções Futuras <span class="ed">· Analytics · Edição Nº 15</span></div>
+    <div class="foot-tag">Leitura semanal e estruturada dos mercados e da economia brasileira.</div>
+    <div class="byline">Giuliano Tomazelli</div>
+    <div class="bio">Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</div>
+    <div class="disclaimer">Análise de cenário com base em dados de mercado. Não constitui recomendação de investimento.</div>
+  </div>
+
+</main>
+</body>
+</html>
