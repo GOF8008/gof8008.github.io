@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sozinho, na véspera — decisões individuais no TSE e a janela que o colegiado não alcança | Giuliano Tomazelli</title>
+<meta name="description" content="Entre 28 de setembro e 4 de outubro de 2026, dois atos individuais de um mesmo relator do TSE alteraram a situação de candidaturas na reta final da campanha — no Ceará e no Paraná (caso Dallagnol). O artigo reconstrói as duas sequências com horário e fonte e mede os intervalos em que cada decisão produziu efeito antes de qualquer exame colegiado.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/artigos/sozinho-na-vespera.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="Sozinho, na véspera">
+<meta property="og:description" content="Decisões individuais no TSE e a janela que o colegiado não alcança: o caso Dallagnol no Paraná e a chapa de oposição no Ceará, setembro e outubro de 2026.">
+<meta property="og:url" content="https://gof8008.github.io/artigos/sozinho-na-vespera.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sozinho, na véspera">
+<meta name="twitter:description" content="Decisões individuais no TSE e a janela que o colegiado não alcança: o caso Dallagnol no Paraná e a chapa de oposição no Ceará, setembro e outubro de 2026.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#15243f; --navy-2:#22375c; --navy-3:#33507e;
+    --orange:#e07a28; --orange-soft:#f0a25a; --orange-tint:#fbeede;
+    --ink:#202733; --ink-soft:#4a525f; --paper:#fff;
+    --line:#dde1e8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{background:#EDF0F3;font-family:'Source Sans 3',system-ui,sans-serif;
+       color:var(--ink);-webkit-font-smoothing:antialiased;
+       padding:16px 10px 240px}
+  .page{width:100%;max-width:760px;margin:0 auto;background:var(--paper);
+        border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(18,41,63,.15)}
+
+  header{background:var(--navy);color:#fff;padding:34px clamp(16px,4vw,48px) 30px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;
+                border-radius:50%;background:radial-gradient(circle at center,rgba(224,122,40,.22),transparent 68%)}
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:22px;position:relative;z-index:2}
+  .brand-mark{width:34px;height:34px;border:2px solid var(--orange);border-radius:50%;
+              display:flex;align-items:center;justify-content:center;flex:none;
+              font-family:'Playfair Display',serif;font-weight:800;font-size:16px;color:var(--orange)}
+  .brand-word{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.05em;font-size:12.5px;color:#eef2f8}
+  .brand-word span{color:var(--orange)}
+  .marker{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-soft);
+          font-weight:700;margin-bottom:14px;position:relative;z-index:2;line-height:1.5}
+  h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,6.4vw,46px);
+     line-height:1.05;color:#fff;position:relative;z-index:2}
+  .sub{margin-top:15px;font-size:14.5px;line-height:1.55;color:#c3cee0;position:relative;z-index:2}
+  .byline{margin-top:20px;position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.16);padding-top:15px}
+  .byline b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:5px}
+  .byline p{font-size:12.4px;line-height:1.55;color:#aeb9cc}
+
+  .scope{background:var(--orange-tint);border-left:5px solid var(--orange);padding:20px clamp(16px,4vw,48px)}
+  .scope b{display:block;font-size:10.5px;letter-spacing:.19em;text-transform:uppercase;color:#a35d12;margin-bottom:8px}
+  .scope p{font-size:13.4px;line-height:1.6;color:#5c4a2c;text-align:justify;hyphens:auto;margin-bottom:9px}
+  .scope p:last-child{margin-bottom:0}
+
+  main{padding:30px clamp(16px,4vw,48px) 14px}
+  section{margin-bottom:32px}
+  .sec-head{display:flex;align-items:baseline;gap:11px;margin-bottom:11px}
+  .sec-num{font-family:'Playfair Display',serif;font-weight:800;font-size:15px;color:var(--orange);flex:none}
+  h2{font-family:'Playfair Display',serif;font-weight:700;font-size:21px;line-height:1.18;color:var(--navy-2)}
+  p{font-size:13.6px;line-height:1.64;color:var(--ink-soft);margin-bottom:10px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  p strong{color:var(--ink);font-weight:600}
+  h3{font-family:'Playfair Display',serif;font-size:15.5px;color:var(--navy);font-weight:700;margin:16px 0 6px}
+
+  .abst{background:#f6f7f9;border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin-bottom:26px}
+  .abst b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .abst p{margin-bottom:0;font-size:13.2px}
+
+  .props{display:flex;flex-direction:column;gap:8px;margin:12px 0 4px}
+  .prop{padding:11px 14px;background:#f6f7f9;border:1px solid var(--line);border-radius:6px}
+  .prop .top{display:flex;gap:12px;align-items:flex-start}
+  .prop .tag{font-family:'Playfair Display',serif;font-weight:800;font-size:13px;color:var(--orange);
+             min-width:26px;line-height:1.4;flex:none}
+  .prop .t{font-size:12.6px;line-height:1.52;color:var(--ink-soft)}
+  .prop .fals{margin-top:6px;margin-left:38px;font-size:11.3px;line-height:1.5;color:#7a828c;font-style:italic}
+
+  .two{display:flex;gap:11px;flex-wrap:wrap;margin:14px 0 4px}
+  .two .col{flex:1;min-width:210px;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .two .col .hd{padding:10px 14px;font-size:11.5px;font-weight:700;letter-spacing:.04em;color:#fff}
+  .two .a .hd{background:var(--navy-2)}
+  .two .b .hd{background:#8c3a12}
+  .two .col .bd{padding:12px 14px;background:#fafbfc}
+  .two .col .bd p{margin-bottom:0;font-size:12.9px}
+
+  .pull{border-left:4px solid var(--navy-3);background:#f6f7f9;border-radius:0 6px 6px 0;
+        padding:15px 18px;margin:14px 0}
+  .pull p{margin-bottom:0;font-size:14.2px;color:var(--navy-2);font-weight:600;text-align:left}
+
+  .desenhos{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+  .desenho{border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .desenho .hd{background:var(--navy);color:#fff;padding:10px 15px;font-size:13px;font-weight:600}
+  .desenho .bd{padding:12px 15px;background:#fafbfc}
+  .desenho .bd p{margin-bottom:0;font-size:12.7px}
+
+  .stat{background:var(--navy);border-radius:8px;padding:20px 22px;margin:12px 0 4px;display:flex;gap:22px;flex-wrap:wrap}
+  .stat .item{flex:1;min-width:140px}
+  .stat .big{font-family:'Playfair Display',serif;font-weight:800;font-size:22px;color:var(--orange-soft);line-height:1.2}
+  .stat .lbl{font-size:11.2px;line-height:1.42;color:#c3cee0;margin-top:6px}
+  .stat .lbl b{color:#fff;font-weight:600}
+
+  .rows{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+  .row{display:flex;gap:13px;align-items:flex-start;padding:13px 15px;background:#f6f7f9;
+       border:1px solid var(--line);border-radius:6px}
+  .row .n{font-family:'Playfair Display',serif;font-weight:800;font-size:15px;color:var(--orange);min-width:20px;line-height:1.25;flex:none}
+  .row .t{font-size:13px;line-height:1.55;color:var(--ink-soft)}
+
+  .posic{display:flex;flex-direction:column;gap:8px;margin:12px 0 4px}
+  .pos{padding:11px 14px;background:#f6f7f9;border:1px solid var(--line);border-radius:6px}
+  .pos .who{font-size:11.5px;font-weight:700;color:var(--navy);margin-bottom:4px}
+  .pos p{margin-bottom:0;font-size:12.5px}
+
+  .falsif{background:#f6f7f9;border:1px solid var(--line);border-left:4px solid var(--navy-3);
+          border-radius:6px;padding:16px 18px;margin-top:12px}
+  .falsif b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy-2);margin-bottom:7px}
+  .falsif p{margin-bottom:9px;font-size:13px}
+  .falsif p:last-child{margin-bottom:0}
+
+  .hist{background:var(--navy);border-radius:8px;padding:20px 22px;margin-top:14px}
+  .hist b.h{display:block;font-size:10.3px;letter-spacing:.17em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:11px}
+  .hist .step{display:flex;gap:10px;margin-bottom:9px;align-items:flex-start}
+  .hist .step:last-child{margin-bottom:0}
+  .hist .step .v{font-family:'Playfair Display',serif;font-weight:800;font-size:12px;color:var(--orange-soft);
+                 min-width:32px;flex:none}
+  .hist .step p{margin:0;font-size:12.2px;line-height:1.5;color:#c3cee0;text-align:left}
+
+  .gloss{border-top:1px solid var(--line);padding-top:16px;margin-top:4px}
+  .gloss b.h{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:9px}
+  .gloss p{font-size:12.4px;line-height:1.55;color:#5c6873;margin-bottom:7px;text-align:left}
+  .gloss p b{color:var(--navy);font-weight:700}
+
+  .srcs{border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+  .srcs b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .srcs p{font-size:11.6px;line-height:1.55;color:#6c757f;text-align:left;margin-bottom:6px}
+
+  footer{background:var(--navy);color:#fff;padding:28px clamp(16px,4vw,48px) 32px;margin-top:22px}
+  .fquote{border-left:4px solid var(--orange);padding-left:17px;margin-bottom:22px}
+  .fquote p{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;line-height:1.45;
+            color:#f0f5fa;margin:0;text-align:left}
+  .fauth b{display:block;font-size:13.5px;color:#fff;font-weight:600;margin-bottom:4px}
+  .fauth p{font-size:12.2px;line-height:1.55;color:#aeb9cc;margin-bottom:15px;text-align:left}
+  .fnote{font-size:11.3px;line-height:1.55;color:#7f93a6;border-top:1px solid rgba(255,255,255,.16);padding-top:14px}
+  .kw{font-size:12.4px;color:#6c757f;margin:-14px 0 26px;text-align:left}
+  .kw b{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-right:6px}
+  .tls{margin:10px 0 8px;border-left:2px solid var(--line);padding-left:14px}
+  .tl{position:relative;margin-bottom:12px}
+  .tl::before{content:"";position:absolute;left:-19px;top:5px;width:8px;height:8px;border-radius:50%;background:var(--orange)}
+  .tl .d{font-size:11.5px;font-weight:700;letter-spacing:.04em;color:var(--navy);margin-bottom:2px}
+  .tl p{margin-bottom:0;font-size:13.2px}
+  .tlnote{font-size:12.6px;color:var(--navy-2);font-weight:600;margin:4px 0 14px}
+  blockquote{border-left:4px solid var(--orange);background:var(--orange-tint);border-radius:0 6px 6px 0;padding:14px 16px;margin:10px 0 12px}
+  blockquote p{margin:0;font-size:13.4px;color:#5c4a2c;font-style:italic}
+  ul.lst{list-style:none;margin:8px 0 10px}
+  ul.lst li{position:relative;padding-left:16px;font-size:13.4px;line-height:1.6;color:var(--ink-soft);margin-bottom:8px;text-align:justify;hyphens:auto}
+  ul.lst li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--orange)}
+  ul.lst li strong{color:var(--ink);font-weight:600}
+  .pos .row2{font-size:12.3px;line-height:1.5;color:var(--ink-soft);margin-top:4px}
+  .pos .row2 span{font-size:10.3px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-right:5px}
+  .gloss .gh{font-size:11.5px;font-weight:700;color:var(--navy-2);margin:10px 0 5px}
+  .srcs ul{list-style:none}
+  .srcs li{font-size:11.6px;line-height:1.5;color:#6c757f;margin-bottom:7px;overflow-wrap:anywhere}
+  .srcs a{color:var(--navy-3);text-decoration:underline;text-decoration-color:rgba(51,80,126,.35)}
+  .gaps{display:flex;flex-direction:column;gap:9px;margin:12px 0 6px}
+  .gap{background:var(--navy);border-radius:8px;padding:14px 16px}
+  .gap .big{font-family:'Playfair Display',serif;font-weight:800;font-size:21px;color:var(--orange-soft);line-height:1.2}
+  .gap .lbl{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin:4px 0 6px}
+  .gap p{margin:0;font-size:12.8px;color:#c3cee0;text-align:left}
+  .more{font-size:12px;color:#7a828c;font-style:italic;text-align:left;margin-top:6px}
+  .freq{font-size:12.4px;line-height:1.5;color:var(--orange-soft);font-weight:600;border-left:3px solid var(--orange);padding:2px 0 2px 11px;margin:0 0 16px}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="brand"><div class="brand-mark">G</div><div class="brand-word">GOF · <span>ARTIGO</span> · ANALÍTICO</div></div>
+    <div class="marker">Série Eleições 26 · Artigo analítico · v04 · 4 de outubro de 2026</div>
+    <h1>Sozinho,<br>na véspera</h1>
+    <p class="sub">Decisões individuais no Tribunal Superior Eleitoral e a janela que o colegiado não alcança — o caso Dallagnol no Paraná e a chapa de oposição no Ceará, setembro e outubro de 2026</p>
+    <div class="byline">
+      <b>Por Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado. Chapecó, 2026.</p>
+    </div>
+  </header>
+  <div class="scope">
+    <b>Escopo honesto</b>
+    <p>Não se afirma que algum julgador tenha agido com parcialidade, nem que alguma decisão esteja errada no mérito. O mérito da inelegibilidade do candidato ao Senado pelo Paraná e o mérito da disputa partidária no Ceará não são examinados. Também não se propõe reforma processual: o autor não é especialista em direito eleitoral, e a peça descreve o desenho em vez de prescrever.</p>
+    <p>A tese é mais restrita. No desenho observado, um ato individual pode alterar a situação de uma candidatura na janela final antes do voto, e a correção desse ato também depende de outro ato individual. O julgamento colegiado chega depois — e o que ele não desfaz não é a contagem de votos, que fica preservada, mas a decisão do eleitor tomada sob um status oficial que deixou de valer e o tempo de campanha que não volta.</p>
+  </div>
+  <main>
+    <div class="abst">
+      <b>Resumo</b>
+      <p>Entre 28 de setembro e 4 de outubro de 2026, dois atos individuais de um mesmo relator do Tribunal Superior Eleitoral alteraram a situação de candidaturas na reta final da campanha — no Ceará, suspendendo atos de campanha e acesso a fundos de candidatos ao Senado e à vice-governadoria; no Paraná, indeferindo o registro de Deltan Dallagnol (Novo), candidato ao Senado, e declarando nulos os seus votos às 19h32 da véspera do primeiro turno. Os dois atos foram suspensos por decisões também individuais de outros ministros, o segundo deles na manhã da votação. O artigo reconstrói as duas sequências com horário e fonte, mede os intervalos em que cada decisão produziu efeito antes de qualquer exame colegiado e separa o que a lei fixa do que permanece em aberto. A tese é restrita ao desenho: não examina o mérito das inelegibilidades nem atribui intenção a qualquer julgador.</p>
+    </div>
+    <p class="kw"><b>Palavras-chave</b>Justiça Eleitoral; decisão monocrática; registro de candidatura; colegialidade; calendário eleitoral; eleições de 2026.</p>
+
+    
+    <section>
+      <div class="sec-head"><span class="sec-num">·</span><h2>Nota de método</h2></div>
+<p>Um artigo que examina a hora em que uma decisão produziu efeito fica obrigado a expor de onde tirou cada hora. Grande parte dos horários deste artigo está no terceiro nível, porque as decisões citadas foram lidas por transcrição jornalística e não no processo eletrônico, cuja consulta pública não foi acessível no corte.</p><p>Onde o texto infere, diz que infere. Onde não localizou documento, diz que não localizou — e não que o documento inexiste.</p>
+    </section>
+    <section>
+      <div class="sec-head"><span class="sec-num">·</span><h2>Proposições</h2></div>
+<div class="props"><div class="prop"><div class="top"><span class="tag">P1</span><span class="t">Na janela final antes do voto, um ato individual de ministro do TSE pode alterar a situação oficial de uma candidatura. O que o julgamento colegiado posterior não desfaz não é a contagem de votos, mas a decisão do eleitor tomada sob o status alterado e o tempo de campanha suprimido.</span></div></div><div class="prop"><div class="top"><span class="tag">P2</span><span class="t">Nos casos observados, a reversão de decisão individual de relator veio por decisão individual de outro ministro — o presidente do TSE, num caso; o relator de mandado de segurança, no outro.</span></div></div><div class="prop"><div class="top"><span class="tag">P3</span><span class="t">A declaração de suspeição de um relator não revogou a liminar que ele havia concedido; a liminar seguiu produzindo efeito até ser suspensa por provocação da parte atingida.</span></div></div></div>
+    </section>
+    <section>
+      <div class="sec-head"><span class="sec-num">I</span><h2>O que existe, e quem já decidiu</h2></div>
+<h3>I.1 Paraná — o registro de candidatura ao Senado</h3><div class="tls"><div class="tl"><div class="d">8 de setembro de 2026</div><p>O TRE-PR defere, por 4 votos a 3, o registro de Deltan Dallagnol (Novo) ao Senado e rejeita a tese de inelegibilidade, com voto de desempate do presidente da corte.</p></div><div class="tl"><div class="d">19 e 21 de setembro de 2026</div><p>Suspende atos de campanha, propaganda no rádio e na TV e acesso a recursos públicos. O plenário virtual do TSE referenda a liminar por 5 votos a 2.</p></div><div class="tl"><div class="d">3 de outubro de 2026, 19h32</div><p>No julgamento do recurso ordinário, o relator, individualmente, reforma o acórdão regional, indefere o registro, declara o prejuízo de toda a chapa, a nulidade dos votos a ela atribuídos e a cessação da condição sub judice. As urnas já estavam lacradas; o nome do candidato permanece nelas.</p></div><div class="tl"><div class="d">4 de outubro de 2026, manhã</div><p>O registro volta à situação de deferido com recurso; os votos são processados, com validade condicionada ao plenário, e os registros de votação devem ser preservados. Primeira divulgação localizada: 8h58.</p></div></div><p class="tlnote">As seções eleitorais do Paraná abriram às 8h, horário de Brasília.</p><h3>I.2 Ceará — a campanha da chapa de oposição</h3><div class="tls"><div class="tl"><div class="d">28 de setembro de 2026, noite</div><p>A liminar suspende atos de campanha e acesso a recursos de Roberto Cláudio, candidato a vice-governador, de Capitão Wagner, candidato ao Senado, e de seus suplentes, e retira o tempo de propaganda da federação na coligação de Ciro Gomes.</p></div><div class="tl"><div class="d">29 de setembro de 2026</div><p>No mesmo dia, o relator declara a própria suspeição com base no art. 145, § 1º, do Código de Processo Civil e deixa o caso. Segundo O Povo, a decisão de suspeição não revoga expressamente a liminar.</p></div><div class="tl"><div class="d">30 de setembro de 2026</div><p>O ministro André Mendonça, em liminar no Mandado de Segurança nº 0602458-24.2026.6.00.0000, impetrado pela federação e por Capitão Wagner, suspende integralmente a liminar anterior e restabelece campanha, recursos e propaganda, citando insegurança jurídica no cumprimento do calendário eleitoral.</p></div></div>
+    </section>
+    <section>
+      <div class="sec-head"><span class="sec-num">II</span><h2>O que já está decidido</h2></div>
+<p>Para cargo majoritário, como o de senador, a regra que importa é a do caput: a validade do voto no próprio candidato, condicionada ao deferimento do registro.</p><p>Na decisão de 4 de outubro de 2026, o presidente do TSE sustentou que o art. 51, § 1º, II, da Resolução TSE nº 23.609/2019 vincula o fim da condição sub judice a decisão colegiada do Tribunal, e que o § 3º do mesmo artigo, ao admitir decisões monocráticas, mantém nesses casos a situação sub judice. O texto do dispositivo não foi conferido nesta versão: o que se afirma é que essa é a leitura invocada pela decisão, conforme transcrita pela imprensa.</p><p>O dispositivo regula o afastamento do julgador; não dispõe sobre a sorte dos atos que ele já praticou.</p>
+    </section>
+    <section>
+      <div class="sec-head"><span class="sec-num">III</span><h2>O que fica em aberto</h2></div>
+<ul class="lst"><li>O registro de candidatura no Paraná e a validade dos votos atribuídos à chapa dependem do julgamento do plenário do TSE, ainda não realizado no corte deste artigo.</li><li>A competência controvertida: o relator sustentou que podia decidir individualmente, invocando urgência e precedentes colegiados; o presidente sustentou que a decisão capaz de encerrar a condição sub judice é reservada ao colegiado. A divergência entre os dois ministros é, ela própria, matéria para o plenário.</li></ul>
+    </section>
+    <section>
+      <div class="sec-head"><span class="sec-num">IV</span><h2>A lacuna, medida</h2></div>
+<p>Três intervalos sustentam o argumento. Todos são medidos com as datas e horas da Seção I; nenhum depende do mérito das decisões.</p><div class="gaps"><div class="gap"><div class="big">12h28</div><div class="lbl">IV.1 Da assinatura à abertura das seções</div><p>O exame colegiado previsto no texto da decisão não tinha como ocorrer antes do voto.</p></div><div class="gap"><div class="big">8h → 8h58</div><div class="lbl">IV.2 Da assinatura à publicidade</div><p>Entre as 8h e as 8h58, portanto, a última ordem publicamente conhecida sobre os votos da chapa era a de nulidade.</p></div><div class="gap"><div class="big">29/9 → 30/9</div><div class="lbl">IV.3 Da suspeição à suspensão</div><p>A correção não veio de mecanismo automático: dependeu de a parte atingida impetrar mandado de segurança e de outro ministro decidir.</p></div></div><h3>IV.4 O que os dados não medem</h3><p>O artigo constata que esses efeitos são possíveis e que o julgamento colegiado posterior não os alcança; não afirma que ocorreram, nem em que escala.</p>
+    </section>
+    <section>
+      <div class="sec-head"><span class="sec-num">V</span><h2>Quatro implicações</h2></div>
+<div class="rows"><div class="row"><span class="n">1</span><span class="t"><strong>Para o eleitor.</strong> A situação oficial de uma candidatura ao Senado mudou duas vezes entre a noite de 3 e a manhã de 4 de outubro de 2026, e a segunda mudança só se tornou pública depois da abertura das seções. A decisão de voto tomada sob informação que deixou de valer não se refaz.</span></div><div class="row"><span class="n">2</span><span class="t"><strong>Para a campanha.</strong> No Ceará, atos de campanha, recursos e tempo de propaganda ficaram suspensos na última semana. O restabelecimento devolve o direito; não devolve os dias.</span></div><div class="row"><span class="n">3</span><span class="t"><strong>Para o tribunal.</strong> A divergência entre dois ministros sobre o alcance da competência individual será resolvida pelo plenário depois do voto. O colegiado chega quando o efeito já ocorreu.</span></div><div class="row"><span class="n">4</span><span class="t"><strong>Para a apuração.</strong> Os votos da chapa no Paraná foram processados com validade condicionada. O resultado da eleição para o Senado no estado pode depender do julgamento posterior do plenário.</span></div></div>
+    </section>
+    <section>
+      <div class="sec-head"><span class="sec-num">VI</span><h2>As posições em disputa</h2></div>
+<p>O artigo não atribui intenção. Registra as que foram atribuídas, com quem as sustenta, no mesmo espaço para cada lado.</p><div class="pull"><p>Um registro sem comentário: a justificativa declarada do relator, em setembro, incluía evitar a confusão do eleitorado. A maior confusão documentada no caso ocorreu na manhã de 4 de outubro de 2026, por efeito do horário das decisões.</p></div>
+    </section>
+    <section>
+      <div class="sec-head"><span class="sec-num">VII</span><h2>Limites e condições de refutação</h2></div>
+<div class="falsif"><b>O que derrubaria</b><ul class="lst"><li>P2 cai se o histórico de eleições anteriores mostrar alterações individuais de registro às vésperas do voto como rotina, corrigidas por mecanismo colegiado rápido e sem controvérsia.</li><li>O intervalo IV.2 se reduz se o documento oficial mostrar a suspensão assinada, publicada e refletida no sistema de divulgação antes das 8h de 4 de outubro de 2026. O intervalo IV.1 permanece.</li><li>P3 cai se norma processual atribuir à declaração de suspeição efeito suspensivo automático sobre os atos do julgador.</li></ul></div><h3>Onde o texto é mais frágil</h3><p>Dois casos, um mesmo relator, uma mesma semana. É possível que o que se descreve como traço do desenho seja episódio de uma relatoria. A distinção entre as duas leituras exige série histórica que esta versão não tem.</p><p>Há ainda uma hipótese rival que o texto precisa carregar. O atraso pode ser do rito, não dos julgadores: o TRE-PR julgou o registro em 8 de setembro de 2026, os embargos em 23 de setembro de 2026, e o acórdão foi publicado em 25 de setembro de 2026. O recurso chegou ao TSE tarde por calendário. Se essa leitura for a correta, a pergunta deixa de ser por que tão tarde — e passa a ser por que sozinho. Ela não derruba a tese; desloca o seu centro.</p>
+    </section>
+    <section>
+      <div class="sec-head"><span class="sec-num">VIII</span><h2>Conclusão</h2></div>
+<p>O que os documentos respondem é outra coisa. Um ato individual alterou a situação de uma candidatura às 19h32 da véspera. Outro ato individual a restabeleceu na manhã do voto. Entre os dois, o eleitor teve doze horas de noite e uma manhã de informação incerta. No Ceará, a liminar sobreviveu à suspeição de quem a concedeu e só caiu porque a parte atingida foi buscar outro ministro.</p><p><strong>O que se afirma:</strong> as duas sequências, com hora e fonte, e os intervalos que elas abrem. <strong>O que se propõe, como hipótese:</strong> que esses intervalos são traço do desenho, e não acidente de uma relatoria — hipótese que depende de série histórica para ser confirmada ou descartada.</p><div class="pull"><p>O colegiado vai decidir. Vai decidir depois. Entre um e outro — o voto.</p></div><div class="gloss"><b class="h">Glossário</b><p><strong>Decisão monocrática</strong> — decisão tomada por um único ministro ou juiz, e não pelo colegiado.</p><p><strong>Colegiado / plenário</strong> — o conjunto dos ministros do tribunal, decidindo por maioria.</p><p><strong>Efeito suspensivo</strong> — ordem que impede uma decisão de produzir efeitos até novo julgamento.</p><p><strong>Suspeição</strong> — afastamento do julgador por razão que comprometa ou possa parecer comprometer sua equidistância; por foro íntimo, pode ser declarada sem razões.</p><p><strong>Sub judice</strong> — situação da candidatura cujo registro ainda está sob discussão judicial.</p></div><div class="srcs"><b>Fontes principais</b><p>Lei nº 9.504/1997, art. 16-A (texto publicado pelo TSE); STF, ADIs 4513 e 4542; TRE-PR, Acórdãos nº 69.591 e 69.777; TRE-CE, comunicado de 29/9/2026; cobertura de VEJA, CNN Brasil, Gazeta do Povo, Gazeta do Paraná, Valor Econômico, Metrópoles, Exame, Migalhas, O Povo, Diário do Nordeste, g1 Ceará e outros veículos, todos consultados em 4 de outubro de 2026.</p><p class="more">O artigo integral traz 32 fontes com endereço completo.</p></div>
+    </section>
+  </main>
+  <footer>
+    <div class="fquote"><p>“O colegiado vai decidir. Vai decidir depois. Entre um e outro — o voto.”</p></div>
+    <div class="fauth">
+      <b>Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</p>
+    </div>
+    <div class="freq">O artigo completo será disponibilizado por solicitação direta ao autor.</div>
+    <div class="fnote">Versão 04, de 4 de outubro de 2026, que sucede as versões 01 a 03 do mesmo dia. Data e hora de corte: 4 de outubro de 2026, 11h30, horário de Brasília — durante a votação do primeiro turno. Fatos posteriores ao corte, inclusive o julgamento do plenário do TSE sobre o registro de candidatura examinado na Seção I.1, não estão incorporados. Fontes consultadas em 4 de outubro de 2026, listadas com endereço completo. Nesta versão não há marca de pendência no corpo. Os pontos que não puderam ser confirmados em documento foram retirados ou convertidos em declaração do que não foi localizado; o art. 51 da Resolução TSE nº 23.609/2019 aparece apenas como leitura invocada pela decisão que o cita, sem conferência do texto do dispositivo.</div>
+  </footer>
+</div>
+</body>
+</html>
