@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A volatilidade bateu recorde; o índice quase não saiu do lugar. — GOF Analytics Nº 18 | Giuliano Tomazelli</title>
+<meta name="description" content="Leitura semanal dos mercados (19 a 23/10/2026): na última semana antes do segundo turno, o Ibovespa termina com -0,17%, o VIX Brasil fecha em 45,27 pontos na quinta, novo recorde, o dólar cai a R$ 4,99 e o IPCA-15 vem abaixo do esperado.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/radar/gof-analytics-18.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="A volatilidade bateu recorde; o índice quase não saiu do lugar. — GOF Analytics Nº 18">
+<meta property="og:description" content="Leitura semanal dos mercados (19 a 23/10/2026): na última semana antes do segundo turno, o Ibovespa termina com -0,17%, o VIX Brasil fecha em 45,27 pontos na quinta, novo recorde, o dólar cai a R$ 4,99 e o IPCA-15 vem abaixo do esperado.">
+<meta property="og:url" content="https://gof8008.github.io/radar/gof-analytics-18.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A volatilidade bateu recorde; o índice quase não saiu do lugar. — GOF Analytics Nº 18">
+<meta name="twitter:description" content="VIX Brasil em recorde e Ibovespa praticamente estável na véspera do segundo turno. Semana de 19 a 23/10/2026.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<style>
+  :root{
+    --u: clamp(12px, 3.4vw, 14.5px);
+    --ink:#1A1D24; --bg:#F3EFE6; --paper:#FFFFFF;
+    --accent:#B8862F; --accent-dk:#8A6420; --tint:#FAF6EC;
+    --pos:#1F7A4D; --neg:#B23A36; --muted:#6B6F76; --hair:#E4DECF;
+    --serif:'Playfair Display', Georgia, 'Times New Roman', serif;
+    --sans:'Source Sans 3', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg);}
+  body{font-family:var(--sans);color:var(--ink);font-size:var(--u);line-height:1.5;
+    -webkit-font-smoothing:antialiased;padding:clamp(14px,4vw,44px) clamp(10px,3vw,24px) 240px;}
+  .card{width:100%;max-width:740px;margin:0 auto;background:var(--paper);border:1px solid var(--hair);
+    box-shadow:0 1px 0 rgba(0,0,0,.02), 0 22px 50px -30px rgba(26,29,36,.32);
+    padding:clamp(22px,5.2vw,48px);}
+
+  .masthead-top{display:flex;justify-content:space-between;align-items:baseline;
+    font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.72);
+    letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
+  .masthead-top .ed-date{color:var(--accent-dk);}
+  .brand-row{display:flex;justify-content:space-between;align-items:center;gap:1em;margin:.25em 0 .55em;}
+  .wordmark{font-family:var(--serif);line-height:.98;letter-spacing:-.01em;}
+  .wordmark .g{display:block;font-weight:800;font-size:clamp(23px,6.2vw,38px);}
+  .wordmark .a{display:block;font-weight:500;font-style:italic;font-size:clamp(14px,3.4vw,18px);
+    letter-spacing:.05em;color:var(--accent-dk);margin-top:.12em;}
+  .badge{flex:none;text-align:center;border:2px solid var(--accent);padding:.45em .7em;
+    min-width:4.6em;border-radius:2px;}
+  .badge .b-lab{font-size:calc(var(--u)*.58);font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--accent-dk);display:block;}
+  .badge .b-num{font-family:var(--serif);font-weight:800;font-size:clamp(22px,6vw,30px);
+    line-height:1;color:var(--ink);}
+  .rule-dbl{border:none;border-top:3px solid var(--ink);box-shadow:0 3px 0 var(--accent);margin:.2em 0 1.4em;}
+
+  h1{font-family:var(--serif);font-weight:800;font-size:clamp(27px,7.2vw,42px);line-height:1.05;
+    margin:0 0 .18em;letter-spacing:-.012em;}
+  .dek{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--accent-dk);
+    font-size:calc(var(--u)*1.16);line-height:1.35;max-width:54ch;margin:0;}
+
+  .geo{border:1px solid var(--hair);border-left:3px solid var(--ink);background:#F7F4ED;
+    padding:.95em 1.15em;margin:1.3em 0 .2em;border-radius:2px;}
+  .geo.institucional{border-left-color:#5B4A8A;}
+  .geo.agro{border-left-color:#1F7A4D;background:#F1F7F2;} .geo.agro .g-lab{color:#1F7A4D;}
+  .geo.eleitoral{border-left-color:var(--accent);background:var(--tint);}
+  .geo .g-lab{font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.64);
+    letter-spacing:.18em;text-transform:uppercase;color:var(--accent-dk);display:flex;align-items:center;gap:.6em;}
+  .geo.institucional .g-lab{color:#5B4A8A;}
+  .geo .g-lab::after{content:"";flex:1;height:1px;background:var(--hair);}
+  .geo p{margin:.5em 0 0;font-size:calc(var(--u)*.88);color:#3A3D44;line-height:1.5;}
+  .geo .g-rel{display:inline-block;margin-top:.5em;font-size:calc(var(--u)*.7);font-weight:700;
+    letter-spacing:.03em;background:var(--ink);color:#F3EFE6;padding:.28em .65em;border-radius:2px;}
+
+  .indicador{background:var(--ink);color:#F3EFE6;padding:1.15em 1.3em;margin:1.4em 0 .2em;border-radius:2px;}
+  .indicador .i-lab{font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.66);
+    letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:.6em;}
+  .indicador .i-lab::after{content:"";flex:1;height:1px;background:var(--accent);opacity:.5;}
+  .indicador .i-term{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.4);
+    margin:.25em 0 .35em;color:#fff;}
+  .indicador .i-text{font-size:calc(var(--u)*.94);line-height:1.5;color:#E8E2D4;margin:0;}
+
+  .sec{border-top:1px solid var(--hair);padding-top:1.2em;margin-top:1.5em;}
+  .sec-head{display:flex;align-items:baseline;gap:.6em;margin-bottom:.5em;}
+  .num{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.05);color:var(--accent);min-width:1.5em;}
+  .sec-title{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.25);letter-spacing:-.005em;}
+  .sec p{margin:.2em 0 0;} .sec p + p{margin-top:.7em;} .lbl{font-weight:700;color:var(--ink);}
+
+  .chart-wrap{margin:.4em 0 .2em;}
+  .chart-cap{font-size:calc(var(--u)*.78);color:var(--muted);margin-top:.3em;}
+  svg{width:100%;height:auto;display:block;}
+  .bar-val{font-family:var(--sans);font-weight:700;font-size:14px;fill:var(--ink);}
+  .bar-lab{font-family:var(--sans);font-weight:600;font-size:13px;fill:var(--muted);}
+  .axis{stroke:var(--hair);stroke-width:1;}
+
+  table{width:100%;border-collapse:collapse;margin:.3em 0 .1em;
+    font-variant-numeric:tabular-nums;font-size:calc(var(--u)*.92);}
+  caption{text-align:left;font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.72);
+    letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-bottom:.5em;}
+  th,td{padding:.46em .4em;text-align:right;border-bottom:1px solid var(--hair);}
+  th{font-weight:700;color:var(--muted);font-size:calc(var(--u)*.72);letter-spacing:.05em;text-transform:uppercase;}
+  th:first-child,td:first-child{text-align:left;} td:first-child{font-weight:600;}
+  tbody tr:last-child td{border-bottom:none;}
+  .up{color:var(--pos);font-weight:700;} .down{color:var(--neg);font-weight:700;} .flat{color:var(--muted);}
+
+  .radar-synth{font-size:calc(var(--u)*.96);line-height:1.5;margin:.2em 0 1em;
+    padding-bottom:.9em;border-bottom:1px dashed var(--hair);}
+  .tier{border-left:3px solid var(--c);padding:.5em 0 .5em .85em;margin:.65em 0;}
+  .tier.t-blue{--c:#2F6FB0;} .tier.t-amber{--c:#CC7A22;} .tier.t-green{--c:#1F7A4D;} .tier.t-red{--c:#B23A36;}
+  .tier-head{display:flex;align-items:center;gap:.5em;font-weight:700;font-size:calc(var(--u)*.98);color:var(--c);margin-bottom:.15em;}
+  .tier-dot{width:.7em;height:.7em;border-radius:50%;background:var(--c);flex:none;}
+  .tier-items{font-size:calc(var(--u)*.9);color:#3A3D44;line-height:1.45;}
+  .cal{margin-top:1.4em;}
+  .cal caption{font-family:var(--serif);font-weight:800;font-size:clamp(20px,5.2vw,26px);
+    letter-spacing:.01em;text-transform:none;color:var(--accent-dk);
+    padding:.1em 0 .45em;border-bottom:2px solid var(--accent);margin-bottom:.2em;}
+  .cal th,.cal td{text-align:left;vertical-align:top;} .cal td:first-child{white-space:nowrap;color:var(--accent-dk);}
+
+  .sobre{border:1px solid var(--hair);border-left:3px solid var(--accent);background:var(--tint);
+    padding:1.05em 1.2em;margin:1.45em 0 .2em;border-radius:2px;}
+  .sobre .g-lab{font-family:var(--sans);font-weight:700;font-size:calc(var(--u)*.66);
+    letter-spacing:.2em;text-transform:uppercase;color:var(--accent-dk);display:flex;align-items:center;gap:.6em;}
+  .sobre .g-lab::after{content:"";flex:1;height:1px;background:var(--hair);}
+
+  .foot{border-top:2px solid var(--ink);box-shadow:0 2px 0 var(--accent);margin-top:1.9em;padding-top:1.1em;}
+  .seal{display:inline-block;border:1px solid var(--accent);color:var(--accent-dk);font-size:calc(var(--u)*.68);
+    font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.32em .7em;border-radius:2px;margin-bottom:.85em;}
+  .foot-brand{font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*1.02);}
+  .foot-brand .ed{color:var(--accent-dk);font-weight:600;}
+  .foot-tag{font-style:italic;color:var(--muted);font-size:calc(var(--u)*.86);margin:.2em 0 .8em;max-width:46ch;}
+  .byline{font-weight:700;font-size:calc(var(--u)*.94);}
+  .bio{color:var(--muted);font-size:calc(var(--u)*.82);margin-top:.12em;}
+  .disclaimer{margin-top:.85em;font-size:calc(var(--u)*.8);color:var(--muted);font-style:italic;
+    border-left:2px solid var(--accent);padding-left:.8em;}
+</style>
+</head>
+<body>
+<main class="card">
+
+  <div class="masthead-top">
+    <span>Leitura Semanal dos Mercados</span>
+    <span class="ed-date">Semana de 19 a 23/10/2026</span>
+  </div>
+  <div class="brand-row">
+    <div class="wordmark"><span class="g">Gestão de Opções Futuras</span><span class="a">Analytics</span></div>
+    <div class="badge"><span class="b-lab">Edição</span><span class="b-num">Nº 18</span></div>
+  </div>
+  <hr class="rule-dbl">
+
+  <h1>A volatilidade bateu recorde; o índice quase não saiu do lugar.</h1>
+  <p class="dek">Na última semana antes do segundo turno, o Ibovespa oscilou entre 203 mil e 209 mil pontos e terminou com variação de -0,17%. O VIX Brasil fechou em 45,27 pontos na quinta, novo recorde, e o dólar comercial caiu 1,6% na semana, para R$ 4,99. O IPCA-15 veio abaixo do esperado, mas a inflação em 12 meses segue acima do teto.</p>
+
+  <!-- CALENDÁRIO ELEITORAL -->
+  <div class="geo eleitoral">
+    <div class="g-lab">Calendário Eleitoral</div>
+    <p>A semana teve pesquisa quase todo dia, e os pregões coincidiram com as divulgações — sem que a relação causal esteja isolada. Na terça (20/10), uma pesquisa Real Time Big Data registrou Flávio Bolsonaro 52% x Lula 48% nos votos válidos, e o Ibovespa subiu 1,57%, com dólar e juros futuros em queda. Na quarta (21/10), a Quaest mostrou Flávio Bolsonaro 45% x Lula 44% nos votos totais, e o índice recuou 0,86%. No sábado (24/10), as pesquisas finais ficaram todas dentro da margem de erro: Datafolha e Quaest, 51% x 49% nos votos válidos; AtlasIntel/Bloomberg, 50,8% x 49,2%; CNT/MDA, 50,7% x 49,3%. O segundo turno é hoje, 25/10. O card registra o fato e o preço, não a preferência de quem negocia.</p>
+  </div>
+
+  <!-- RADAR AGRO -->
+  <div class="geo agro">
+    <div class="g-lab">Radar Agro</div>
+    <p>O Ministério da Agricultura confirmou, no início da semana, um foco da doença de Newcastle numa granja comercial de perus em Nova Itaberaba, no oeste de Santa Catarina; as aves dos dois galpões foram eliminadas. Até 21/10, cinco países haviam restringido importações avícolas: Malásia e México, de todo o Brasil; China, Chile e Arábia Saudita, só de Santa Catarina — no caso chinês, 14 dos 61 estabelecimentos brasileiros habilitados, segundo o Ministério. A Cidasc fará vigilância em cerca de 1.600 propriedades no entorno. As suspensões são temporárias e dependem das exigências de cada mercado; o canal é direto para a receita exportadora de carne de aves do estado.</p>
+    <span class="g-rel">Relevância para a B3: Média — concentrada em frigoríficos e no agro catarinense</span>
+  </div>
+
+  <!-- INDICADOR DA SEMANA -->
+  <div class="indicador">
+    <div class="i-lab">Indicador da Semana</div>
+    <div class="i-term">VIX Brasil: 45,27 pontos (recorde de fechamento)</div>
+    <p class="i-text">O VIX Brasil subiu 8% na quarta, para 42,42, e mais 6,72% na quinta, para 45,27 — o maior fechamento desde a criação do índice, em 2024. Na sexta, recuou cerca de 6,5%, para a faixa de 42,3 a 42,5 pontos — as fontes divergem no fechamento exato —, ainda acima de 40. Enquanto isso, o Ibovespa terminou a semana praticamente estável. O índice não aponta direção: mostra que, na véspera da votação, as opções precificavam um movimento grande para qualquer lado.</p>
+  </div>
+
+  <!-- 1 · O QUE MEXEU -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">1</span><span class="sec-title">O que mexeu</span></div>
+    <p><span class="lbl">Brasil.</span> Segunda (19/10): Ibovespa -0,17%, a 205.079,25 pontos, com o varejo em alta e Petrobras em queda de 2,82%. Terça (20/10): +1,57%, a 208.295,98 pontos, no dia da pesquisa Real Time Big Data. Quarta (21/10): -0,86%, a 206.495,23 pontos, depois de chegar a 209.244 durante o pregão; pesaram a Quaest, a WEG (-7,34% após o balanço) e a Vale. Quinta (22/10): -1,15%, a 204.120,12 pontos, com a Vale em queda de 3,97% pelo minério e os bancos em baixa; o DI de janeiro de 2028 subiu 15 pontos-base no dia. Sexta (23/10): +0,47%, a 205.082,56 pontos, com Banco do Brasil (+3,34%) e Petrobras (+1,47%) em alta. O IPCA-15 de outubro subiu 0,32%, abaixo das projeções (cerca de 0,43%), com queda da energia elétrica (-0,89%, bandeira verde) e das passagens aéreas (-9,24%), mas alta de 1,01% na alimentação no domicílio; no acumulado de 12 meses da prévia, 4,62%, acima do teto de 4,5% da meta (que é medida pelo IPCA cheio). O dólar comercial fechou a semana em R$ 4,99, queda de 1,6% sobre a sexta anterior. A curva DI recuou pouco no saldo: o vencimento de 2028 caiu 7 pontos-base, para 12,83%, e o de 2035, 16,5, para 12,66%.</p>
+    <p><span class="lbl">Exterior.</span> O Brent fechou a sexta em US$ 116,72, alta de 3,14% no dia, com novas tensões no Oriente Médio. Em Nova York, o Nasdaq caiu 2,60% na quinta, com preocupações sobre os gastos em inteligência artificial após balanços de grandes empresas de tecnologia. O Treasury de 10 anos recuou para perto de 5% na semana; a cobertura associou o movimento à procura por títulos diante das preocupações com inteligência artificial.</p>
+  </section>
+
+  <!-- 2 · OS NÚMEROS -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">2</span><span class="sec-title">Os números</span></div>
+
+    <div class="chart-wrap">
+<svg viewBox="0 0 660 430" role="img" aria-label="Ibovespa e VIX Brasil, fechamentos de 16 a 23 de outubro de 2026; VIX de 19 e 20/10 estimado">
+<text class="bar-lab" x="20" y="22" style="font-weight:700;fill:#8A6420">IBOVESPA (pontos)</text>
+<text class="bar-lab" x="20" y="236" style="font-weight:700;fill:#5B4A8A">VIX BRASIL (pontos)</text>
+<line class="axis" x1="45" y1="185" x2="625" y2="185"/>
+<line class="axis" x1="45" y1="382" x2="625" y2="382"/>
+<line x1="45" y1="333" x2="625" y2="333" stroke="#B23A36" stroke-width="1" stroke-dasharray="2 4" opacity=".55"/>
+<text class="bar-lab" x="40" y="337" text-anchor="end" style="font-size:11px;fill:#B23A36">40</text>
+<polyline points="75,137 177,143 279,88 381,119 483,159 585,143" fill="none" stroke="#8A6420" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="75" cy="137" r="5" fill="#8A6420"/>
+<text class="bar-val" x="75" y="113" text-anchor="middle" style="font-size:12.5px">205,4 mil</text>
+<text class="bar-lab" x="75" y="127" text-anchor="middle" style="font-size:11.5px;fill:#8A6420">ref.</text>
+<circle cx="177" cy="143" r="5" fill="#B23A36"/>
+<text class="bar-val" x="177" y="119" text-anchor="middle" style="font-size:12.5px">205,1 mil</text>
+<text class="bar-lab" x="177" y="133" text-anchor="middle" style="font-size:11.5px;fill:#B23A36">-0,17%</text>
+<circle cx="279" cy="88" r="5" fill="#1F7A4D"/>
+<text class="bar-val" x="279" y="64" text-anchor="middle" style="font-size:12.5px">208,3 mil</text>
+<text class="bar-lab" x="279" y="78" text-anchor="middle" style="font-size:11.5px;fill:#1F7A4D">+1,57%</text>
+<circle cx="381" cy="119" r="5" fill="#B23A36"/>
+<text class="bar-val" x="381" y="95" text-anchor="middle" style="font-size:12.5px">206,5 mil</text>
+<text class="bar-lab" x="381" y="109" text-anchor="middle" style="font-size:11.5px;fill:#B23A36">-0,86%</text>
+<circle cx="483" cy="159" r="5" fill="#B23A36"/>
+<text class="bar-val" x="483" y="135" text-anchor="middle" style="font-size:12.5px">204,1 mil</text>
+<text class="bar-lab" x="483" y="149" text-anchor="middle" style="font-size:11.5px;fill:#B23A36">-1,15%</text>
+<circle cx="585" cy="143" r="5" fill="#1F7A4D"/>
+<text class="bar-val" x="585" y="119" text-anchor="middle" style="font-size:12.5px">205,1 mil</text>
+<text class="bar-lab" x="585" y="133" text-anchor="middle" style="font-size:11.5px;fill:#1F7A4D">+0,47%</text>
+<polyline points="381,311 483,285 585,311" fill="none" stroke="#5B4A8A" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="75" cy="326" r="5" fill="#5B4A8A"/>
+<text class="bar-val" x="75" y="314" text-anchor="middle" style="font-size:12.5px;fill:#5B4A8A">40,82</text>
+<circle cx="381" cy="311" r="5" fill="#5B4A8A"/>
+<text class="bar-val" x="381" y="299" text-anchor="middle" style="font-size:12.5px;fill:#5B4A8A">42,42</text>
+<circle cx="483" cy="285" r="5" fill="#5B4A8A"/>
+<text class="bar-val" x="483" y="273" text-anchor="middle" style="font-size:12.5px;fill:#5B4A8A">45,27</text>
+<circle cx="585" cy="311" r="5" fill="#5B4A8A"/>
+<text class="bar-val" x="585" y="299" text-anchor="middle" style="font-size:12.5px;fill:#5B4A8A">≈42,4</text>
+<text class="bar-lab" x="75" y="404" text-anchor="middle" style="font-size:12px">16/10*</text>
+<text class="bar-lab" x="177" y="404" text-anchor="middle" style="font-size:12px">19/10</text>
+<text class="bar-lab" x="279" y="404" text-anchor="middle" style="font-size:12px">20/10</text>
+<text class="bar-lab" x="381" y="404" text-anchor="middle" style="font-size:12px">21/10</text>
+<text class="bar-lab" x="483" y="404" text-anchor="middle" style="font-size:12px">22/10</text>
+<text class="bar-lab" x="585" y="404" text-anchor="middle" style="font-size:12px">23/10</text>
+<polyline points="75,326 177,341 279,340 381,311" fill="none" stroke="#5B4A8A" stroke-width="2.5" stroke-dasharray="6 5" stroke-linejoin="round"/>
+<circle cx="177" cy="341" r="5" fill="#fff" stroke="#5B4A8A" stroke-width="2.2"/>
+<text class="bar-val" x="177" y="363" text-anchor="middle" style="font-size:12.5px;fill:#5B4A8A">≈39,2</text>
+<circle cx="279" cy="340" r="5" fill="#fff" stroke="#5B4A8A" stroke-width="2.2"/>
+<text class="bar-val" x="279" y="362" text-anchor="middle" style="font-size:12.5px;fill:#5B4A8A">≈39,3</text>
+</svg>
+      <div class="chart-cap">Ibovespa e VIX Brasil — fechamentos diários. *16/10: último pregão da semana anterior, como referência. Linha pontilhada: VIX em 40 pontos. VIX de 19 e 20/10 (marcadores vazados, trecho tracejado): não há fechamento publicado; os valores são calculados a partir da abertura e da variação informadas pela imprensa (39,30 com +0,38% em 20/10; 38,84 com -1,07% em 21/10) e coincidem com a alta de 8% registrada em 21/10. VIX de 21 e 22/10 confirmado pela imprensa (42,42 e 45,27); o de 23/10 diverge entre fontes (42,26 e 42,47) e aparece como ≈42,4. Ibovespa em escala proporcional aos fechamentos; referência de 16/10: 205.430,33 pts. Fonte: B3/imprensa.</div>
+    </div>
+    <p style="margin:.9em 0 .6em;"><span class="lbl">Os movimentos.</span> O painel de cima parece calmo no saldo e não é: o Ibovespa andou mais de 6 mil pontos entre a máxima de quarta e a mínima de quinta, e terminou a semana quase onde começou. O painel de baixo mostra por quê: o VIX subiu até o recorde de quinta, quando as opções precificavam a maior oscilação já registrada pelo índice. Preço no lugar e volatilidade no topo são a mesma informação lida de dois jeitos: a semana não tinha direção definida, só a expectativa de que o resultado de domingo produziria uma.</p>
+
+    <table>
+      <caption>Panorama da semana</caption>
+      <thead><tr><th>Indicador</th><th>Situação</th></tr></thead>
+      <tbody>
+        <tr><td>Ibovespa</td><td class="flat">205.082,56 pts (-0,17% sem.)</td></tr>
+        <tr><td>VIX Brasil</td><td class="down">≈42,4 na sexta (recorde de 45,27 na quinta)</td></tr>
+        <tr><td>Dólar comercial (R$)</td><td class="up">4,99 (-1,6% sem.)</td></tr>
+        <tr><td>DI jan/2028</td><td class="up">12,83% (-7 pb na semana)</td></tr>
+        <tr><td>DI jan/2035</td><td class="up">12,66% (-16,5 pb na semana)</td></tr>
+        <tr><td>IPCA-15 out. (mês)</td><td class="up">0,32% (projeção: ~0,43%)</td></tr>
+        <tr><td>IPCA-15 (prévia), 12 meses</td><td class="down">4,62% (teto da meta: 4,5%)</td></tr>
+        <tr><td>Petróleo (Brent)</td><td class="down">US$ 116,72 (+3,14% na sexta)</td></tr>
+        <tr><td>Treasury 10 anos</td><td class="up">perto de 5% (5,09% na sexta anterior)</td></tr>
+      </tbody>
+    </table>
+    <div class="chart-cap">Verde/vermelho indicam o sinal favorável/desfavorável ao ambiente brasileiro, não o sinal aritmético. DIs: taxas de fechamento reportadas pela imprensa; ajuste oficial no boletim da B3. Fluxo estrangeiro da semana ainda não consolidado.</div>
+  </section>
+
+  <!-- 3 · LEITURA -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">3</span><span class="sec-title">Leitura</span></div>
+    <p>Prestação de contas da #17: a edição terminou perguntando se a incerteza se concentraria até o dia 25. Concentrou: o VIX Brasil renovou o recorde na quinta, a três dias da votação, acima dos 40 pontos da semana anterior. O vetor segue eleitoral, e nesta semana ele apareceu menos na direção dos preços e mais na amplitude. Cada pesquisa coincidiu com um movimento — alta de 1,57% na terça, queda de 0,86% na quarta —, mas os movimentos se anularam, e o saldo do índice ficou perto de zero. O câmbio e a curva de juros terminaram a semana com melhora pequena, e as pesquisas finais, todas dentro da margem de erro, não resolveram a incerteza: transferiram-na para o resultado oficial.</p>
+    <p><span class="lbl">Contraleitura.</span> Nem toda a oscilação foi eleitoral. A queda de quinta teve componentes próprios — minério em queda pesando na Vale, Nasdaq em baixa de 2,60% com os gastos em inteligência artificial, petróleo em alta —, e a alta de sexta teve o Banco do Brasil e a Petrobras. O IPCA-15 abaixo do esperado coincidiu com a queda da curva na sexta, embora a alimentação tenha subido e a prévia em 12 meses siga acima do teto da meta. E o Brent perto de US$ 117 é um vetor externo que independe do resultado de domingo: pressiona custos e juros globais em qualquer cenário.</p>
+    <p><i>Na segunda-feira (26/10), o resultado deixa de ser hipótese — e o VIX acima de 40 indica o tamanho do ajuste que as opções esperam, não o sentido dele. Continuidade do governo ou vitória da oposição tendem a produzir efeitos de natureza diferente: o teste não será o primeiro pregão, mas se a reprecificação persiste na ponta longa da curva de juros nos dias seguintes.</i></p>
+  </section>
+
+  <!-- 4 · SÍNTESE ESTRATÉGICA -->
+  <section class="sec">
+    <div class="sec-head"><span class="num">4</span><span class="sec-title">Síntese estratégica</span></div>
+    <p class="radar-synth">A última semana antes do segundo turno terminou com o Ibovespa praticamente estável, o dólar abaixo de R$ 5 e a curva de juros com leve queda, mas com o VIX Brasil em recorde. As pesquisas finais ficaram dentro da margem de erro. O petróleo perto de US$ 117 e os embargos ao frango catarinense são vetores próprios, que seguem depois da eleição. Mapa de onde olhar, não sinal de compra ou venda.</p>
+
+    <div class="tier t-blue">
+      <div class="tier-head"><span class="tier-dot"></span>Atenção elevada</div>
+      <div class="tier-items">Resultado oficial do segundo turno (TSE) e a abertura de 26/10 — VIX Brasil, curva DI e câmbio dirão quanto da volatilidade precificada se realiza, e em que direção.</div>
+    </div>
+    <div class="tier t-amber">
+      <div class="tier-head"><span class="tier-dot"></span>Atenção moderada</div>
+      <div class="tier-items">Brent perto de US$ 117 e o canal para a inflação, já acima do teto em 12 meses · decisão do Fed (28/10), com o Treasury de 10 anos perto de 5%.</div>
+    </div>
+    <div class="tier t-green">
+      <div class="tier-head"><span class="tier-dot"></span>Oportunidades de observação</div>
+      <div class="tier-items">Composição da Bolsa após o resultado — empresas domésticas sensíveis a juros, bancos e petroleiras como termômetros de canais diferentes · evolução dos embargos avícolas e o efeito sobre frigoríficos com operação em Santa Catarina.</div>
+    </div>
+    <div class="tier t-red">
+      <div class="tier-head"><span class="tier-dot"></span>Riscos no radar</div>
+      <div class="tier-items">Movimento amplo em qualquer direção na abertura de segunda · petróleo sustentado acima de US$ 115 · ampliação das restrições sanitárias a outros mercados ou estados · gastos em inteligência artificial pressionando as bolsas americanas.</div>
+    </div>
+
+    <table class="cal">
+      <caption>Calendário da semana</caption>
+      <thead><tr><th>Data</th><th>Evento</th><th>O que observar</th></tr></thead>
+      <tbody>
+        <tr><td>25/10</td><td>Segundo turno</td><td>resultado oficial do TSE</td></tr>
+        <tr><td>26/10</td><td>Primeiro pregão pós-eleição · Focus</td><td>VIX Brasil, curva DI e câmbio</td></tr>
+        <tr><td>28/10</td><td>Decisão do Fed</td><td>Treasury e custo do capital global</td></tr>
+        <tr><td>29/10</td><td>PIB dos EUA (3º tri) e PCE (set.) · BCE · Caged · IGP-M · balanço da Vale</td><td>atividade e inflação globais; emprego formal</td></tr>
+        <tr><td>30/10</td><td>Pnad Contínua (desemprego) · estatísticas fiscais (BCB) · bandeira tarifária (Aneel)</td><td>mercado de trabalho, fiscal e energia no IPCA</td></tr>
+        <tr><td>—</td><td>Embargos avícolas (Newcastle)</td><td>retomada ou ampliação das restrições</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SOBRE ESTA PUBLICAÇÃO -->
+  <div class="sobre">
+    <div class="g-lab">Sobre esta publicação</div>
+    <p style="margin:.5em 0 0;font-size:calc(var(--u)*.9);color:#3A3D44;line-height:1.55;">Gestão de Opções Futuras Analytics é uma publicação semanal dedicada à interpretação dos mercados financeiros e da economia brasileira. Cada edição identifica o vetor que melhor explicou a semana — quantitativo ou fundamental —, organiza os principais acontecimentos econômicos e institucionais, e propõe uma leitura estruturada dos fatores capazes de alterar a trajetória do mercado. Fatos institucionais em apuração são tratados como investigação em curso, nunca como conclusão de responsabilidade. As publicações têm caráter educacional e analítico.</p>
+  </div>
+
+  <!-- RODAPÉ -->
+  <div class="foot">
+    <div class="seal">Vetor da Semana #18 · Volatilidade Recorde na Véspera</div>
+    <div class="foot-brand">Gestão de Opções Futuras <span class="ed">· Analytics · Edição Nº 18</span></div>
+    <div class="foot-tag">Leitura semanal e estruturada dos mercados e da economia brasileira.</div>
+    <div class="byline">Giuliano Tomazelli</div>
+    <div class="bio">Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</div>
+    <div class="disclaimer">Análise de cenário com base em dados de mercado. Não constitui recomendação de investimento.</div>
+  </div>
+
+</main>
+</body>
+</html>
