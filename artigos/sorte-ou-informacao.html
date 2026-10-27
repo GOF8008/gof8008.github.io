@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sorte ou informação: quem deve fiscalizar o pregão de 26 de outubro | Giuliano Tomazelli</title>
+<meta name="description" content="Ganhar apostando num cenário público é risco, não ilícito. Em 26 de outubro de 2026, a informação que não era pública estava nas decisões da B3 — e o dever de perguntar por ela está repartido entre muitas instituições.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/artigos/sorte-ou-informacao.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="Sorte ou informação">
+<meta property="og:description" content="Ganhos com cenário público, decisões operacionais não divulgadas e a fragmentação do dever de perguntar após o circuit breaker da B3.">
+<meta property="og:url" content="https://gof8008.github.io/artigos/sorte-ou-informacao.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sorte ou informação">
+<meta name="twitter:description" content="Ganhos com cenário público, decisões operacionais não divulgadas e a fragmentação do dever de perguntar após o circuit breaker da B3.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#15243f; --navy-2:#22375c; --navy-3:#33507e;
+    --orange:#e07a28; --orange-soft:#f0a25a; --orange-tint:#fbeede;
+    --ink:#202733; --ink-soft:#4a525f; --paper:#fff;
+    --line:#dde1e8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{background:#EDF0F3;font-family:'Source Sans 3',system-ui,sans-serif;
+       color:var(--ink);-webkit-font-smoothing:antialiased;
+       padding:16px 10px 240px}
+  .page{width:100%;max-width:760px;margin:0 auto;background:var(--paper);
+        border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(18,41,63,.15)}
+
+  header{background:var(--navy);color:#fff;padding:34px clamp(16px,4vw,48px) 30px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;
+                border-radius:50%;background:radial-gradient(circle at center,rgba(224,122,40,.22),transparent 68%)}
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:22px;position:relative;z-index:2}
+  .brand-mark{width:34px;height:34px;border:2px solid var(--orange);border-radius:50%;
+              display:flex;align-items:center;justify-content:center;flex:none;
+              font-family:'Playfair Display',serif;font-weight:800;font-size:16px;color:var(--orange)}
+  .brand-word{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.05em;font-size:12.5px;color:#eef2f8}
+  .brand-word span{color:var(--orange)}
+  .marker{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-soft);
+          font-weight:700;margin-bottom:14px;position:relative;z-index:2;line-height:1.5}
+  h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,6.4vw,46px);
+     line-height:1.05;color:#fff;position:relative;z-index:2}
+  .sub{margin-top:15px;font-size:14.5px;line-height:1.55;color:#c3cee0;position:relative;z-index:2}
+  .byline{margin-top:20px;position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.16);padding-top:15px}
+  .byline b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:5px}
+  .byline p{font-size:12.4px;line-height:1.55;color:#aeb9cc}
+
+  .scope{background:var(--orange-tint);border-left:5px solid var(--orange);padding:20px clamp(16px,4vw,48px)}
+  .scope b{display:block;font-size:10.5px;letter-spacing:.19em;text-transform:uppercase;color:#a35d12;margin-bottom:8px}
+  .scope p{font-size:13.4px;line-height:1.6;color:#5c4a2c;text-align:justify;hyphens:auto;margin-bottom:9px}
+  .scope p:last-child{margin-bottom:0}
+  .edn{background:#E7EDF4;border-left-color:var(--navy)}
+  .edn b{color:var(--navy)}
+  .edn p{color:#2b3d52}
+
+  main{padding:30px clamp(16px,4vw,48px) 14px}
+  section{margin-bottom:32px}
+  .sec-head{display:flex;align-items:baseline;gap:11px;margin-bottom:11px}
+  .sec-num{font-family:'Playfair Display',serif;font-weight:800;font-size:15px;color:var(--orange);flex:none}
+  h2{font-family:'Playfair Display',serif;font-weight:700;font-size:21px;line-height:1.18;color:var(--navy-2)}
+  p{font-size:13.6px;line-height:1.64;color:var(--ink-soft);margin-bottom:10px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  p strong{color:var(--ink);font-weight:600}
+  h3{font-family:'Playfair Display',serif;font-size:15.5px;color:var(--navy);font-weight:700;margin:16px 0 6px}
+
+  .abst{background:#f6f7f9;border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin-bottom:26px}
+  .abst b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .abst p{margin-bottom:0;font-size:13.2px}
+
+  .props{display:flex;flex-direction:column;gap:8px;margin:12px 0 4px}
+  .prop{padding:11px 14px;background:#f6f7f9;border:1px solid var(--line);border-radius:6px}
+  .prop .top{display:flex;gap:12px;align-items:flex-start}
+  .prop .tag{font-family:'Playfair Display',serif;font-weight:800;font-size:13px;color:var(--orange);
+             min-width:26px;line-height:1.4;flex:none}
+  .prop .t{font-size:12.6px;line-height:1.52;color:var(--ink-soft)}
+  .prop .fals{margin-top:6px;margin-left:38px;font-size:11.3px;line-height:1.5;color:#7a828c;font-style:italic}
+
+  .two{display:flex;gap:11px;flex-wrap:wrap;margin:14px 0 4px}
+  .two .col{flex:1;min-width:210px;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .two .col .hd{padding:10px 14px;font-size:11.5px;font-weight:700;letter-spacing:.04em;color:#fff}
+  .two .a .hd{background:var(--navy-2)}
+  .two .b .hd{background:#8c3a12}
+  .two .col .bd{padding:12px 14px;background:#fafbfc}
+  .two .col .bd p{margin-bottom:0;font-size:12.9px}
+
+  .pull{border-left:4px solid var(--navy-3);background:#f6f7f9;border-radius:0 6px 6px 0;
+        padding:15px 18px;margin:14px 0}
+  .pull p{margin-bottom:0;font-size:14.2px;color:var(--navy-2);font-weight:600;text-align:left}
+
+  .desenhos{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+  .desenho{border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .desenho .hd{background:var(--navy);color:#fff;padding:10px 15px;font-size:13px;font-weight:600}
+  .desenho .bd{padding:12px 15px;background:#fafbfc}
+  .desenho .bd p{margin-bottom:0;font-size:12.7px}
+
+  .stat{background:var(--navy);border-radius:8px;padding:20px 22px;margin:12px 0 4px;display:flex;gap:22px;flex-wrap:wrap}
+  .stat .item{flex:1;min-width:140px}
+  .stat .big{font-family:'Playfair Display',serif;font-weight:800;font-size:22px;color:var(--orange-soft);line-height:1.2}
+  .stat .lbl{font-size:11.2px;line-height:1.42;color:#c3cee0;margin-top:6px}
+  .stat .lbl b{color:#fff;font-weight:600}
+
+  .rows{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+  .row{display:flex;gap:13px;align-items:flex-start;padding:13px 15px;background:#f6f7f9;
+       border:1px solid var(--line);border-radius:6px}
+  .row .n{font-family:'Playfair Display',serif;font-weight:800;font-size:15px;color:var(--orange);min-width:20px;line-height:1.25;flex:none}
+  .row .t{font-size:13px;line-height:1.55;color:var(--ink-soft)}
+
+  .posic{display:flex;flex-direction:column;gap:8px;margin:12px 0 4px}
+  .pos{padding:11px 14px;background:#f6f7f9;border:1px solid var(--line);border-radius:6px}
+  .pos .who{font-size:11.5px;font-weight:700;color:var(--navy);margin-bottom:4px}
+  .pos p{margin-bottom:0;font-size:12.5px}
+
+  .falsif{background:#f6f7f9;border:1px solid var(--line);border-left:4px solid var(--navy-3);
+          border-radius:6px;padding:16px 18px;margin-top:12px}
+  .falsif b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy-2);margin-bottom:7px}
+  .falsif p{margin-bottom:9px;font-size:13px}
+  .falsif p:last-child{margin-bottom:0}
+
+  .hist{background:var(--navy);border-radius:8px;padding:20px 22px;margin-top:14px}
+  .hist b.h{display:block;font-size:10.3px;letter-spacing:.17em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:11px}
+  .hist .step{display:flex;gap:10px;margin-bottom:9px;align-items:flex-start}
+  .hist .step:last-child{margin-bottom:0}
+  .hist .step .v{font-family:'Playfair Display',serif;font-weight:800;font-size:12px;color:var(--orange-soft);
+                 min-width:32px;flex:none}
+  .hist .step p{margin:0;font-size:12.2px;line-height:1.5;color:#c3cee0;text-align:left}
+
+  .gloss{border-top:1px solid var(--line);padding-top:16px;margin-top:4px}
+  .gloss b.h{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:9px}
+  .gloss p{font-size:12.4px;line-height:1.55;color:#5c6873;margin-bottom:7px;text-align:left}
+  .gloss p b{color:var(--navy);font-weight:700}
+
+  .srcs{border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+  .srcs b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .srcs p{font-size:11.6px;line-height:1.55;color:#6c757f;text-align:left;margin-bottom:6px}
+
+  footer{background:var(--navy);color:#fff;padding:28px clamp(16px,4vw,48px) 32px;margin-top:22px}
+  .fquote{border-left:4px solid var(--orange);padding-left:17px;margin-bottom:22px}
+  .fquote p{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;line-height:1.45;
+            color:#f0f5fa;margin:0;text-align:left}
+  .fauth b{display:block;font-size:13.5px;color:#fff;font-weight:600;margin-bottom:4px}
+  .fauth p{font-size:12.2px;line-height:1.55;color:#aeb9cc;margin-bottom:15px;text-align:left}
+  .fnote{font-size:11.3px;line-height:1.55;color:#7f93a6;border-top:1px solid rgba(255,255,255,.16);padding-top:14px}
+  .kw{font-size:12.4px;color:#6c757f;margin:-14px 0 26px;text-align:left}
+  .kw b{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-right:6px}
+  .tls{margin:10px 0 8px;border-left:2px solid var(--line);padding-left:14px}
+  .tl{position:relative;margin-bottom:12px}
+  .tl::before{content:"";position:absolute;left:-19px;top:5px;width:8px;height:8px;border-radius:50%;background:var(--orange)}
+  .tl .d{font-size:11.5px;font-weight:700;letter-spacing:.04em;color:var(--navy);margin-bottom:2px}
+  .tl p{margin-bottom:0;font-size:13.2px}
+  .tlnote{font-size:12.6px;color:var(--navy-2);font-weight:600;margin:4px 0 14px}
+  blockquote{border-left:4px solid var(--orange);background:var(--orange-tint);border-radius:0 6px 6px 0;padding:14px 16px;margin:10px 0 12px}
+  blockquote p{margin:0;font-size:13.4px;color:#5c4a2c;font-style:italic}
+  ul.lst{list-style:none;margin:8px 0 10px}
+  ul.lst li{position:relative;padding-left:16px;font-size:13.4px;line-height:1.6;color:var(--ink-soft);margin-bottom:8px;text-align:justify;hyphens:auto}
+  ul.lst li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--orange)}
+  ul.lst li strong{color:var(--ink);font-weight:600}
+  .pos .row2{font-size:12.3px;line-height:1.5;color:var(--ink-soft);margin-top:4px}
+  .pos .row2 span{font-size:10.3px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-right:5px}
+  .gloss .gh{font-size:11.5px;font-weight:700;color:var(--navy-2);margin:10px 0 5px}
+  .srcs ul{list-style:none}
+  .srcs li{font-size:11.6px;line-height:1.5;color:#6c757f;margin-bottom:7px;overflow-wrap:anywhere}
+  .srcs a{color:var(--navy-3);text-decoration:underline;text-decoration-color:rgba(51,80,126,.35)}
+  .gaps{display:flex;flex-direction:column;gap:9px;margin:12px 0 6px}
+  .gap{background:var(--navy);border-radius:8px;padding:14px 16px}
+  .gap .big{font-family:'Playfair Display',serif;font-weight:800;font-size:21px;color:var(--orange-soft);line-height:1.2}
+  .gap .lbl{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin:4px 0 6px}
+  .gap p{margin:0;font-size:12.8px;color:#c3cee0;text-align:left}
+  .more{font-size:12px;color:#7a828c;font-style:italic;text-align:left;margin-top:6px}
+  .freq{font-size:12.4px;line-height:1.5;color:var(--orange-soft);font-weight:600;border-left:3px solid var(--orange);padding:2px 0 2px 11px;margin:0 0 16px}
+  h1{font-size:clamp(25px,5.6vw,40px);line-height:1.1}
+  .ask{background:var(--orange-tint);border-left:5px solid var(--orange);padding:18px clamp(16px,4vw,48px)}
+  .ask b{display:block;font-size:10.5px;letter-spacing:.19em;text-transform:uppercase;color:#a35d12;margin-bottom:8px}
+  .ask p{font-family:'Playfair Display',serif;font-style:italic;font-size:16.5px;line-height:1.45;color:#5c4a2c;margin:0;text-align:left}
+  .gens{display:flex;flex-direction:column;gap:8px;margin:12px 0 10px}
+  .gen{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:7px;padding:11px 14px;background:#fafbfc}
+  .gen .g{font-family:'Playfair Display',serif;font-weight:800;font-size:20px;color:var(--orange);line-height:1;min-width:28px}
+  .gen.hot{background:var(--navy)}
+  .gen.hot .t,.gen.hot .t b{color:#fff}
+  .gen .t{font-size:12.8px;line-height:1.5;color:var(--ink-soft)}
+  .gen .t b{display:block;color:var(--navy);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+  .qcs{display:flex;flex-direction:column;gap:8px;margin:12px 0 10px}
+  .qc{border:1px solid var(--line);border-radius:7px;padding:11px 14px;background:#f6f7f9}
+  .qc .qn{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--navy);margin-bottom:3px;text-transform:uppercase}
+  .qc p{margin:0;font-size:12.8px}
+  .stat .lbl{font-size:11.6px}
+  .box2{border-radius:8px;padding:16px 18px;margin:12px 0;border:1px solid var(--line)}
+  .box2.yes{background:#f6f7f9;border-left:4px solid var(--navy-3)}
+  .box2.no{background:var(--orange-tint);border-left:4px solid var(--orange)}
+  .box2 b.h{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy-2);margin-bottom:7px}
+  .box2.no b.h{color:#a35d12}
+  .box2 p{margin:0;font-size:13px}
+  .tcap{font-size:11.3px;line-height:1.5;color:#7a828c;font-style:italic;text-align:left;margin:6px 0 12px}
+  .refs2{font-size:11.4px;line-height:1.55;color:#6c757f;text-align:left}
+  .tls{margin:10px 0 8px;border-left:2px solid var(--line);padding-left:14px}
+  .tl{position:relative;margin-bottom:11px}
+  .tl::before{content:"";position:absolute;left:-19px;top:5px;width:8px;height:8px;border-radius:50%;background:var(--orange)}
+  .tl .d{font-size:11.5px;font-weight:700;letter-spacing:.04em;color:var(--navy);margin-bottom:2px}
+  .tl p{margin-bottom:0;font-size:13px}
+  blockquote{border-left:4px solid var(--orange);background:var(--orange-tint);border-radius:0 6px 6px 0;padding:12px 15px;margin:10px 0 12px}
+  blockquote p{margin:0;font-size:13.3px;color:#5c4a2c;font-style:italic;text-align:left}
+  blockquote .bqs{display:block;font-size:11px;color:#8a6d45;margin-top:5px}
+  .acts{margin:12px 0 8px;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .act{display:flex;gap:10px;padding:8px 12px;border-top:1px solid var(--line);font-size:12.4px;line-height:1.45;color:var(--ink-soft)}
+  .act:first-child{border-top:none}
+  .act .an{font-weight:800;color:var(--orange);min-width:14px}
+  .act .am{display:block;font-size:11.4px;color:#7a828c;margin-top:2px}
+  .act.hot{background:var(--navy)}
+  .act.hot,.act.hot .am{color:#fff}
+  .act.hot .an{color:var(--orange-soft)}
+  .presc{background:var(--orange-tint);border:1px solid #f0d6b8;border-left:5px solid var(--orange);border-radius:0 8px 8px 0;padding:16px 18px;margin:12px 0}
+  .presc b.h{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#a35d12;margin-bottom:7px}
+  .presc p{color:#5c4a2c;font-size:13.2px;margin-bottom:8px}
+  .presc p:last-child{margin-bottom:0}
+  .dl{background:var(--navy);border-radius:10px;padding:18px 20px;margin:24px 0 6px}
+  .dl .tagl{display:block;font-size:10.3px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:8px}
+  .dl p{color:#c3cee0;font-size:12.8px;margin-bottom:12px;text-align:left}
+  .dl p b{color:#fff}
+  .dl a.btn{display:block;text-align:center;background:var(--orange);color:#fff;font-weight:700;font-size:14.5px;text-decoration:none;padding:13px 16px;border-radius:8px}
+  .dl .ver{font-size:11.2px;color:#93a8bb;margin:10px 0 0}
+  .figs{display:flex;gap:10px;margin:12px 0 6px}
+  .figs figure{flex:1;margin:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#f6f7f9}
+  .figs img{display:block;width:100%;height:auto}
+  .figs figcaption{font-size:11px;line-height:1.4;color:#5c6873;padding:6px 8px 8px;text-align:left}
+  .figcap{font-size:11.3px;line-height:1.5;color:#7a828c;font-style:italic;text-align:left;margin:4px 0 14px}
+  .terms{margin:10px 0 8px}
+  .term{border-left:3px solid var(--orange);padding:4px 0 4px 12px;margin-bottom:10px}
+  .term b{display:block;font-size:12.5px;color:var(--navy);margin-bottom:2px}
+  .term p{margin:0;font-size:13px}
+  .freq{font-size:12.4px;line-height:1.5;color:var(--orange-soft);font-weight:600;border-left:3px solid var(--orange);padding:2px 0 2px 11px;margin:0 0 16px}
+  .epi{margin:4px 0 0;padding:14px 0 0;border-top:1px solid rgba(255,255,255,.14)}
+  .epi p{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;line-height:1.45;color:#fff}
+  .epi span{display:block;margin-top:6px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-soft)}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="brand"><div class="brand-mark">G</div><div class="brand-word">GOF · <span>ARTIGO</span> · ANALÍTICO</div></div>
+    <div class="marker">Mercado de capitais · Fiscalização · Versão 11 · 27 de outubro de 2026</div>
+    <h1>Sorte ou<br>informação</h1>
+    <p class="sub">Quem deve fiscalizar o pregão de 26 de outubro. Ganhos com cenário público, decisões operacionais não divulgadas e a fragmentação do dever de perguntar após o circuit breaker da B3.</p>
+    <div class="epi"><p>“A sorte é muito bem-vinda, e a fiscalização é a garantia de que ela continue atuando.”</p><span>Giuliano Tomazelli</span></div>
+    <div class="byline">
+      <b>Por Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado. Chapecó, 2026.</p>
+    </div>
+  </header>
+  <div class="scope">
+    <b>Escopo</b>
+    <p>Não se afirma que alguém tenha usado informação privilegiada. Não se afirma que quem ganhou com a queda agiu mal. Não se afirma omissão ilegal de nenhuma instituição. Não se pede a divulgação de identidades. A tese é sobre desenho: onde a fiscalização deveria olhar, e quem tem o dever de olhar. Segunda peça da sequência iniciada por “O disjuntor que ficou ligado”.</p>
+  </div>
+  <main>
+    <div class="abst">
+      <b>Resumo</b>
+      <p>No pregão de 26 de outubro de 2026, o Ibovespa caiu mais de 17%, o circuit breaker foi acionado uma vez, e a segunda interrupção, prevista no Manual da B3, não veio. Houve quem perdesse muito e quem ganhasse muito. A pergunta pública — quem ganhou com a queda — mistura duas coisas que a lei separa. Ganhar apostando num cenário aberto e público é risco assumido, por maior que seja o ganho. O que a lei examina é o uso de informação ainda não divulgada. Naquele dia, a informação que não era pública não era o resultado da eleição. Eram as decisões operacionais da própria B3.</p>
+    </div>
+    <section>
+      <div class="sec-head"><span class="sec-num">·</span><h2>Proposições</h2></div>
+      <div class="props"><div class="prop"><div class="top"><span class="tag">P1</span><span class="t">A CVM tem o dever geral de fiscalizar permanentemente o mercado. O que está repartido é o dever de apurar um fato determinado e de informar que a apuração foi aberta — e não se localizou norma que atribua a alguma instituição o dever explícito de responder pelo todo</span></div></div><div class="prop"><div class="top"><span class="tag">P2</span><span class="t">Ganho obtido com posição tomada sobre cenário público não é ilícito, por maior que seja. O tamanho do lucro não é critério de fiscalização</span></div></div><div class="prop"><div class="top"><span class="tag">P3</span><span class="t">A informação que poderia dar vantagem a quem a conhecesse antes estava nas decisões da B3 sobre o mercado à vista: a interrupção e, sobretudo, a não aplicação do estágio II — decidida pela B3 e só explicada às 14h32, à imprensa</span></div></div><div class="prop"><div class="top"><span class="tag">P4</span><span class="t">A fiscalização legítima olha para quem conhecia essas decisões antes de serem aplicadas, e para os negócios da hora em que o Manual pode ter previsto interrupção. Não olha para quem acertou o cenário</span></div></div></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">I</span><h2>Quem pode perguntar</h2></div>
+      <p>São muitas portas, e cada uma abre para um cômodo diferente.</p><div class="posic"><div class="pos"><div class="who">CVM</div><div class="row2"><span>Sobre</span>Negociação, operações atípicas, uso de informação não divulgada (Lei 6.385/1976, arts. 8º, III, e 9º).</div><div class="row2"><span>Até 27/10</span>Nenhuma manifestação pública localizada.</div></div><div class="pos"><div class="who">Autorregulação (BSM)</div><div class="row2"><span>Sobre</span>Ofertas e negócios atípicos; conduta de participantes. Entidade vinculada à própria B3.</div><div class="row2"><span>Até 27/10</span>Nenhuma manifestação pública localizada.</div></div><div class="pos"><div class="who">Banco Central</div><div class="row2"><span>Sobre</span>Liquidação, margens, câmbio futuro (Lei 10.214/2001, art. 10).</div><div class="row2"><span>Até 27/10</span>Nenhuma manifestação pública localizada.</div></div><div class="pos"><div class="who">CADE</div><div class="row2"><span>Sobre</span>Abuso de posição dominante; coordenação (Lei 12.529/2011, art. 36).</div><div class="row2"><span>Até 27/10</span>Nenhuma manifestação pública localizada.</div></div><div class="pos"><div class="who">Congresso e TCU</div><div class="row2"><span>Sobre</span>A atuação da própria CVM (Constituição, arts. 50, 58 e 71).</div><div class="row2"><span>Até 27/10</span>Nenhuma iniciativa localizada.</div></div><div class="pos"><div class="who">Ministério Público</div><div class="row2"><span>Sobre</span>Dano a investidores; manipulação; uso de informação (Lei 7.913/1989; Lei 6.385/1976, arts. 27-C e 27-D). Age de ofício ou por representação.</div><div class="row2"><span>Até 27/10</span>Nenhuma iniciativa localizada.</div></div><div class="pos"><div class="who">STF</div><div class="row2"><span>Sobre</span>Guarda da Constituição; só quando provocado, em matéria de sua competência.</div><div class="row2"><span>Papel</span>Porta de saída, se as outras não responderem.</div></div></div><div class="pull"><p>Quando o fato a apurar é uma decisão da B3, a fiscalizadora e a fiscalizada pertencem ao mesmo conjunto.</p></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">II</span><h2>O que já está decidido</h2></div>
+      <h3>Ganho com cenário público é risco, não ilícito</h3><p>Entre o primeiro e o segundo turno, o cenário estava aberto e era público. Quem montou posição vendida apostou num desfecho. A lei não pune o acerto. Pune, entre outras, duas condutas que interessam aqui: manobras fraudulentas destinadas a alterar cotação, preço ou volume (art. 27-C) e o uso de informação relevante ainda não divulgada ao mercado, mediante negociação (art. 27-D). Desde a Lei 13.506/2017, responde quem quer que tenha usado a informação, e não só quem devia guardá-la.</p><h3>A regra avisada e a regra não aplicada</h3><div class="tls"><div class="tl"><div class="d">9h03 a 9h33</div><p>Avisos da B3 ampliam os limites de oscilação dos futuros, antes de valer ou poucos minutos depois.</p></div><div class="tl"><div class="d">10:01:04</div><p>Aviso oficial de interrupção. Reafirma por escrito a regra do estágio II: reabertas as negociações, queda de 15% interrompe por uma hora.</p></div><div class="tl"><div class="d">10h45</div><p>Ibovespa a -17,21% depois da reabertura. A parada não vem.</p></div><div class="tl"><div class="d">14h32</div><p>Em nota à imprensa, a B3 não menciona o estágio II; anuncia que um novo circuit breaker só viria com queda de 20%. Nenhum aviso ao mercado com esse conteúdo.</p></div></div><div class="pull"><p>A B3 dispunha do canal e do tempo para comunicar mudança de regra. Usou-o para os futuros. Não o usou para o mercado à vista.</p></div><h3>A identidade e o resultado</h3><p>As operações e seus titulares estão sob sigilo (LC 105/2001), e o sigilo acompanha a CVM quando ela fiscaliza. O fiscal tem caminho para chegar às operações. O público, não. O que pode tornar-se público, sem quebra de sigilo, é se houve apuração, sobre o quê, e com que resultado.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">III</span><h2>O que fica em aberto</h2></div>
+      <div class="rows"><div class="row"><span class="n">1</span><span class="t"><strong>Dever ou faculdade.</strong> O dever geral de fiscalizar existe (art. 8º, III). Fica em aberto se ele obriga a apurar um fato determinado e a informar que a apuração foi aberta.</span></div><div class="row"><span class="n">2</span><span class="t"><strong>O silêncio como resposta.</strong> Uma instituição que examina em sigilo e uma que não examina produzem, para o público, o mesmo silêncio.</span></div><div class="row"><span class="n">3</span><span class="t"><strong>Quem sabia, e quando.</strong> A nota da B3 não diz quando se decidiu que o gatilho seguinte seria 20%. Se foi junto com o primeiro acionamento, a informação existiu desde a manhã, enquanto o aviso oficial dizia outra coisa.</span></div><div class="row"><span class="n">4</span><span class="t"><strong>Quando entraria o STF.</strong> Só por provocação de quem tem legitimidade, em questão constitucional. Não é porta de entrada.</span></div></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">IV</span><h2>A lacuna, medida</h2></div>
+      <p>Fora a nota da B3 à imprensa, mais de vinte e quatro horas depois do fato nenhuma das instituições do quadro se manifestou publicamente, até onde se apurou. Ausência de localização não é prova de inexistência.</p><p>Há dados públicos agregados que permitem testar, sem identidades, se houve posicionamento atípico antes do pregão: posição em aberto dos futuros por tipo de investidor, saldo de empréstimo de ações, opções de venda. Não foram examinados nesta peça. Se mostrarem posição vendida concentrada, o exame individual ganha ponto de partida. Se não mostrarem, a hipótese perde força — e isso também precisa ser dito.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">V</span><h2>Implicações</h2></div>
+      <div class="rows"><div class="row"><span class="n">1</span><span class="t"><strong>A sorte sem fiscal vira suspeita.</strong> Ganho legítimo que ninguém examina fica indistinguível de ganho ilegítimo. O primeiro prejudicado é quem ganhou honestamente.</span></div><div class="row"><span class="n">2</span><span class="t"><strong>A pergunta errada ocupa o lugar da certa.</strong> Enquanto o debate público pergunta quem ganhou, ninguém pergunta quem sabia.</span></div><div class="row"><span class="n">3</span><span class="t"><strong>A confiança como ativo.</strong> Mercado em que as regras podem não valer, e ninguém pergunta por quê, cobra mais caro para receber capital.</span></div></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">VI</span><h2>As posições em disputa</h2></div>
+      <div class="posic"><div class="pos"><div class="who">Quem ganhou com o cenário</div><div class="row2"><span>Pede</span>Que o ganho seja reconhecido como risco assumido.</div><div class="row2"><span>Teme</span>Ser confundido com quem usou informação.</div></div><div class="pos"><div class="who">Quem perdeu</div><div class="row2"><span>Pede</span>Saber se as regras valeram para todos.</div><div class="row2"><span>Teme</span>Ter operado contra quem sabia mais.</div></div><div class="pos"><div class="who">B3</div><div class="row2"><span>Pede</span>Reconhecimento de que agiu para preservar o mercado.</div><div class="row2"><span>Teme</span>Ver decisão operacional tratada como favorecimento.</div></div></div><p>O operador que ganhou legitimamente e o investidor que perdeu pedem a mesma coisa: exame. Só ele separa a sorte da informação.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">VII</span><h2>Limites e condições de refutação</h2></div>
+      <div class="falsif"><b>O que derrubaria</b><ul class="lst"><li>P1 cai se houver norma que converta o dever geral de fiscalização em dever explícito de apurar um fato determinado e de informar que a apuração foi aberta.</li><li>P3 cai se tiver havido aviso ao mercado, antes da reabertura, sobre a não aplicação do estágio II ou a adoção do gatilho de 20%. Não foi localizado.</li></ul></div><h3>Onde o texto é mais frágil</h3><p>No silêncio sobre apuração. A autorregulação monitora atipicidades de forma contínua — em 2023, abriu 196 casos de análise, segundo a própria B3, fonte interessada. A CVM pode ter aberto exame sem anunciá-lo. O que a peça lê como ausência de pergunta pode ser pergunta não divulgada.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">VIII</span><h2>Conclusão</h2></div>
+      <p>A imprensa perguntou por que a parada não veio, e a B3 respondeu. A pergunta que a lei permite fazer é outra: quem sabia, antes de todos, das decisões que a B3 tomou naquela manhã, e o que se negociou na hora em que o pregão pode ter devido estar parado. O dever geral de fiscalizar tem dono; essa pergunta determinada tem muitos donos possíveis e nenhum obrigatório. Até onde se apurou, ninguém a fez em público.</p><div class="pull"><p>Sorte, bem-vinda. Informação, examinada. A pergunta, ainda sem dono.</p></div><div class="gloss"><b class="h">Glossário</b><p><b>Posição vendida</b> — aposta na queda de um ativo.</p><p><b>Informação privilegiada</b> — informação relevante ainda não divulgada ao mercado, cujo uso para obter vantagem é vedado.</p><p><b>Autorregulação</b> — supervisão exercida por entidade vinculada à própria bolsa.</p><p><b>Faculdade e dever</b> — faculdade é o poder de agir; dever é a obrigação de agir.</p></div><div class="srcs"><b>Fontes principais</b><p class="refs2">Constituição Federal; Lei 6.385/1976; Lei 12.529/2011 (textos compilados, Presidência da República); LC 105/2001; Lei 7.913/1989; Lei 10.214/2001; B3, Manual de Procedimentos Operacionais de Negociação, item 13; B3, Plantão de Notícias, avisos de 26 out. 2026; nota da B3 à imprensa, 26 out. 2026, 14h32 (EXAME; InfoMoney); BSM, relatório de 2023. Somente registros de 26 de outubro de 2026 sobre o pregão.</p><p class="more">A lista integral de fontes está no artigo completo.</p></div>
+    </section>
+  </main>
+  <footer>
+    <div class="fquote"><p>“O operador que ganhou legitimamente e o investidor que perdeu pedem a mesma coisa: exame.”</p></div>
+    <div class="fauth">
+      <b>Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</p>
+    </div>
+    <div class="freq">O artigo completo será disponibilizado por solicitação direta ao autor.</div>
+    <div class="fnote">Versão 11 — 27 de outubro de 2026. Segunda peça da sequência iniciada por “O disjuntor que ficou ligado” (versão 10). Peça fechada nesta data, com as informações disponíveis até então; não será reaberta. Sobre o pregão, somente registros de 26 de outubro de 2026.</div>
+  </footer>
+</div>
+</body>
+</html>
