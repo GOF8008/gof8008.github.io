@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>O que a B3 diz que faz — Mercado de capitais | Giuliano Tomazelli</title>
+<meta name="description" content="Artigo empírico de Giuliano Tomazelli, 3ª peça da série sobre o pregão de 26 de outubro de 2026: as normas, políticas e relatórios da B3 confrontados com o que os documentos dela, os da sua autorregulação e os registros do dia mostram.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/artigos/o-que-a-b3-diz-que-faz-v24.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="O que a B3 diz que faz">
+<meta property="og:description" content="A regra escrita, a prática documentada e quem paga a diferença: o que a B3 declara sobre regra, fiscalização, proteção ao investidor e divulgação, confrontado com os seus próprios documentos.">
+<meta property="og:url" content="https://gof8008.github.io/artigos/o-que-a-b3-diz-que-faz-v24.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O que a B3 diz que faz">
+<meta name="twitter:description" content="A regra escrita, a prática documentada e quem paga a diferença: o que a B3 declara sobre regra, fiscalização, proteção ao investidor e divulgação, confrontado com os seus próprios documentos.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta name="twitter:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#15243f; --navy-2:#22375c; --navy-3:#33507e;
+    --orange:#e07a28; --orange-soft:#f0a25a; --orange-tint:#fbeede;
+    --ink:#202733; --ink-soft:#4a525f; --paper:#fff;
+    --line:#dde1e8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{background:#EDF0F3;font-family:'Source Sans 3',system-ui,sans-serif;
+       color:var(--ink);-webkit-font-smoothing:antialiased;
+       padding:16px 10px 240px}
+  .page{width:100%;max-width:760px;margin:0 auto;background:var(--paper);
+        border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(18,41,63,.15)}
+
+  header{background:var(--navy);color:#fff;padding:34px clamp(16px,4vw,48px) 30px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;
+                border-radius:50%;background:radial-gradient(circle at center,rgba(224,122,40,.22),transparent 68%)}
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:22px;position:relative;z-index:2}
+  .brand-mark{width:34px;height:34px;border:2px solid var(--orange);border-radius:50%;
+              display:flex;align-items:center;justify-content:center;flex:none;
+              font-family:'Playfair Display',serif;font-weight:800;font-size:16px;color:var(--orange)}
+  .brand-word{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.05em;font-size:12.5px;color:#eef2f8}
+  .brand-word span{color:var(--orange)}
+  .marker{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-soft);
+          font-weight:700;margin-bottom:14px;position:relative;z-index:2;line-height:1.5}
+  h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,6.4vw,46px);
+     line-height:1.05;color:#fff;position:relative;z-index:2}
+  .sub{margin-top:15px;font-size:14.5px;line-height:1.55;color:#c3cee0;position:relative;z-index:2}
+  .byline{margin-top:20px;position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.16);padding-top:15px}
+  .byline b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:5px}
+  .byline p{font-size:12.4px;line-height:1.55;color:#aeb9cc}
+
+  .scope{background:var(--orange-tint);border-left:5px solid var(--orange);padding:20px clamp(16px,4vw,48px)}
+  .scope b{display:block;font-size:10.5px;letter-spacing:.19em;text-transform:uppercase;color:#a35d12;margin-bottom:8px}
+  .scope p{font-size:13.4px;line-height:1.6;color:#5c4a2c;text-align:justify;hyphens:auto;margin-bottom:9px}
+  .scope p:last-child{margin-bottom:0}
+  .edn{background:#E7EDF4;border-left-color:var(--navy)}
+  .edn b{color:var(--navy)}
+  .edn p{color:#2b3d52}
+
+  main{padding:30px clamp(16px,4vw,48px) 14px}
+  section{margin-bottom:32px}
+  .sec-head{display:flex;align-items:baseline;gap:11px;margin-bottom:11px}
+  .sec-num{font-family:'Playfair Display',serif;font-weight:800;font-size:15px;color:var(--orange);flex:none}
+  h2{font-family:'Playfair Display',serif;font-weight:700;font-size:21px;line-height:1.18;color:var(--navy-2)}
+  p{font-size:13.6px;line-height:1.64;color:var(--ink-soft);margin-bottom:10px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  p strong{color:var(--ink);font-weight:600}
+  h3{font-family:'Playfair Display',serif;font-size:15.5px;color:var(--navy);font-weight:700;margin:16px 0 6px}
+
+  .abst{background:#f6f7f9;border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin-bottom:26px}
+  .abst b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .abst p{margin-bottom:0;font-size:13.2px}
+
+  .props{display:flex;flex-direction:column;gap:8px;margin:12px 0 4px}
+  .prop{padding:11px 14px;background:#f6f7f9;border:1px solid var(--line);border-radius:6px}
+  .prop .top{display:flex;gap:12px;align-items:flex-start}
+  .prop .tag{font-family:'Playfair Display',serif;font-weight:800;font-size:13px;color:var(--orange);
+             min-width:26px;line-height:1.4;flex:none}
+  .prop .t{font-size:12.6px;line-height:1.52;color:var(--ink-soft)}
+  .prop .fals{margin-top:6px;margin-left:38px;font-size:11.3px;line-height:1.5;color:#7a828c;font-style:italic}
+
+  .two{display:flex;gap:11px;flex-wrap:wrap;margin:14px 0 4px}
+  .two .col{flex:1;min-width:210px;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .two .col .hd{padding:10px 14px;font-size:11.5px;font-weight:700;letter-spacing:.04em;color:#fff}
+  .two .a .hd{background:var(--navy-2)}
+  .two .b .hd{background:#8c3a12}
+  .two .col .bd{padding:12px 14px;background:#fafbfc}
+  .two .col .bd p{margin-bottom:0;font-size:12.9px}
+
+  .pull{border-left:4px solid var(--navy-3);background:#f6f7f9;border-radius:0 6px 6px 0;
+        padding:15px 18px;margin:14px 0}
+  .pull p{margin-bottom:0;font-size:14.2px;color:var(--navy-2);font-weight:600;text-align:left}
+
+  .desenhos{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+  .desenho{border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .desenho .hd{background:var(--navy);color:#fff;padding:10px 15px;font-size:13px;font-weight:600}
+  .desenho .bd{padding:12px 15px;background:#fafbfc}
+  .desenho .bd p{margin-bottom:0;font-size:12.7px}
+
+  .stat{background:var(--navy);border-radius:8px;padding:20px 22px;margin:12px 0 4px;display:flex;gap:22px;flex-wrap:wrap}
+  .stat .item{flex:1;min-width:140px}
+  .stat .big{font-family:'Playfair Display',serif;font-weight:800;font-size:22px;color:var(--orange-soft);line-height:1.2}
+  .stat .lbl{font-size:11.2px;line-height:1.42;color:#c3cee0;margin-top:6px}
+  .stat .lbl b{color:#fff;font-weight:600}
+
+  .rows{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+  .row{display:flex;gap:13px;align-items:flex-start;padding:13px 15px;background:#f6f7f9;
+       border:1px solid var(--line);border-radius:6px}
+  .row .n{font-family:'Playfair Display',serif;font-weight:800;font-size:15px;color:var(--orange);min-width:20px;line-height:1.25;flex:none}
+  .row .t{font-size:13px;line-height:1.55;color:var(--ink-soft)}
+
+  .posic{display:flex;flex-direction:column;gap:8px;margin:12px 0 4px}
+  .pos{padding:11px 14px;background:#f6f7f9;border:1px solid var(--line);border-radius:6px}
+  .pos .who{font-size:11.5px;font-weight:700;color:var(--navy);margin-bottom:4px}
+  .pos p{margin-bottom:0;font-size:12.5px}
+
+  .falsif{background:#f6f7f9;border:1px solid var(--line);border-left:4px solid var(--navy-3);
+          border-radius:6px;padding:16px 18px;margin-top:12px}
+  .falsif b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy-2);margin-bottom:7px}
+  .falsif p{margin-bottom:9px;font-size:13px}
+  .falsif p:last-child{margin-bottom:0}
+
+  .hist{background:var(--navy);border-radius:8px;padding:20px 22px;margin-top:14px}
+  .hist b.h{display:block;font-size:10.3px;letter-spacing:.17em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:11px}
+  .hist .step{display:flex;gap:10px;margin-bottom:9px;align-items:flex-start}
+  .hist .step:last-child{margin-bottom:0}
+  .hist .step .v{font-family:'Playfair Display',serif;font-weight:800;font-size:12px;color:var(--orange-soft);
+                 min-width:32px;flex:none}
+  .hist .step p{margin:0;font-size:12.2px;line-height:1.5;color:#c3cee0;text-align:left}
+
+  .gloss{border-top:1px solid var(--line);padding-top:16px;margin-top:4px}
+  .gloss b.h{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:9px}
+  .gloss p{font-size:12.4px;line-height:1.55;color:#5c6873;margin-bottom:7px;text-align:left}
+  .gloss p b{color:var(--navy);font-weight:700}
+
+  .srcs{border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+  .srcs b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .srcs p{font-size:11.6px;line-height:1.55;color:#6c757f;text-align:left;margin-bottom:6px}
+
+  footer{background:var(--navy);color:#fff;padding:28px clamp(16px,4vw,48px) 32px;margin-top:22px}
+  .fquote{border-left:4px solid var(--orange);padding-left:17px;margin-bottom:22px}
+  .fquote p{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;line-height:1.45;
+            color:#f0f5fa;margin:0;text-align:left}
+  .fauth b{display:block;font-size:13.5px;color:#fff;font-weight:600;margin-bottom:4px}
+  .fauth p{font-size:12.2px;line-height:1.55;color:#aeb9cc;margin-bottom:15px;text-align:left}
+  .fnote{font-size:11.3px;line-height:1.55;color:#7f93a6;border-top:1px solid rgba(255,255,255,.16);padding-top:14px}
+  .kw{font-size:12.4px;color:#6c757f;margin:-14px 0 26px;text-align:left}
+  .kw b{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-right:6px}
+  .tls{margin:10px 0 8px;border-left:2px solid var(--line);padding-left:14px}
+  .tl{position:relative;margin-bottom:12px}
+  .tl::before{content:"";position:absolute;left:-19px;top:5px;width:8px;height:8px;border-radius:50%;background:var(--orange)}
+  .tl .d{font-size:11.5px;font-weight:700;letter-spacing:.04em;color:var(--navy);margin-bottom:2px}
+  .tl p{margin-bottom:0;font-size:13.2px}
+  .tlnote{font-size:12.6px;color:var(--navy-2);font-weight:600;margin:4px 0 14px}
+  blockquote{border-left:4px solid var(--orange);background:var(--orange-tint);border-radius:0 6px 6px 0;padding:14px 16px;margin:10px 0 12px}
+  blockquote p{margin:0;font-size:13.4px;color:#5c4a2c;font-style:italic}
+  ul.lst{list-style:none;margin:8px 0 10px}
+  ul.lst li{position:relative;padding-left:16px;font-size:13.4px;line-height:1.6;color:var(--ink-soft);margin-bottom:8px;text-align:justify;hyphens:auto}
+  ul.lst li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--orange)}
+  ul.lst li strong{color:var(--ink);font-weight:600}
+  .pos .row2{font-size:12.3px;line-height:1.5;color:var(--ink-soft);margin-top:4px}
+  .pos .row2 span{font-size:10.3px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-right:5px}
+  .gloss .gh{font-size:11.5px;font-weight:700;color:var(--navy-2);margin:10px 0 5px}
+  .srcs ul{list-style:none}
+  .srcs li{font-size:11.6px;line-height:1.5;color:#6c757f;margin-bottom:7px;overflow-wrap:anywhere}
+  .srcs a{color:var(--navy-3);text-decoration:underline;text-decoration-color:rgba(51,80,126,.35)}
+  .gaps{display:flex;flex-direction:column;gap:9px;margin:12px 0 6px}
+  .gap{background:var(--navy);border-radius:8px;padding:14px 16px}
+  .gap .big{font-family:'Playfair Display',serif;font-weight:800;font-size:21px;color:var(--orange-soft);line-height:1.2}
+  .gap .lbl{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin:4px 0 6px}
+  .gap p{margin:0;font-size:12.8px;color:#c3cee0;text-align:left}
+  .more{font-size:12px;color:#7a828c;font-style:italic;text-align:left;margin-top:6px}
+  .freq{font-size:12.4px;line-height:1.5;color:var(--orange-soft);font-weight:600;border-left:3px solid var(--orange);padding:2px 0 2px 11px;margin:0 0 16px}
+  h1{font-size:clamp(25px,5.6vw,40px);line-height:1.1}
+  .ask{background:var(--orange-tint);border-left:5px solid var(--orange);padding:18px clamp(16px,4vw,48px)}
+  .ask b{display:block;font-size:10.5px;letter-spacing:.19em;text-transform:uppercase;color:#a35d12;margin-bottom:8px}
+  .ask p{font-family:'Playfair Display',serif;font-style:italic;font-size:16.5px;line-height:1.45;color:#5c4a2c;margin:0;text-align:left}
+  .gens{display:flex;flex-direction:column;gap:8px;margin:12px 0 10px}
+  .gen{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:7px;padding:11px 14px;background:#fafbfc}
+  .gen .g{font-family:'Playfair Display',serif;font-weight:800;font-size:20px;color:var(--orange);line-height:1;min-width:28px}
+  .gen.hot{background:var(--navy)}
+  .gen.hot .t,.gen.hot .t b{color:#fff}
+  .gen .t{font-size:12.8px;line-height:1.5;color:var(--ink-soft)}
+  .gen .t b{display:block;color:var(--navy);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+  .qcs{display:flex;flex-direction:column;gap:8px;margin:12px 0 10px}
+  .qc{border:1px solid var(--line);border-radius:7px;padding:11px 14px;background:#f6f7f9}
+  .qc .qn{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--navy);margin-bottom:3px;text-transform:uppercase}
+  .qc p{margin:0;font-size:12.8px}
+  .stat .lbl{font-size:11.6px}
+  .box2{border-radius:8px;padding:16px 18px;margin:12px 0;border:1px solid var(--line)}
+  .box2.yes{background:#f6f7f9;border-left:4px solid var(--navy-3)}
+  .box2.no{background:var(--orange-tint);border-left:4px solid var(--orange)}
+  .box2 b.h{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy-2);margin-bottom:7px}
+  .box2.no b.h{color:#a35d12}
+  .box2 p{margin:0;font-size:13px}
+  .tcap{font-size:11.3px;line-height:1.5;color:#7a828c;font-style:italic;text-align:left;margin:6px 0 12px}
+  .refs2{font-size:11.4px;line-height:1.55;color:#6c757f;text-align:left}
+  .tls{margin:10px 0 8px;border-left:2px solid var(--line);padding-left:14px}
+  .tl{position:relative;margin-bottom:11px}
+  .tl::before{content:"";position:absolute;left:-19px;top:5px;width:8px;height:8px;border-radius:50%;background:var(--orange)}
+  .tl .d{font-size:11.5px;font-weight:700;letter-spacing:.04em;color:var(--navy);margin-bottom:2px}
+  .tl p{margin-bottom:0;font-size:13px}
+  blockquote{border-left:4px solid var(--orange);background:var(--orange-tint);border-radius:0 6px 6px 0;padding:12px 15px;margin:10px 0 12px}
+  blockquote p{margin:0;font-size:13.3px;color:#5c4a2c;font-style:italic;text-align:left}
+  blockquote .bqs{display:block;font-size:11px;color:#8a6d45;margin-top:5px}
+  .acts{margin:12px 0 8px;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .act{display:flex;gap:10px;padding:8px 12px;border-top:1px solid var(--line);font-size:12.4px;line-height:1.45;color:var(--ink-soft)}
+  .act:first-child{border-top:none}
+  .act .an{font-weight:800;color:var(--orange);min-width:14px}
+  .act .am{display:block;font-size:11.4px;color:#7a828c;margin-top:2px}
+  .act.hot{background:var(--navy)}
+  .act.hot,.act.hot .am{color:#fff}
+  .act.hot .an{color:var(--orange-soft)}
+  .presc{background:var(--orange-tint);border:1px solid #f0d6b8;border-left:5px solid var(--orange);border-radius:0 8px 8px 0;padding:16px 18px;margin:12px 0}
+  .presc b.h{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#a35d12;margin-bottom:7px}
+  .presc p{color:#5c4a2c;font-size:13.2px;margin-bottom:8px}
+  .presc p:last-child{margin-bottom:0}
+  .dl{background:var(--navy);border-radius:10px;padding:18px 20px;margin:24px 0 6px}
+  .dl .tagl{display:block;font-size:10.3px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:8px}
+  .dl p{color:#c3cee0;font-size:12.8px;margin-bottom:12px;text-align:left}
+  .dl p b{color:#fff}
+  .dl a.btn{display:block;text-align:center;background:var(--orange);color:#fff;font-weight:700;font-size:14.5px;text-decoration:none;padding:13px 16px;border-radius:8px}
+  .dl .ver{font-size:11.2px;color:#93a8bb;margin:10px 0 0}
+  .figs{display:flex;gap:10px;margin:12px 0 6px}
+  .figs figure{flex:1;margin:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#f6f7f9}
+  .figs img{display:block;width:100%;height:auto}
+  .figs figcaption{font-size:11px;line-height:1.4;color:#5c6873;padding:6px 8px 8px;text-align:left}
+  .figcap{font-size:11.3px;line-height:1.5;color:#7a828c;font-style:italic;text-align:left;margin:4px 0 14px}
+  .terms{margin:10px 0 8px}
+  .term{border-left:3px solid var(--orange);padding:4px 0 4px 12px;margin-bottom:10px}
+  .term b{display:block;font-size:12.5px;color:var(--navy);margin-bottom:2px}
+  .term p{margin:0;font-size:13px}
+  .freq{font-size:12.4px;line-height:1.5;color:var(--orange-soft);font-weight:600;border-left:3px solid var(--orange);padding:2px 0 2px 11px;margin:0 0 16px}
+  .epi{margin:4px 0 0;padding:14px 0 0;border-top:1px solid rgba(255,255,255,.14)}
+  .epi p{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;line-height:1.45;color:#fff}
+  .epi span{display:block;margin-top:6px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-soft)}
+  .pv{margin-top:5px;font-size:11.6px;line-height:1.45;color:#7a828c;font-style:italic}
+  .seq{margin:10px 0 12px;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .seq .s{padding:10px 14px;border-top:1px solid var(--line);background:#fafbfc}
+  .seq .s:first-child{border-top:none}
+  .seq .s b{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:3px}
+  .seq .s p{margin:0;font-size:12.8px}
+  .eixo{font-family:'Playfair Display',serif;font-size:16px;line-height:1.45;color:var(--navy);font-weight:700;margin:4px 0 12px;text-align:left}
+  .bars{border:1px solid var(--line);border-radius:8px;background:#fafbfc;padding:12px 12px 10px;margin:12px 0 4px}
+  .bh{font-size:11px;color:#7a828c;margin-bottom:8px;text-align:center}
+  .br{margin-bottom:9px}
+  .bn{font-size:12px;font-weight:600;color:var(--ink);line-height:1.25;text-align:left;margin-bottom:3px}
+  .bn i{font-style:normal;font-weight:400;font-size:10.6px;color:#7a828c;margin-left:6px}
+  .bt{display:flex;min-width:0}
+  .bt .bng,.bt .bps{flex:1;display:flex;align-items:center;min-height:22px;gap:4px}
+  .bt .bng{justify-content:flex-end;border-right:1.5px solid #8a8a86}
+  .bt .bps{justify-content:flex-start}
+  .b{height:16px;border-radius:3px}
+  .b.buy{background:#C55A11}
+  .b.sell{background:#2F63B0}
+  .v{font-size:11.6px;font-weight:700;color:var(--ink);white-space:nowrap}
+  .blg{display:flex;justify-content:space-between;font-size:10.6px;margin:6px 0 0}
+  .blg .ls{color:#2F63B0}.blg .lb{color:#C55A11}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="brand"><div class="brand-mark">G</div>
+<div class="brand-word">GOF · <span>ARTIGO</span> · EMPÍRICO</div>
+</div>
+    <div class="marker">Artigo empírico de base documental · Mercado de capitais · 3ª peça da série sobre o pregão de 26/10 · Versão 2.4 · 6 de novembro de 2026</div>
+    <h1>O que a B3<br>diz que faz</h1>
+    <p class="sub">A regra escrita, a prática documentada e quem paga a diferença: normas, políticas e relatórios da B3 confrontados com o que os documentos dela, os da sua autorregulação e os registros de 26 de outubro de 2026 mostram.</p>
+    <div class="byline">
+      <b>Por Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado. Chapecó, 6 de novembro de 2026.</p>
+    </div>
+  </header>
+  <div class="scope">
+    <b>Escopo</b>
+    <p>Não se afirma que a B3 tenha violado lei ou norma. Não se afirma intenção de ocultar: afirma-se a não divulgação pelo canal oficial, documentada. Não se afirma que a autorregulação seja ineficaz: afirma-se o vínculo, com os números da própria B3.</p>
+    <p>A peça prescreve em dois registros. Onde a norma vigente já exige, cobra cumprimento; no restante, propõe dever novo, com o Congresso como destinatário principal e a CVM como ponte.</p>
+  </div>
+  <div class="scope edn">
+    <b>Terceira peça</b>
+    <p>A série começou com “O disjuntor que ficou ligado” (a regra foi aplicada?) e seguiu com “Sorte ou informação: quem deve fiscalizar o pregão de 26 de outubro” (quem deve perguntar?), ambas de 27 de outubro de 2026. Esta pergunta outra coisa: o que a B3 diz que faz, e o que os seus próprios papéis mostram. Pontos marcados [A CONFERIR] aguardam conferência em fonte primária.</p>
+  </div>
+  <main>
+    <div class="abst">
+      <b>Resumo</b>
+      <p>Em 26 de outubro de 2026, a B3 deixou de aplicar uma regra escrita e explicou-se à imprensa, não ao mercado. Esta peça trata o mecanismo. A B3 declara, em normas, políticas, relatórios e demonstrações, como se regula, quem a fiscaliza, como protege o investidor e o que divulga. Cada declaração é confrontada com os documentos da própria B3, os da sua autorregulação e os registros do dia. O resultado é uma matriz de quinze linhas. O padrão não é de infração demonstrada. É o de uma instituição que decide o que divulga, por qual canal e por quanto tempo — e cujas obrigações de divulgar estão em norma da CVM e em regulamentos que ela própria escreve, não em lei.</p>
+    </div>
+<section>
+<div class="sec-head"><span class="sec-num">·</span><h2>Cinco proposições, antes da evidência</h2>
+</div>
+<div class="props">
+<div class="prop"><div class="top"><span class="tag">P1</span><span class="t"><strong>Dois fundamentos, dois canais.</strong> O aviso oficial das 10:01:04 acionou o circuit breaker pela queda de 10% e reafirmou a parada de uma hora a −15%; a nota à imprensa das 14h32 atribuiu a decisão ao preço teórico e anunciou um gatilho de 20%. A mudança não chegou ao mercado por aviso.</span></div></div>
+<div class="prop"><div class="top"><span class="tag">P2</span><span class="t"><strong>A fiscalizadora descrita de dois modos.</strong> Independente nas demonstrações; parte da “Companhia” em políticas da B3; financiada pela fiscalizada; aconselhada por uma Câmara presidida por representante de participante fiscalizado.</span></div></div>
+<div class="prop"><div class="top"><span class="tag">P3</span><span class="t"><strong>Aviso com prazo de validade.</strong> A norma manda anunciar antes e manter por cinco anos os procedimentos especiais de negociação, e, pelo Regulamento da própria B3, a reabertura em leilão é um deles. O Plantão guarda trinta dias; o Boletim, que guardou no mesmo dia um leilão de 3.102 ações, não guardou a interrupção do mercado.</span></div></div>
+<div class="prop"><div class="top"><span class="tag">P4</span><span class="t"><strong>Proteção que não alcança quem decide.</strong> Os mecanismos declarados cobrem o erro do intermediário, não a decisão da bolsa. Em emergência, a B3 declara que não indeniza.</span></div></div>
+<div class="prop"><div class="top"><span class="tag">P5</span><span class="t"><strong>Hipótese do autor.</strong> A B3, único mercado de bolsa de ações em operação no País, mantém relacionamento direto com o Poder Executivo fora dos canais regulatórios.</span></div>
+<div class="pv">Não testada nesta versão. Teste definido: agendas públicas obrigatórias (Lei 12.813/2013; e-Agendas).</div></div>
+</div>
+</section>
+<section>
+<div class="sec-head"><span class="sec-num">I</span><h2>Quem é quem</h2>
+</div>
+<div class="stat"><div class="item"><div class="big">R$ 402,9 mi</div>
+<div class="lbl"><b>da B3 à BSM</b>: contribuições e multas repassadas desde 2013, rendimentos de títulos desde 2021, até 30/06/2026 (ITR 2T26, nota 13) [soma do autor]</div>
+</div>
+<div class="item"><div class="big">R$ 3,18 bi</div>
+<div class="lbl"><b>lucro líquido da B3</b> atribuído aos acionistas no 1º semestre de 2026 (ITR 1T26 e 2T26)</div>
+</div>
+<div class="item"><div class="big">1</div>
+<div class="lbl"><b>auditor</b> comum à B3, à BSM e ao MRP</div>
+</div>
+</div>
+<p>Um regulador sem manifestação sobre o dia. Uma companhia que administra o mercado e mantém a entidade que a fiscaliza. Intermediários que a aconselham e recebem seus incentivos. Um auditor comum aos dois lados. E um investidor no fim da cadeia.</p>
+</section>
+<section>
+<div class="sec-head"><span class="sec-num">II</span><h2>O que a letra manda</h2>
+</div>
+<blockquote><p>“As entidades administradoras de mercado organizado devem divulgar em sua página na rede mundial de computadores […] anúncios da adoção de procedimentos especiais de negociação, previamente à sua realização” — e mantê-los disponíveis “para livre acesso público e gratuito por qualquer usuário […] pelo prazo de 5 (cinco) anos”.<span class="bqs">Resolução CVM 135, art. 39, VII e § 2º, IV</span></p></blockquote>
+<p>Pelo Regulamento de Negociação da própria B3, o leilão comum é procedimento especial (art. 54, I), e a reabertura depois de uma interrupção é feita por leilão comum (art. 93). Há uma objeção, que a peça registra e não resolve: o art. 53 fala em submeter “determinada oferta” a leilão, e a B3 pode sustentar que o dever não alcança a reabertura do mercado.</p>
+<p>Para a troca do gatilho, três caminhos — cada um no caso em que se aplica —, e nenhum dispensa a comunicação:</p>
+<div class="seq">
+<div class="s"><b>Estágio de 20%</b><p>“O mercado deve ser comunicado pelos canais usuais de divulgação das informações da B3” (Manual, item 13, III).</p></div>
+<div class="s"><b>Medida de emergência</b><p>Deve ser “imediatamente comunicada à CVM, ao BCB e ao mercado, incluindo as razões” (Regulamento de Negociação, art. 100).</p></div>
+<div class="s"><b>Alteração de regra</b><p>Alteração materialmente significativa depende de aprovação prévia da CVM; as demais, de notificação com trinta dias (Res. CVM 135, art. 180).</p></div>
+</div>
+<p>E uma assimetria escrita: o Regulamento manda informar as razões da suspensão de um ativo (art. 86), mas não as da interrupção do mercado inteiro (arts. 91 a 93). O ato de maior alcance tem a exigência de divulgação mais fraca.</p>
+<p class="tcap">No artigo: as diferenças entre o aviso das 10:01:04 e o Manual que ele diz reforçar; a escala do túnel de leilão; quem arca, pela letra dos regulamentos.</p>
+</section>
+<section>
+<div class="sec-head"><span class="sec-num">III</span><h2>Quem comprou e quem vendeu em 26 de outubro</h2>
+</div>
+<p>O Boletim Diário do Mercado publica a participação dos investidores acumulada no mês, com dois pregões de defasagem. A diferença entre o acumulado até 26/10 (Boletim de 28/10) e o acumulado até 23/10 (Boletim de 27/10) isola o pregão [cálculo do autor]. Compras e vendas fecham em R$ 115,47 bilhões de cada lado, cerca do dobro da média diária de outubro.</p>
+<div class="bars" role="img" aria-label="Saldo líquido do pregão de 26 de outubro de 2026, em R$ bilhões: investidores individuais +6,19; outros +0,44; instituições financeiras −0,44; investidor estrangeiro −2,85; institucionais −3,34.">
+<div class="bh"><span>Saldo líquido (compras − vendas), R$ bilhões</span></div>
+<div class="br"><div class="bn">Investidores individuais<i>compras 14,56 · vendas 8,37</i></div><div class="bt"><div class="bng"></div><div class="bps"><div class="b buy" style="width:94%"></div><span class="v">+6,19</span></div></div></div>
+<div class="br"><div class="bn">Outros<i>compras 0,87 · vendas 0,44</i></div><div class="bt"><div class="bng"></div><div class="bps"><div class="b buy" style="width:6.7%"></div><span class="v">+0,44</span></div></div></div>
+<div class="br"><div class="bn">Instituições financeiras<i>compras 0,66 · vendas 1,10</i></div><div class="bt"><div class="bng"><span class="v">−0,44</span><div class="b sell" style="width:6.7%"></div></div><div class="bps"></div></div></div>
+<div class="br"><div class="bn">Investidor estrangeiro<i>compras 72,68 · vendas 75,53</i></div><div class="bt"><div class="bng"><span class="v">−2,85</span><div class="b sell" style="width:43%"></div></div><div class="bps"></div></div></div>
+<div class="br"><div class="bn">Institucionais<i>compras 26,69 · vendas 30,03</i></div><div class="bt"><div class="bng"><span class="v">−3,34</span><div class="b sell" style="width:51%"></div></div><div class="bps"></div></div></div>
+<div class="blg"><span class="ls">◀ vendedores líquidos</span><span class="lb">compradores líquidos ▶</span></div>
+</div>
+<p class="figcap">Fonte: B3, Boletim Diário do Mercado nº 205 (27/10/2026) e nº 206 (28/10/2026), “Participação dos investidores”. Elaboração do autor.</p>
+<p>Os investidores individuais foram os únicos compradores líquidos relevantes. O Boletim não informa o horário dos negócios: os números não dizem em que momento do pregão cada grupo comprou. Dizem quem estava do outro lado das vendas naquele dia.</p>
+</section>
+<section>
+<div class="sec-head"><span class="sec-num">IV</span><h2>A lacuna, medida</h2>
+</div>
+<div class="gaps">
+<div class="gap"><div class="big">30 dias × 5 anos</div><div class="lbl">Plantão de Notícias × norma da CVM</div><p>O canal em que a B3 publicou os avisos de 26 de outubro os mantém por trinta dias. A norma fixa cinco anos para os anúncios de procedimentos especiais.</p></div>
+<div class="gap"><div class="big">3.102 ações × 0 menções</div><div class="lbl">Boletim Diário de 26 e 27/10</div><p>A seção “Leilões/comunicados” registrou um leilão de frações de ações da Enjoei. A busca no texto integral das duas edições por “circuit”, “interrupção da negociação”, “reabertura” e “estágio” não retorna nada.</p></div>
+<div class="gap"><div class="big">2 promessas</div><div class="lbl">Aviso oficial das 10:01:04</div><p>“Comunicaremos em breve o horario de reabertura da negociacao” e “Disponibilizamos em anexo um FAQ”. O aviso de reabertura não foi localizado nas buscas por título; o anexo não está na página do aviso.</p></div>
+</div>
+<div class="rows">
+<div class="row"><span class="n">·</span><span class="t"><strong>Estágio II:</strong> a negociação “é interrompida por 1 (uma) hora”. Contrariada pelos registros do dia.</span></div>
+<div class="row"><span class="n">·</span><span class="t"><strong>BSM com “estrutura funcional independente”:</strong> contrariada em parte por documentos da própria B3.</span></div>
+<div class="row"><span class="n">·</span><span class="t"><strong>Autorregulação supervisiona a própria B3</strong> (Res. CVM 135, art. 47, II): não demonstrada no relatório anual da BSM, que registra auditorias só nos participantes.</span></div>
+<div class="row"><span class="n">·</span><span class="t"><strong>MRP garante o ressarcimento:</strong> confirmada no alcance declarado — 32 ressarcimentos em 2025, R$ 751.922,52 —, que é o erro do intermediário.</span></div>
+</div>
+<p class="tcap">Quatro das quinze linhas da matriz “declarado × praticado”.</p>
+</section>
+<section>
+<div class="sec-head"><span class="sec-num">V</span><h2>Implicações</h2>
+</div>
+<div class="rows">
+<div class="row"><span class="n">1</span><span class="t"><strong>O canal é uma decisão.</strong> Quem escolhe entre aviso ao mercado e nota à imprensa escolhe quem fica sabendo primeiro, e por qual fundamento.</span></div>
+<div class="row"><span class="n">2</span><span class="t"><strong>Memória de prazo curto.</strong> Informação que se apaga em trinta dias transfere ao público o ônus de guardar a prova — e ao fiscal, o de pedir.</span></div>
+<div class="row"><span class="n">3</span><span class="t"><strong>Receita que depende da falha.</strong> Parte do orçamento da fiscalizadora vem de multas que a administradora cobra dos fiscalizados. O caso grave é a infração nascida de assimetria de informação gerada pela própria B3.</span></div>
+<div class="row"><span class="n">4</span><span class="t"><strong>Monopólio sem contraponto.</strong> Sem concorrente em operação, não há outra bolsa cuja prática sirva de comparação, nem cliente que possa migrar.</span></div>
+</div>
+<p class="tcap">Quatro das oito implicações do artigo.</p>
+</section>
+<section>
+<div class="sec-head"><span class="sec-num">VI</span><h2>As posições em disputa</h2>
+</div>
+<p>Nenhum dos agentes se manifestou sobre o objeto da peça. As posições são inferidas do papel de cada um, e o artigo as declara assim.</p>
+<div class="posic">
+<div class="pos"><div class="who">B3</div>
+<div class="row2"><span>Pede</span>Margem para decidir em tempo real e liberdade para organizar a própria divulgação</div>
+<div class="row2"><span>Teme</span>Dever de publicidade que exponha cada decisão e seu autor</div></div>
+<div class="pos"><div class="who">CVM</div>
+<div class="row2"><span>Pede</span>Supervisão preservada e sigilo para apurar</div>
+<div class="row2"><span>Teme</span>Ser cobrada por apuração que não pode anunciar e por um regulado maior que ela</div></div>
+<div class="pos"><div class="who">Investidor</div>
+<div class="row2"><span>Pede</span>Saber qual regra vale, por qual canal, e a quem recorrer</div>
+<div class="row2"><span>Teme</span>Arcar com decisão de quem não responde a ele</div></div>
+</div>
+<p class="tcap">Três dos sete agentes do quadro do artigo.</p>
+</section>
+<section>
+<div class="sec-head"><span class="sec-num">VII</span><h2>Limites</h2>
+</div>
+<div class="falsif"><b>O que não se afirma</b><ul class="lst">
+<li>Que a B3 violou lei ou norma.</li>
+<li>Intenção de ocultar.</li>
+<li>Que a BSM deixou de apurar o dia 26 de outubro.</li>
+<li>Relacionamento indevido com o Poder Executivo: afirma-se a hipótese e o modo de testá-la.</li>
+<li>As perguntas da seção VIII são hipóteses a investigar, não acusações.</li>
+</ul></div>
+<h3>Onde o texto é mais frágil</h3>
+<p>Na amplitude: a peça fala em mecanismo, e a prática observada em tempo real é a de um único pregão. E na interpretação: o confronto com o art. 39 depende de que o dever alcance a reabertura do mercado, e não só o leilão de uma oferta.</p>
+</section>
+<section>
+<div class="sec-head"><span class="sec-num">VIII</span><h2>Conclusão e proposta</h2>
+</div>
+<p class="eixo">Regra escrita, fundamento duplo. Fiscal mantido pelo fiscalizado. Aviso com prazo de validade.</p>
+<div class="presc"><b class="h">O que se propõe</b>
+<p><strong>Ao Congresso:</strong> inserir na Lei 6.385/1976 o dever de publicidade permanente dos atos da administradora de mercado que alterem, afastem ou interpretem regra de negociação.</p>
+<p><strong>À CVM, como ponte:</strong> ampliar o art. 39 da Resolução CVM 135 — fundamento, dispositivo, autor e horário de cada decisão, razões também na interrupção do mercado, e permanência em vez de cinco anos.</p>
+<p><strong>Fora:</strong> a autorregulação da própria B3. Entregar a permanência da informação a quem decide o que divulgar repete o problema.</p>
+</div>
+<h3>O que precisa ser respondido</h3>
+<p>O dado que responderia às perguntas mais duras existe, mas é sigiloso. Só a CVM (Lei 6.385, art. 9º), a autorregulação (Res. CVM 135, art. 60) e, por ordem judicial, o Ministério Público podem vê-lo.</p>
+<div class="qcs">
+<div class="qc"><div class="qn">CVM e BSM</div><p>Quem tinha ordens de compra no livro executadas nos leilões de abertura e de reabertura, no limite de preço ou perto dele, e quando foram registradas? Quem concentrou as compras líquidas de R$ 6,19 bilhões?</p></div>
+<div class="qc"><div class="qn">CVM e BSM</div><p>Quem decidiu não aplicar o estágio II e adotar o gatilho de 20%, a que horas, e quem soube antes da nota das 14h32?</p></div>
+<div class="qc"><div class="qn">Qualquer pessoa, em parte</div><p>Administradores, conselheiros e acionistas relevantes das companhias que mais caíram negociaram em 26 de outubro? O consolidado mensal de outubro (Res. CVM 44, art. 11) fica disponível até cerca de 10 de novembro de 2026; os comunicados de participação relevante, pelo art. 12.</p></div>
+<div class="qc"><div class="qn">BSM e B3</div><p>Houve multas, liquidações compulsórias ou pedidos ao MRP decorrentes de operações feitas sob a regra comunicada às 10:01:04 e não aplicada?</p></div>
+</div>
+<p class="tcap">Quatro das seis perguntas do quadro do artigo.</p>
+<div class="srcs"><b>Fontes principais</b><p class="refs2">Primeiro nível: Resolução CVM 135 (texto consolidado, com a Resolução CVM 220/2024) e Resolução CVM 44; Lei 6.385/1976, Lei 12.813/2013 e Decreto 10.889/2021; Manual de Procedimentos Operacionais de Negociação (versão de 01/07/2026), Regulamento de Negociação e Regulamento de Acesso da B3; Plantão de Notícias da B3 (26/10/2026, reconsultado em 5 e 6/11/2026); Boletim Diário do Mercado nº 189, 204, 205, 206 e 211; ITR da B3 do 1º e do 2º trimestres de 2026; políticas corporativas da B3; registros de tela do autor. Fonte vinculada à B3: Relatório Anual 2025 da BSM Supervisão de Mercados. Terceiro nível: Exame (nota da B3 das 14h32), Mix Vale, TradeMap. Fontes consultadas entre 26 de outubro e 6 de novembro de 2026.</p>
+<p class="more">A lista integral de fontes, com os endereços, está no artigo completo.</p>
+</div>
+<div class="dl"><span class="tagl">Artigo completo · PDF</span><p><b>Este card é um resumo.</b> O artigo completo, com a matriz de quinze linhas, a letra das normas, a tabela e o gráfico do fluxo de 26 de outubro, as perguntas aos órgãos competentes, o glossário e a lista integral de fontes, abre em outra página, de onde pode ser baixado.</p>
+<a class="btn" href="https://gof8008.github.io/artigos/o-que-a-b3-diz-que-faz-v24.pdf" target="_blank" rel="noopener">Baixar o artigo completo (PDF) &rarr;</a><p class="ver">Versão 2.4 · 6 de novembro de 2026 · 25 páginas.</p>
+</div>
+</section>  </main>
+  <footer>
+    <div class="fquote"><p>“O ato de maior alcance tem a exigência de divulgação mais fraca.”</p>
+</div>
+    <div class="fauth">
+      <b>Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</p>
+    </div>
+    <div class="fnote">Versão 2.4 — 6 de novembro de 2026. Fontes consultadas entre 26 de outubro e 6 de novembro de 2026. 3ª peça da série sobre o pregão de 26 de outubro de 2026, depois de “O disjuntor que ficou ligado” e “Sorte ou informação”.</div>
+  </footer>
+</div>
+</body>
+</html>
