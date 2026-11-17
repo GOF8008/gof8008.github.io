@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nem Senado, nem Banco Central — a escolha de quem dirige o Banco do Brasil | Giuliano Tomazelli</title>
+<meta name="description" content="A lei exige aprovação do Senado para o presidente do Banco do Brasil; os atos examinados não a registram. A norma do Banco Central dispensa sua autorização prévia de posse para os bancos públicos federais. Artigo sobre onde a regra do regulador e a do controlador se cruzam.">
+<meta name="author" content="Giuliano Tomazelli">
+<link rel="canonical" href="https://gof8008.github.io/artigos/nem-senado-nem-banco-central.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gestão de Opções Futuras">
+<meta property="og:title" content="Nem Senado, nem Banco Central">
+<meta property="og:description" content="Duas regras. Um banco. Na escolha de quem o dirige, nenhum crivo externo à vista.">
+<meta property="og:url" content="https://gof8008.github.io/artigos/nem-senado-nem-banco-central.html">
+<meta property="og:image" content="https://gof8008.github.io/img/og-gof.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gestão de Opções Futuras — Lucidez no presente, soberania no futuro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nem Senado, nem Banco Central">
+<meta name="twitter:description" content="Duas regras. Um banco. Na escolha de quem o dirige, nenhum crivo externo à vista.">
+<meta name="twitter:image" content="https://gof8008.github.io/img/og-gof.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#15243f; --navy-2:#22375c; --navy-3:#33507e;
+    --orange:#e07a28; --orange-soft:#f0a25a; --orange-tint:#fbeede;
+    --ink:#202733; --ink-soft:#4a525f; --paper:#fff;
+    --line:#dde1e8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{background:#EDF0F3;font-family:'Source Sans 3',system-ui,sans-serif;
+       color:var(--ink);-webkit-font-smoothing:antialiased;
+       padding:16px 10px 240px}
+  .page{width:100%;max-width:760px;margin:0 auto;background:var(--paper);
+        border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(18,41,63,.15)}
+
+  header{background:var(--navy);color:#fff;padding:34px clamp(16px,4vw,48px) 30px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;
+                border-radius:50%;background:radial-gradient(circle at center,rgba(224,122,40,.22),transparent 68%)}
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:22px;position:relative;z-index:2}
+  .brand-mark{width:34px;height:34px;border:2px solid var(--orange);border-radius:50%;
+              display:flex;align-items:center;justify-content:center;flex:none;
+              font-family:'Playfair Display',serif;font-weight:800;font-size:16px;color:var(--orange)}
+  .brand-word{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.05em;font-size:12.5px;color:#eef2f8}
+  .brand-word span{color:var(--orange)}
+  .marker{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-soft);
+          font-weight:700;margin-bottom:14px;position:relative;z-index:2;line-height:1.5}
+  h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,6.4vw,46px);
+     line-height:1.05;color:#fff;position:relative;z-index:2}
+  .sub{margin-top:15px;font-size:14.5px;line-height:1.55;color:#c3cee0;position:relative;z-index:2}
+  .byline{margin-top:20px;position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.16);padding-top:15px}
+  .byline b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:5px}
+  .byline p{font-size:12.4px;line-height:1.55;color:#aeb9cc}
+
+  .scope{background:var(--orange-tint);border-left:5px solid var(--orange);padding:20px clamp(16px,4vw,48px)}
+  .scope b{display:block;font-size:10.5px;letter-spacing:.19em;text-transform:uppercase;color:#a35d12;margin-bottom:8px}
+  .scope p{font-size:13.4px;line-height:1.6;color:#5c4a2c;text-align:justify;hyphens:auto;margin-bottom:9px}
+  .scope p:last-child{margin-bottom:0}
+
+  main{padding:30px clamp(16px,4vw,48px) 14px}
+  section{margin-bottom:32px}
+  .sec-head{display:flex;align-items:baseline;gap:11px;margin-bottom:11px}
+  .sec-num{font-family:'Playfair Display',serif;font-weight:800;font-size:15px;color:var(--orange);flex:none}
+  h2{font-family:'Playfair Display',serif;font-weight:700;font-size:21px;line-height:1.18;color:var(--navy-2)}
+  p{font-size:13.6px;line-height:1.64;color:var(--ink-soft);margin-bottom:10px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  p strong{color:var(--ink);font-weight:600}
+  h3{font-family:'Playfair Display',serif;font-size:15.5px;color:var(--navy);font-weight:700;margin:16px 0 6px}
+
+  .abst{background:#f6f7f9;border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin-bottom:26px}
+  .abst b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .abst p{margin-bottom:0;font-size:13.2px}
+
+  .pull{border-left:4px solid var(--navy-3);background:#f6f7f9;border-radius:0 6px 6px 0;
+        padding:15px 18px;margin:14px 0}
+  .pull p{margin-bottom:0;font-size:14.2px;color:var(--navy-2);font-weight:600;text-align:left}
+
+  .chain{background:var(--navy);border-radius:8px;padding:20px 22px;margin:14px 0 6px}
+  .chain .lbl{font-size:10.3px;letter-spacing:.17em;text-transform:uppercase;color:var(--orange-soft);font-weight:700;margin-bottom:11px}
+  .chain .seq{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:11px}
+  .chain .st{background:rgba(255,255,255,.08);border:1px solid rgba(240,162,90,.35);border-radius:5px;
+             padding:6px 10px;font-size:12.3px;color:#fff;font-weight:600}
+  .chain .ar{color:var(--orange);font-weight:700;font-size:14px}
+  .chain p{margin:0;font-size:12.6px;line-height:1.55;color:#c3cee0;text-align:left}
+
+  .stat{background:var(--navy);border-radius:8px;padding:20px 22px;margin:12px 0 4px;display:flex;gap:22px;flex-wrap:wrap}
+  .stat .item{flex:1;min-width:128px}
+  .stat .big{font-family:'Playfair Display',serif;font-weight:800;font-size:28px;color:var(--orange-soft);line-height:1}
+  .stat .lbl{font-size:11.4px;line-height:1.45;color:#c3cee0;margin-top:6px}
+  .stat .lbl b{color:#fff;font-weight:600}
+
+  .rows{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+  .row{display:flex;gap:13px;align-items:flex-start;padding:13px 15px;background:#f6f7f9;
+       border:1px solid var(--line);border-radius:6px}
+  .row .n{font-family:'Playfair Display',serif;font-weight:800;font-size:17px;color:var(--orange);min-width:20px;line-height:1.25;flex:none}
+  .row .t{font-size:13.1px;line-height:1.55;color:var(--ink-soft)}
+  .row .t b{color:var(--navy);font-weight:700;display:block;margin-bottom:2px}
+
+  .vias{display:flex;flex-direction:column;gap:10px;margin:12px 0 4px}
+  .via{border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .via .hd{background:var(--navy-2);color:#fff;padding:10px 15px;font-size:13px;font-weight:600;
+           display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+  .via .hd .tag{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--orange-soft);font-weight:700}
+  .via.best .hd{background:var(--navy);border-bottom:3px solid var(--orange)}
+  .via .bd{padding:12px 15px;background:#fafbfc}
+  .via .bd p{margin-bottom:0;font-size:12.9px}
+
+  .caut{background:#f6f7f9;border:1px solid var(--line);border-left:4px solid var(--navy-3);
+        border-radius:6px;padding:16px 18px;margin-top:12px}
+  .caut b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy-2);margin-bottom:7px}
+  .caut p{margin-bottom:9px;font-size:13px}
+  .caut p:last-child{margin-bottom:0}
+
+  .foot-status{background:var(--navy);border-radius:8px;padding:20px 22px;margin-top:18px}
+  .foot-status .fs-tag{display:block;font-size:10.3px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--orange-soft);font-weight:700;margin-bottom:8px}
+  .foot-status p{margin:0;font-size:12.7px;line-height:1.55;color:#c3cee0;text-align:left}
+  .foot-status b{color:#fff;font-weight:600}
+  .foot-status .fs-dl{display:inline-block;margin:13px 0 10px;background:var(--orange);color:#fff;
+    text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.02em;
+    padding:11px 18px;border-radius:6px}
+  .tag-ac{color:#a35d12;font-weight:600;font-size:12px}
+  .foot-status .fs-ver{font-size:11.4px;color:#93a8bb;line-height:1.5}
+  .srcs{border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+  .srcs b{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .srcs p{font-size:11.8px;line-height:1.55;color:#6c757f;text-align:left;margin-bottom:7px}
+
+  footer{background:var(--navy);color:#fff;padding:28px clamp(16px,4vw,48px) 32px;margin-top:22px}
+  .fquote{border-left:4px solid var(--orange);padding-left:17px;margin-bottom:22px}
+  .fquote p{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;line-height:1.45;
+            color:#f0f5fa;margin:0;text-align:left}
+  .fauth b{display:block;font-size:13.5px;color:#fff;font-weight:600;margin-bottom:4px}
+  .fauth p{font-size:12.2px;line-height:1.55;color:#aeb9cc;margin-bottom:15px;text-align:left}
+  .fnote{font-size:11.3px;line-height:1.55;color:#7f93a6;border-top:1px solid rgba(255,255,255,.16);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand"><div class="brand-mark">G</div><div class="brand-word">GOF · <span>ARTIGO</span></div></div>
+    <div class="marker">Regulação e supervisão bancária · SFBD · Peça independente · Novembro de 2026</div>
+    <h1>Nem Senado,<br>nem Banco Central</h1>
+    <p class="sub">A escolha de quem dirige o Banco do Brasil: a aprovação do Senado que os atos não registram e a autorização do Banco Central que a norma dispensa.</p>
+    <div class="byline">
+      <b>Por Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado. Chapecó, 2026.</p>
+    </div>
+  </header>
+
+  <div class="scope">
+    <b>Delimitação</b>
+    <p>Este artigo <strong>não afirma que o Banco Central foi omisso</strong>. Não avalia se as provisões do Banco do Brasil são adequadas, não sustenta que as fraudes expliquem o resultado do terceiro trimestre de 2026 e não toma posição sobre o mérito do pedido de flexibilização contábil.</p>
+    <p>A tese é mais restrita: sobre o banco incidem duas ordens de regra — a do regulador, que vale para todo banco, e a do controlador, que vale só para ele. O artigo mapeia onde as duas se encontram e pergunta se a fronteira entre elas é visível a quem está de fora. Informações com data de corte de 16 de novembro de 2026.</p>
+  </div>
+
+  <main>
+
+    <div class="abst">
+      <b>Resumo</b>
+      <p>O artigo examina cinco pontos de cruzamento — regime prudencial, nomeação, controles internos, norma de provisão e ordem de atuação diante de fraude. <strong>O achado central está na escolha de quem dirige:</strong> a lei prevê aprovação do Senado para o presidente do banco, os atos de nomeação examinados não a registram e a pesquisa não localizou deliberação senatorial sobre presidente do banco desde 1988; a norma do regulador exige autorização prévia para a posse de administradores de bancos privados e a excetua para os bancos públicos federais.</p>
+    </div>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">I</span><h2>Quatro papéis, um banco</h2></div>
+      <p>O Banco do Brasil é sociedade de economia mista controlada pela União. O Conselho Monetário Nacional normatiza; o Banco Central fiscaliza. O colegiado tem três votos: o Ministro da Fazenda, que o preside, o Ministro do Planejamento e o presidente do Banco Central (Lei 9.069/1995, art. 8º).</p>
+      <p>A Lei 4.595/1964 dá ao banco tratamento que nenhum banco privado recebe: define-o como <strong>instrumento de execução da política creditícia e financeira do Governo Federal</strong> (art. 19). E o controlador aparece em dois papéis — como acionista, indica quem dirige; como Poder Executivo, preside o colegiado que escreve a norma.</p>
+      <div class="chain">
+        <div class="lbl">A cadeia de nomeação, segundo os textos</div>
+        <div class="seq">
+          <span class="st">Presidente da República nomeia</span><span class="ar">→</span>
+          <span class="st">Senado aprova (art. 21, § 1º)</span><span class="ar">→</span>
+          <span class="st">Conselho elege diretores (Estatuto)</span>
+        </div>
+        <p>Para bancos privados, o Banco Central autoriza previamente a posse dos administradores. Para os bancos públicos federais, a Resolução CMN 4.970/2021 excetua essa autorização — e mantém o poder de afastamento posterior (art. 18). Redação do Estatuto Social de 29/04/2026 <span style="color:#f0a25a">[A CONFERIR]</span>.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">II</span><h2>A régua comum, e uma exceção</h2></div>
+      <p>Nos domínios examinados — capital, concentração, crédito ao setor público e provisão —, <strong>não foi localizado requisito prudencial exclusivo do Banco do Brasil.</strong> O limite de 25% do Nível I por cliente (Res. 4.677/2018), o de 45% para o setor público (Res. 4.995/2022) e a norma de perdas esperadas (Res. 4.966/2021) valem igual para os bancos do Segmento 1.</p>
+      <p>A exceção escrita está em partes relacionadas: o teto de crédito não se aplica às operações com empresas controladas pela União, no caso dos bancos públicos federais (Res. 4.693/2018, art. 8º, I). A exigência de condições de mercado continua. A exceção admite duas leituras — vantagem ou equiparação —, e o artigo registra as duas.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">III</span><h2>Dois cruzamentos sem resposta pública</h2></div>
+      <h3>A escolha de quem dirige</h3>
+      <div class="stat">
+        <div class="item"><div class="big">3</div><div class="lbl">decretos de nomeação — <b>set. 2020, abr. 2021 e jan. 2023</b> — sem registro de aprovação do Senado</div></div>
+        <div class="item"><div class="big">1988</div><div class="lbl">desde 5 de outubro, <b>nenhuma deliberação senatorial</b> sobre presidente do banco localizada</div></div>
+        <div class="item"><div class="big">4</div><div class="lbl">conselheiros independentes registraram em ata, em <b>31/03/2021</b>, um "aparente conflito de normas"</div></div>
+      </div>
+      <p style="margin-top:14px">A Constituição deixa à lei a escolha dos cargos cuja nomeação depende do Senado (art. 52, III, "f"), e a Lei 4.595 fez essa escolha. Nenhuma lei a revogou expressamente, e nenhuma decisão localizada julgou a sua recepção. <strong>Se o dispositivo foi recepcionado em 1988, são dois silêncios:</strong> o de quem nomeia sem submeter e o de quem tem a competência e não a reclama. A prática atravessa todos os governos desde 1988.</p>
+      <div class="pull"><p>Ao transcrever o art. 21, § 1º, a manifestação registrada em ata o interrompe com reticências exatamente onde a lei continua: "após aprovação do Senado Federal".</p></div>
+      <h3>O pedido de 2026</h3>
+      <p>Em 16 de novembro de 2026, a Folha de S.Paulo noticiou que o banco quer negociar regra mais flexível de perda esperada para o crédito do agronegócio. Em nota reproduzida pela reportagem, a Fazenda confirmou ter recebido o pedido. Não foi localizado documento formal, minuta ou nota técnica. Em 2025, a flexibilização anterior (Res. 5.244) foi geral e publicada; em 2026, a tratativa não tem documento público. Quem decide é o mesmo colegiado — e um dos três votos é de ministro do Poder Executivo que controla o banco que pede. <strong>O texto registra a sobreposição; não afirma influência.</strong></p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">IV</span><h2>A lacuna, medida</h2></div>
+      <p>A norma de controles internos é detalhada: prevê detecção, relato, correção e registro de cada perda operacional com data de descoberta, e sua remessa semestral ao Banco Central (Res. 4.968/2021; Circular 3.979/2020). Quatro episódios de fraude entre 2025 e 2026 servem de teste — o de Londrina, cuja nota oficial não nomeia a instituição, com atribuição ao banco <span class="tag-ac">[A CONFERIR]</span>.</p>
+      <div class="pull"><p>Quatro episódios. Nenhuma data de detecção pública. Nenhum enquadramento conhecido. Nenhuma palavra do supervisor.</p></div>
+      <div class="stat">
+        <div class="item"><div class="big">R$ 35 bi</div><div class="lbl">cerca de — exposição a um único cliente a partir da qual a norma obriga o <b>conselho do banco a deliberar</b> — 20% do Nível I de R$ 175,9 bi (set. 2026)</div></div>
+        <div class="item"><div class="big">R$ 73,7 bi</div><div class="lbl">soma dos <b>dez maiores devedores</b> do banco em setembro de 2026 — cerca de duas vezes o limiar</div></div>
+      </div>
+      <p style="margin-top:14px">Saldo de carteira não é o mesmo que exposição, e a exposição a cada cliente não é pública; mas a ordem de grandeza indica que a deliberação obrigatória do conselho alcança muito poucos clientes. O limiar é a regra internacional de grandes exposições e não foi feito para pegar fraude. <strong>O problema está abaixo dele:</strong> entre a operação de agência e R$ 35 bilhões, a norma do regulador não fixa quem decide. A alçada é interna, e os valores de decisão do banco não foram localizados em documento público. Diante de fraude, a lei não fixa precedência entre banco, polícia e Ministério Público; fixa destinatários — e qual Ministério Público recebe depende de um enquadramento penal que não está em fonte oficial <span class="tag-ac">[A CONFERIR]</span>.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">V</span><h2>O que cada cruzamento deixa à vista</h2></div>
+      <div class="rows">
+        <div class="row"><div class="n">1</div><div class="t"><b>O debate sobre privilégio está no lugar errado</b>A diferença não está na régua prudencial, mas na lei que define o banco como instrumento de política e na cadeia que escolhe quem o dirige.</div></div>
+        <div class="row"><div class="n">2</div><div class="t"><b>A escolha depende só da cadeia do controlador</b>Os dois crivos externos ficam de fora: o Senado, por prática; o Banco Central, por exceção expressa. O controle não desaparece — muda de mãos.</div></div>
+        <div class="row"><div class="n">3</div><div class="t"><b>O controle interno é avaliável só por quem o supervisiona</b>O que chega a público são afirmações do banco, sem data. A avaliação de se os controles funcionaram a tempo, se existir, está no supervisor.</div></div>
+        <div class="row"><div class="n">4</div><div class="t"><b>A isonomia da régua não está fixada</b>A régua comum é um retrato de 16 de novembro de 2026, não uma garantia: o pedido pode resultar em norma geral, setorial ou dirigida.</div></div>
+        <div class="row"><div class="n">5</div><div class="t"><b>A comunicação depende de classificação não pública</b>A regra de comunicação é clara no papel e indeterminada no caso.</div></div>
+        <div class="row"><div class="n">6</div><div class="t"><b>A norma é pública; parte da aplicação, não</b>Para quem está de fora, processo em curso e processo inexistente são indistinguíveis — o limite já descrito em "A Omissão Inverificável", agora num banco que não quebrou.</div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">VI</span><h2>As posições em disputa</h2></div>
+      <p>Das cinco posições mapeadas — banco, Fazenda, Banco Central oficial, Banco Central por fonte anônima e demais bancos do Segmento 1 —, <strong>só uma é pública e identificada:</strong> a do banco que pede, e mesmo ela conhecida pela imprensa. O regulador fala por fonte anônima; o ministério, por nota reproduzida; os concorrentes não falam. A disputa está posta entre o banco e o regulador, mas a decisão, se vier, cabe ao colegiado em que o ministério tem a presidência e o regulador tem um voto.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">VII</span><h2>Limites e condições de refutação</h2></div>
+      <p>Cada proposição traz a condição que a derrubaria. O artigo não afirma que o descumprimento é certo: afirma-o sob a condição de que o art. 21, § 1º, tenha sido recepcionado pela Constituição de 1988 — questão que nenhuma instância decidiu.</p>
+      <div class="caut">
+        <b>As objeções que o artigo registra e não resolve</b>
+        <p><strong>Não-recepção.</strong> Na ADI 1.642/MG, de 2008, o STF entendeu que exigir aprovação legislativa para dirigentes de sociedades de economia mista estaduais fere a separação de Poderes. Estendida ao plano federal, a ausência do Senado seria conformidade, não descumprimento. A constância da prática reforça a objeção na percepção, não no direito: pela Lei de Introdução, o desuso não revoga lei.</p>
+        <p><strong>Revogação tácita.</strong> A Lei das Estatais remete à Lei das S.A., que dá ao conselho a eleição dos diretores. Mas o parágrafo seguinte da Lei de Introdução dispõe que a lei nova com disposições gerais ou especiais a par das já existentes não revoga nem modifica a anterior (art. 2º, § 2º) — e a Lei das Estatais é geral, enquanto a Lei 4.595 trata especificamente do Banco do Brasil.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">VIII</span><h2>Quem confere os crivos</h2></div>
+      <p>Na régua prudencial, a fronteira se sustenta. Nos controles internos, a aplicação não é verificável por quem está de fora. Na escolha de quem dirige, a fronteira se desloca: <strong>o Senado não aparece — nem é chamado, nem reclama; o regulador foi dispensado pela própria norma.</strong></p>
+      <p>Daqui não decorre omissão do regulador nem influência do controlador. Decorre, sob a condição da recepção, um descumprimento que dura desde 1988, de quem nomeia e de quem deveria aprovar — e uma fronteira cuja regra é pública e cuja aplicação, em parte, não é.</p>
+
+      <div class="foot-status">
+        <span class="fs-tag">Artigo completo</span>
+        <p><b>Versão integral disponível.</b> O card acima é um resumo estruturado. O artigo completo, com as oito seções, as seis proposições e suas condições de refutação, os quadros, o glossário e as fontes por nível, está aberto para leitura e download.</p>
+        <a class="fs-dl" href="https://gof8008.github.io/artigos/nem-senado-nem-banco-central-v4.pdf" target="_blank" rel="noopener">Baixar o artigo completo (PDF) &rarr;</a>
+        <p class="fs-ver">Versão 4 &middot; 17 páginas &middot; 17 de novembro de 2026. Pontos marcados [A CONFERIR] aguardam conferência em fonte primária.</p>
+      </div>
+
+      <div class="srcs">
+        <b>Fontes e referências</b>
+        <p><b>Normativas:</b> Constituição Federal de 1988, arts. 52, III, "f", e 84, XIV; Lei 4.595/1964; Lei 9.069/1995; Lei 13.303/2016; Lei 6.404/1976; Lei 7.492/1986; LC 105/2001; Código de Processo Penal, arts. 4º, 5º e 27; Decreto-Lei 4.657/1942 (LINDB); Resoluções CMN 4.677, 4.693, 4.859, 4.966, 4.968, 4.970, 4.995 e 5.244; Circular BCB 3.979/2020.</p>
+        <p><b>Institucionais:</b> Diário Oficial da União (decretos de 16/09/2020, 01/04/2021 e 13/01/2023; extrato de ata, 10/09/2021); Banco do Brasil, Análise do Desempenho do 3º trimestre de 2026; base de matérias do Senado Federal; STF, ADI 1.642/MG (2008); notas da SSP-PI e da Agência Estadual de Notícias do Paraná.</p>
+        <p><b>Jornalísticas (nível 3):</b> Folha de S.Paulo, 21/10/2026 e 16/11/2026, e demais veículos citados no artigo.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="fquote"><p>“Duas regras. Um banco. Na escolha de quem o dirige, nenhum crivo externo à vista.”</p></div>
+    <div class="fauth">
+      <b>Giuliano Tomazelli</b>
+      <p>Graduado em Ciências Econômicas pela Unochapecó, com especialização em Políticas Públicas. Pesquisador independente e analista de mercado.</p>
+    </div>
+    <div class="fnote">Versão 4 — 17 de novembro de 2026. Peça independente vinculada à série Sistema Financeiro Bancário em Discussão (SFBD). Artigo analítico de posição, sem estimação própria, com data de corte das informações em 16 de novembro de 2026. Análise de normas e fatos públicos; não constitui acusação a qualquer agente. O descumprimento é afirmado apenas sob a condição declarada — a recepção do art. 21, § 1º, da Lei 4.595 pela Constituição de 1988. Ausência de publicidade não é ausência de atuação.</div>
+  </footer>
+
+</div>
+</body>
+</html>
